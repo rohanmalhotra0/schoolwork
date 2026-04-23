@@ -1008,6 +1008,32 @@ h2.pencil::after{
 .cat--parties   { background: var(--tab-4); }
 .cat--essay     { background: var(--tab-7); }
 
+/* ============== essay quiz (active recall) ============== */
+.eq-recall-box{
+  width: 100%;
+  min-height: 120px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 13.5px;
+  line-height: 1.5;
+  padding: 10px 12px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  box-shadow: inset 2px 2px 0 rgba(29,26,22,0.06);
+  resize: vertical;
+  outline: none;
+  background-image: repeating-linear-gradient(
+    transparent 0 23px,
+    rgba(124,156,191,0.22) 23px 24px
+  );
+  background-size: 100% 24px;
+  line-height: 24px;
+}
+.eq-recall-box:focus{ border-color: var(--red); box-shadow: inset 2px 2px 0 rgba(181,45,45,0.08); }
+#essay-quiz .check-box{ background: var(--tab-3); }
+#essay-quiz #eq-select.check-box{ background: var(--tab-4); }
+#essay-quiz .q-explain{ margin-top: 0; }
+
 /* ============== quiz difficulty picker ============== */
 .quiz-diff-row{
   display: grid;

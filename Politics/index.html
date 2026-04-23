@@ -29,6 +29,7 @@
   <button class="tab" data-target="learn">02 · Learn</button>
   <button class="tab" data-target="match">03 · Match</button>
   <button class="tab" data-target="essays">04 · Essays</button>
+  <button class="tab" data-target="essay-quiz">05 · Essay Quiz</button>
   <button class="tab" data-target="home" onclick="location.href='../index.html';return false">↩ home</button>
 </nav>
 
@@ -139,6 +140,65 @@
     <h2 class="pencil">Essay prompts — 10 questions</h2>
     <p class="kicker">Try to outline an answer on paper before expanding the hint. Hints are skeleton arguments, not full essays.</p>
     <div class="essay-list" id="essay-list"></div>
+  </div>
+</section>
+
+<!-- ================= ESSAY QUIZ ================= -->
+<section class="sheet" id="essay-quiz">
+  <div class="sheet-margin">
+    <h2 class="pencil">Essay Quiz — active recall</h2>
+    <p class="kicker">Two-step drill on each essay topic. Step 1: free-recall your outline from memory. Step 2: pick the central argument from 4 options. Missed questions requeue until you get them right.</p>
+
+    <div id="eq-start">
+      <div class="deck-bar">
+        <label class="deck-chip"><input type="radio" name="eqorder" value="order" checked>in order</label>
+        <label class="deck-chip"><input type="radio" name="eqorder" value="shuffle">shuffle</label>
+      </div>
+      <button class="mini-btn" id="eq-start-btn" style="margin-top:6px">begin quiz &rarr;</button>
+    </div>
+
+    <div id="eq-session" style="display:none">
+      <div class="learn-prog">
+        <div class="learn-prog-bar"><div class="learn-prog-fill" id="eq-prog-fill" style="width:0%"></div></div>
+        <span class="learn-prog-txt" id="eq-prog-txt">0 / 0 mastered</span>
+      </div>
+
+      <!-- step 1: free recall -->
+      <div class="check-box" id="eq-recall">
+        <h4>step 1 · free recall</h4>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="eq-topic"></p>
+        <p style="font-family:'Spectral',serif;font-size:17px;font-style:italic;margin:0 0 10px" id="eq-prompt"></p>
+        <textarea id="eq-recall-text" class="eq-recall-box" placeholder="Outline your main argument from memory — key terms, counter-arguments, example cases. (Nothing you type is graded; this is the recall step.)"></textarea>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <button class="mini-btn" id="eq-recall-done">ready &rarr; reveal choices</button>
+          <button class="mini-btn" id="eq-skip-recall" title="Skip the recall box and go straight to multiple choice">skip recall</button>
+        </div>
+      </div>
+
+      <!-- step 2: selection -->
+      <div class="check-box" id="eq-select" style="display:none;margin-top:14px">
+        <h4>step 2 · pick the central argument</h4>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="eq-topic-2"></p>
+        <p style="font-family:'Spectral',serif;font-size:17px;font-style:italic;margin:0 0 10px" id="eq-mc-q"></p>
+        <div class="learn-mc-opts" id="eq-opts"></div>
+        <div class="check-feedback" id="eq-fb"></div>
+        <div id="eq-reveal" style="display:none;margin-top:12px">
+          <div class="q-explain" id="eq-explain"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--pencil);margin:14px 0 4px;letter-spacing:1.5px;text-transform:uppercase">full outline</div>
+          <div class="essay-hint" id="eq-full-hint"></div>
+        </div>
+        <button class="mini-btn" id="eq-next" style="display:none;margin-top:10px">next question &rarr;</button>
+      </div>
+    </div>
+
+    <div id="eq-done" style="display:none">
+      <div class="done-screen">
+        <div class="done-icon">✓</div>
+        <div class="done-title">All essay concepts locked in!</div>
+        <div class="done-sub" id="eq-done-txt"></div>
+        <button class="mini-btn" id="eq-restart">study again &rarr;</button>
+      </div>
+    </div>
   </div>
 </section>
 

@@ -294,3 +294,137 @@ function renderEssays(){
   });
 }
 renderEssays();
+
+/* =========================================================
+   ESSAY QUIZ — two-step active recall then MC selection
+   step 1: type an outline from memory (self-graded)
+   step 2: pick the central argument from 4 options
+   requeues missed cards until all 10 are mastered
+   ========================================================= */
+let eqQueue = [];
+let eqMastered = new Set();
+let eqTotal = 0;
+let eqCurrent = null;
+
+function shuffleArr(arr){
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function buildEqDeck(){
+  // pair each ESSAY prompt with its matching ESSAY_MC entry by index
+  return ESSAYS.map((e, i) => ({
+    idx: i,
+    prompt: e.q,
+    hint: e.hint,
+    topic: ESSAY_MC[i]?.topic || e.q,
+    mc: ESSAY_MC[i],
+  })).filter(x => x.mc);
+}
+
+function startEssayQuiz(){
+  const order = document.querySelector('input[name="eqorder"]:checked').value;
+  const deck = buildEqDeck();
+  eqQueue = order === "shuffle" ? shuffleArr(deck) : deck.slice();
+  eqMastered = new Set();
+  eqTotal = deck.length;
+  document.getElementById("eq-start").style.display = "none";
+  document.getElementById("eq-done").style.display  = "none";
+  document.getElementById("eq-session").style.display = "block";
+  updateEqProgress();
+  serveEssayQuiz();
+}
+
+function updateEqProgress(){
+  const pct = eqTotal ? Math.round(100 * eqMastered.size / eqTotal) : 0;
+  document.getElementById("eq-prog-fill").style.width = pct + "%";
+  document.getElementById("eq-prog-txt").textContent = `${eqMastered.size} / ${eqTotal} mastered`;
+}
+
+function serveEssayQuiz(){
+  if (!eqQueue.length){ endEssayQuiz(); return; }
+  eqCurrent = eqQueue.shift();
+
+  // show recall, hide selection
+  document.getElementById("eq-recall").style.display = "block";
+  document.getElementById("eq-select").style.display = "none";
+  document.getElementById("eq-reveal").style.display = "none";
+  document.getElementById("eq-next").style.display   = "none";
+
+  document.getElementById("eq-topic").textContent   = "topic: " + eqCurrent.topic;
+  document.getElementById("eq-topic-2").textContent = "topic: " + eqCurrent.topic;
+  document.getElementById("eq-prompt").textContent  = eqCurrent.prompt;
+  document.getElementById("eq-recall-text").value   = "";
+
+  const fb = document.getElementById("eq-fb");
+  fb.textContent = ""; fb.className = "check-feedback";
+}
+
+function revealEssayChoices(){
+  document.getElementById("eq-recall").style.display = "none";
+  document.getElementById("eq-select").style.display = "block";
+
+  const mc = eqCurrent.mc;
+  document.getElementById("eq-mc-q").textContent = mc.q;
+  const wrap = document.getElementById("eq-opts");
+  wrap.innerHTML = "";
+  // shuffle option order but remember the correct index
+  const indexed = mc.opts.map((text, i) => ({ text, i }));
+  const shuffled = shuffleArr(indexed);
+  shuffled.forEach(o => {
+    const b = document.createElement("button");
+    b.className = "learn-opt";
+    b.textContent = o.text;
+    b.addEventListener("click", () => checkEssayMC(b, o.i));
+    wrap.appendChild(b);
+  });
+}
+
+function checkEssayMC(btn, chosenIdx){
+  const all = document.querySelectorAll("#eq-opts .learn-opt");
+  all.forEach(b => b.style.pointerEvents = "none");
+  const fb = document.getElementById("eq-fb");
+  const mc = eqCurrent.mc;
+  const correctText = mc.opts[mc.correct];
+
+  if (chosenIdx === mc.correct){
+    btn.classList.add("correct");
+    fb.textContent = "✓ Right.";
+    fb.className = "check-feedback ok";
+    eqMastered.add(eqCurrent.idx);
+  } else {
+    btn.classList.add("wrong");
+    all.forEach(b => { if (b.textContent === correctText) b.classList.add("correct"); });
+    fb.textContent = `✗ Central argument: "${correctText}".`;
+    fb.className = "check-feedback bad";
+    // requeue 2-3 slots ahead
+    const ins = Math.min(eqQueue.length, 3);
+    eqQueue.splice(ins, 0, eqCurrent);
+  }
+
+  document.getElementById("eq-explain").textContent    = mc.explain;
+  document.getElementById("eq-full-hint").textContent  = eqCurrent.hint;
+  document.getElementById("eq-reveal").style.display   = "block";
+  document.getElementById("eq-next").style.display     = "inline-block";
+  updateEqProgress();
+}
+
+function endEssayQuiz(){
+  document.getElementById("eq-session").style.display = "none";
+  document.getElementById("eq-done").style.display    = "block";
+  document.getElementById("eq-done-txt").textContent  =
+    `${eqMastered.size} / ${eqTotal} essay topics recalled cleanly.`;
+}
+
+document.getElementById("eq-start-btn").addEventListener("click", startEssayQuiz);
+document.getElementById("eq-recall-done").addEventListener("click", revealEssayChoices);
+document.getElementById("eq-skip-recall").addEventListener("click", revealEssayChoices);
+document.getElementById("eq-next").addEventListener("click", serveEssayQuiz);
+document.getElementById("eq-restart").addEventListener("click", () => {
+  document.getElementById("eq-done").style.display  = "none";
+  document.getElementById("eq-start").style.display = "block";
+});
