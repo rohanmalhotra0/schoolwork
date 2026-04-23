@@ -420,11 +420,19 @@ function endEssayQuiz(){
     `${eqMastered.size} / ${eqTotal} essay topics recalled cleanly.`;
 }
 
-document.getElementById("eq-start-btn").addEventListener("click", startEssayQuiz);
-document.getElementById("eq-recall-done").addEventListener("click", revealEssayChoices);
-document.getElementById("eq-skip-recall").addEventListener("click", revealEssayChoices);
-document.getElementById("eq-next").addEventListener("click", serveEssayQuiz);
-document.getElementById("eq-restart").addEventListener("click", () => {
-  document.getElementById("eq-done").style.display  = "none";
-  document.getElementById("eq-start").style.display = "block";
+// Wire essay-quiz event listeners defensively so a missing element (stale
+// cached HTML, etc.) can never halt execution of earlier init code.
+const eqOn = (id, handler) => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener("click", handler);
+};
+eqOn("eq-start-btn",    startEssayQuiz);
+eqOn("eq-recall-done",  revealEssayChoices);
+eqOn("eq-skip-recall",  revealEssayChoices);
+eqOn("eq-next",         serveEssayQuiz);
+eqOn("eq-restart",      () => {
+  const done  = document.getElementById("eq-done");
+  const start = document.getElementById("eq-start");
+  if (done)  done.style.display  = "none";
+  if (start) start.style.display = "block";
 });
