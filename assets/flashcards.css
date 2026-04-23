@@ -1,0 +1,171 @@
+/* =========================================================
+   rohan.lab — shared flashcards session styles
+   Uses each tab's own CSS variables (paper / ink / red / olive / etc.)
+   so the notebook aesthetic carries through.
+   ========================================================= */
+
+/* progress bar */
+.fc-prog{
+  display: flex; align-items: center; gap: 10px;
+  margin: 6px 0 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--pencil);
+}
+.fc-prog-bar{
+  flex: 1;
+  height: 10px;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  overflow: hidden;
+}
+.fc-prog-fill{
+  height: 100%;
+  background: var(--olive, #6a6a2a);
+  transition: width 0.3s ease-out;
+}
+.fc-prog-txt{ color: var(--ink); font-weight: 600; white-space: nowrap; }
+.fc-prog-queue{ color: var(--pencil); white-space: nowrap; }
+
+/* hint toggle on the back of a card */
+.fc-hint-toggle{
+  all: unset;
+  display: inline-block;
+  margin-top: 14px;
+  cursor: pointer;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--pencil);
+  text-transform: uppercase;
+}
+.fc-hint-toggle:hover{ background: var(--tab-3, #ead29c); color: var(--ink); }
+
+/* "seen before" mastery badge on card front */
+.fc-mastery-badge{
+  position: absolute;
+  top: 10px; right: 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  color: var(--olive, #6a6a2a);
+  text-transform: uppercase;
+  background: var(--tab-2, #c7d9b8);
+  border: 1px solid var(--olive, #6a6a2a);
+  padding: 1px 6px;
+}
+
+/* session complete */
+.fc-done{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 30px 10px;
+  text-align: center;
+}
+.fc-done-icon{
+  width: 64px; height: 64px;
+  display: grid; place-items: center;
+  border: 2px solid var(--olive, #6a6a2a);
+  border-radius: 50%;
+  color: var(--olive, #6a6a2a);
+  font-family: 'Architects Daughter', cursive;
+  font-size: 38px;
+  background: var(--tab-2, #c7d9b8);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.fc-done-title{
+  font-family: 'Caveat', cursive;
+  font-size: 38px;
+  color: var(--ink);
+  line-height: 1;
+}
+.fc-done-stats{
+  display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  justify-content: center;
+}
+.fc-done-score{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 44px;
+  color: var(--ink);
+  line-height: 1;
+}
+.fc-done-score span{
+  color: var(--pencil);
+  font-size: 24px;
+  margin-left: 2px;
+}
+.fc-done-pct{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--pencil);
+}
+.fc-done-missed{
+  width: 100%;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--red);
+}
+.fc-done-missed--clean{ color: var(--olive, #6a6a2a); }
+.fc-done-actions{
+  display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
+  margin-top: 8px;
+}
+
+/* "ask AI" button on the back of every flashcard */
+.fc-ask-ai{
+  all: unset;
+  position: absolute;
+  top: 10px; right: 12px;
+  cursor: pointer;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 1.2px;
+  padding: 3px 8px;
+  border: 1px solid var(--ink);
+  background: var(--paper-soft, rgba(0,0,0,0.05));
+  color: var(--pencil);
+  text-transform: uppercase;
+  line-height: 1.2;
+  z-index: 2;
+}
+.fc-ask-ai:hover{
+  background: var(--tab-3, #ead29c);
+  color: var(--ink);
+}
+
+/* ---------- shared content-page "ask AI" button --------
+   Inline icon button placed on vocab cards, cases, frameworks, formulas.
+   Consumed by Consulting (and any other tab that chooses to surface it).
+*/
+.ask-ai-btn{
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 1.2px;
+  padding: 3px 8px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--pencil);
+  text-transform: uppercase;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+.ask-ai-btn:hover{
+  background: var(--red);
+  color: var(--paper);
+  border-color: var(--red);
+}
+.ask-ai-btn--small{
+  font-size: 9.5px;
+  padding: 2px 6px;
+}

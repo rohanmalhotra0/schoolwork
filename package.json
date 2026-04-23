@@ -1,0 +1,12 @@
+{
+  "name": "rohan-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Study notebooks — static site + serverless AI tutor on Vercel",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "openai": "^4.68.0"
+  }
+}

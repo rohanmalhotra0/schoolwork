@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cs202.lab — operating systems study notebook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Architects+Daughter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/assets/flashcards.css?v=1">
+<link rel="stylesheet" href="/assets/chat-widget.css?v=1">
+</head>
+<body>
+
+<!-- PAPER TAPE HEADER -->
+<header class="masthead">
+  <div class="tape tape-left"></div>
+  <div class="tape tape-right"></div>
+  <div class="brand">
+    <h1 class="brand-title">cs202<span class="brand-dot">.</span>lab</h1>
+    <p class="brand-sub">operating systems · nyu · study notebook</p>
+  </div>
+</header>
+
+<!-- INDEX TABS (like filing-cabinet tabs, not rounded pills) -->
+<nav class="file-tabs" role="tablist">
+  <button class="tab tab--active" data-target="learn">01 · Learn</button>
+  <button class="tab" data-target="cards">02 · Flashcards</button>
+  <button class="tab" data-target="quiz">03 · Quizzes</button>
+  <button class="tab" data-target="practice">04 · Problems</button>
+  <button class="tab" data-target="defs">05 · Definitions</button>
+  <button class="tab" data-target="formulas">06 · Formulas</button>
+  <button class="tab" data-target="cheat">07 · Cheat sheet</button>
+  <button class="tab" data-target="home" onclick="location.href='../index.html';return false">↩ home</button>
+</nav>
+
+<main id="page">
+
+<!-- ================= LEARN ================= -->
+<section class="sheet sheet--active" id="learn">
+  <div class="sheet-margin">
+    <h2 class="pencil">Learn — guided walkthrough</h2>
+    <p class="kicker">Pick a module. Each ends with a self-check you have to answer before the next unlocks. No AI hints, no shortcuts.</p>
+
+    <div class="module-grid">
+      <!-- modules rendered by JS -->
+    </div>
+
+    <div id="learn-stage" class="learn-stage hidden"></div>
+  </div>
+</section>
+
+<!-- ================= FLASHCARDS ================= -->
+<section class="sheet" id="cards">
+  <div class="sheet-margin">
+    <h2 class="pencil">Flashcards</h2>
+    <p class="kicker">Space = flip · [K] = got it (retires card) · [D] = missed (requeues) · [H] = reveal hint · [U] = undo. Each filter is a finite session — you're done when every card is mastered.</p>
+    <div class="deck-bar">
+      <label class="deck-chip"><input type="radio" name="deck" value="all" checked>All</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="concurrency">Concurrency</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="vm">Virtual Memory</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="fs">File Systems</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="asm">Assembly / Process</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="disk">Disk / Sched</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="sec">Security / Cases</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="crash">Crash Recovery</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="dist">Distributed</label>
+      <button id="shuffle" class="mini-btn">shuffle</button>
+    </div>
+
+    <div class="card-stage">
+      <div class="card" id="flashcard">
+        <div class="card-face card-front">
+          <div class="card-corner">term</div>
+          <div class="card-body" id="card-front">Tap to start</div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-corner">def.</div>
+          <div class="card-body" id="card-back"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-controls">
+      <button class="mini-btn" id="prev-card">&larr; prev</button>
+      <button class="mini-btn" id="flip-card">flip</button>
+      <button class="mini-btn" id="next-card">next &rarr;</button>
+      <span class="counter" id="card-counter">0 / 0</span>
+      <button class="mini-btn mini-btn--ok" id="knew">K — got it</button>
+      <button class="mini-btn mini-btn--bad" id="missed">D — missed</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUIZ ================= -->
+<section class="sheet" id="quiz">
+  <div class="sheet-margin">
+    <h2 class="pencil">Quizzes</h2>
+    <p class="kicker">Mixed from q02–q08, 2025 fall midterm, 2026 spring midterm, and the 2019/2020/2021 finals. Pick a set; answer with the radio buttons; see the red ink at the end.</p>
+    <div class="quiz-picker">
+      <button class="tabline" data-qset="all">All items</button>
+      <button class="tabline" data-qset="q02">Quiz 02 · processes/asm</button>
+      <button class="tabline" data-qset="q04">Quiz 04 · threads</button>
+      <button class="tabline" data-qset="q05">Quiz 05 · Therac-25</button>
+      <button class="tabline" data-qset="q07">Quiz 07 · VM</button>
+      <button class="tabline" data-qset="q08">Quiz 08 · VM+context</button>
+      <button class="tabline" data-qset="midterm25">Midterm 2025 fall</button>
+      <button class="tabline" data-qset="midterm26">Midterm 2026 spring</button>
+      <button class="tabline" data-qset="final19">Final 2019</button>
+      <button class="tabline" data-qset="final20">Final 2020</button>
+      <button class="tabline" data-qset="final21">Final 2021</button>
+    </div>
+    <div id="quiz-area"></div>
+    <div id="quiz-score" class="score-slip hidden"></div>
+  </div>
+</section>
+
+<!-- ================= PRACTICE PROBLEMS ================= -->
+<section class="sheet" id="practice">
+  <div class="sheet-margin">
+    <h2 class="pencil">Practice Problems</h2>
+    <p class="kicker">Work these with paper and pencil first. Flip the tab to see the worked solution.</p>
+    <div id="practice-list"></div>
+  </div>
+</section>
+
+<!-- ================= DEFINITIONS ================= -->
+<section class="sheet" id="defs">
+  <div class="sheet-margin">
+    <h2 class="pencil">Definitions — glossary</h2>
+    <p class="kicker">Every term that actually appears in quizzes, exams, labs, or homework. Click a letter to jump.</p>
+    <div class="alpha-jump" id="alpha-jump"></div>
+    <input id="defs-search" class="search" placeholder="filter — try 'fork', 'tlb', 'inode' ...">
+    <dl class="glossary" id="glossary"></dl>
+  </div>
+</section>
+
+<!-- ================= FORMULAS ================= -->
+<section class="sheet" id="formulas">
+  <div class="sheet-margin">
+    <h2 class="pencil">Formulas — everything worth memorizing</h2>
+    <p class="kicker">The 40 or so expressions that unlock the arithmetic problems on the exams.</p>
+    <div id="formula-list"></div>
+  </div>
+</section>
+
+<!-- ================= CHEAT SHEET ================= -->
+<section class="sheet" id="cheat">
+  <div class="sheet-margin">
+    <h2 class="pencil">Cheat sheet — 2 pages · print landscape</h2>
+    <p class="kicker">Ctrl/Cmd-P → Save as PDF → Landscape → Margins: none → Scale: default. Fits exactly two pages.</p>
+    <button class="mini-btn" onclick="window.print()">print</button>
+  </div>
+  <!-- the actual 2-page sheet lives inside #cheat-printable -->
+  <div id="cheat-printable">
+    <!-- injected by JS -->
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span>cs202 · compiled by hand in the worktree · &larr;/&rarr; arrow keys work on every tab</span>
+  <div style="margin-top:6px">
+    want to contribute? →
+    <a href="https://github.com/rohanmalhotra0/OperatingSystems" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">github repo</a>
+    ·
+    <a href="https://rohanm.org" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">rohanm.org</a>
+  </div>
+</footer>
+
+<script src="content.js?v=6"></script>
+<script src="/assets/flashcards.js?v=1"></script>
+<script src="app.js?v=6"></script>
+<script src="/assets/quiz.js?v=1" defer></script>
+<script src="/assets/voice.js?v=1" defer></script>
+<script src="/assets/mock.js?v=1" defer></script>
+<script src="/assets/chat-widget.js?v=1" defer></script>
+</body>
+</html>

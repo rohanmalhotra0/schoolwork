@@ -1,0 +1,14 @@
+.claude/worktrees/
+.DS_Store
+german copy/
+
+# secrets
+.env
+.env.local
+.env.*.local
+
+# node
+node_modules/
+
+# vercel
+.vercel

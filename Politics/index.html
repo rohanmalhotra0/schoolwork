@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pol500.lab — political science study notebook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Architects+Daughter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="/assets/flashcards.css?v=1">
+<link rel="stylesheet" href="/assets/chat-widget.css?v=1">
+</head>
+<body>
+
+<!-- PAPER TAPE HEADER -->
+<header class="masthead">
+  <div class="tape tape-left"></div>
+  <div class="tape tape-right"></div>
+  <div class="brand">
+    <h1 class="brand-title">pol500<span class="brand-dot">.</span>lab</h1>
+    <p class="brand-sub">pol-ua 500 · nyu · exam #2 · 30 terms · 10 essays</p>
+  </div>
+</header>
+
+<!-- INDEX TABS -->
+<nav class="file-tabs" role="tablist">
+  <button class="tab tab--active" data-target="cards">01 · Flashcards</button>
+  <button class="tab" data-target="learn">02 · Learn</button>
+  <button class="tab" data-target="match">03 · Match</button>
+  <button class="tab" data-target="essays">04 · Essays</button>
+  <button class="tab" data-target="home" onclick="location.href='../index.html';return false">↩ home</button>
+</nav>
+
+<main id="page">
+
+<!-- ================= FLASHCARDS ================= -->
+<section class="sheet sheet--active" id="cards">
+  <div class="sheet-margin">
+    <h2 class="pencil">Flashcards</h2>
+    <p class="kicker">Space = flip · [K] = got it (retires card) · [D] = missed (requeues) · [H] = reveal hint · [U] = undo. Each filter is a finite session — you're done when every card is mastered.</p>
+    <div class="deck-bar">
+      <label class="deck-chip"><input type="radio" name="deck" value="all" checked>All (30)</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="Voting &amp; Participation">Voting &amp; Participation</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="Ethnicity &amp; Identity">Ethnicity &amp; Identity</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="Parties &amp; Systems">Parties &amp; Systems</label>
+      <button id="shuffle" class="mini-btn">shuffle</button>
+    </div>
+
+    <div class="card-stage">
+      <div class="card" id="flashcard">
+        <div class="card-face card-front">
+          <div class="card-corner">term</div>
+          <div class="card-body" id="card-front">Tap to start</div>
+          <div class="fc-badge cat-badge" id="card-tag" style="display:none"></div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-corner">def.</div>
+          <div class="card-body" id="card-back"></div>
+          <div class="fc-note" id="card-note"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-controls">
+      <button class="mini-btn" id="prev-card">&larr; prev</button>
+      <button class="mini-btn" id="flip-card">flip</button>
+      <button class="mini-btn" id="next-card">next &rarr;</button>
+      <span class="counter" id="card-counter">0 / 0</span>
+      <button class="mini-btn mini-btn--ok" id="knew">K — got it</button>
+      <button class="mini-btn mini-btn--bad" id="missed">D — missed</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEARN ================= -->
+<section class="sheet" id="learn">
+  <div class="sheet-margin">
+    <h2 class="pencil">Learn — 4-option multiple choice</h2>
+    <p class="kicker">Pick a filter. Each correct answer marks a term mastered; each miss requeues it. Done when all cards are mastered.</p>
+
+    <div id="learn-start">
+      <div class="deck-bar">
+        <label class="deck-chip"><input type="radio" name="lfilter" value="all" checked>All (30)</label>
+        <label class="deck-chip"><input type="radio" name="lfilter" value="Voting &amp; Participation">Voting</label>
+        <label class="deck-chip"><input type="radio" name="lfilter" value="Ethnicity &amp; Identity">Ethnicity</label>
+        <label class="deck-chip"><input type="radio" name="lfilter" value="Parties &amp; Systems">Parties</label>
+      </div>
+      <button class="mini-btn" id="learn-start-btn" style="margin-top:6px">start session &rarr;</button>
+    </div>
+
+    <div id="learn-session" style="display:none">
+      <div class="learn-prog">
+        <div class="learn-prog-bar"><div class="learn-prog-fill" id="learn-prog-fill" style="width:0%"></div></div>
+        <span class="learn-prog-txt" id="learn-prog-txt">0 / 0 mastered</span>
+      </div>
+
+      <div class="check-box">
+        <h4>multiple choice</h4>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="learn-mc-cat"></p>
+        <p style="font-family:'Spectral',serif;font-size:17px;margin:0 0 10px" id="learn-mc-q"></p>
+        <div class="learn-mc-opts" id="learn-mc-opts"></div>
+        <div class="check-feedback" id="learn-mc-fb"></div>
+        <button class="mini-btn" id="learn-mc-next" style="display:none;margin-top:10px">continue &rarr;</button>
+      </div>
+    </div>
+
+    <div id="learn-done" style="display:none">
+      <div class="done-screen">
+        <div class="done-icon">✓</div>
+        <div class="done-title">All mastered!</div>
+        <div class="done-sub" id="learn-done-txt"></div>
+        <button class="mini-btn" id="learn-restart">study again &rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MATCH ================= -->
+<section class="sheet" id="match">
+  <div class="sheet-margin">
+    <h2 class="pencil">Match — 6 pairs, timed</h2>
+    <p class="kicker">Click a term, then click its definition. Get all 6 pairs as fast as you can.</p>
+
+    <div class="match-bar">
+      <span>time: <strong id="match-time" class="match-timer">0.0s</strong></span>
+      <span>pairs: <strong id="match-pairs">0 / 6</strong></span>
+      <button class="mini-btn" id="match-new">new round</button>
+    </div>
+
+    <div class="match-grid" id="match-grid"></div>
+    <div class="match-win" id="match-win"></div>
+  </div>
+</section>
+
+<!-- ================= ESSAYS ================= -->
+<section class="sheet" id="essays">
+  <div class="sheet-margin">
+    <h2 class="pencil">Essay prompts — 10 questions</h2>
+    <p class="kicker">Try to outline an answer on paper before expanding the hint. Hints are skeleton arguments, not full essays.</p>
+    <div class="essay-list" id="essay-list"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span>pol-ua 500 · compiled by hand · &larr;/&rarr; arrow keys work on every tab · viel erfolg on exam #2!</span>
+  <div style="margin-top:6px">
+    want to contribute? →
+    <a href="https://github.com/rohanmalhotra0/OperatingSystems" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">github repo</a>
+    ·
+    <a href="https://rohanm.org" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">rohanm.org</a>
+  </div>
+</footer>
+
+<script src="content.js?v=1"></script>
+<script src="/assets/flashcards.js?v=1"></script>
+<script src="app.js?v=1"></script>
+<script src="/assets/quiz.js?v=1" defer></script>
+<script src="/assets/voice.js?v=1" defer></script>
+<script src="/assets/mock.js?v=1" defer></script>
+<script src="/assets/chat-widget.js?v=1" defer></script>
+</body>
+</html>

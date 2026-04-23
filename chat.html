@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rohan.lab — chat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Architects+Daughter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/chat-widget.css?v=1">
+<link rel="stylesheet" href="/assets/chat-page.css?v=1">
+</head>
+<body data-chat-mode="full">
+
+<div class="cp-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="cp-side">
+    <div class="cp-side-head">
+      <div class="cp-brand">rohan<span class="cp-dot">.</span>lab</div>
+      <div class="cp-sub">study chat · multi-course</div>
+      <button class="cp-new" id="cp-new">+ new chat</button>
+    </div>
+
+    <div class="cp-tab-pick" id="cp-tab-pick"></div>
+
+    <div class="cp-list" id="cp-list"></div>
+
+    <div class="cp-side-foot">
+      <a href="/index.html">← home</a>
+      <button class="cp-tab-chip" id="cp-clear-all" title="delete every session">clear all</button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="cp-main">
+    <header class="cp-main-head">
+      <div style="flex:1;min-width:0">
+        <div class="cp-main-title" id="cp-title">new chat</div>
+        <span class="cp-main-scope" id="cp-scope">pick a course</span>
+      </div>
+      <div class="cp-main-modes" id="cp-modes"></div>
+    </header>
+
+    <div class="cp-msgs" id="cp-msgs"></div>
+    <div class="cw-quiz" id="cp-quiz"></div>
+    <div class="cw-mock" id="cp-mock"></div>
+
+    <div class="cp-input-wrap" id="cp-input-wrap">
+      <textarea class="cp-textarea" id="cp-input" rows="1" placeholder="ask anything…"></textarea>
+      <button class="cp-send" id="cp-send">send</button>
+    </div>
+  </main>
+</div>
+
+<!-- chat-widget.js exposes window.ChatLab (store + client) and self-skips
+     the floating button thanks to data-chat-mode="full". -->
+<script src="/assets/chat-widget.js?v=1"></script>
+<script src="/assets/quiz.js?v=1"></script>
+<script src="/assets/voice.js?v=1"></script>
+<script src="/assets/mock.js?v=1"></script>
+<script src="/assets/chat-page.js?v=1" defer></script>
+</body>
+</html>

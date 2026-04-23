@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rohan.lab — study notebooks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Architects+Daughter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/chat-widget.css?v=1">
+<style>
+  :root{
+    --paper:       #f3ecd8;
+    --paper-soft:  #efe6cd;
+    --ink:         #1d1a16;
+    --pencil:      #5a564c;
+    --red:         #b52d2d;
+    --tab-1:       #e7c7a1;
+    --tab-4:       #b8c5d8;
+    --tab-5:       #e3b4b0;
+    --tab-7:       #d6c4a9;
+    --rule-blue:   #7c9cbf;
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    margin:0; padding:0; min-height:100%;
+    background: var(--paper);
+    color: var(--ink);
+    font-family:'Spectral',Georgia,serif;
+    background-image:
+      linear-gradient(rgba(124,156,191,0.14) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,156,191,0.14) 1px, transparent 1px),
+      radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1.5px);
+    background-size: 22px 22px, 22px 22px, 5px 5px;
+  }
+  ::selection{ background: var(--red); color: var(--paper); }
+  .wrap{
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 60px 28px 40px;
+  }
+  .masthead{
+    position: relative;
+    padding: 30px 20px 26px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 48px;
+  }
+  .tape{
+    position:absolute; top:-10px;
+    width: 120px; height: 28px;
+    background: rgba(224,194,120,0.58);
+    border: 1px dashed rgba(0,0,0,0.15);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .tape-left{ left: 40px; transform: rotate(-4deg); }
+  .tape-right{ right: 40px; transform: rotate(3deg); background: rgba(183,198,217,0.55); }
+  h1.title{
+    font-family:'Architects Daughter','Caveat',cursive;
+    font-size: 64px;
+    margin: 0;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 0 rgba(181,45,45,0.22);
+  }
+  h1 .dot{ color: var(--red); }
+  .sub{
+    font-family:'IBM Plex Mono',monospace;
+    font-size: 13px;
+    color: var(--pencil);
+    margin: 4px 0 0;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+  }
+  .shelf{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+  }
+  @media (max-width: 720px){ .shelf{ grid-template-columns: 1fr; } }
+  .folder{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    background: var(--paper-soft);
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+    padding: 30px 28px 28px;
+    transition: transform 0.1s, box-shadow 0.1s;
+    min-height: 240px;
+  }
+  .folder:hover{ transform: translate(-2px,-2px); box-shadow: 8px 8px 0 var(--ink); }
+  .folder:active{ transform: translate(2px,2px); box-shadow: 2px 2px 0 var(--ink); }
+  .folder .tab-strip{
+    position: absolute;
+    top: -22px; left: 22px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 18px 10px;
+    background: var(--tab-1);
+    border: 2px solid var(--ink);
+    border-bottom: none;
+    border-radius: 12px 14px 0 0 / 22px 20px 0 0;
+  }
+  .folder--two .tab-strip{ background: var(--tab-4); }
+  .folder--three .tab-strip{ background: var(--tab-5); }
+  .folder--four .tab-strip{ background: var(--tab-7); }
+  .folder .course{
+    font-family:'IBM Plex Mono',monospace;
+    font-size: 11px;
+    color: var(--pencil);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .folder .name{
+    font-family:'Architects Daughter',cursive;
+    font-size: 40px;
+    margin: 6px 0 10px;
+    color: var(--ink);
+  }
+  .folder .desc{
+    font-family:'Spectral',serif;
+    font-size: 15px;
+    color: var(--pencil);
+    margin-bottom: 14px;
+  }
+  .folder ul{
+    list-style: none;
+    padding: 0; margin: 0;
+    font-family:'IBM Plex Mono',monospace;
+    font-size: 12.5px;
+    color: var(--pencil);
+  }
+  .folder ul li{ padding: 2px 0; }
+  .folder ul li::before{ content: "›  "; color: var(--red); }
+  .folder .arrow{
+    position: absolute;
+    right: 22px; bottom: 18px;
+    font-family:'Caveat',cursive;
+    font-size: 30px;
+    color: var(--red);
+    transform: rotate(-4deg);
+  }
+  .stamp{
+    position: absolute;
+    right: 32px; top: 30px;
+    width: 120px; height: 120px;
+    display: grid; place-items:center;
+    transform: rotate(-11deg);
+    opacity: 0.75;
+    pointer-events:none;
+  }
+  .stamp-ring{
+    width: 100%; height: 100%;
+    border: 3px double var(--red);
+    border-radius: 50%;
+    display:flex; flex-direction:column;
+    justify-content:center; align-items:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--red);
+    text-align:center;
+    line-height: 1.35;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: radial-gradient(transparent 40%, rgba(181,45,45,0.07) 70%);
+  }
+  .stamp-ring span:nth-child(2){ font-size: 13px; font-weight: 700; letter-spacing: 2px; }
+  .footer{
+    margin-top: 40px;
+    text-align: center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--pencil);
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="tape tape-left"></div>
+    <div class="tape tape-right"></div>
+    <h1 class="title">rohan<span class="dot">.</span>lab</h1>
+    <p class="sub">study notebooks · nyu · pick a course</p>
+  </header>
+
+  <div class="shelf">
+    <a class="folder folder--one" href="./StudyTool/">
+      <span class="tab-strip">01 · folder</span>
+      <div class="course">CS202 · Operating Systems</div>
+      <h2 class="name">cs202.lab</h2>
+      <p class="desc">x86-64 paging, fork/exec/pipe, mutexes, WeensyOS, file systems, crash recovery.</p>
+      <ul>
+        <li>Learn · Flashcards · Quizzes</li>
+        <li>Practice problems · Definitions</li>
+        <li>Formulas · 2-page cheat sheet</li>
+      </ul>
+      <span class="arrow">open →</span>
+    </a>
+
+    <a class="folder folder--two" href="./German/">
+      <span class="tab-strip">02 · Mappe</span>
+      <div class="course">German II · K5–K8</div>
+      <h2 class="name">deutsch.lab</h2>
+      <p class="desc">Dativ & two-way prepositions, Perfekt/Präteritum, Relativpronomen, Konjunktiv II, Passiv.</p>
+      <ul>
+        <li>Flashcards · Learn (MC → type-in)</li>
+        <li>Quizzes · Grammar tables</li>
+        <li>Vokabeln · Kapitel 8 focus</li>
+      </ul>
+      <span class="arrow">öffnen →</span>
+    </a>
+
+    <a class="folder folder--three" href="./Politics/">
+      <span class="tab-strip">03 · dossier</span>
+      <div class="course">POL-UA 500 · Exam #2</div>
+      <h2 class="name">pol500.lab</h2>
+      <p class="desc">Voting & Participation, Ethnicity & Identity, Parties & Systems — 30 terms, 10 essay prompts.</p>
+      <ul>
+        <li>Flashcards · Learn (4-opt MC)</li>
+        <li>Match · 6 pairs timed</li>
+        <li>Essay prompts · with hints</li>
+      </ul>
+      <span class="arrow">open →</span>
+    </a>
+
+    <a class="folder folder--four" href="./Oracle/">
+      <span class="tab-strip">04 · binder</span>
+      <div class="course">Oracle 1Z0-1080-25 · Cert Prep</div>
+      <h2 class="name">epm1080.lab</h2>
+      <p class="desc">Oracle Planning 2025 Implementation Professional — dimensions, rules, modules, IPM, approvals. 106 terms, 19 scenarios, 36 exam Qs.</p>
+      <ul>
+        <li>Flashcards · Learn · Quiz (3 levels)</li>
+        <li>Match · 6 pairs timed · Scenario prompts</li>
+        <li>Exam Practice · single + multi-select</li>
+      </ul>
+      <span class="arrow">open →</span>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    want to contribute? →
+    <a href="https://github.com/rohanmalhotra0/schoolwork" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">github repo</a>
+    ·
+    <a href="https://rohanm.org" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">rohanm.org</a>
+    ·
+    <a href="/chat.html" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">open full chat →</a>
+    ·
+    <a href="/metrics.html" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">metrics 📊</a>
+  </div>
+</div>
+
+<script src="/assets/quiz.js?v=1" defer></script>
+<script src="/assets/voice.js?v=1" defer></script>
+<script src="/assets/mock.js?v=1" defer></script>
+<script src="/assets/chat-widget.js?v=1" defer></script>
+</body>
+</html>

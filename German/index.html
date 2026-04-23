@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>deutsch.lab — german ii study notebook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Architects+Daughter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="/assets/flashcards.css?v=1">
+<link rel="stylesheet" href="/assets/chat-widget.css?v=1">
+</head>
+<body>
+
+<!-- PAPER TAPE HEADER -->
+<header class="masthead">
+  <div class="tape tape-left"></div>
+  <div class="tape tape-right"></div>
+  <div class="brand">
+    <h1 class="brand-title">deutsch<span class="brand-dot">.</span>lab</h1>
+    <p class="brand-sub">german ii · nyu · study notebook · K5–K8</p>
+  </div>
+</header>
+
+<!-- INDEX TABS -->
+<nav class="file-tabs" role="tablist">
+  <button class="tab tab--active" data-target="cards">01 · Flashcards</button>
+  <button class="tab" data-target="learn">02 · Learn</button>
+  <button class="tab" data-target="quiz">03 · Quiz</button>
+  <button class="tab" data-target="grammar">04 · Grammar</button>
+  <button class="tab" data-target="vocab">05 · Vokabeln</button>
+  <button class="tab" data-target="k8">06 · Kapitel 8</button>
+  <button class="tab" data-target="home" onclick="location.href='../index.html';return false">↩ home</button>
+</nav>
+
+<main id="page">
+
+<!-- ================= FLASHCARDS ================= -->
+<section class="sheet sheet--active" id="cards">
+  <div class="sheet-margin">
+    <h2 class="pencil">Flashcards</h2>
+    <p class="kicker">Space = flip · [K] = got it (retires card) · [D] = missed (requeues) · [H] = reveal hint · [U] = undo. Each filter is a finite session — you're done when every card is mastered.</p>
+    <div class="deck-bar">
+      <label class="deck-chip"><input type="radio" name="deck" value="all" checked>All</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="K5">K5 · prepositions</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="K6">K6 · past tense</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="K7">K7 · relative/adj</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="K8">K8 · Konj II / Passiv</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="GR">grammar only</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="VO">vocab only</label>
+      <button id="shuffle" class="mini-btn">shuffle</button>
+    </div>
+
+    <div class="card-stage">
+      <div class="card" id="flashcard">
+        <div class="card-face card-front">
+          <div class="card-corner">term</div>
+          <div class="card-body" id="card-front">Tap to start</div>
+          <div class="fc-badge" id="card-tag" style="display:none"></div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-corner">def.</div>
+          <div class="card-body" id="card-back"></div>
+          <div class="fc-note" id="card-note"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-controls">
+      <button class="mini-btn" id="prev-card">&larr; prev</button>
+      <button class="mini-btn" id="flip-card">flip</button>
+      <button class="mini-btn" id="next-card">next &rarr;</button>
+      <span class="counter" id="card-counter">0 / 0</span>
+      <button class="mini-btn mini-btn--ok" id="knew">K — got it</button>
+      <button class="mini-btn mini-btn--bad" id="missed">D — missed</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEARN ================= -->
+<section class="sheet" id="learn">
+  <div class="sheet-margin">
+    <h2 class="pencil">Learn — MC first, then type it</h2>
+    <p class="kicker">Pick a filter. Multiple-choice first — get it right and it upgrades to type-in. Miss it and the card comes back. Done when every card is mastered.</p>
+
+    <div id="learn-start">
+      <div class="deck-bar">
+        <label class="deck-chip"><input type="radio" name="lfilter" value="all" checked>All</label>
+        <label class="deck-chip"><input type="radio" name="lfilter" value="K5">K5</label>
+        <label class="deck-chip"><input type="radio" name="lfilter" value="K6">K6</label>
+        <label class="deck-chip"><input type="radio" name="lfilter" value="K7">K7</label>
+        <label class="deck-chip"><input type="radio" name="lfilter" value="K8">K8</label>
+        <label class="deck-chip"><input type="radio" name="lfilter" value="GR">grammar</label>
+        <label class="deck-chip"><input type="radio" name="lfilter" value="VO">vocab</label>
+      </div>
+      <button class="mini-btn" id="learn-start-btn" style="margin-top:6px">start session &rarr;</button>
+    </div>
+
+    <div id="learn-session" style="display:none">
+      <div class="learn-prog">
+        <div class="learn-prog-bar"><div class="learn-prog-fill" id="learn-prog-fill" style="width:0%"></div></div>
+        <span class="learn-prog-txt" id="learn-prog-txt">0 / 0 mastered</span>
+      </div>
+
+      <div id="learn-mc" style="display:none">
+        <div class="check-box">
+          <h4>multiple choice</h4>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="learn-mc-ch"></p>
+          <p style="font-family:'Spectral',serif;font-size:17px;margin:0 0 10px" id="learn-mc-q"></p>
+          <div class="learn-mc-opts" id="learn-mc-opts"></div>
+          <div class="check-feedback" id="learn-mc-fb"></div>
+          <button class="mini-btn" id="learn-mc-next" style="display:none;margin-top:10px">continue &rarr;</button>
+        </div>
+      </div>
+
+      <div id="learn-write" style="display:none">
+        <div class="check-box" style="background:var(--tab-2)">
+          <h4 style="color:var(--teal)">type it out</h4>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="learn-wr-ch"></p>
+          <p style="font-family:'Spectral',serif;font-size:17px;margin:0 0 10px" id="learn-wr-q"></p>
+          <input class="learn-input" id="learn-wr-input" type="text" placeholder="type the answer…">
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="mini-btn mini-btn--ok" id="learn-wr-check">check</button>
+            <button class="mini-btn" id="learn-wr-skip">skip</button>
+          </div>
+          <div class="check-feedback" id="learn-wr-fb"></div>
+          <button class="mini-btn" id="learn-wr-next" style="display:none;margin-top:10px">continue &rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="learn-done" style="display:none">
+      <div class="done-screen">
+        <div class="done-icon">✓</div>
+        <div class="done-title">Sitzung fertig!</div>
+        <div class="done-sub" id="learn-done-txt"></div>
+        <button class="mini-btn" id="learn-restart">study again &rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUIZ ================= -->
+<section class="sheet" id="quiz">
+  <div class="sheet-margin">
+    <h2 class="pencil">Quizzes</h2>
+    <p class="kicker">Pick a set. Answer with the radio buttons. Grade-all gives you the percent in red ink at the end.</p>
+    <div class="quiz-picker">
+      <button class="tabline" data-qset="all">all items</button>
+      <button class="tabline" data-qset="K5">K5 · prepositions</button>
+      <button class="tabline" data-qset="K6">K6 · past tense</button>
+      <button class="tabline" data-qset="K7">K7 · relative + adj</button>
+      <button class="tabline" data-qset="K8">K8 · Konj II + Passiv</button>
+      <button class="tabline" data-qset="mixed">mixed final prep</button>
+    </div>
+    <div id="quiz-area"></div>
+    <div id="quiz-score" class="score-slip hidden"></div>
+  </div>
+</section>
+
+<!-- ================= GRAMMAR ================= -->
+<section class="sheet" id="grammar">
+  <div class="sheet-margin">
+    <h2 class="pencil">Grammar — reference tables</h2>
+    <p class="kicker">Every paradigm you need for K5–K8. Red cells are the forms you most often get wrong on exams.</p>
+    <div id="grammar-list"></div>
+  </div>
+</section>
+
+<!-- ================= VOCAB ================= -->
+<section class="sheet" id="vocab">
+  <div class="sheet-margin">
+    <h2 class="pencil">Vokabeln — chapter-by-chapter</h2>
+    <p class="kicker">Filter by chapter or search.</p>
+    <div class="deck-bar">
+      <label class="deck-chip"><input type="radio" name="vfilter" value="all" checked>All</label>
+      <label class="deck-chip"><input type="radio" name="vfilter" value="K5">K5</label>
+      <label class="deck-chip"><input type="radio" name="vfilter" value="K6">K6</label>
+      <label class="deck-chip"><input type="radio" name="vfilter" value="K7">K7</label>
+      <label class="deck-chip"><input type="radio" name="vfilter" value="K8">K8</label>
+    </div>
+    <input id="vocab-search" class="search" placeholder="filter — try 'haus', 'Umwelt', 'Dativ' …">
+    <div class="vocab-grid" id="vocab-grid"></div>
+  </div>
+</section>
+
+<!-- ================= KAPITEL 8 ================= -->
+<section class="sheet" id="k8">
+  <div class="sheet-margin">
+    <h2 class="pencil">Kapitel 8 — final exam focus</h2>
+    <p class="kicker">Konjunktiv II, Passiv, um/ohne/statt + zu, plus the two topic clusters that dominate K8: Umwelt/Gesellschaft and Beruf/Arbeit.</p>
+    <div id="k8-content"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span>deutsch ii · compiled by hand · &larr;/&rarr; arrow keys work on every tab · viel erfolg auf der prüfung!</span>
+  <div style="margin-top:6px">
+    want to contribute? →
+    <a href="https://github.com/rohanmalhotra0/OperatingSystems" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">github repo</a>
+    ·
+    <a href="https://rohanm.org" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">rohanm.org</a>
+  </div>
+</footer>
+
+<script src="content.js?v=1"></script>
+<script src="/assets/flashcards.js?v=1"></script>
+<script src="app.js?v=1"></script>
+<script src="/assets/quiz.js?v=1" defer></script>
+<script src="/assets/voice.js?v=1" defer></script>
+<script src="/assets/mock.js?v=1" defer></script>
+<script src="/assets/chat-widget.js?v=1" defer></script>
+</body>
+</html>

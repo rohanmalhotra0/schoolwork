@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>epm1080.lab — Oracle Planning 2025 Implementation cert prep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Architects+Daughter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="/assets/flashcards.css?v=1">
+<link rel="stylesheet" href="/assets/chat-widget.css?v=1">
+</head>
+<body>
+
+<!-- PAPER TAPE HEADER -->
+<header class="masthead">
+  <div class="tape tape-left"></div>
+  <div class="tape tape-right"></div>
+  <div class="brand">
+    <h1 class="brand-title">epm1080<span class="brand-dot">.</span>lab</h1>
+    <p class="brand-sub">oracle 1z0-1080-25 · planning 2025 implementation professional · 106 terms · 19 scenarios · 36 exam Qs</p>
+  </div>
+</header>
+
+<!-- INDEX TABS -->
+<nav class="file-tabs" role="tablist">
+  <button class="tab tab--active" data-target="cards">01 · Flashcards</button>
+  <button class="tab" data-target="learn">02 · Learn</button>
+  <button class="tab" data-target="quiz">03 · Quiz</button>
+  <button class="tab" data-target="match">04 · Match</button>
+  <button class="tab" data-target="defs">05 · Definitions</button>
+  <button class="tab" data-target="essays">06 · Scenarios</button>
+  <button class="tab" data-target="exam">07 · Exam Practice</button>
+  <button class="tab" data-target="home" onclick="location.href='../index.html';return false">↩ home</button>
+</nav>
+
+<main id="page">
+
+<!-- ================= FLASHCARDS ================= -->
+<section class="sheet sheet--active" id="cards">
+  <div class="sheet-margin">
+    <h2 class="pencil">Flashcards</h2>
+    <p class="kicker">Space = flip · [K] = got it (retires card) · [D] = missed (requeues) · [H] = reveal hint · [U] = undo. Each filter is a finite session — you're done when every card is mastered.</p>
+    <div class="deck-bar">
+      <label class="deck-chip"><input type="radio" name="deck" value="all" checked>All (106)</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="Application Setup">Application Setup</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="Content &amp; Rules">Content &amp; Rules</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="Modules">Modules</label>
+      <label class="deck-chip"><input type="radio" name="deck" value="Operations">Operations</label>
+      <button id="shuffle" class="mini-btn">shuffle</button>
+    </div>
+
+    <div class="card-stage">
+      <div class="card" id="flashcard">
+        <div class="card-face card-front">
+          <div class="card-corner">term</div>
+          <div class="card-body" id="card-front">Tap to start</div>
+          <div class="fc-badge cat-badge" id="card-tag" style="display:none"></div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-corner">def.</div>
+          <div class="card-body" id="card-back"></div>
+          <div class="fc-note" id="card-note"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-controls">
+      <button class="mini-btn" id="prev-card">&larr; prev</button>
+      <button class="mini-btn" id="flip-card">flip</button>
+      <button class="mini-btn" id="next-card">next &rarr;</button>
+      <span class="counter" id="card-counter">0 / 0</span>
+      <button class="mini-btn mini-btn--ok" id="knew">K — got it</button>
+      <button class="mini-btn mini-btn--bad" id="missed">D — missed</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEARN ================= -->
+<section class="sheet" id="learn">
+  <div class="sheet-margin">
+    <h2 class="pencil">Learn — 4-option multiple choice</h2>
+    <p class="kicker">Pick a filter. Each correct answer marks a term mastered; each miss requeues it. Done when all cards are mastered.</p>
+
+    <div id="learn-start">
+      <p class="deck-label">Pick one or more — mix categories freely.</p>
+      <div class="deck-bar">
+        <label class="deck-chip"><input type="checkbox" name="lfilter" value="Application Setup" checked>App Setup (31)</label>
+        <label class="deck-chip"><input type="checkbox" name="lfilter" value="Content &amp; Rules" checked>Content &amp; Rules (13)</label>
+        <label class="deck-chip"><input type="checkbox" name="lfilter" value="Modules" checked>Modules (40)</label>
+        <label class="deck-chip"><input type="checkbox" name="lfilter" value="Operations" checked>Operations (22)</label>
+        <label class="deck-chip"><input type="checkbox" name="lfilter" value="essays" checked>Scenario MC (34)</label>
+        <button class="mini-btn" data-sel="lfilter" data-act="all">all</button>
+        <button class="mini-btn" data-sel="lfilter" data-act="clear">clear</button>
+      </div>
+      <button class="mini-btn" id="learn-start-btn" style="margin-top:6px">start session &rarr;</button>
+      <span class="sel-count" id="learn-sel-count"></span>
+    </div>
+
+    <div id="learn-session" style="display:none">
+      <div class="learn-prog">
+        <div class="learn-prog-bar"><div class="learn-prog-fill" id="learn-prog-fill" style="width:0%"></div></div>
+        <span class="learn-prog-txt" id="learn-prog-txt">0 / 0 mastered</span>
+      </div>
+
+      <div class="check-box">
+        <h4>multiple choice</h4>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="learn-mc-cat"></p>
+        <p style="font-family:'Spectral',serif;font-size:17px;margin:0 0 10px" id="learn-mc-q"></p>
+        <div class="learn-mc-opts" id="learn-mc-opts"></div>
+        <div class="check-feedback" id="learn-mc-fb"></div>
+        <button class="mini-btn" id="learn-mc-next" style="display:none;margin-top:10px">continue &rarr;</button>
+      </div>
+    </div>
+
+    <div id="learn-done" style="display:none">
+      <div class="done-screen">
+        <div class="done-icon">✓</div>
+        <div class="done-title">All mastered!</div>
+        <div class="done-sub" id="learn-done-txt"></div>
+        <button class="mini-btn" id="learn-restart">study again &rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUIZ ================= -->
+<section class="sheet" id="quiz">
+  <div class="sheet-margin">
+    <h2 class="pencil">Quiz — graded, 3 difficulties</h2>
+    <p class="kicker">Pick what's on the quiz — then choose a difficulty. Easy = definition&rarr;term. Medium mixes directions. Hard adds clue&rarr;term and scenario MC. Score at the end; missed items listed for review.</p>
+
+    <div id="quiz-start">
+      <p class="deck-label">Pick what's on the quiz — then choose a difficulty.</p>
+      <div class="deck-bar">
+        <label class="deck-chip"><input type="checkbox" name="qfilter" value="Application Setup" checked>App Setup (31)</label>
+        <label class="deck-chip"><input type="checkbox" name="qfilter" value="Content &amp; Rules" checked>Content &amp; Rules (13)</label>
+        <label class="deck-chip"><input type="checkbox" name="qfilter" value="Modules" checked>Modules (40)</label>
+        <label class="deck-chip"><input type="checkbox" name="qfilter" value="Operations" checked>Operations (22)</label>
+        <label class="deck-chip"><input type="checkbox" name="qfilter" value="essays" checked>Scenario MC (34)</label>
+        <button class="mini-btn" data-sel="qfilter" data-act="all">all</button>
+        <button class="mini-btn" data-sel="qfilter" data-act="clear">clear</button>
+      </div>
+      <span class="sel-count" id="quiz-sel-count" style="display:block;margin:4px 0 10px"></span>
+      <div class="quiz-diff-row">
+        <button class="diff-btn diff-easy"   data-diff="easy">
+          <span class="diff-label">easy</span>
+          <span class="diff-desc">10 Q · def &rarr; term · hints allowed</span>
+        </button>
+        <button class="diff-btn diff-medium" data-diff="medium">
+          <span class="diff-label">medium</span>
+          <span class="diff-desc">15 Q · mixed direction · no hints</span>
+        </button>
+        <button class="diff-btn diff-hard"   data-diff="hard">
+          <span class="diff-label">hard</span>
+          <span class="diff-desc">20 Q · mixed + scenario MC</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="quiz-session" style="display:none">
+      <div class="quiz-meta">
+        <span class="quiz-diff-badge" id="quiz-diff-badge">easy</span>
+        <span class="quiz-score" id="quiz-score">0 correct</span>
+      </div>
+      <div class="learn-prog">
+        <div class="learn-prog-bar"><div class="learn-prog-fill" id="quiz-prog-fill" style="width:0%"></div></div>
+        <span class="learn-prog-txt" id="quiz-prog-txt">0 / 0</span>
+      </div>
+
+      <div class="check-box">
+        <h4 id="quiz-type-label">multiple choice</h4>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="quiz-mc-cat"></p>
+        <p style="font-family:'Spectral',serif;font-size:17px;margin:0 0 10px" id="quiz-mc-q"></p>
+        <div class="learn-mc-opts" id="quiz-mc-opts"></div>
+        <div class="check-feedback" id="quiz-mc-fb"></div>
+        <div class="q-explain" id="quiz-mc-explain" style="display:none"></div>
+        <button class="mini-btn" id="quiz-mc-next" style="display:none;margin-top:10px">next &rarr;</button>
+      </div>
+      <button class="mini-btn" id="quiz-quit" style="margin-top:10px">quit quiz</button>
+    </div>
+
+    <div id="quiz-done" style="display:none">
+      <div class="done-screen">
+        <div class="done-icon" id="quiz-done-icon">✓</div>
+        <div class="done-title" id="quiz-done-title">Quiz complete</div>
+        <div class="done-sub"   id="quiz-done-txt"></div>
+        <div class="score-slip" id="quiz-score-slip"></div>
+        <div id="quiz-missed-wrap" style="display:none;text-align:left;margin-top:18px">
+          <h4 style="font-family:'Caveat',cursive;font-size:24px;color:var(--red);margin:0 0 8px">review — missed items</h4>
+          <ul id="quiz-missed-list" class="quiz-missed-list"></ul>
+        </div>
+        <button class="mini-btn" id="quiz-restart" style="margin-top:14px">try another quiz &rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MATCH ================= -->
+<section class="sheet" id="match">
+  <div class="sheet-margin">
+    <h2 class="pencil">Match — 6 pairs, timed</h2>
+    <p class="kicker">Click a term, then click its definition. Get all 6 pairs as fast as you can.</p>
+
+    <div class="match-bar">
+      <span>time: <strong id="match-time" class="match-timer">0.0s</strong></span>
+      <span>pairs: <strong id="match-pairs">0 / 6</strong></span>
+      <button class="mini-btn" id="match-new">new round</button>
+    </div>
+
+    <div class="match-grid" id="match-grid"></div>
+    <div class="match-win" id="match-win"></div>
+  </div>
+</section>
+
+<!-- ================= DEFINITIONS ================= -->
+<section class="sheet" id="defs">
+  <div class="sheet-margin">
+    <h2 class="pencil">Definitions — all 106 terms</h2>
+    <p class="kicker">Full glossary, grouped by exam domain. Filter or search to find a term fast. Click any row to peek the hint.</p>
+
+    <div class="deck-bar">
+      <label class="deck-chip"><input type="radio" name="dfilter" value="all" checked>All (106)</label>
+      <label class="deck-chip"><input type="radio" name="dfilter" value="Application Setup">Application Setup</label>
+      <label class="deck-chip"><input type="radio" name="dfilter" value="Content &amp; Rules">Content &amp; Rules</label>
+      <label class="deck-chip"><input type="radio" name="dfilter" value="Modules">Modules</label>
+      <label class="deck-chip"><input type="radio" name="dfilter" value="Operations">Operations</label>
+    </div>
+    <div class="def-search-row">
+      <input type="text" id="def-search" class="def-search" placeholder="search term or definition…" autocomplete="off">
+      <span class="def-count" id="def-count"></span>
+    </div>
+
+    <div class="def-list" id="def-list"></div>
+  </div>
+</section>
+
+<!-- ================= SCENARIOS ================= -->
+<section class="sheet" id="essays">
+  <div class="sheet-margin">
+    <h2 class="pencil">Scenario prompts — 19 questions</h2>
+    <p class="kicker">Try to outline an answer before expanding the hint. Hints are skeleton arguments — the exam and real implementations will ask follow-ups.</p>
+    <div class="essay-list" id="essay-list"></div>
+  </div>
+</section>
+
+<!-- ================= EXAM PRACTICE ================= -->
+<section class="sheet" id="exam">
+  <div class="sheet-margin">
+    <h2 class="pencil">Exam Practice — real-format questions</h2>
+    <p class="kicker">Real-format 1Z0-1080-25 questions — single-select and multi-select (pick 2 / pick 3). Selection count is enforced; detailed explanations after each question.</p>
+
+    <div id="exam-start">
+      <p class="deck-label">Answer all questions, then review the score slip and explanations for any missed items.</p>
+      <button class="mini-btn" id="exam-start-btn">start practice &rarr;</button>
+      <span class="sel-count" id="exam-bank-count"></span>
+    </div>
+
+    <div id="exam-session" style="display:none">
+      <div class="quiz-meta">
+        <span class="quiz-diff-badge is-hard" id="exam-type-badge">single select</span>
+        <span class="quiz-score" id="exam-score">0 correct</span>
+      </div>
+      <div class="learn-prog">
+        <div class="learn-prog-bar"><div class="learn-prog-fill" id="exam-prog-fill" style="width:0%"></div></div>
+        <span class="learn-prog-txt" id="exam-prog-txt">0 / 0</span>
+      </div>
+
+      <div class="check-box">
+        <h4 id="exam-pick-label">pick one</h4>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="exam-topic"></p>
+        <p style="font-family:'Spectral',serif;font-size:17px;margin:0 0 10px" id="exam-q"></p>
+        <div class="exam-opts" id="exam-opts"></div>
+        <div class="check-feedback" id="exam-fb"></div>
+        <div class="q-explain" id="exam-explain" style="display:none"></div>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <button class="mini-btn" id="exam-submit">submit answer</button>
+          <button class="mini-btn" id="exam-next" style="display:none">next &rarr;</button>
+        </div>
+      </div>
+      <button class="mini-btn" id="exam-quit" style="margin-top:10px">quit practice</button>
+    </div>
+
+    <div id="exam-done" style="display:none">
+      <div class="done-screen">
+        <div class="done-icon" id="exam-done-icon">✓</div>
+        <div class="done-title" id="exam-done-title">Practice complete</div>
+        <div class="done-sub"   id="exam-done-txt"></div>
+        <div class="score-slip" id="exam-score-slip"></div>
+        <div id="exam-missed-wrap" style="display:none;text-align:left;margin-top:18px">
+          <h4 style="font-family:'Caveat',cursive;font-size:24px;color:var(--red);margin:0 0 8px">review — missed items</h4>
+          <ul id="exam-missed-list" class="quiz-missed-list"></ul>
+        </div>
+        <button class="mini-btn" id="exam-restart" style="margin-top:14px">try again &rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span>oracle 1z0-1080-25 · compiled by hand · &larr;/&rarr; arrow keys work on every tab · viel erfolg on the cert!</span>
+  <div style="margin-top:6px">
+    want to contribute? →
+    <a href="https://github.com/rohanmalhotra0/OperatingSystems" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">github repo</a>
+    ·
+    <a href="https://rohanm.org" style="color:var(--ink);border-bottom:1px solid var(--red);text-decoration:none;margin:0 4px">rohanm.org</a>
+  </div>
+</footer>
+
+<script src="content.js?v=1"></script>
+<script src="/assets/flashcards.js?v=1"></script>
+<script src="app.js?v=1"></script>
+<script src="/assets/quiz.js?v=1" defer></script>
+<script src="/assets/voice.js?v=1" defer></script>
+<script src="/assets/mock.js?v=1" defer></script>
+<script src="/assets/chat-widget.js?v=1" defer></script>
+</body>
+</html>

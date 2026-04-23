@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rohan.lab — metrics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Architects+Daughter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/metrics.css?v=1">
+</head>
+<body>
+
+<div class="mx-wrap">
+  <header class="mx-head">
+    <div class="mx-tape mx-tape-left"></div>
+    <div class="mx-tape mx-tape-right"></div>
+    <h1 class="mx-title">rohan<span class="mx-dot">.</span>metrics</h1>
+    <p class="mx-sub" id="mx-sub">computing from your local progress…</p>
+    <div class="mx-range" id="mx-range">
+      <button class="mx-chip mx-chip--on" data-range="7">7 days</button>
+      <button class="mx-chip" data-range="30">30 days</button>
+      <button class="mx-chip" data-range="all">all time</button>
+      <a class="mx-home" href="/index.html">↩ home</a>
+    </div>
+  </header>
+
+  <!-- top KPI row -->
+  <section class="mx-kpis" id="mx-kpis"></section>
+
+  <!-- heat-map style 7×N grid of daily activity -->
+  <section class="mx-section">
+    <h2 class="mx-h2">daily activity</h2>
+    <p class="mx-kicker">each square = one day. darker = more ratings that day. longest streak & weekly average on the right.</p>
+    <div class="mx-calendar-wrap">
+      <div class="mx-calendar" id="mx-calendar"></div>
+      <div class="mx-calendar-side" id="mx-calendar-side"></div>
+    </div>
+  </section>
+
+  <!-- per-tab mastery -->
+  <section class="mx-section">
+    <h2 class="mx-h2">per-course progress</h2>
+    <p class="mx-kicker">mastery = cards you marked "got it" in flashcards OR answered correctly in quiz. weights & mastered keys pulled from each course's localStorage.</p>
+    <div class="mx-tabtable" id="mx-tabtable">loading courses…</div>
+  </section>
+
+  <!-- weakest terms -->
+  <section class="mx-section">
+    <h2 class="mx-h2">weakest terms</h2>
+    <p class="mx-kicker">top 10 you've missed most often across flashcards + quiz. one tap sends this term to the tutor for a deep-dive.</p>
+    <div class="mx-weaklist" id="mx-weaklist">loading…</div>
+  </section>
+
+  <!-- mock history -->
+  <section class="mx-section" id="mx-mocks-section">
+    <h2 class="mx-h2">mock interviews</h2>
+    <p class="mx-kicker">finished case-interview runs. three-dimension grade and one-sentence summary per mock.</p>
+    <div class="mx-mocks" id="mx-mocks"></div>
+  </section>
+
+  <footer class="mx-foot">
+    <span>metrics computed client-side from <code>localStorage</code>. clear your browser storage and they reset.</span>
+  </footer>
+</div>
+
+<script src="/assets/metrics.js?v=1" defer></script>
+</body>
+</html>

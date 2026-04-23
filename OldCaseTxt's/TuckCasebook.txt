@@ -1,0 +1,3379 @@
+Tuck Consulting Club
+ 2024 Casebook
+Thank you to our sponsors!
+
+  Corporate
+  Sponsors
+
+
+
+
+ Case Coach        Peter K        Rohan Gupta
+   Sponsors        Professional   Professional
+                   case coach     case coach
+                   Website        LinkedIn
+
+
+
+
+                                                 2
+Welcome to the 2024 Tuck Consulting Club Casebook!
+
+Dear Tuckie,                                                                     2024 Case Writers
+Welcome to the 2024 Casebook! We, the Consulting Club Co-Chairs, have          AJ Kumar T’24
+put together this collection of advice, recommendations, and cases to assist   Aditya Kumar T’25
+you as you prepare for your consulting interviews. Before you dive in, a few   Akash Pattanayak T’25
+words on what is in the book:                                                  Anam Aziz Sethi T’25
+ 5 new cases from the T’24s and T’25s, a refreshed old favorite, and 6        Apeksha Atal T’25
+  sponsored cases from firms and specialist case writers                       Becca Pyeon T’25
+                                                                               Ben Marshall T’24
+ Recruiting advice, fit preparation guidance, and a comprehensive index of    Charles Hill T’25
+  all the best resources from across case books
+                                                                               Jisue Choi T’25
+This book is not intended to have every case you will ever need for your       Megan Woody T’24
+preparation, but rather to provide some unique, learning-oriented cases and    Priya Ochani T’25
+opportunities for firm-specific practice.                                      Rohan Lohia T’25
+                                                                               Tout Lin T’25
+We hope you find it useful and valuable!
+                                                                               Will Seex T’24
+Abhinav Chhabra, Claire von Loesecke, Rohini Poptani, Tom Fontana, and
+Will Seex (T’24 Co-Chairs)
+                                                                                       Editor
+Alan Lu, Berk Atillasoy, Joanna Mulvey, Mayur Deshpande, and Rohan             Will Seex T’24
+Lohia (T’25 Co-Chairs)
+
+
+                                                                                                       3
+Contents | All Sections
+
+                               Contents        Page
+
+What Every Aspiring Consultant Needs to Know    6
+
+Preparing For Fit Interviews                    13
+
+Casing Concepts                                 17
+
+Case Library                                    21
+
+
+
+
+                                                      4
+Contents | Case List
+
+              Case                       Industry                     Case Type      Page
+
+Aftermarket Auto Parts (LEK)   Automotive                   Growth Strategy           22
+
+Craft Co (EY-Parthenon)        Retail & CPG                 Growth Strategy           28
+
+Hanover Health                 Healthcare                   Mergers & Acquisitions    39
+
+Kitchen Co (Innosight)         Retail & CPG                 Growth Strategy           52
+
+Luxury Landscaping (IGS)       Engineering & Construction   Mergers & Acquisitions    63
+
+Nutters of Savile Row          Retail & CPG                 Operations                72
+
+OldSchool                      Government & Public Sector   Profitability             84
+
+Pediatric Hearing Aids         Healthcare                   Profitability             94
+
+PowerStride Sportswear         Retail & CPG                 Growth Strategy          103
+
+Snow Big Deal                  Transportation & Logistics   Opportunity Assessment   111
+
+SwitchDeck Motors              Automotive                   Market Entry             122
+
+Tuck Air II                    Airline                      Opportunity Assessment   132
+
+
+
+                                                                                            5
+What Every Aspiring Consultant
+       Needs to Know
+Casing is a skill that takes time and practice to master
+
+Casing Principle #1: Recognize that mastering casing takes time; it's a
+marathon, not a sprint.
+ The case interview is an exercise in structured problem-solving, a skill that is core to
+  the role of a consultant
+ Therefore, for most consulting firms, a strong case interview performance is a
+  prerequisite to being considered for an offer
+ For nearly all aspiring consultants, building proficient structured problem-solving skills
+  takes time (i.e. months not weeks: its a marathon, not a sprint)
+
+In which month did you start your case prep?
+
+    Summer            4%
+  September                                                33%
+     October                                                                           54%
+  November            4%
+  December            4%
+
+                                                                                               7
+Successful preparation will vary across candidates
+
+Casing Principle #2: Don't get caught up in comparing yourself to others; focus
+on your own progress.
+ Just how long preparation takes, as well as the ‘number of cases needed’ to succeed,
+  will vary widely across candidates
+ Each individual working to develop this skill has his or her own set of natural strengths
+  (that should be leveraged) and development areas (that should be addressed
+  throughout the preparation process)
+ Candidates are encouraged to ‘run their own race’, and avoid comparing themselves
+  based on arbitrary metrics, such as ‘number of cases completed’
+
+
+
+What is the best advice you received during the recruitment process?
+“Keep blinders on! Run your own race and try not to compare yourself to
+others.”
+
+
+
+                                                                                              8
+Ultimately, the best candidates find their own style
+
+Casing Principle #3: Find what works best for you
+ There are a wide variety of resources available to help you with your preparation
+  journey – try many of them, focus on those that are the most helpful and best suited to
+  your learning preferences
+ Likewise, there are many ways to case successfully. Try out different ways to
+  structure, brainstorm, set up your paper (and so on…) until you find an approach that
+  you are comfortable with
+
+                                   Understand casing best                         Improve through
+       Consume the news
+                                          practice                                 individual drills
+•   Wall Street Journal        •   CraftingCases: Case Interview        •   Crafting Cases: The Definitive Guide to
+•   The Economist                  Fundamentals (Free Course)               RocketBlocks
+
+•   Financial Times            •   CraftingCases: Mock Case Interview   •   Math Drills
+                                   Examples                             •   RocketBlocks
+•   Morning Brew
+                               •   How to Get a Job in Consulting       •   Case Coach
+•   The Journal
+                               •   Case Interviews for Beginners        •   Case books
+•   The Best One Yet (TBOY)
+                               •   Case in Point
+•   Plain English
+                               •   Case Interview Secrets
+•   Business Casual
+                               •   Strategy Simplified Podcast
+•   Firm Thought Leadership
+                               •   The Case Interview Podcast
+
+
+
+
+                                                                                                                      9
+While there are some great cases in other books…
+
+                 Industry                                     Sample Cases
+Airline                      Wildcat Wings - Kellogg (2022)
+Entertainment                Board Game Co - Duke (2016)
+Retail                       Kellogg Klogs - Kellogg (2022)
+Hotel                        Zenith Hotels - Wharton (2009)
+Industrial Goods             Alkaline Ash - Columbia (2017)
+Media                        Winter Olympics Bidding - Kellogg (2022)
+Non-Profit                   Kellogg in India - Kellogg (2022)
+Private Equity               Fighting Phillies - Wharton (2017)
+Technology / Telecom         Digibooks Inc - Kellogg (2022)
+
+
+                  Topic                                       Sample Cases
+Profitability                Orrington Office Supplies - Kellogg (2022)
+New product / market entry   Portkey Inc - Kellogg (2022)
+Cost reduction               Money Bank Call Center - Kellogg (2022)
+M&A                          Zoo Co - Kellogg (2022)
+Growth Strategy              Defecation Nation - Duke (2015)
+Wildcard                     Dinosaur - Sloan (2019)
+
+
+
+                                                                             10
+…As well as some excellent additional resources…
+
+ In the spirit of sharing the very best resources for your preparation, listed below are
+  some outstanding offerings from other case books
+
+                  Resource                            Case Book Recommendation
+
+Case Math and Formulae            Booth; Stern
+
+Case Sequence Recommendations     Kellogg
+
+Casing Best Practice              Booth; Kellogg
+
+Common Mistakes                   Booth; Haas
+
+Firm Briefs                       Booth; Columbia; Haas
+
+Fit Preparation                   Booth; Columbia; Kellogg; Haas
+
+Industry Primers                  Booth; Darden; Fuqua; Kellogg; Stern
+
+Interview Day Tips                Booth
+
+Office Guide                      Booth
+
+Sample Frameworks                 Booth
+
+
+
+                                                                                            11
+…Here is how you can best use this book to prepare!
+ Dartmouth is just one of two colleges in the country to own its own ski resort, so it is only appropriate
+  that we use trail symbols to denote case difficulty levels.
+
+
+
+
+           Easy                     Intermediate                        Difficult                   Expert Only
+
+      First few cases            Before 2nd Years Leave         Until the end of the year            Early January
+• Do your first case with      • Run through intermediate • Time to case with other        • Focus on reviewing your
+  your mentor as soon as         cases with 2nd years,          first years.                 past cases and building
+  you finish the curriculum.     building experience across • Master difficult cases and     confidence by nailing
+  Do not delay starting          a range of case types. Try                                  intermediate cases.
+                                                                start feeding in expert
+  casing.                        your first difficult case.     only pressure cases that • Try a sponsored case
+• Complete a few easy          • Firms may reach out to         test multiple skills and     from a firm you are
+  cases to build familiarity     case: try not to read into it. require bespoke              interviewing with.
+  with the flow of a case.       These cases are typically      structures.
+                                                                                           • It is critical that you go into
+• Avoid the urge to              not evaluative, just do your • Quality over quantity:       your interviews feeling as
+  memorize structures, it        best!                          carefully review each case   rested and relaxed as
+  won’t help you in the long   • Start fit prep. The most       and learn from it. Take      possible.
+  run!                           common mistake is              breaks to avoid burn-out!
+                                 starting fit too late!
+
+
+                                                                                                                        12
+Preparing for Fit Interviews
+Fit is equally as important as casing, yet many
+candidates delay fit preparation to their detriment
+ How much does fit matter to consulting firms?
+       o    50% case interview performance, 50% fit
+ Your fit is evaluated throughout the recruiting process:
+       o    Coffee chats and networking events
+       o    Cover letters
+       o    Case interviews (personality, attitude, composure)
+       o    Behavioral fit interview questions
+ It is very important to invest in preparing for and demonstrating fit throughout your recruiting
+  journey
+
+
+1      September              2   October               3   November                4   December              5   January
+
+
+ •   Company research /   •   Networking, coffee    •   Networking, coffee      •   Case interview prep   •   Interviews
+     exploration              chats, company            chats, company          •   Fit interview prep
+ •   Narrative prep           events                    events, cover letters
+                          •   Case interview prep   •   Case interview prep
+                          •   Fit interview prep    •   Fit interview prep
+
+
+
+
+                                                                                                                            14
+Here are some common fit questions to prepare for
+                  Personal Insight & Experience                                              Consulting Insight & Problem Solving
+•   Tell me about yourself / Walk me through your resume.                       •   Why are you interested in consulting and this specific company?
+•   Describe a challenging situation or conflict you've faced and how you       •   Describe a time when you had to lead in a difficult situation.
+    handled it.                                                                 •   Are you quantitative? Give me examples.
+•   What is your leadership style / how do you work in a team?                  •   How do you approach a situation in which you have to lead without
+•   Tell me about a time you had to influence or persuade someone.                  authority?
+•   What are your strengths and weaknesses?                                     •   What do you think will be the challenges in transitioning from your prior
+•   How do you handle failure or a time when you didn't achieve your desired        career to consulting?
+    outcome?                                                                    •   Do you have a practice you are interested in working in?
+•   How do you see yourself in 25 years if everything goes well in your life?   •   Which other companies are you interviewing with?
+•   What do you do outside of work for fun?                                     •   Tell me about a time when you had to think creatively about a solution to a
+•   How would your friends describe you?                                            problem.
+•   Describe to me the best and worst day of your life.                         •   If you were to get the job, what qualities would make you a good
+                                                                                    consultant?
+•   What is one thing you want me to know that we haven’t discussed and that
+    is not on your resume?                                                      •   At the end of this process, you get offers from X, Y, and Z firms – how do
+                                                                                    you think about making that decision?
+•   Tell me about your previous work at X.
+                                                                                •   How would you approach a situation where you disagreed with a decision
+•   What are 3 things you’d like me to remember about you from this
+                                                                                    that was made?
+    interview?
+                                                                                •   Tell me about a time you encountered a difficult situation with another team
+•   Tell me about a time when you had to quickly learn something new outside
+                                                                                    member or client and the outcome.
+    of your expertise.
+                                                                                •   Describe a time when you worked under a tight deadline.
+•   How do you manage stress in high-pressure situations?
+                                                                                •   How do you ensure quality in your work while managing multiple tasks?
+•   Can you give an example of a time you received constructive criticism?
+                                                                                •   Share an instance where you had to assimilate into a new team quickly.
+•   Discuss a moment when you had to make a difficult ethical decision.
+                                                                                •   How do you handle ambiguity in a business setting?
+•   Discuss a time when you took the initiative to address an unspoken issue.
+                                                                                •   Discuss an experience where you had to pivot your strategy based on new
+•   Talk about a time when you had to work with limited resources.
+                                                                                    information.
+•   Describe an instance where you improved a process.
+•   Can you describe a situation where you took a risk, and it paid off?
+
+
+
+
+                                                                                                                                                                15
+McKinsey has a different approach to evaluating fit, so
+your approach should be different too
+
+ During the McKinsey Personal Experience Interview (PEI), you will discuss just one
+  story in detail. The story will relate to one of four behavioural areas.
+
+       Preparing your PEI                                               Best Practice
+ Begin with a Headline to set the stage: Summarize        Practice 6 unique stories to allow for depth and
+  the problem and impact, asking, "Does that sound like     breadth across interviews.
+  a story you'd like to hear?"                             Engage in a discussion, not a monologue. Provide a
+ Describe the Situation: Who, What, When, Where,           4-5 min detailed overview, and the interviewer will
+  and the stakes involved. Be specific.                     guide with smart questions
+ Highlight the Problem: Detail the challenge and the      Each story should be specific, structured, and
+  consequences of not addressing it.                        showcase self-awareness.
+ Actions Taken: List the key steps you took to resolve    Demonstrate emotional intelligence: How did others
+  the problem, emphasizing universally applicable           feel? How did you manage reactions? Go into detail.
+  skills.                                                  The PEI topics may change; confirm with your
+ Share the Results: Discuss the outcomes and lasting       recruiter which topics to prepare.
+  changes resulting from your actions.                     Be ready to pivot: If your headline doesn't fit the
+ Conclude with Takeaways: Express what you learned         prompt, your interviewer will guide you.
+  and how it applies to your aspirations in consulting.    Between interview rounds, stories can be the same,
+                                                            but different stories should be used within each
+                                                            round.
+
+
+
+                                                                                                                  16
+Casing Concepts
+You should be aware of the following business concepts
+
+Financial Health
+ Break-even Point – Revenue necessary to cover fixed and variable expenses incurred over the course of a specific
+  time period, often the first few months or year of business operation or new product introduction.
+ CAGR – Compounded Annual Growth Rate – year over year growth over a specified period (usually several years).
+  Note that compounded annual growth compounds, so costs growing at a CAGR of 15% for three years are actually
+  growing by 1.15 x 1.15 x 1.15 or ~1.5X!
+ Gross Profit [and margin] – Revenue minus COGS [divide by revenue for margin]
+ Net Income – Same as profit: total revenue minus all expenses
+ EBITDA – Earnings before interest, taxes, depreciation + amortization – basically the profit before you factor in debt,
+  policy and business-specific context (e.g. age of machinery investments).
+ ROI (Return on investment ) – Revenue generated based on amount of money spent
+
+
+Cost Management
+ Fixed Costs – Costs like facility costs (e.g. factory rent) that don’t grow or shrink in lockstep with production
+ Variable Costs – All costs that vary with production (e.g., labor, raw materials, distribution)
+ COGS (Cost of Goods Sold) – Cost of material + labor
+ SG&A (Selling, General & Administrative Expenses) – “Overhead” – costs that are not directly associated with
+  product manufacturing. Often great target areas for finding cost savings through “synergies”
+ Contribution – Revenue after subtracting variable costs
+
+
+                                                                                                                            18
+You should be aware of the following business concepts
+
+Market Dynamics & Growth
+ Market Share – Business revenue as a percentage of the total market spend on that type of product or service
+ Share of Wallet – A company or product’s share of customer spend
+ GDP (Gross Domestic Product) – The value of all products made in a country – a measure of the size / growth of a
+  country
+ KPI (Key Performance Indicators) – The most important metrics for a business
+ SME / SMB – Small to Medium sized Business or Enterprise
+ Top Line – All revenue from sales
+ Bottom Line – Profit, revenue minus costs
+
+
+Useful figures
+ US Population: ~320M. For estimation, 4M per age.
+      o So, if you’re estimating the population of people over 65, a good way to do that is 80-65 = 15 years * 4M
+        people / year = 60M seniors.
+      o If you’re estimating the driving population, 80-16 = 64 years * 4M people / year = 256M people old enough to
+        drive * assumption around percentage of license holders.
+ World Population: ~8B (Asia makes up ~4.5B of this, Africa ~1.2B)
+
+
+
+
+                                                                                                                       19
+You should also be aware of these key business risks
+M&A Risks:M&A                   Market
+                           Market EntryEntry
+                                         Risks:        Healthcare
+                                                    Healthcare      / R&D
+                                                                / R&D                    Other Risks:
+                                                                               Other Common
+• Culture Shock            • Competitive            • Legislation /            • Data Quality /
+• Key Talent Retention       Response                 regulation                 Assumptions
+  Headline Risk /          • Changing prices,       • Reverse Engineering      • Extra Costs / Time
+  Layoffs                    WTP, elasticity of     • Existing IP or Patents     Delays
+• Anti-Trust Legislation     demand                 • Threat of                • Third-Party Risk
+• Learning Curve           • Changing Market          newer/better             • Labor Strikes /
+  (outside of core           Demand & consumer        technology or drugs        Unions
+  competency)                trends                                            • Economic Downturn
+                           • CAPEX = Debt, Sunk                                • Pandemic
+                             Costs                                             • Political Instability
+                                                                               • Language Barriers
+
+Mitigating Solutions:      Mitigating Solutions:    Mitigating Solutions:      Mitigating Solutions:
+• Target Due Diligence     • Deep market analysis   • Update on R&D            • Sensitivity Analysis to
+• Change Management          & competition due        progress &                 ensure we can meet
+  Strategy & Integration     diligence                implementation             results
+  Training                 • Find attractive          timeline                 • Negotiate with
+                             financing options:     • Seek Patent & IP           suppliers and
+                             lenders / banks          Protection                 distributors
+                                                    • Deep market analysis     • Customer Surveys
+                                                      & competition due
+                                                      diligence
+
+                                                                                                      20
+Case Library
+Aftermarket Auto Parts
+
+               Delivery style                                Interviewee-led
+
+
+ Concepts & Skills Tested                Industry                      Case Type
+Market share                    Automotive                    Growth strategy
+Creativity
+
+
+Fit question
+Tell me about a time when you had to quickly learn something new outside of your
+expertise.
+
+
+Nugget of wisdom
+Emphasize authenticity in both your fit and case preparation, as it enhances natural
+delivery and helps interviewers envision working with you.
+Aftermarket Auto Parts
+
+Case Prompt
+• Our client, KLE Capital, is evaluating the acquisition of company ABC, a leading branded manufacturer of high-
+  performance automotive aftermarket engine air filters, which prevent abrasive particulate matter from entering an
+  engine’s cylinders. All internal combustion engines require some form of an air filter. ABC’s product improves a
+  vehicle’s performance from baseline and lasts upwards of 5 times longer than standard air filters.
+• ABC’s primary sales channels include large retail auto parts stores (e.g., AutoZone, Napa, etc.) warehouse/club stores
+  (e.g., Walmart, Costco), auto repair shops, and e-commerce (e.g., Amazon).
+• While ABC primarily serves the do-it-yourself (DIY) channel, it also has a small presence in the do-it-for-me (DIFM)
+  channel (where auto repair shops installs the product for the consumer).
+• KLE Capital is interested in assessing opportunities to grow ABC post-acquisition.
+
+
+Interviewer guide
+• Case structure:                                            • Kindly provided by LEK
+  o Cold open                                                • Automotive case
+  o Q1: Brainstorm                                           • Growth strategy
+  o Q2
+  o Q3: Recommendation
+
+
+
+
+                                                                                                                         23
+Aftermarket Auto Parts | Case Prompt
+
+Case Prompt
+• Our client, KLE Capital, is evaluating the acquisition of company ABC, a leading branded manufacturer of high-
+  performance automotive aftermarket engine air filters, which prevent abrasive particulate matter from entering an
+  engine’s cylinders. All internal combustion engines require some form of an air filter. ABC’s product improves a
+  vehicle’s performance from baseline and lasts upwards of 5 times longer than standard air filters.
+• ABC’s primary sales channels include large retail auto parts stores (e.g., AutoZone, Napa, etc.) warehouse/club stores
+  (e.g., Walmart, Costco), auto repair shops, and e-commerce (e.g., Amazon).
+• While ABC primarily serves the do-it-yourself (DIY) channel, it also has a small presence in the do-it-for-me (DIFM)
+  channel (where auto repair shops installs the product for the consumer).
+• KLE Capital is interested in assessing opportunities to grow ABC post-acquisition.
+
+
+Clarifying information
+Geography                                                    • 100% of ABC’s sales are aftermarket sales (they
+• 90% of ABC’s sales are in North America                      replace a part that comes installed on a vehicle at
+                                                               the initial vehicle sale)
+Business
+• ABC has an excellent reputation for quality, a
+  strong customer following, and a high awareness
+  among performance-minded drivers
+
+
+
+
+                                                                                                                         24
+Aftermarket Auto Parts | Part 1
+
+Brainstorm potential growth avenues
+• What growth opportunities could ABC pursue?
+
+• International expansion: the company’s sales are concentrated in North America and expanding into
+  other countries may represent an opportunity to increase revenues
+• Product line expansion: the company’s sales are concentrated in one main product. There may be
+  adjacent product lines that the company could enter, leveraging its strong reputation for quality
+• Expanding into the DIFM channel: given the company’s strong position among DIY’ers, the
+  company could try to enter the DIFM channel
+• Expansion into other vehicle types: the company currently focuses on the automotive space. There
+  could be opportunities to expand into other vehicle types (motorcycles, boats, ATVs, etc.)
+• Expanding into OEM sales: Since 100% of the company’s sales are aftermarket sales, they could
+  potentially approach car manufacturers to have ABC parts installed at the factory
+• Price increases: there may be opportunities to selectively increase the prices of the company’s
+  products. This is an acceptable answer, but the candidate would need to give some rationale for
+  selecting this option. For instance, ABC may be pricing its low volume products too low
+• Increase marketing / sales spend: this is acceptable but press the candidate to explain where this
+  spend would be directed. For instance, the company is a very strong player (with high awareness)
+  within its core North American air filter segment, so increasing S&M spend may not be effective
+
+
+
+
+                                                                                                  25
+Aftermarket Auto Parts | Part 2
+
+Calculate potential market share
+• Our client is considering increasing ABC’s focus on the DIFM channel.
+• Currently, ABC sells to 300 auto shops with an average order value (AOV) of $10,000 per year.
+• The DIFM channel was $500M in 2022 and is expected to grow at 3% p.a. over the next 3 years.
+• If ABC enters the space more aggressively, it believes it will be able to reach 5,000 shops in 3 years,
+  but with AOV at $5,000 per year.
+• What share of the market will ABC have in 3 years?
+
+                              3
+Market: $500𝑀𝑀 ∗ 1 + 0.03         = ~$550𝑀𝑀
+
+
+ABC Revenues: 5,000 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 ∗ $5,000 = $25𝑀𝑀
+
+
+                       $25
+ABC’s Market Share:           = ~4.5%
+                       $550
+
+
+
+
+                                                                                                        26
+Aftermarket Auto Parts | Part 3
+
+Potential team activities
+• What activities would you suggest for the team to test whether these represent attractive
+  opportunities?
+
+  International expansion                                 Product line expansion                               Expand to DIFM
+  •   Things to think about: which countries to           •   Things to think about: what products would       •   Things to think about: what is the market
+      pursue, the size of the opportunity in each             be natural extensions of the company’s               receptivity to a performance product (would
+      country, distribution channels, the                     product lines (from both a manufacturing and         auto repair shops be interested in carrying
+      competitive landscape, consumer interest in             consumer permission-space perspective);              this product, would consumers be interested
+      a performance air filter offering, other                what products are typically purchased                in purchasing this product)
+      structural factors that may help/hurt                   alongside air filters; what products have        •   Next step: Conduct desktop research to
+      expanding into a given country                          standard and performance offerings, what is          determine what types of engine air filters are
+  •   Next step: Conduct desktop research to                  the size of the market of the identified             currently sold by auto repair shops (if
+      narrow the research to a set of manageable              products, where are they sold, what is the           performance products already exist out in the
+      countries and understand if performance air             competitive landscape                                market, this would be a positive signal);
+      filters are sold in the identified countries        •   Next step: Conduct desktop research to               conduct interviews with executives from the
+  •   Next step: Interview local industry experts to          determine what other products engine air             DIFM channel to understand how attractive
+      understand topics such as consumer interest             filter competitors also sell                         they would find the ability to sell ABC’s parts
+      in the offering, where air filters are installed,   •   Next step: Interview industry experts to
+      current competitive landscape, etc.                     determine the most logical product
+  •   Next step: Conduct a consumer survey in                 expansion adjacencies; conduct consumer
+      each identified country to understand                   interviews or a survey to determine what
+      consumer receptivity to a performance air               aftermarket parts are most frequently
+      filter offering                                         purchased alongside engine air filters as well
+                                                              as consumers’ interest in a performance
+                                                              offering for the identified products
+
+
+
+
+                                                                                                                                                                     27
+Craft Co
+
+               Delivery style                              Interviewee-led
+
+
+ Concepts & Skills Tested                Industry                    Case Type
+Creativity                      Retail & CPG                Growth strategy
+                                                            Profitability
+
+
+Fit question
+Tell me about a time where you had to influence or persuade someone.
+
+
+Nugget of wisdom
+Use mock interviews as learning opportunities, making sure not to repeat the same
+mistake.
+Craft Co
+
+Case Prompt
+• Our client, Craft Co., is a subscription service that will send customers kits for adult crafting and DIY projects (e.g.,
+  watercolor painting, woodworking)
+• Customers pay a monthly fee based on the number of kits they would like; Craft Co. sends them a box with craft
+  supplies
+• Craft Co. had grown its customer base rapidly during the COVID-19 pandemic, but has seen a dip in recent quarters as
+  new competitors have entered the field
+• Management is looking to assess the business’s current performance and identify whether it can grow profitably and
+  regain market share in the next ~3-5 years
+• Our client would like our help in answering two questions: (i) how has Craft Co. performed recently? and (ii) what
+  strategies can it implement to grow profitability and increase share?
+
+
+Interviewer guide
+• Case structure:                                               •   Kindly provided by EY-Parthenon
+  o Framework                                                   •   Retail & CPG case
+  o Q1 + Exhibit A                                              •   Profitability
+  o Q2 Brainstorm                                               •   Competitive analysis
+  o Q3 + Exhibit A                                              •   Interviewer led
+  o Q4 + Exhibit B
+  o Q5 Brainstorm
+
+
+                                                                                                                              29
+Craft Co | Case Prompt
+
+Case Prompt
+• Our client, Craft Co., is a subscription service that will send customers kits for adult crafting and DIY projects (e.g.,
+  watercolor painting, woodworking)
+• Customers pay a monthly fee based on the number of kits they would like; Craft Co. sends them a box with craft
+  supplies
+• Craft Co. had grown its customer base rapidly during the COVID-19 pandemic, but has seen a dip in recent quarters as
+  new competitors have entered the field
+• Management is looking to assess the business’s current performance and identify whether it can grow profitably and
+  regain market share in the next ~3-5 years
+• Our client would like our help in answering two questions: (i) how has Craft Co. performed recently? and (ii) what
+  strategies can it implement to grow profitability and increase share?
+
+
+Clarifying information
+• Craft Co’s products are typically marketed towards young adults ages 18-35
+• Craft Co. was seen as the first major player in this market, but new competitors began to enter by the end of 2020
+• There is no specific ROI or objective that our client is aiming to achieve related to this analysis, but they are most
+  interested in short-term strategies in the next 1-3 years as opposed to longer-term opportunities
+• Craft Co. is currently focused solely on the U.S. market
+Allow the candidate to walk you through their framework, noting that we do not have information on product
+opportunities, guiding them to the profitability exercise
+
+
+                                                                                                                              30
+Craft Co | Example Structure
+
+    Profitability                  Market                  Products                   Execution
+
+• Revenue                    • Market size and        • Pipeline?                 • Increase growth
+  o Subscription fee           market share             o R&D and                   o Marketing
+  o Number of                  o Growth?                  development                 spend?
+    subscribers                  Trajectory?          • New lines?                • Reduce costs
+• Cost                       • Competitor               o Children’s kits?          o Customer
+  o Variable costs             analysis                 o Cooking kits?               acquisition cost
+     COGS                   • Trends                                               o Streamline
+  o Fixed costs                                                                       product
+     Marketing                                                                       components
+
+
+Behind the Framework
+Must-haves:                        Nice-to-haves:                    Differentiators: thinking about
+• A profitability analysis         • Product – not a consideration   how to execute any profitability
+• A market analysis                  later in the case               growth plan
+
+
+
+
+                                                                                                         31
+Craft Co | Part 1
+
+Calculate current profitability
+• Based on Exhibit A, how would you estimate Craft Co.’s monthly profitability in Q4 2020?
+
+                                                                 Provide Exhibit A
+
+                                                                                       2                            1 kit   2 kits   Total
+•       Craft Co. is operationally unprofitable, largely
+        driven by marketing costs                                                          Revenue
+•       Individuals purchasing 1 kit per month are                                         Customers (k)             45       30      75
+        breaking even and do not need to be calculated                                     Price                    $50      $80     n/a
+        to find profit                                                                     Months per quarter                 3
+
+    1                            Profitability                                             Total revenue ($m)        $7       $7     $14
+                                                                                           Costs
+                Revenue                                       Cost
+                                                                                           Variable costs           $50      $60     n/a
+                          Monthly                                                          Months per quarter                 3
+    # of sub-                                    # of sub-                 Cost per
+    scribers
+                            sub-
+                                                 scribers                 subscriber       Total variable costs
+                          scription                                                                                  $7       $5     $12
+                                                                                           ($m)
+          (Segmented by usage)                                                             Total fixed costs ($m)   $2 + $8 = $10    $10
+                                                             Fixed Cost                    Profit                                    ($8)
+
+
+
+
+                                                                                                                                             32
+Craft Co | Part 2
+
+Brainstorm profitability
+• How can Craft Co become more profitable?
+
+
+
+• Brainstorm ideas should include:
+
+                 Revenue Growth                                   Cost Control
+
+  •   Increase revenue from existing customers   •   Analyze marketing mix and effectiveness to
+      (share of wallet)                              reduce spending without losing subscribers
+  •   Enter new geographic markets
+  •   Expand into new channels
+
+
+
+
+                                                                                                  33
+Craft Co | Part 3
+
+Return to the Exhibit
+• Going back to Exhibit A, how would you describe Craft Co’s pattern of subscriber growth?
+
+                                          Provide Exhibit A
+
+
+• Subscriber levels have seen a steady decline in 2020, even though interest in crafts likely increased
+  due to the pandemic
+• Earlier growth could be due to strong investment in marketing and lack of initial competitors and/or
+  pandemic-related demand increase across the market
+
+
+
+
+                                                                                                          34
+Craft Co | Part 4
+
+Competitor analysis
+• Based on Exhibit B, what do you notice about Craft Co.’s performance?
+
+                                           Provide Exhibit B
+
+
+• Craft Co. outperforms competitors on price and quality, but underperforms on delivery and
+  convenience
+• Exhibit 2 in context with profitability analysis suggests Craft Co. has likely lost customers to higher-
+  priced competitors positioned as “premium”, therefore there may be opportunity to increase price to
+  restore profitability since Craft Co. is perceived as high-quality
+
+
+
+
+                                                                                                             35
+Craft Co | Part 5
+
+Stopping the decline
+• How might Craft Co stabilize its subscriber decline?
+
+
+
+Stabilization levers
+• Better differentiating its product relative to new entrants
+• Loyalty incentives
+• Acquiring one of its competitors
+
+
+
+
+                                                                36
+Craft Co | Exhibit A
+                                                     Average number of monthly subscribers, in
+    Cost and revenue information for Craft Co.                 thousands, 2019-2020
+
+
+           Revenue for Craft Co. (Q4 2020)
+                                     Percentage of
+                         Price
+                                      subscribers
+ 1 kit per month          $50            60%
+ 2 kits per month           $80          40%
+
+            Costs for Craft Co. (Q4 2020)
+                                     Percentage of
+                          Cost
+                                      subscribers
+ 1 kits per month          $50            60%
+ 2 kits per month         $60            40%
+ Operating costs per quarter (3
+                                         $2m
+ months)
+ Marketing costs per quarter (3
+                                         $8m
+ months)
+
+
+
+Source: Internal company data
+
+
+
+                                                                                                 37
+Craft Co | Exhibit B
+                                    Craft Co. performance against service selection factors
+                                                     Consumer survey data
+
+
+                                                                Perception of performance on key factors (1-5, 5 = best)
+ Craft kit selection factors       Importance in decision
+                                                                          Craft Co.             Average of all others
+
+Price                                                                        4.3                         2.4
+
+Delivery speed                                                               2.5                         3.8
+
+Craft kit quality                                                            3.7                         3.2
+
+Time required for craft                                                      2.3                         3.1
+
+Variety of craft types                                                       3.4                         3.6
+
+Variety of experience levels
+                                                                             3.1                         3.0
+required
+
+
+ Source: Survey of recent craft kit purchases                                                                         …
+                                                                                                               High       Low
+
+
+
+
+                                                                                                                                38
+                                                        Authors: AJ Kumar T’24, Ben Marshall
+Hanover Health                                          T’24, Megan Woody T’24
+
+
+
+
+                Delivery style                                  Interviewee-led
+
+
+ Concepts & Skills Tested                 Industry                            Case Type
+Market sizing                    Healthcare                      Mergers & acquisitions
+Exhibit interpretation                                           Opportunity assessment
+
+
+Fit question
+How would you approach a situation where you disagreed with a decision that was made?
+
+
+Nugget of wisdom
+Spend more time on fit preparation and practice articulating your stories clearly and
+concisely.
+                                                                 Authors: AJ Kumar T’24, Ben Marshall
+Hanover Health                                                   T’24, Megan Woody T’24
+
+
+
+Case Prompt
+• Your client, a private equity fund, is evaluating the potential acquisition of Hanover Health. HH
+  operates a series of urgent care clinics throughout the US and has grown quickly over the past 5
+  years.
+• Your client has little experience in the industry and needs to quickly evaluate the opportunity. Your
+  client would like to grow EBITDA each year during the investment horizon with minimal capital
+  expenditure.
+• How should you evaluate the opportunity? Should the fund invest in HH?
+
+• Note: candidate is being asked for a yes/no answer rather than a valuation of HH
+
+Interviewer guide
+• Case structure:                                    o Recommendation
+  o Framework
+  o Part 1: Profitability Analysis                   • Case Type: Healthcare PE Investment
+       o Exhibit A: Revenue & EBITDA                 • Skills tested: Profitability, Competitive Analysis
+       o Exhibit B: Costs by Segment                 • Interviewee led; Parts 1 and 2 are modular and
+  o Part 2: Market Analysis                            independent so interviewee can begin with either
+       o Exhibit C: Market Size by Segment           • Bain-style case
+       o Exhibit D: Customer Survey
+
+
+
+                                                                                                          40
+Hanover Health | Case Prompt
+
+Case Prompt
+• Your client, a private equity fund, is evaluating the potential acquisition of Hanover Health. HH
+  operates a series of urgent care clinics throughout the US and has grown quickly over the past 5
+  years.
+• Your client has little experience in the industry and needs to quickly evaluate the opportunity. Your
+  client would like to grow EBITDA each year during the investment horizon with minimal capital
+  expenditure.
+• How should you evaluate the opportunity? Should the fund invest in HH?
+
+• Note: candidate is being asked for a yes/no answer rather than a valuation of HH
+
+Clarifying information
+• Geography: HH operates throughout the US                 operates a nurse-staffing/talent management
+• Business: HH clinics only services customers             portfolio company
+  with healthcare (steer away from insurance           •   Competitive Landscape: There are many
+  issues) and offers 3 out-patient procedures:             players in the very fragmented out-patient urgent
+  vaccinations, physicals, and x-rays                      care segment in the US (meaning good growth
+• Objective: EBITDA growth above 10%                       opportunities)
+• Time: The client is interested in a standard exit in •   Industry: Primary profit drivers for out-patient
+  3-5 years                                                urgent care are cost-effectiveness and time
+• PE Client: no direct healthcare experience but           efficiency
+
+                                                                                                           41
+Hanover Health | Example Structure
+                                     Out-Patient Urgent                          Strategic
+     HH Profitability
+                                       Care Market                             Considerations
+• Revenue                         • Size/growth of the market             • Portfolio Synergies
+  o # of visits per procedure     • Patient needs/preferences               o Cost decrease (nurse-
+  o $ per procedure                 o In vs. out-patient                      staffing)
+• Cost                            • Competitors                           • Risks
+  o Variable: Medical staff,        o Procedures offered                    o Lack of client healthcare
+    single-use equipment          • Substitutes                               experience
+  o Fixed: SG&A, equipment          o Hospitals
+• Time spent per procedure          o Mobile health clinics
+
+
+
+Behind the Framework
+Must-haves:                     Nice-to-haves:                        from clarifying questions (e.g. 3
+• Profitability Analysis        • Time spent per procedure            procedures: vaccinations,
+     • Revenue (P x Q)          • Market substitutes                  physicals, and x-rays; # and $ of
+     • Fixed/variable costs     • Portfolio synergies                 procedures, costs of doctor/nurse
+• Market Analysis                                                     salaries, PE fund hurdle rate)
+     • Size/growth              Differentiators: Excellent
+     • Competitors              candidates will utilize information
+
+
+                                                                                                      42
+Hanover Health | Part 1: Profitability Analysis—Revenue
+
+Historical revenue and EBITDA figures for HH from 2019 to 2023
+
+
+                              Provide Exhibit A: Revenue & EBITDA
+
+• Candidate should quickly communicate what they see and note trends among revenue and EBITDA
+• Candidates should recognize the client objective is strong EBITDA and should recognize a fall in
+  EBITDA margin in 2023 and should hypothesize what happened
+• EBITDA margin falls from 30% to 20% in 2023
+
+
+• Key Takeaways: Revenue growth is strong (and accelerating) as mentioned in case prompt but
+  falling profit margin in 2023 is concerning and may lead to a “no” recommendation; investigation of
+  costs is needed
+• Differentiators:
+       • Strong candidates will take initiative to identify that EBITDA margin falls from historical 30% to
+         20% in 2023
+       • If candidate has seen market data, they are able to calculate/characterize HH market share
+         (.1%) and should remark on opportunity for continued growth over investment horizon
+
+
+
+
+                                                                                                              43
+Hanover Health | Part 1: Profitability Analysis—Costs
+
+Historical costs by procedure from 2021 to 2023 and breakdown of x-ray costs
+• Interviewer should ask what the EBITDA margin would be in 2023 without x-ray fixed costs
+
+                             Provide Exhibit B: Costs by Procedure
+
+• Additional information: inform candidate that HH began offering x-rays in 2023 and procured
+  equipment/trained staff in 2023.
+• Clarifying Information:
+      • All costs for HH are displayed
+• Candidate should identify left side as costs over time by procedure in the left graph and the pie chart
+  on the right as a breakdown for x-ray costs
+• Candidate should categorize x-ray costs as fixed (equipment purchase and one-time training) and
+  variable (nurse salaries)
+
+• Key Takeaways: Candidates should recognize that the costs of offering x-rays will be smaller in the
+  future because the fixed costs were absorbed in 2023. Candidate should recognize x-ray variable
+  costs going forward will
+• Differentiators: Candidates will identify that EBITDA margin will rise in 2024 because x-rays have a
+  lower variable cost per procedure than vaccines (30% of costs) and physicals (70% of costs)
+
+
+
+
+                                                                                                            44
+Hanover Health | Part 2: Market Analysis—Size
+
+US Healthcare market by segment, 2023
+• Interviewer should guide candidate towards calculating size of Urgent Care Out-Patient segment
+
+                         Provide Exhibit C: Market Size by Segment
+
+• Additional information: When asked, the US healthcare market in 2023 was $4.75 Trillion
+• Clarifying Information: If asked, there are hundreds of players in a very fragmented out-patient
+  urgent care segment in the US
+• Candidate should identify that the chart breaks down the healthcare market by 3 channels/2 segments
+• Candidate should identify that the relevant segment is Urgent Care Out-Patient
+• Candidate should identify they need the overall market size and seek to calculate the Urgent Care
+  Out-Patient market size
+
+• Key Takeaways: The Urgent Care Out-Patient market is $190B (4% of $4.75T). The market is very
+  large and there is no need for HH to expand beyond its core segment during the investment horizon.
+  Candidates should not be confused by the segment’s small percentage of the overall market
+• Differentiators:
+      • If candidate has seen revenue data, they are able to calculate/characterize HH market share
+        (.1%) and should remark on opportunity for continued growth over investment horizon
+      • An excellent candidate will also quickly calculate size of the urgent care market ($950B)
+
+
+
+
+                                                                                                       45
+Hanover Health | Part 2: Market Analysis—Competitors
+
+Customer Survey data comparing HH with Providers A and B
+• Interviewer should guide candidate towards brainstorming how HH is performing and why
+
+                              Provide Exhibit D: Customer Survey
+
+• Clarifying Information: A and B are comparable urgent care clinics only offering out-patient services
+• Additional information: HH began offering x-rays in 2023—inform only if beginning with Part 2
+• Candidate should identify the chart displays urgent care out-patient preferences across 7 categories,
+  rank-ordered from most important to least important and compares HH with 2 competitors
+• HH vs. A: worse in quality, speed and consistency but better in range
+• HH vs. B: worse in consistency and range but better in quality and speed
+• Note: Further information on A and B services is unavailable
+
+• Key Takeaways:
+      • HH’s introduction of a new service (x-rays) is affecting performance; HH seems to offer more
+        services than Provider A but less than B, leading to middling performance in quality/speed/range
+      • Candidate should conclude HH is competitive but there are improvement opportunities
+• Differentiators:
+      • Strong candidates will hypothesize HH will improve as they move along the learning curve
+      • Excellent candidates will conclude, holding all else equal, HH can absorb continuing x-ray
+        training in 2024 (5.7) for total costs of 47.5, achieving a CAGR of 12% and meeting hurdle rate
+
+
+
+                                                                                                      46
+Hanover Health | Recommendation
+
+Based on our analysis today, should our client acquire HH?
+• Candidate should conclude “yes”
+• While HH seems to have a lower EBITDA CAGR than the hurdle rate (6% vs. 10%), this is caused by
+  the fixed costs of beginning to offer x-ray services, which HH should continue to offer because of their
+  higher profit margin versus vaccinations and physicals
+• HH is a small but well-growing player in a large, fragmented market segment worth $190B
+• Risks: Expansion of services has led to customer survey issues vs. 2 competitors, which may lead to
+  decreasing revenues/profitability issues
+• Mitigation/Next Steps: HH will learn how to better incorporate x-rays into operations with
+  experience/over time, the PE client may be able to source nurses capable of helping HH learn, and
+  HH could offer more training while still meeting hurdle rate requirements; our firm can assist
+
+• Key Takeaways:
+      • Candidate provides a clear bottom line up front (yes/no) and provide specific support evidence
+      • Candidate provides an informed/supported opinion on the second key issue of
+        continuing/discontinuing x-ray operations
+      • Candidates will briefly discuss a potential risk, mitigation, and next steps
+• Differentiators:
+      • Strong candidates will annotate notes through case and will need 10 seconds or less to prepare
+      • Strong candidates will incorporate brainstorming for potential risks and offer appropriate
+        mitigations
+
+
+                                                                                                        47
+Hanover Health | Exhibit A: Revenue & EBITDA
+
+
+
+
+             2019                   2020   2021   2022   2023
+                                                                CAGR
+Revenue 100                         114    130    150    190     17%
+EBITDA 30                           34.2   39     45     38      6%
+
+
+Note: figures are in US$ millions
+
+
+
+                                                                       48
+Hanover Health | Exhibit B: Costs by Procedure
+
+
+    Vaccinations                    152
+    Physicals
+    X-Rays                          39.9
+
+                          105                           X-Ray Cost Breakdown
+     91
+                          31.5
+    27.3                                   One-Time Training
+                                    93.1                       30%
+                                                                           Equipment
+                                                                     50%
+                                                                           Purchase
+                          73.5
+    63.7                                                       20%
+                                     19         Nurse Salaries
+
+    2021                 2022       2023
+
+
+
+Note: figures are in US$ millions
+
+
+
+                                                                                       49
+Hanover Health | Exhibit C: Market Size by Segment
+
+                                                                       42
+    Out-Patient
+    In-Patient
+
+                                                      28
+
+
+
+
+                          16
+
+                                                                               10
+
+           4
+                                                                                            0
+            Urgent Care                                    Hospitals        Mobile Health Clinics
+
+
+
+
+Note: figures are percentages of US healthcare market in 2023
+
+
+
+                                                                                                    50
+   Hanover Health | Exhibit D: Customer Survey
+
+Most Important
+        5.0           4.7
+                                     4.5            4.4                                                     Provider A
+                                                                4.1         4.0                             Provider B
+          4.0                                                                            3.7                HH
+                                                                                                    3.2
+          3.0
+
+
+          2.0
+
+
+          1.0
+
+
+        0.0
+Not Important       Quality       Speed of      Consistency   Range of   Cleanliness Friendliness   Price
+                                   Service       of Service   Services                  of Staff
+
+
+
+    Note: Survey of urgent care out-patients, end of 2023
+
+
+
+                                                                                                                 51
+Kitchen Co
+
+               Delivery style                               Interviewee-led
+
+
+ Concepts & Skills Tested                Industry                     Case Type
+Accounting                      Retail & CPG                 Growth strategy
+Trends analysis                                              Innovation
+Creativity
+
+
+Fit question
+How do you ensure quality in your work while managing multiple tasks?
+
+
+Nugget of wisdom
+Manage burnout by scheduling breaks and engaging in non-recruiting activities to refresh
+yourself.
+Kitchen Co
+
+Case Prompt
+• We have started to work with a global consumer product company with a diverse portfolio of well-known brands for use
+  both inside and outside the home. Its US brands are typically #1 or #2 in their categories – blenders, toasters, slow
+  cookers, coffee makers, food preservation, irons, fans, clippers – and their international business is small but growing
+  quickly. The company has a lean operating and sales structure, and senior executives believe the company has
+  enjoyed considerable growth and profitability for the past decade.
+• Our client, the CEO, recognizes that seismic change is occurring in the market and that “business as usual” will not
+  sustain the company for long. However, he is not sure that his leadership team shares his concerns. The CEO, Adam,
+  has hired us to help him get his team on-board to pursuing a new strategy for growth and to help them develop that
+  strategy
+• The client is seeking our help to identify and analyze the internal and external forces that could significantly alter the
+  direction of the business over the next 10 years, and to recommend how should Kitchen Co prepare for and act given
+  these changes
+
+
+Interviewer guide
+• Case structure:                                              • Kindly provided by Innosight
+  o Framework                                                  • Growth Strategy
+  o Q1: Exhibit                                                • Case tests whether a candidate can create
+  o Q2: Exhibit                                                  insights from information while remaining
+  o Recommendation                                               structured.
+                                                               • Interviewee led
+
+
+                                                                                                                           53
+Kitchen Co | Case Prompt
+
+Case Prompt
+• We have started to work with a global consumer product company with a diverse portfolio of well-known brands for use
+  both inside and outside the home. Its US brands are typically #1 or #2 in their categories – blenders, toasters, slow
+  cookers, coffee makers, food preservation, irons, fans, clippers – and their international business is small but growing
+  quickly. The company has a lean operating and sales structure, and senior executives believe the company has
+  enjoyed considerable growth and profitability for the past decade.
+• Our client, the CEO, recognizes that seismic change is occurring in the market and that “business as usual” will not
+  sustain the company for long. However, he is not sure that his leadership team shares his concerns. The CEO, Adam,
+  has hired us to help him get his team on-board to pursuing a new strategy for growth and to help them develop that
+  strategy
+• The client is seeking our help to identify and analyze the internal and external forces that could significantly alter the
+  direction of the business over the next 10 years, and to recommend how should Kitchen Co prepare for and act given
+  these changes
+
+
+Clarifying information
+10-year Aspirations                                • Additional information is shared at relevant points
+• Finances: $3.5B total revenue and 35% gross        in the case
+  margin
+• Market position: Global leader in home solutions
+• Business Model: Shift to more
+  durable/consumable versus just durable (current)
+
+
+                                                                                                                           54
+Kitchen Co | Example Structure
+
+                Hypothesis: Need to change strategy in order to grow
+
+   Current Business              Market Dynamics              Future Aspirations
+
+• Financial Results           • Trends                     • Finances
+• US v International          • Consumer behavior          • Market position
+• Current business model      • Competition                • Business model
+
+
+
+
+Behind the Framework
+Must-haves:                 Nice-to-haves:             Differentiators: candidate must
+• Current Business          • Future aspirations       drive the direction of the case,
+• Market dynamics                                      demonstrating comfort with
+                                                       ambiguity and creative thinking
+
+
+
+
+                                                                                          55
+Kitchen Co | Part 1
+
+Current Business
+• If the candidate asks for information about Kitchen Co’s financial performance, share Exhibit A
+
+                                           Provide Exhibit A
+
+• Give the candidate some time to study the exhibit and then ask for reactions
+• Additional information to be shared at interviewer’s discretion:
+
+                CVP                          Profit Formula               Key Resources / Processes
+
+  •   Mid-tier electric appliances   •   Sell to retailers who then   •     Small administrative
+  •   Trusted brand names you            sell to consumers                  headcount
+      grew up with                   •   Not able to control price    •     Strong sales support
+  •   Sold through mass retailers        that consumer’s pay          •     Able to move quickly in
+      (Walmart, Target)              •   Relatively low margin              response to customer
+  •   No marketing beyond                compared with premium              (retailer) requests
+      packaging and retailer             category brands
+      promotions
+
+
+
+
+                                                                                                      56
+Kitchen Co | Part 1 continued
+
+Current Business
+Examples of what you should hear
+•   Business is growing but not as much as expected given statement about “considerable growth”
+•   US is driving overall revenue and margin numbers, but revenue is flat and margin growth is slow
+•   International is small but seems to be the primary driver of both overall revenue and margin growth
+
+
+Examples of what you should not hear
+•   Overall, growth looks good – misses that US is flat
+•   That’s interesting, thanks – no synthesis
+•   Revenue in 20XX seems to be [sum of US and international] – no synthesis
+
+
+
+
+                                                                                                          57
+Kitchen Co | Part 2
+
+Market Dynamics
+• If the candidate asks for information about trends or consumer behavior, ask for a hypothesis and
+  then share exhibit B
+
+                                                     Provide Exhibit B
+
+• Give the candidate some time to study the exhibit and then ask for reactions
+• Additional information to be shared at interviewer’s discretion:
+
+                              Past                                                            Today
+  •   Market could be broken into three tiers: low-end, mid-tier,   •   Market can be broken down into 4 tiers: low-end, mid-tier,
+      and premium                                                       premium mass, and premium luxury
+  •   Distribution channels for low-end and mid-tier and the        •   No changes to competition or business model in low-end
+      same (mass retailers)                                             or mid-tier
+  •   Premium brands sold through speciality stores (e.g.           •   Premium mass brands advertise heavily, often using
+      Williams Sonoma)                                                  infomercials, and are sold in both mass and specialty
+  •   Client was questioned and unchallenged in the mid-tier            stores
+                                                                    •   Premium brands have moved upmarket, becoming
+                                                                        “premium luxury,” and promise superior functionality and
+                                                                        award-winning design (i.e. trophies on the counter)
+
+
+
+
+                                                                                                                                     58
+Kitchen Co | Part 2 continued
+
+Market dynamics
+Examples of what you should hear
+•   Population is aging in developed countries so there may be an opportunity to design simpler, lighter,
+    easier to use products
+•   Middle class in developing markets is growing so potential opportunity to grow business
+    internationally
+•   Urbanization means that people will be living in smaller spaces so potential opportunity to design
+    smaller footprint appliances, but also threat that people will use services to access meals
+•   Online retail is growing wildly but likely to be more mobile users in coming years, potential to
+    increase online and mobile presence/sales
+•   Technology is progressing rapidly so need to consider how to keep pace – do it ourselves or partner
+•   Definition of a “traditional home” is changing as more women are working outside of the home, men
+    are becoming the “stay at home parent,” kitchens are becoming status symbols in developed
+    countries while square footage of homes in developing markets are shrinking due to urbanization
+
+
+
+
+                                                                                                         59
+Kitchen Co | Part 3
+
+Recommendations
+• Present your recommendations to the client.
+
+
+• Examples only, candidate does not need to identify any or all of these:
+
+  Current business                  Market Dynamics                   Future Aspirations
+  Need to invest in both US and     US business is getting            Consider changing business
+  international businesses to       squeezed by low-end &             models for existing brands.
+  achieve growth aspirations        premium US competitors.
+                                                                      Partner to develop new
+                                    Need to find a way to             offerings
+                                    differentiate, update become
+                                    relevant
+
+
+
+
+                                                                                                    60
+Kitchen Co | Exhibit A
+
+
+
+
+Note: financial data from 2009 to present year, 2013
+
+
+
+                                                       61
+Kitchen Co | Exhibit B
+
+
+
+
+                         62
+Luxury Landscaping
+
+                Delivery style                                Interviewee-led
+
+
+ Concepts & Skills Tested                 Industry                     Case Type
+Market sizing                    Engineering & Construction   Mergers & Acquisitions
+                                 Financial Services           Growth strategy
+
+
+Fit question
+Discuss a time you took the initiative to address an unspoken issue.
+
+
+Nugget of wisdom
+On interview day, demonstrate executive presence by maintaining a professional yet
+conversational tone and show confidence, even if you make a mistake.
+Luxury Landscaping
+
+Case Prompt
+• Our client, a private equity firm, is considering an investment in a luxury residential landscaping
+  company that focuses on large-scale renovation projects for high-value homes ($2MM+).
+• As part of the development of its growth plan following the acquisition, our client wants to study Los
+  Angeles County to evaluate its appeal as a target for geographic expansion.
+
+
+
+
+Interviewer guide
+• Case structure:                                     • Kindly provided by IGS
+  o Framework                                         • Engineering & Construction
+  o Q1 Market size + Exhibit A                        • Market entry
+  o Q2 Brainstorm                                     • Market sizing and brainstorming
+  o Q2 Brainstorm                                     • Strong candidates can differentiate themselves
+                                                        with creative ideas and an ability to make
+                                                        relevant, realistic assumptions
+                                                      • Interviewer led
+
+
+
+                                                                                                           64
+Luxury Landscaping | Case Prompt
+
+Case Prompt
+• Our client, a private equity firm, is considering an investment in a luxury residential landscaping
+  company that focuses on large-scale renovation projects for high-value homes ($2MM+).
+• As part of the development of its growth plan following the acquisition, our client wants to study Los
+  Angeles County to evaluate its appeal as a target for geographic expansion.
+
+
+
+
+Clarifying information
+• Additional Service Background: The company               the services. Then, let them know frequency is
+  does total landscape renovation projects of              every ~20 years and the price is typically ~10% of
+  residential yards (e.g., installing pools,               the value of the home.
+  replacing/planting foliage, creating plant beds,     •   Demographic Data: Provide the relevant L.A.
+  building/replacing patios, etc.). Property sales can     County data in the exhibit with if requested.
+  sometimes be a prompt for undertaking a project,
+  otherwise it is a significant upgrade investment. •      Competitive Landscape: ~100-200 small
+                                                           players on average undertaking <25 projects per
+• Service Pricing / Frequency: Ask the candidate           year.
+  to explain their intuition about what they think
+  price/frequency might be based on the nature of
+
+
+                                                                                                           65
+Luxury Landscaping | Example Structure
+
+      Market            Potential Share              Potential Profit                  Risks
+
+• Market size          • Competitors               • Investment                • Housing market
+  o Number of            o Number of                 o Up front cost             o House price
+    relevant homes         competitors               o Financing cost              shock
+  o Renovation rate      o Competitor focus        • Revenue from              • Macro effects
+• Market growth        • Customer needs              target                      o Interest rates for
+  o Home builds          o Product market          • Running costs                 financing
+  o Population             fit with target firm                                  o Recessions
+    growth and             offering
+    demographics
+
+
+Behind the Framework
+Must-haves:                    Nice-to-haves:                      Differentiators: important to
+• Market evaluation            • Idea of competitive threat,       remember that the client is the PE
+                                 won’t be re-visited in the case   firm, not the target
+                               • Risks involved
+
+
+
+
+                                                                                                    66
+Luxury Landscaping | Part 1
+
+Market sizing
+• The first priority is to understand the size of the market in annual sales dollars in that geography.
+• Ask: What data would be helpful in sizing the market?
+• Then, provide exhibit A.
+
+                                           Provide Exhibit A
+
+                                    Addressable Homes
+                                    ~10MM people in L.A. County / average household size of 6 people
+        LA County Population
+                                    = ~1.7MM households / homes
+                 /                  Assumptions: (accuracy of specific answers is less important than
+        Avg. Household Size         having a thoughtful and logical justification for the assumption):
+                                       X the % of homes >$2MM+ in value: <10%
+                 X                     X the % of homes $2MM+ that are single family v.
+      % of Homes Addressable           apartment: ~75-80%
+                                       (very strong answer) X the % of single-family homes $2MM+ on a
+                 =                     sufficiently large lot to have a yard: ~65-70%
+      Total Addressable Homes
+                                    Total Addressable Homes: ~55-60K
+
+                                    Continued on the next page
+
+
+
+                                                                                                          67
+Luxury Landscaping | Part 1 continued
+
+Market sizing
+
+                               Addressable Market
+    Total Addressable Homes
+
+                /              Projects
+                               ~55-60K addressable homes / 20-year service frequency = ~2,500-
+     Frequency of Projects
+                               3,000 projects
+               X               (very strong answer) Assumed % of projects done by third-party
+                               providers: 95-100%
+    % of Projects Outsourced
+                               ~2,500-3,000 projects x % handled by third parties = ~2,500-3,000
+               X               projects
+         Price of Project
+        Avg. Home Value
+                               Price
+                               Assumed avg home value: ~$2.5-3MM (ask for justification probing
+               X               on distribution of home values)
+              10%              Avg home value x 10% estimated project cost: $250-$300K
+               =
+                               ~2,500-3,000 projects x $250-$300K
+      Addressable Market
+                               Avg project cost = ~$750MM
+
+
+
+
+                                                                                                   68
+Luxury Landscaping | Part 2
+
+Other aspects of the market to evaluate?
+• Beyond the size of the L.A. County market, what other aspects of the market would you want to
+  evaluate to assess its attractiveness for expansion?
+
+• Market growth trends and outlook
+• Cyclicality of demand – recession exposure, COVID recovery dynamics
+• Competitive landscape – intensity of competition, fragmentation, strong incumbent players, M&A
+  options
+• Seasonality of demand
+• Labor market factors – availability of labor, wage trends
+
+We generally are not looking for company-specific considerations in these response. The focus is
+intended to be market-wide.
+
+
+
+
+                                                                                                   69
+Luxury Landscaping | Part 3
+
+Evaluating market growth?
+• What factors are influencing market growth that you would want to look at to develop historical and
+  forecasted growth estimates? How would you expect the market to grow relative to U.S. GDP?
+
+Growth Factors
+• Residential construction & renovation spending
+• Population growth
+• Single family v. multifamily mix
+• Home values
+• Frequency of renovation projects
+• Financing dynamics
+
+
+
+
+                                                                                                        70
+Luxury Landscaping | Exhibit A
+
+                                               Case Study
+
+
+                       L.A. County Population:              10MM people
+
+
+                       Average Household Size:               ~6 people
+
+
+                       Median Home Sale Price
+                                                               $850K
+                           in L.A. County:
+
+                                                        Households $2MM+ in
+                          Target Population:
+                                                              Value
+
+
+
+                            Project Price:             ~10% of the Home Value
+
+
+                         Project Redo Rate:                  ~20 Years
+
+
+                                                                          71
+                                                       Author: Ravi Darda T’17 & Nancy Yang
+Nutters of Savile Row                                  T’17 – Refreshed in 2024
+
+
+
+
+               Delivery style                                  Interviewee-led
+
+
+ Concepts & Skills Tested                Industry                            Case Type
+Capacity                        Retail & CPG                     Operations
+
+
+Fit question
+At the end of this process, you get offers from X, Y, and Z firms – how do you think about
+making that decision?
+
+
+Nugget of wisdom
+In brainstorming sessions during a case, display creativity and structure by categorizing
+ideas into relevant buckets to stay organized.
+                                                                       Author: Ravi Darda T’17 & Nancy Yang
+Nutters of Savile Row                                                  T’17 – Refreshed in 2024
+
+
+
+Case Prompt
+• Our client is Nutters of Savile Row, a legendary tailoring business that opened in 1969. At the height of its fame,
+  Nutters dressed Mick Jagger, Twiggy, Elton John, and three of the four Beatles on the Abbey Road cover. Despite the
+  departure of the two founders – Tommy Nutter and Edward Sexton – Nutters continues to have an excellent reputation.
+• Nutters offers customers made-to-measure and bespoke suits. The industry defines made-to-measure suits as those
+  cut, usually by machine, from an existing pattern and adjusted according to the customer’s measurements. Bespoke
+  suits are fully hand-made and the pattern is cut from scratch.
+• Lately, however, Nutters has heard grumblings from customers. Fearing declining customer satisfaction, Alan Lewis,
+  the current owner, has approached you for help. What could be driving declining customer satisfaction at Nutters?
+
+
+
+
+Interviewer guide
+• Case structure:                                          • Operations case
+  o Framework                                              • Operations expertise is not necessary (though certainly
+  o Q1: Demand Analysis                                      helpful). Depending on candidate’s exposure to
+  o Q2: Process Flow Analysis                                operations, interviewer may choose to give more
+  o Q3: Adding Capacity                                      guidance. It is not important that candidates use
+  o Recommendation                                           operations-specific language, rather, this case is meant to
+                                                             test candidate’s business sense and intuition when
+                                                             responding to a new situation.
+                                                           • Interviewee-led
+
+
+
+
+                                                                                                                       73
+Nutters of Savile Row | Case Prompt
+
+Case Prompt
+• Our client is Nutters of Savile Row, a legendary tailoring business that opened in 1969. At the height of its fame,
+  Nutters dressed Mick Jagger, Twiggy, Elton John, and three of the four Beatles on the Abbey Road cover. Despite the
+  departure of the two founders – Tommy Nutter and Edward Sexton – Nutters continues to have an excellent reputation.
+• Nutters offers customers made-to-measure and bespoke suits. Industry ruling defines made-to-measure suits as those
+  cut, usually by machine, from an existing pattern and adjusted according to the customer’s measurements. Bespoke
+  suits are fully hand-made and the pattern is cut from scratch.
+• Lately, however, Nutters has heard grumblings from customers. Fearing declining customer satisfaction, Alan Lewis,
+  the current owner, has approached you for help. What could be driving declining customer satisfaction at Nutters?
+
+
+
+
+Clarifying information
+• Nutters operates out of a main store location on • Process capacity information will be provided
+  Savile Row and has an artisan workshop on Beak later in the case
+  Street, a few streets down.
+• Customer dissatisfaction has picked up in the
+  past two months
+• Nutters has made no recent changes to their
+  regular manufacturing processes
+
+
+
+                                                                                                                       74
+Nutters of Savile Row | Example Structure
+
+      Quality                   Cost                     Speed                       Flexibility
+
+• Reputation            • Price compared to        • Wait time at intake        • Accessibility
+  o Brand                 expectations               o Arrival frequency          o Hours
+  o Exclusivity           o “Value”                  o Throughput rate            o Location
+• Expertise             • Price compared to        • Delivery time              • Selection
+• Fit & attention to      competitors                o Process time               o Leaf 1
+  detail                  o “Deal”                   o Waiting time
+• Feel                                               o WIP items
+  o Space
+  o Service
+
+
+Behind the Framework
+Must-haves: candidates should   Nice-to-haves: Given that we are   Differentiators: An excellent
+identity drivers of customer    talking about a high-end tailor,   response will also address how
+satisfaction. Options include   reputation and exclusivity (i.e.   customer expectations – based on
+structuring by customer         perceived quality) matters         past experience, the shop’s
+experience objectives, or by                                       reputation, or competitors’ offering
+phases of customer engagement                                      – inform satisfaction.
+
+
+
+                                                                                                     75
+Nutters of Savile Row | Part 1
+
+Demand Analysis
+• Let this part be conversational: the goal here is to gauge how well the candidate are able to ask
+  questions to get relevant data. If the candidate mentions demand, proceed with Part 1. If the
+  candidate mentions Nutters capacity or production process, skip to Part 2 and return to Part 1 after.
+• As it turns out, customers are unhappy with delivery time. Nutters has been experiencing increasing
+  delays such that the percent of orders delivered on time has gone down. What might be causing the
+  delay? What data would you want to answer this question?
+
+                                          Provide Exhibit A
+
+• Once the candidate has cleared the exhibit, guide them towards Exhibit B
+
+
+• From Exhibit A, candidate should observe that delay is increasing even as the total number of orders
+  accepted is declining. Therefore, the mix of made-to-measure and bespoke suits is the problem.
+
+
+
+
+                                                                                                          76
+Nutters of Savile Row | Part 2
+
+Process Flow Analysis
+
+                                             Provide Exhibit B
+•   Guide candidate to Part 1 if incomplete or push the candidate to synthesize both exhibits
+•   From Exhibit B, the candidate should calculate the capacity at each step
+Made-to-Measure Orders
+                 Measuring                      Sewing                       Finishing
+    Capacity     (160 hr * 1 FTE) / 1 hr =      (160 hr * 5 FTE) / 16 hr =   (160 hr * 1 FTE) / 4 hr =
+                 160 orders                     50 orders                    40 orders
+•   Nutters can complete, at most, 40 made-to-measure orders a month.
+Bespoke Orders
+•   Candidate should realize from the footnote that steps 2 and 3 can be treated as one step.
+                 Measuring                      Patterning and Sewing        Finishing
+    Capacity     (160 hr * 1 FTE) / 4 hr =      (160 hr * 5 FTE) / 32 hr =   (160 hr * 2 FTE) / 8 hr =
+                 40 orders                      25 orders                    40 orders
+•   Nutters can complete, at most, 25 bespoke orders a month.
+
+
+
+                                                                                                         77
+Nutters of Savile Row | Part 2 continued
+
+Process Flow Analysis
+Synthesis of both exhibits
+•   Looking back at Exhibit A, candidate should realize that delay is caused by made-to-measure orders
+    exceeding the maximum in April and May.
+•   Further, an excellent candidate should identify spare capacity in the system: because steps are
+    separated sequentially, there is spare capacity in some steps (i.e. measuring), and because made-
+    to-measure and bespoke suits are separated by location, there is also spare capacity in the bespoke
+    line.
+
+
+
+
+                                                                                                     78
+Nutters of Savile Row | Part 3
+
+Adding Capacity
+• Nutters is considering hiring additional tailors. Anson is an experienced tailor who can do any of the
+  steps involved in either the made-to-measure or bespoke process. How much would you be willing to
+  offer Anson and which step would you assign him to?
+• The candidate should recognize that compensation depends on the incremental profit generated by
+  Anson, which depends on which step and line he’s assigned to. If asked, tell the candidate that made-
+  to-measure suits generate profit of $350 per suit; bespoke suits generate profit of $900 per suit.
+• Candidate should assume that demand is not a constraint: if hiring Anson will produce 7 more
+  bespoke suits, there will be buyers for those 7 suits.
+
+
+• Since the maximum number of suits Nutters can complete per month is determined by the step with
+  the lowest capacity (the bottleneck), candidates should realize that Anson needs to be assigned to
+  either the “finishing” step for made-to-measure suits or “patterning and sewing” steps for bespoke
+  suits.
+• Calculations on the next slide
+
+
+
+
+                                                                                                       79
+Nutters of Savile Row | Part 3 continued
+
+Adding Capacity
+Updated Capacities
+
+                        Made-to-measure orders:                Bespoke orders:
+                        Finishing                              Patterning and Sewing
+    Updated capacity    (160 hr * 2 FTE) / 4 hr =              (160 hr * 6 FTE) / 32 hr =
+                        80 orders (Note: Sewing becomes        30 orders (increase of 5 orders)
+                        the new bottleneck at 50 orders, so
+                        Anson adds 10 orders to capacity)
+    Profit (pay Anson   10 orders * $350 =                     5 orders * $900 =
+    up to…)             $3,500                                 $4,500
+
+•   Remember that delay is caused by the number of made-to-measure orders, so an excellent
+    response will weigh the tradeoff between profit and customer satisfaction of assigning Anson to the
+    bespoke versus the made-to-measure line.
+
+
+
+
+                                                                                                          80
+Nutters of Savile Row | Part 3
+
+Recommendation
+• Summarize your recommendation for the client.
+
+• Recommendation: Candidate can recommend assigning Anson to either made-to-measure or
+  bespoke line depending on rationale and provide a salary cap of either $3,500 or $4,500.
+• Reason: Delay was caused by made-to-measure orders exceeding the shop’s capacity; hiring Anson
+  will increase the capacity at bottleneck processes (finishing and patterning & sewing, respectively)
+• Risks: There is a tradeoff between profit and customer satisfaction involved in assigning Anson to
+  either made-to-measure or bespoke line. Given Nutters’ brand equity, a longer delay in the form of a
+  waitlist may actually increase the brand’s exclusivity; on the other hand, the client’s original concern
+  was customer satisfaction, and an additional revenue of $1,000 per month ($4,500 - $3,500) is likely
+  insignificant for Nutters.
+• Next Steps: A strong candidate should suggest other ways for Nutters to alleviate the delay problem.
+  For instance, if FTEs can be moved between steps, and assuming FTEs are not limited by skill, then
+  spare capacity at the “measuring” step can be used to increase capacity elsewhere. Additionally, if
+  resource can be pooled between the made-to-order and bespoke lines, then Nutters can avoid having
+  spare capacity in the bespoke line while the made- to-measure line struggles to fulfill demand.
+
+
+
+
+                                                                                                             81
+Nutters of Savile Row | Exhibit A
+
+    Nutters Orders Accepted (Last Four Months)
+
+                                        February   March   April   May
+           Made-to-measure               37         39      42     44
+                        Bespoke          25         23      19     15
+                                Total    62         62      61     59
+
+
+
+
+Source: Internal Company Data
+
+
+
+                                                                         82
+Nutters of Savile Row | Exhibit B
+
+Process for Made-to-Measure Orders
+Made-to-measure orders are taken and completed in a separate workshop on Beak Street:
+
+
+ Measuring                                  Sewing                                    Finishing
+ • Time/order: 1 hr.                        • Time/order: 16 hrs.                     • Time/order: 4 hrs.
+ • FTE: 1                                   • FTE: 5                                  • FTE: 1
+
+
+Process for Bespoke Orders
+Bespoke orders are taken and completed in Nutters’ main Savile Row location:
+
+
+
+ Measuring                           Patterning                           Sewing                              Finishing
+ • Time/order: 4                     • Time/order: 14                     • Time/order: 18                    • Time/order: 8
+   hrs.                                hrs.                                 hrs.                                hrs.
+ • FTE: 1                            • FTE: 5                             • FTE: 5                            • FTE: 2
+
+
+Note: For bespoke orders, the same 5 master tailors pattern (step 2) and sew the suit (step 3). One full-time-employee (FTE) works
+160 hours per month.
+
+
+                                                                                                                                     83
+                                                       Author: Akash Pattanayak T’25, Anam
+OldSchool                                              Aziz Sethi T’25
+
+
+
+
+                Delivery style                                 Interviewer-led
+
+
+ Concepts & Skills Tested                 Industry                           Case Type
+Creativity                       Government & Public Sector     Profitability
+Net Present Value                                               GenAI
+Exhibit interpretation
+
+
+Fit question
+Tell me about a time when you had to think creatively about a solution to a problem.
+
+
+Nugget of wisdom
+Remember to stay hydrated and look after your general well-being to maintain peak
+performance during interviews.
+                                                                  Author: Akash Pattanayak T’25, Anam
+OldSchool                                                         Aziz Sethi T’25
+
+
+
+Case Prompt
+•   OldSchool is a high school that was founded in 1947 in Delhi, India.
+•   It was considered one of the most prestigious schools in the city for many years, known for its
+    emphasis on teacher quality and discipline. Today, it is one of the oldest schools in India: it is
+    committed to upholding traditions but has been relatively slow to modernize.
+•   Over time, OldSchool has experienced a decline in profitability and growing competition from newer
+    schools in Delhi.
+•   The Principal has heard a lot about the transformative potential of Generative AI (GenAI) in
+    education. She is considering whether it makes sense to invest in GenAI. Based on initial research,
+    the Principal has determined that adopting GenAI will require a significant upfront investment.
+•   Should she move ahead with the investment?
+
+
+Interviewer guide
+• Case Structure:                                     • McKinsey (interviewer led)
+  o Surprise Brainstorm                               • This case tests a candidate’s ability to recognize
+  o Framework                                           that this is not just a profitability case, but an
+  o Q1. Chart Analysis                                  investment decision case
+  o Q2. Calculation                                   • This case appears quant-heavy and requires a
+  o Q3. Calculation                                     candidate to determine which calculations are
+  o Recommendation                                      necessary
+
+
+                                                                                                         85
+OldSchool | Case Prompt
+Case Prompt
+•   OldSchool is a high school that was founded in 1947 in Delhi, India.
+•   It was considered one of the most prestigious schools in the city for many years, known for its
+    emphasis on teacher quality and discipline. Today, it is one of the oldest schools in India: it is
+    committed to upholding traditions but has been relatively slow to modernize.
+•   Over time, OldSchool has experienced a decline in profitability and growing competition from newer
+    schools in Delhi.
+•   The Principal has heard a lot about the transformative potential of Generative AI (GenAI) in
+    education. She is considering whether it makes sense to invest in GenAI. Based on initial research,
+    the Principal has determined that adopting GenAI will require a significant upfront investment.
+•   Should she move ahead with the investment?
+
+
+Clarifying Information
+• The Principal has identified that the upfront       • If the candidate asks about how GenAI will be
+  investment will amount to $200,000.                   used in the school or in what capacity, have
+• Any changes will impact the profitability of the      them do a surprise brainstorm before the
+  current year (assume we are at the start of the       framework to identify the different ways GenAI
+  year).                                                can be used to improve profitability in a high
+• The school has a current enrollment of 600            school (both cost and revenue perspectives can
+  students per year                                     be considered).
+
+                                                                                                         86
+OldSchool | Optional
+
+Surprise Brainstorm
+• If the candidate asks about how GenAI will be used in the school or in what capacity, have them do a
+  surprise brainstorm before the framework to identify the different ways GenAI can be used to improve
+  profitability in a high school.
+
+
+                          Revenue                                                             Cost
+  • Personalized Learning/Adaptive Curriculum:                    • Automated Administration:
+        o Increase enrollment by advertising a cutting-edge             o Implement GenAI for administrative tasks such as
+            personalized learning experience powered by                     grading, attendance, and scheduling, reducing the
+            GenAI, which could justify a tuition increase due to            need for administrative staff and the associated
+            the enhanced value proposition.                                 expenses.
+  • Virtual Tutoring and 24/7 Accessibility:                      • Resource Optimization:
+        o Offer additional paid services such as round-the-             o Use GenAI to optimize resource allocation, potentially
+            clock GenAI tutoring, helping students with                     allowing for larger class sizes with the same number of
+            homework and exam preparation outside of school                 teachers or reducing the number of needed substitute
+            hours.                                                          teachers through predictive analytics.
+  • Up-to-Date Curriculum and Better Job Placement:
+                                                                  • Virtual/Remote Learning:
+        o Develop and sell an advanced GenAI-enabled
+            curriculum to other schools or educational                  o Expand remote learning options to reduce the need for
+            institutions, capitalizing on OldSchool's prestigious           physical space and related costs, such as
+            reputation.                                                     maintenance, utilities, and infrastructure.
+
+
+
+
+                                                                                                                                      87
+OldSchool | Example Structure
+
+      Revenue                        Cost                    Investment                          Risks
+• Increase price (tuition)   • Reduce Fixed Cost         • NPV Calculation              • Risks
+  o Up-to-Date                 o Automated Admin           o Can calculate NPV            o Need for Training of
+     Curriculum                o Resource                     given Free Cash               Staff and
+  o Better Job                   Optimization (fewer          Flows, Discount               Employees
+     Placement                   teachers)                    Rate, and Growth            o Need for Constant
+  o Reputation Prestige      • Reduce Variable Costs          Rate if in perpetuity         Updates to be
+• Increase Quantity            o Spread over a           • Industry Multiples               Relevant
+  o Personalized                 larger student body       o Can use                      o Implementation
+     Learning/Adaptive         o Virtual/Remote               comparative                   Strategy
+     Curriculum                  Learning (less need          analysis and                o Resistance from
+  o More Capacity                for physical space)          industry multiples            Teachers/Staff
+     (Admin, HR)               o Digital Learning                                         o AI Hallucinations
+  o Virtual Tutoring             Materials                                                o Privacy Concerns
+  o 24/7 Accessibility
+
+
+Behind the Framework
+Must-haves:                         Nice-to-haves:                        Differentiators: A candidate who can
+• Revenue                           • Risks                               communicate an equation(s) and speak
+• Cost                              • Other Considerations                about how the revenue, cost, and
+• Investment                                                              investment buckets will align to impact
+                                                                          the final recommendation
+
+
+
+                                                                                                               88
+OldSchool | Part 1
+
+Profitability – Revenue Increase
+• The introduction of GenAI is likely to build a significant buzz in the school market in India and will
+  boost both the enrolment and margin at OldSchool. The Principal’s office have made the following
+  initial projections:
+• Margin is currently $80 per student per year and will increase by 2.5% through fee increases.
+• Enrolment is currently 600 students and will increase by 16.67%.
+• Calculate the increase in annual profit.
+
+•   Candidate should react that these projections – particularly enrollment – seem high, and there are
+    likely other factors that may constrain Old School’s growth.
+•   Annual profit before GenAI = $80 x 600 = $48,000
+•   New margin = (1+ 2.5%) x $80 = $82 per student (recognize that 2.5% = 1/40)
+•   New enrollment = (1+ 16.67%) x 600 = 700 students (recognize that 16.67% = 1/6)
+•   Annual profit after GenAI = 82 x 700 = $57,400
+•   Increase in profit = 57,400 – 48,000 = $9,400 (~ 20% increase)
+
+
+
+
+                                                                                                           89
+OldSchool | Part 2
+
+Profitability – Cost Savings
+• There are multiple GenAI tools to increase in cost savings once the basic training and infrastructure is
+  completed through the upfront investment.
+
+                                               Provide Exhibit A
+• Which initiative should the client select? (Note that OldSchool only has the resources to adopt one AI
+  tool/application, and the up-front cost for each is $200,000, driven by front-end development cost)
+
+•   The interviewee should realize that simply eyeballing the visual is not enough and that they will need
+    to do a quick calculation: (Cost Saving x # Students) – Subscription Cost
+                     Subscription Price   Cost Saving Per      # of students   Total Cost Saving   Net Saving Per
+       AI Tool
+                        Per Year ($)    Student Per Year ($)     (in 100s)        Per Year ($)        Year ($)
+Research & Editing
+                           1,000                100                100              10,000             9,000
+Tool
+Personalized
+                           2,000                 30                500              15,000            13,000
+Learning Tool
+Administrative
+                           3,000                 50                300              15,000            12,000
+Assistant
+Career Development
+                           4,000                 80                100              8,000              4,000
+Tool
+Virtual Tutor              5,000                 20                500              10,000             5,000
+
+
+
+
+                                                                                                                    90
+OldSchool | Part 3
+
+Investment Decision Calculation
+• Assume that the improvements to revenue and costs will exists in perpetuity.
+• Does it make financial sense to make the investment?
+
+• Candidate should undertake an NPV calculation using the perpetuity formula
+• Should the candidate ask, provide the discount rate (10%). There is no growth rate.
+• The interviewee should realize that adding the profit and the cost saving will reflect the incremental
+  increase in earnings per year
+
+
+• Earnings improvement = $13,000 + $9,400 = $22,400
+• NPV = $22,400 / 10% = $224,000
+
+
+• We know that the upfront investment is $200,000 and so the project is NPV > 0. OldSchool should
+  make the investment
+
+
+
+
+                                                                                                           91
+OldSchool | Recommendation
+
+Recommendation
+•   Ask the candidate to provide a recommendation
+
+
+•   Recommendation: OldSchool should invest in a GenAI Personalized Learning Tool
+•   Reason: The investment will improve profitability, increasing revenues by $9,400 and decreasing
+    costs by $13,000. The NPV of the incremental earnings is $224K, which is greater than the initial
+    investment of $200K.
+•   Risks:
+      o   Relies on projections which may or may not turn out to be accurate
+      o   There might be resistance or bottlenecks from teachers, especially if there is a strong teacher's
+          union
+      o   Gen AI has many risks such as hallucinations and privacy concerns that can create issues
+•   Next steps:
+      o   Bring on an expert consultant with experience in the safe deployment of GenAI in educational
+          settings.
+      o   Pilot each intervention before deploying at scale.
+
+
+
+
+                                                                                                         92
+OldSchool | Exhibit A
+
+Cost and Impact Analysis, Generative AI (GenAI) Opportunities
+
+                                                                              Size of Bubble = # of students impacted
+  Annual Cost Saving Per Student
+
+
+
+
+                                   Research & Editing
+                                         Tool
+
+
+                                                                                      Career Development
+                                                                                              Tool
+
+
+
+
+                                                                                                           Virtual Tutor
+
+                                                                         Administrative
+                                                                           Assistant
+
+
+
+                                                 Personalized Learning
+                                                         Tool
+
+
+
+
+                                                                                          Total Annual Subscription Cost
+                                                                                                                           93
+                                                        Author: Rohan Gupta, professional case
+Pediatric Hearing Aids                                  prep coach; LinkedIn
+
+
+
+
+                Delivery style                                  Interviewee-led
+
+
+ Concepts & Skills Tested                 Industry                            Case Type
+Market sizing                    Healthcare                      Profitability
+                                 Technology
+
+
+Fit question
+What do you think will be the challenges transitioning from your previous career into
+consulting?
+
+
+Nugget of wisdom
+Know that building rapport and being relaxed can be just as crucial as acing the case itself;
+it’s about the connection you make with the interviewer.
+                                                                 Author: Rohan Gupta, professional case
+Pediatric Hearing Aids                                           prep coach; LinkedIn
+
+
+
+Case Prompt
+• Our client, a developer of medical-grade hearing aids, is exploring the feasibility of launching a new
+  line of hearing aids designed specifically for children. They want to understand if aiming for a target
+  profit of $4M per year is achievable.
+
+
+
+
+Interviewer guide
+• Case structure:                                     • Kindly provided by Rohan Gupta
+  o Framework                                         • Profitability; Healthcare
+  o Q1: Exhibit + Calculation                         • Suitable for a first-ever case, a simple profitability
+  o Q2: Calculation                                     exercise.
+  o Q3: Brainstorm                                    • Interviewee led
+  o Recommendation
+
+
+
+
+                                                                                                            95
+Pediatric Hearing Aids | Case Prompt
+
+Case Prompt
+• Our client, a developer of medical-grade hearing aids, is exploring the feasibility of launching a new
+  line of hearing aids designed specifically for children. They want to understand if aiming for a target
+  profit of $4M per year is achievable.
+
+
+
+
+Clarifying information
+• The client handles the entire manufacturing process in-     different age groups
+  house                                                     • The current market is fairly fragmented, with no single
+• Pediatric hearing aids are specialized devices designed to company holding more than a 15% share
+  accommodate the hearing loss needs of children
+• Typically, a child might need to use a hearing aid
+  continuously until they reach adulthood, potentially
+  requiring size adjustments or upgrades every few years
+• The client has developed three products targeting
+
+
+
+
+                                                                                                                        96
+Pediatric Hearing Aids | Example Structure
+
+                    Market                                      Profitability
+
+• Customers                                     • Revenue
+  o Parents                                       o # units sold
+  o Insurance                                     o Price
+  o Children                                    • Cost
+• Competition                                     o # units sold
+  o Number of firms                               o Cost per unit
+• Alternatives                                    o R&D spend?
+  o Necessity of product
+  o Other models
+
+
+Behind the Framework
+Must-haves:                  Nice-to-haves:                  Differentiators: going beyond the
+• Profitability assessment   • Consideration of the market   template and adding details
+                                                             relevant to the specific product
+
+
+
+
+                                                                                            97
+Pediatric Hearing Aids | Part 1
+
+Market size
+• Estimate the size of the market for pediatric hearing aids, in terms of number of children.
+
+                                           Provide Exhibit A
+
+
+• US Population heuristic: ~4M per age (320M / 80 yr life expectancy)
+
+  Age                       Population                Prevalence               Market
+  0-5 years                 4M x 6 = 24M              1%                       240K
+
+  6-11 years                4M x 6 = 24M              1.5%                     360K
+
+  12-17 years               4M x 6 = 24M              2%                       480K
+
+
+• Total market = 1.08M children
+
+
+
+
+                                                                                                98
+Pediatric Hearing Aids | Part 2
+
+Market size
+• Our client’s initial projections indicate a conservative expected penetration of 10% in each segment. Is
+  a target annual profit of $4M realistic?
+
+• Key is to recognize that hearing aids are not replaced each year. Candidate can assume that the aids
+  are replaced when children age up into the next segment.
+
+  Product                Gross margin      Penetration         Replacement          Profit
+  Infant                 ($300 - $100) =   240K x 10% =        1/6 x 24K = 4K       $200 x 4K =
+                         $200              24K                                      $800K
+  Behind-the-ear         ($500 - $200) =   360K x 10% =        1/6 x 36K = 6K       $300 x $6K =
+                         $300              36K                                      $1.8M
+  In-the-ear             ($700 - $250) =   480K x 10% =        1/6 x 48K = 8K       $450 x 8K =
+                         $450              48K                                      $3.6M
+
+• Total profit = $6.2M
+
+
+
+
+                                                                                                        99
+Pediatric Hearing Aids | Part 3
+
+Risks
+• What risks are associated with your proposed strategy?
+
+
+•   Entering a fragmented market means facing many competitors, which could require significant
+    marketing and sales efforts to achieve noticeable market share
+•   Dependence on continual technological advancements to stay ahead of competitors could increase
+    R&D expenses
+
+
+
+
+                                                                                                  100
+Pediatric Hearing Aids | Recommendation
+
+Recommendation
+• Provide a recommendation to the client.
+
+
+Illustrative example:
+•   Recommendation: it is clear that achieving a $4M target profit in the first year is not only realistic
+    but likely to be a conservative estimate.
+•   Reason: even at a conservative 10% penetration rate, the expected annual profit is $6.2M.
+•   Risks: technology in this space moves quickly, and so the client should be prepared for significant
+    R&D spend to stay abreast of the competition
+•   Next steps: work with the client to define a go-to-market strategy and long-term R&D plan
+
+
+
+
+                                                                                                             101
+Pediatric Hearing Aids | Exhibit A
+
+Market research and product offerings
+
+                                                      Average price   Average cost
+   Age group       % prevalence         Type of Aid
+                                                         ($/unit)       ($/unit)
+0-5 years              1%         Infant                  300             100
+
+6-11 years            1.5%        Behind-the-ear          500             200
+
+12-17 years            2%         In-the-ear              700             250
+
+
+
+
+                                                                                 102
+                                                       Author: Peter K, professional case prep
+PowerStride Sportswear                                 coach; www.Peter-K.org
+
+
+
+
+                Delivery style                                  Interviewer-led
+
+
+ Concepts & Skills Tested                 Industry                             Case Type
+Creativity                       Retail & CPG                    Growth strategy
+Exhibit interpretation                                           GenAI
+
+
+Fit question
+Discuss a moment where you had to make a difficult ethical decision.
+
+
+Nugget of wisdom
+In the McKinsey Personal Experience Interview (PEI), detail is your friend. Describe the
+characters in the story and lay out the context. How did they react? How could you tell?
+                                                                 Author: Peter K, professional case prep
+PowerStride Sportswear                                           coach; www.Peter-K.org
+
+
+
+Case Prompt
+•   PowerStride Sportswear, a major U.S. sport shoe manufacturer, releases over 100 new shoe models
+    annually. Stronger trends towards sustainability and personalization (e.g. the surge in limited editions
+    and fashion-forward designs), as well as a generational shift in demand, requires a new level of
+    creativity in sport shoe design.
+•   After the ChatGPT’s launch in late 2022, the use of GenAI tools has skyrocketed. In 2023, Adidas
+    integrated a GenAI tool (AI Archive) into their design process, while Nike introduced their first AI-
+    designed shoes (ISPA Universal Shoe). Recognizing the potential of GenAI to enhance creativity in
+    research and development (R&D), the CEO of PowerStride has hired your team to suggest how
+    GenAI can boost the company's innovation in sport shoe design.
+
+Interviewer guide
+• Case structure:                                     • Kindly provided by Peter K
+  o Framework                                         • Type: Wild Card
+  o Q1 Boosting creativity with AI                    • The case is testing the ability of a candidate to
+  o Q2 Limitations of GenAI                             break-down unconventional business problems
+  o Q3 Quantitative Analysis                            and show some basic understanding of GenAI
+                                                      • Interviewer led
+                                                      • McKinsey-style case
+
+
+
+
+                                                                                                           104
+PowerStride Sportswear | Case Prompt
+
+Case Prompt
+•   PowerStride Sportswear, a major U.S. sport shoe manufacturer, releases over 100 new shoe models
+    annually. Stronger trends towards sustainability and personalization (e.g. the surge in limited editions
+    and fashion-forward designs), as well as a generational shift in demand, requires a new level of
+    creativity in sport shoe design.
+•   After the ChatGPT’s launch in late 2022, the use of GenAI tools has skyrocketed. In 2023, Adidas
+    integrated a GenAI tool (AI Archive) into their design process, while Nike introduced their first AI-
+    designed shoes (ISPA Universal Shoe). Recognizing the potential of GenAI to enhance creativity in
+    research and development (R&D), the CEO of PowerStride has hired your team to suggest how
+    GenAI can boost the company's innovation in sport shoe design.
+
+Clarifying information
+• PowerStride’s revenue reached $3B in 2023               • PowerStride has experience in using GenAI tools for
+                                                            marketing (e.g. personalized email offers)
+• PowerStride spends ~$20M on R&D per year
+                                                          • GenAI tools can analyze vast amounts of data, e.g.
+• PowerStride’s product design life cycle goes through
+                                                            market trends, internal shoe design libraries
+  phases of market research, concept development,
+  concept refinement, and testing                         • GenAI tools can generate images and videos based on
+                                                            text descriptions
+• PowerStride has a developed R&D team with top-notch
+  footwear designers, materials engineers, biomechanics   • GenAI tools currently can’t assess manufacturing
+  experts, research scientists, etc.                        feasibility, aesthetics, or usability of shoe designs
+
+
+
+                                                                                                                    105
+PowerStride Sportswear | Example Structure
+
+        PS’s R&D                      PS’s Design Cycle                      GenAI for R&D
+
+• KPIs: now and historical         • Market research (e.g.             • Available GenAI tools
+  (e.g. # new models, their          process, people)                  • Key capabilities and
+  variety, innovation speed)       • Concept development (e.g.           features
+• Awards and other industry          steps, stakeholders)              • Economics/pricing
+  recognition for shoe design      • Concept refinement (e.g.          • Major technical
+                                     iterations, decision-makers)        requirements for integration
+• Benchmarking against             • Current IT systems (e.g. AI
+  adidas, Nike, etc.                 capabilities, relevant
+                                     software systems)
+
+
+Behind the Framework
+Must-haves:                      Nice-to-haves:                     Differentiators:
+• Assessment of GenAI tools      • Financial analysis of GenAI      • Case-specific analyses at the
+• Evaluation of product design   • Risk assessment of GenAI             appropriate depth (not too
+  process                        • Benchmarking against other           high-level, not too tactical)
+• Quantitative and qualitative     players for cases of GenAI in    • Insightful colors and stories
+  metrics of innovation            R&D                                  during framework presentation
+
+
+
+                                                                                                  106
+PowerStride Sportswear | Part 1
+
+Creativity boosters
+• How could PowerStride leverage GenAI to enhance their shoe design creativity?
+
+
+  Market research                  Concept development             Concept refinement
+  • GenAI can do research on       • GenAI can leverage shoe       • GenAI can conduct virtual
+    fashion and industry trends      design libraries to ideate      simulations
+                                     new models                    • GenAI can create concept
+  • GenAI can benchmark                                              descriptions to inform future
+    designs against competition    • Designers can visualize         product roadmaps
+                                     new concepts via GenAI        • GenAI can update design
+  • GenAI can distill sales data     text-to-image feature           concepts via analysis of
+    and customer surveys to
+                                                                     shoe performance test data
+    identify new needs             • GenAI can suggest shoe
+                                                                   • GenAI can enable the quick
+                                     materials given limitations
+                                                                     iteration of concepts with
+                                     (e.g. costs, durability)
+                                                                     key stakeholders and
+                                   • GenAI can provide               customer focus groups
+                                     immediate cost-benefit
+                                     analysis of new concepts
+
+
+
+
+                                                                                                     107
+PowerStride Sportswear | Part 2
+
+GenAI limitations
+• What limitations of GenAI should our client consider in enhancing design creativity?
+
+  Questionable quality of           Lack of capabilities              Impairment to creativity
+  output
+  • GenAI is known for              • GenAI can’t assess              • GenAI might generate too
+    “hallucinations”                  manufacturing feasibility or      many options of shoe
+  • The quality of GenAI output       aesthetic appeal of shoe          models, causing choice
+    is highly dependent on the        designs                           paralysis
+    quality of prompts              • GenAI can’t create truly        • Depending too heavily on
+  • GenAI relies on old data,         innovative/groundbreaking         GenAI could stifle the
+    which may result in               concepts as it relies on the      creative potential of
+    outdated insights                 past data only                    designers and limit the
+  • GenAI might have biases in                                          diversity of ideas
+    the training data
+  • AI-designed shoes may risk
+    violating copyrights held by
+    other companies
+
+
+
+
+                                                                                                   108
+PowerStride Sportswear | Part 3
+
+Quantitative Analysis
+• By how much will GenAI be able to accelerate the shoe design cycle for PowerStride?
+
+                                         Provide Exhibit A
+Provide this additional information only upon request:
+• GenAI tools will enable R&D teams to gather and synthesize market and consumer data faster which
+  will save half of the time to do market research
+• GenAI tools are expected to save 70% of time for concept development as they will free designers of
+  time-consuming tasks to visualize new shoe models and create storyboards for brainstorming
+• GenAI tools will accelerate iterations and visualize refinements on-the-spot for more meaningful
+  discussions with business stakeholders which should shorten the refinement stage by 30%
+
+                                   Current time              Saved time                New time
+ Market Research                     2 months                   - 50%                   1 month
+
+ Concept Development                 4 months                   - 70%                 1.2 months
+
+ Concept Refinement                  4 months                   - 30%                 2.8 months
+ Total                              10 months                                          5 months
+
+
+                                                                                                     109
+PowerStride Sportswear | Exhibit A
+                                                                                      Share of concepts graduated
+                                                                                 X%
+                                                                                      to the next stage of the cycle
+
+     Market Research                   Concept Development                     Concept Refinement
+          2 months                             4 months                                4 months
+• Market trend assessment            • Creation of rough sketches           • Discussions and iterations
+• Competitive benchmarking             and concept drafts                     with key business
+                                     • Experimentation of different           stakeholders
+• Customer data analysis
+  (e.g. sales, surveys,                styles, materials, and               • Synthesis of user testing
+  reviews)                             features                               results
+
+• Evaluation of technology           • Brainstorming (incl. mood            • Validation of design
+  advancements (e.g. new               boards, prototyping)                   assumptions
+  materials, new properties)         • Collaboration with cross-            • Finalization of design
+                                       functional teams to ensure             specifications (e.g. detailed
+                                       manufacturing feasibility              drawings, material specs)
+                                       and alignment with brand
+                                       identity
+
+
+   First rough concepts                Mature filtered concepts                   Refined concepts
+
+
+                               30%                                    10%
+
+                                                                                                              110
+                                                        Author: Apeksha Atal T’25, Rohan Lohia
+Snow Big Deal                                           T’25, Aditya Kumar T’25, Tout Lin T’25
+
+
+
+
+                Delivery style                                   Interviewee-led
+
+
+ Concepts & Skills Tested                  Industry                            Case Type
+Market sizing                    Transportation & Logistics       Opportunity assessment
+Capacity                                                          Operations
+Exhibit interpretation
+
+
+Fit question
+Describe a challenging situation or a conflict you’ve faced and how you handled it.
+
+
+Nugget of wisdom
+Consider tapering off the number of cases you do closer to interview day to ensure you are
+mentally fresh and not overworked.
+                                                                Author: Apeksha Atal T’25, Rohan Lohia
+Snow Big Deal                                                   T’25, Aditya Kumar T’25, Tout Lin T’25
+
+
+
+Case Prompt
+•   Our client is the New Hampshire Department of Transportation (NH DOT), a state government entity
+    that strives to provide "safe and secure mobility and travel options for all of the state's residents,
+    visitors and goods movement." Managing snowfall is a major responsibility of NH DOT. Every year,
+    they rent privately-owned equipment to plow the roads.
+•   NH DOT is currently negotiating plow contracts for 2023 but is facing a shortage in equipment to
+    rent. This is resulting in an increase in projected response time and in number of anticipated "beats"
+    covered by each truck. The DOT have hired our firm to help address this issue and to plan for the
+    years to come.
+
+
+Interviewer guide
+• Case structure:                                    • Type of case: Opportunity assessment
+  o Framework                                        • This case is intended to help the caser practice
+  o Q1: Exhibit A + Calculation                        doing a cost-benefit analysis and think about
+  o Q2: Brainstorm                                     different strategies to address a gap in equipment
+  o Q3: Exhibit B + Calculation                        requirements
+  o Q4: Calculation                                  • Interviewee-led case
+  o Optional Breakeven Calculation
+  o Recommendation
+
+
+
+                                                                                                         112
+Snow Big Deal | Case Prompt
+
+Case Prompt
+•    Our client is the New Hampshire Department of Transportation (NH DOT), a state government entity
+     that strives to provide "safe and secure mobility and travel options for all of the state's residents,
+     visitors and goods movement." Managing snowfall is a major responsibility of NH DOT. Every year,
+     they rent privately-owned equipment to plow the roads.
+•    NH DOT is currently negotiating plow contracts for 2023 but is facing a shortage in equipment to
+     rent. This is resulting in an increase in projected response time and in number of anticipated "beats"
+     covered by each truck. The DOT have hired our firm to help address this issue and to plan for the
+     years to come.
+
+
+Clarifying information
+• Preliminary estimates indicate that there will be   • Beat = Unique Route that needs to be plowed
+  300 machines available this season.                 • Response Time = Time needed to completely
+• NH DOT do not currently own any plows                 plow a beat
+• Plow rental fee includes labor costs. Rental fees • NH Rents 3 classes of snowplows that differ in
+  are negotiated each season.                         size and specifications (Assume all snowplows
+• Responsible for NH and NH routes into               are the same for the purpose of this case)
+    neighboring states
+
+
+                                                                                                         113
+Snow Big Deal | Example Structure
+
+         Financials                                    Market                               Other Factors
+
+• Labor Cost (Wage Rate)                   • Rental rates NH vs                      • Environmental Factors: Snowfall
+                                             neighboring states                        trends over the past decade
+• Cost of snowplows
+                                                                                     • Efficiency of equipment usage
+  (Rent/Buy)                               • Demand/Supply of
+                                                                                       (labor skill, beat composition,
+• Cost of                                    snowplows for rent                        prioritization, response time)
+  storage/maintenance                      • Availability of skilled                 • Buy vs Rent
+• Operational Cost                           snowplowers                             • State policy on snowplowing
+• Budget – Tax Pool                        • Vehicle market                          • Contract length
+
+
+
+Behind the Framework
+Must-haves:                                Nice-to-haves:                      Differentiators: Talks about potential
+• Rental costs / hourly wages (some •      Mentions budget                     contractual issues and invisible issues
+  focus on incentives)                 •   Discusses "competitive landscape” that are less financially focused.
+• Talks about snowfall trends / demand     rates in neighboring states and how
+  that needs to be filled                  this may affect NH snowplow owners
+                                       •   Brings up potential for NH to own
+                                           their own fleet
+
+
+
+
+                                                                                                                     114
+Snow Big Deal | Part 1
+
+Exhibit interpretation
+How many additional machines does the DOT need to plow snow for the coming season?
+
+                                            Provide Exhibit A
+
+Given in exhibit:
+• Snowfall for coming season (2023) is projected to be 120 inches
+• 1,000 hours of plowing is required per inch of snowfall across the state of NH
+
+Provide the following information if the candidate asks for it:
+• A standard machine can plow 300 hours per season
+• Current number of machines = 300
+
+
+Insight: 2022-23 will be a top-3 year for snowfall over the past 10 years and a ~70% increase from 2021
+
+Total number of machines needed:
+(120 inches x 1,000 hours / inch) x (1 machine / 300 hours) = 400 machines
+Machine deficit:
+400 – 300 = 100 machines
+
+
+
+
+                                                                                                     115
+Snow Big Deal | Part 2
+
+Brainstorm costs
+•   The DOT conducted a survey among current snowplow owners and created an updated supply
+    curve. Based on their projections, they estimate that they should be able to raise the number of
+    available snowplows by 100 if they increase rental rates by 10%. NH DOT would like you to help
+    them decide whether they should fill the deficit by purchasing vehicles or by raising rental rates.
+
+•   What cost considerations should the client take into account for each option?
+
+There are two scenarios to consider:
+1. NH DOT increases rent by 10%. Here we must consider:
+     o Current rental rate
+     o Updated rental rate (calculate using 10%)
+     o Incremental cost for existing fleet of 300
+     o Incremental cost for new vehicles
+
+2. NH DOT decides to buy 100 new vehicles to fill the gap:
+     o Fixed cost of buying 1 vehicle
+     o Variable costs per vehicle (fuel, maintenance, storage)
+     o Years of utility per vehicle
+     o Number of hours per vehicle
+     o Labor costs for drivers
+
+
+
+                                                                                                          116
+Snow Big Deal | Part 3
+
+Comparing options
+•   Calculate the incremental hourly cost of pursuing each option.
+                                          Provide Exhibit B
+
+1. NH DOT increases rent by 10%. Here we must consider:
+     o Updated rental rate = $50 x 110% = $55 / hour
+     o Incremental cost for existing fleet = ($55 - $50) x 300 = $1,500 / hour
+     o Incremental cost for new vehicles = $55 x 100 vehicles = $5,500 / hour
+     o Total incremental cost / hour = $1,500 + $5,500 = $7,000 / hour
+
+2. NH DOT decides to buy 100 new vehicles to fill the gap:
+     o Annual depreciation cost = $60,000 / 5 years = $12,000
+     o Hourly depreciation cost = $12,000 / 300 hours = $40
+     o Variable costs (fuel + labor) = $12 + $8 = $20
+     o Hourly maintenance and storage costs = ($2,000 + $4,000) / 300 hours = $20
+     o Incremental cost per hour per vehicle = $40 + $20 + $20 = $80 / vehicle / hour
+     o Overall incremental cost per hour = $80 x 100 vehicles = $8,000 / hour
+
+
+
+
+                                                                                        117
+Snow Big Deal | Part 4
+
+Breakeven analysis
+Optional question to push a strong candidate
+
+Our client is concerned about the sensitivity of their forecasting. What is the breakeven percentage
+increase in rental rates that would make NH DOT indifferent between the two options?
+
+Insight: to guarantee that there is an increase of at least 100 vehicles, the DOT should increase rates by
+more than 10%, up to the breakeven rate
+
+Incremental cost for existing fleet: (y% x $50) x 300 vehicles
+
+
+Incremental cost for new vehicles: ((1 + y%) x $50) x 100 vehicles
+
+
+Total incremental cost:            $15,000 x y% + $5,000 + $5,000 x y% = $8,000
+
+
+Solving for y:                     $20,000 x y% = $3,000
+                                   y% = $3,000 / $20,000
+                                   y% = 0.15 = 15%
+
+
+
+                                                                                                       118
+Snow Big Deal | Recommendation
+
+Recommendation
+The Commissioner of NH DOT is about to walk into the room. What is your recommendation?
+
+       o Incremental cost for exist15
+Illustrative example:
+•   Recommendation: increase plow rental rates by between 10% and 15% to attract the 100 extra
+    vehicles required to address the anticipated snowfall this year
+•   Reason: renting vehicles is at most $1,000 / hour more cost effective than purchasing the required
+    plows, and maintains flexibility for future years
+•   Risks:
+      o   Unanticipated costs
+      o   Existing rental fleet aging (i.e. available number of rentals will dip significantly next year)
+      o   Drastic decrease in snowfall (expectation of the higher rental rate leads to relationship issues)
+•   Next Steps: Investigate strategies to smooth supply (i.e. how can we improve existing relationships
+    with the snowplow owners?)
+
+
+
+
+                                                                                                            119
+Snow Big Deal | Exhibit A
+
+Annual Snowfall, New Hampshire (Inches, Past 10 Yrs and 2023 Forecast)
+
+160
+
+140
+
+120
+
+100
+
+ 80
+
+ 60
+
+ 40
+
+ 20
+
+  0
+
+
+
+
+Note: Each inch of snowfall requires 1000 hours of plowing
+
+
+
+                                                                         120
+Snow Big Deal | Exhibit B
+
+    Rental Cost          Cost consideration
+      Analysis
+                         Current Rental Rate                   $50 / hour
+
+                         Proposed Increase                     10%
+
+
+    Purchase             Cost consideration
+ Cost Analysis
+                         Purchase Cost                         $60,000
+
+                         Useful Life of Vehicle                5 years
+
+                         Hourly Fuel Cost Per Vehicle          $12
+
+                         Hourly Labor Cost                     $8
+
+                         Annual Maintenance Cost Per Vehicle   $2,000
+
+                         Annual Storage Cost Per Vehicle       $4,000
+
+
+Note: Vehicles are depreciated on a straight-line basis
+
+
+
+
+                                                                            121
+                                                         Author: Becca Pyeon T’25, Charles Hill
+SwitchDeck Motors                                        T’25, Jisue Choi T’25, Priya Ochani T’25
+
+
+
+
+               Delivery style                                     Interviewee-led
+
+
+ Concepts & Skills Tested                 Industry                                Case Type
+Market sizing                   Automotive                          Market Entry
+Macroeconomics
+Competitive analysis
+Exhibit interpretation
+
+
+Fit question
+How would you approach a situation where you have to lead without authority?
+
+
+Nugget of wisdom
+During the final stretch before interviews, focus on high-impact activities like reviewing past
+cases and honing specific areas of your case approach.
+                                                               Author: Becca Pyeon T’25, Charles Hill
+SwitchDeck Motors                                              T’25, Jisue Choi T’25, Priya Ochani T’25
+
+
+
+Case Prompt
+• Our client, SwitchDeck Motors, is a major US-based automobile company. They produce a range of
+  vehicle types, including sedans, SUVs, and commercial vehicles (such as trucks, buses, etc.).
+• They have hired our firm to determine how to enter the luxury vehicle market in a foreign country.
+• How should our client consider this market entry opportunity?
+
+
+
+
+Interviewer guide
+• Case structure:                                   • Type of case: Market entry
+  o Framework                                       • A relatively straightforward case that tests
+  o Exhibit 1 – selecting market                      candidates’ ability to interpret exhibits and
+  o Q1                                                perform calculations
+  o Exhibit 2 – selecting the car style             • Interviewee led
+  o Exhibit 3 – financial risks
+  o Recommendation
+
+
+
+
+                                                                                                          123
+SwitchDeck Motors | Case Prompt
+
+Case Prompt
+• Our client, SwitchDeck Motors, is a major US-based automobile company. They produce a range of
+  vehicle types, including sedans, SUVs, and commercial vehicles (such as trucks, buses, etc.).
+• They have hired our firm to determine how to enter the luxury vehicle market in a foreign country.
+• How should our client consider this market entry opportunity?
+
+
+
+
+Clarifying information
+• Our client sells vehicles in the traditional       • Our client currently produces only left-handed
+  dealership networks and direct to consumers.         vehicles; they do not plan to expand their
+                                                       production capabilities into right-handed vehicles.
+• All products must achieve annual profits greater
+  than $100M in each market.
+
+• The client focuses on luxury consumer vehicles.
+
+
+
+
+                                                                                                       124
+SwitchDeck Motors | Example Structure
+
+         Market                      Company                             Risks
+
+• Competitive Landscape      • Financial Capability           • Regulations
+  o Structure – Monopoly?      o Revenue                        o Tariffs & FX risk?
+    Competitive?               o Costs                          o Foreign laws
+  o Ease of Entry            • Non-Financial Capability       • Competitive Response
+  o TAM                        o Brand Awareness                o Reduced margins?
+• Industry Growth              o Product portfolio            • Brand Dilution
+• Consumer Preferences         o Distribution                   o Reputation misaligned?
+
+
+
+
+Behind the Framework
+Must-haves:                 Nice-to-haves:                Differentiators: Regulations,
+• Financials                • Risks                       brand dilution, nonfinancial
+• Industry                  • Competitors                 capabilities
+
+
+
+
+                                                                                          125
+SwitchDeck Motors | Part 1
+
+Market Entry Decision
+• Which country should the client choose?
+
+                                         Provide Exhibit A
+
+• This exhibit illustrates a variety of countries based on market competitiveness and size (SAM). The
+  graph also gives information on customer willingness to pay. The color of each circle articulates
+  whether the country uses a right-hand verses left-hand steering wheel.
+
+
+
+• Interviewer Guidance:
+• The candidate should select Australia as the country that our client should enter based on the
+  following:
+      o Australia has the highest WTP of all the countries, which is a desirable market feature.
+      o Australia has the largest SAM out of the countries that drive left-handed.
+      o Australia has lower competitiveness than other potential options (such as South Korea).
+      o Australia drives left-handed vehicles, so the client would not have to change the
+        product's design.
+
+
+
+
+                                                                                                        126
+SwitchDeck Motors | Part 2
+
+Product Decision
+• Which style vehicle should the client sell?
+
+                                              Provide Exhibit B
+
+• Each vehicle style must accrue profit of $100M for the project to be approved.
+
+Interviewer Guidance:
+• The candidate should request information on total number of cars sold in Australia per year.
+      • 100,000 cars are sold per year (this is the TAM).
+
+          Vehicle            Quantity                Revenue                Costs             Profit
+
+                                               $30K x 5,000 =        $10M + (5,000 x   $150M - $110M =
+  Sedan                100,000 x 5% = 5,000
+                                               $150M                 $20K) = $110M     $40M
+                                                                     $20M + (1,000 x
+  Truck                100,000 x 1% = 1,000    $55K x 1,000 = $55M                     $55M - $50M = $5M
+                                                                     $30K) = $50M
+                                               $50K x 5,000 =        $20M + (5,000 x   $250M - $145M =
+  SUVs                 100,000 x 5% = 5,000
+                                               $250M                 $25K) = $145M     $105M
+                                                                     $10M + (2,000 x
+  Hatchbacks           100,000 x 2% = 2,000    $20K x 2,000 = $40M                     $40M - $30M = $10M
+                                                                     $10K) = $30M
+
+
+
+
+                                                                                                            127
+SwitchDeck Motors | Part 3
+
+Risks
+• What is the most significant risk you foresee in entering the market?
+
+• After the candidate suggests their idea, tell them the following:
+
+“There is a very high likelihood that the Australian government will decide to levy a 3% import tax on
+luxury automobiles, effective next financial year”.
+
+• How would this impact our evaluation?
+
+
+Interviewer Guidance:
+
+•   The candidate should realize that price is constrained by customer WTP and therefore cannot
+    increase and hence this tax will increase our costs, reducing our profitability.
+
+•   Reduction in profitability = $50,000 * 3% * 5,000 cars = $7.5 million
+
+
+
+
+                                                                                                         128
+SwitchDeck Motors | Part 4
+
+Provide Client Recommendation
+Recommendation
+• The client should enter the Australian luxury car market with an SUV product
+
+Reason
+• The Australian market has highest WTP and similar competitiveness to other left-hand drive markets
+• The SUV product is expected to earn $105M annual profits, above the $100M target
+
+Risks
+• Australia may levy an import tax on luxury vehicles, which may reduce profitability below the target
+
+Next steps
+• Engage Australian officials in ways to avoid imposition of the levy, including lobbying and creating
+  local jobs
+
+
+
+
+                                                                                                         129
+SwitchDeck Motors | Exhibit A
+
+Serviceable Addressable Market (SAM), selected Auto markets
+
+  10
+
+                                                                                       UK
+                                                                     Japan
+                                                                                                      Singapore
+   Market Competitiveness
+
+
+
+
+                                        Indonesia                            S.Korea
+                                                                                            Belgium               Australia
+
+
+
+
+                                                    Mexico
+
+                                                                                                                        Left Hand
+                                                             India
+                            Myanmar                                                                                     Right Hand
+    0
+                            300                                                                                               60,000
+                            10: Most Competitive, 0: Least Competitive. Bubble size = SAM             Willingness To Pay (USD)
+
+                                                                                                                                       130
+SwitchDeck Motors | Exhibit B
+
+Australian Auto Market Research
+
+                                               Customer                                    Production      Marketing
+                            SAM                                     Import Cost
+                                                 WTP                                          Cost           Cost
+Sedan                         5%                 $30,000                 $10M                    $15,000    $5,000
+Truck                         1%                 $55,000                 $20M                    $20,000    $10,000
+SUV                           5%                 $50,000                 $20M                    $20,000    $5,000
+Hatchback                     2%                 $20,000                 $10M                    $10,000      $0
+
+
+
+
+Note: import costs are an annual fixed cost; production and marketing costs are variable costs
+
+
+
+
+                                                                                                                      131
+Tuck Air II                                          Author: Will Seex T’24
+
+
+
+
+               Delivery style                                 Interviewee-led
+
+
+ Concepts & Skills Tested                 Industry                            Case Type
+Pricing strategy                Airline                        Opportunity assessment
+Breakeven analysis
+Creativity
+
+
+Fit question
+Describe an instance where you received critical feedback, and how you responded.
+
+
+Nugget of wisdom
+Be strategic about how many mock cases you schedule in the final weeks; focus on fine-
+tuning rather than volume
+Tuck Air II                                                             Author: Will Seex T’24
+
+
+
+Case Prompt
+• Our client, Tuck Air, is a large national airline that is considering installing in-flight Wi-Fi capability to
+  improve its customer experience.
+• Currently, Tuck Air offers a no-frills, low-cost experience. Its fleet of 250 Boeing 737-500 aircraft are
+  arranged in an economy-only configuration. The airline serves a mixture of business and leisure
+  passengers.
+• The client has tasked us to help to determine the required specifications for the network and to
+  determine its financial viability.
+
+
+
+Interviewer guide
+• Case structure:                                           • Opportunity Assessment; Airline
+  o Framework                                               • Tests creative but structured brainstorming and
+  o Q1 Brainstorm                                             data-heavy exhibits.
+  o Q2 Exhibit A                                            • Key skills: Breakeven analysis
+  o Q3                                                      • Interviewee led
+  o Q4 Brainstorm
+  o Recommendation
+
+
+
+
+                                                                                                                   133
+Tuck Air II | Case Prompt
+
+Case Prompt
+• Our client, Tuck Air, is a large national airline that is considering installing in-flight Wi-Fi capability to
+  improve its customer experience.
+• Currently, Tuck Air offers a no-frills, low-cost experience. Its fleet of 250 Boeing 737-500 aircraft are
+  arranged in an economy-only configuration. The airline serves a mixture of business and leisure
+  passengers.
+• The client has tasked us to help to determine the required specifications for the network and to
+  determine its financial viability.
+
+
+
+Clarifying information
+Business                                                    • In-flight Wi-fi works by connecting passengers' devices to
+                                                              onboard satellite or ground-based networks. Ku and Ka
+• Tuck Air operates exclusively domestic routes in a hub-
+                                                              Band frequencies are commonly utilized for transmitting
+  and-spoke model, based out of Boston Logan Airport.
+                                                              data to and from aircraft, providing high-speed
+Opportunity                                                   connectivity for seamless browsing and communication.
+• A recent customer survey showed that the client lagged Target
+  peers in terms of passenger experience. The survey
+  highlighted implementing in-flight Wi-Fi service as a key • The client’s policy is to break even on CAPEX projects
+  improvement for the airline, particularly among business    within 3 years
+  passengers
+
+
+
+                                                                                                                       134
+Tuck Air II | Example Structure
+
+        Customer                             Financial                             Risks
+
+• Speed requirements                • Up-front installation cost       • Negative customer reaction
+  o Streaming services              • Revenue                            to paying
+  o Video calls                       o Pricing model: flat fee,       • Reliability risk
+  o Just Browsing                       pro-rated, subscription        • Implementation risk
+• Duration of connections             o Estimated connections            o Aircraft stuck in the
+  o Whole flight                        per flight                          hangar
+  o Just a few hours                • Ongoing Costs
+• Customer segments                   o Service fee
+  o WTP                               o Maintenance
+
+
+Behind the Framework
+Must-haves:                       Nice-to-haves:                    Differentiators: given candidates
+• Consideration of customer       • A sense of the risks involved   will have personal experience of
+  needs as the case is built                                        this product, adding a personal
+  around customer-centricity                                        touch is essential
+• Financial information, moving
+  towards break-even
+
+
+
+                                                                                                   135
+Tuck Air II | Part 1
+
+Brainstorm pricing
+• What are some different pricing models and monetization strategies that the client could implement for
+  its Wi-Fi service?
+• Which of these ideas might be most suitable for Tuck Air?
+
+
+  Flat fee                   Rated                     Two-part                  Bundling
+  •   Free access            • By time                 • High and low speed      • With streaming
+  •   Pay per flight         • By data use               tiers                     content
+  •   Pay per day                                      • Free access for         • With promotional
+  •   Subscription for                                   loyalty members           item (beverage, etc)
+      month/year                                       • Free access for         • With partner
+                                                         partner firms             (Starbucks, Avis,
+                                                                                   American Express)
+
+• Look for alignment with Tuck Air’s no-frills model. Likely a flat fee or a per hour model will be most
+  suitable, although including a partner could work too.
+
+
+
+
+                                                                                                           136
+Tuck Air II | Part 2
+
+Passenger requirements
+• To reduce the complexity of the product, Tuck Air is only interested in a flat-fee-per-flight model.
+• The airline must decide whether to install the Ku-Band or Ka-Band receiver in their fleet.
+• The client has carried out an initial passenger survey. Let the candidate walk through the exhibit.
+
+                                           Provide Exhibit A
+
+• Which receiver will best meet the requirements of Tuck Air’s passengers at each fee level?
+
+• Either can serve all customers at $4, or business only at $10. How much bandwidth does each need?
+• Average aircraft has occupancy of 125 * 80% = 100 passengers (from the note)
+                                     Business                           Leisure
+  Passengers accessing               (33% * 90%) ≈ 30%                  (67% * 30%) ≈ 20%
+                                     30% * 100 = 30 pax                 20% *100 = 20 pax
+  Data usage                         30 pax * 200 MB = 6,000            20 pax * 800MB = 16,000
+                                     MB/hour (6 GB/hour)                MB/hour (16 GB/hour)
+• Business segment requires 6GB/hour so can be served by the Ku Band receiver. Serving all
+  customers requires (6 + 16 GB/hour =) 22 GB/hour, which would require the Ka Band receiver.
+• Note: candidates may be more familiar with Mbps units. 1 MB/second = 8 Mbps
+
+
+
+                                                                                                         137
+Tuck Air II | Part 3
+
+Breakeven Analysis
+• Given Tuck Air’s requirement that new CAPEX projects must break even in 3 years, which receiver
+  should the client install in its fleet?
+
+
+•   Breakeven = Installation Cost / (Revenue – Annual Costs)
+
+                                      Ku Band                             Ka Band
+    Revenue                           $10 * 30 pax *1000 flights =        $4 * 50 pax * 1000 flights =
+                                      $300,000 per year                   $200,000 per year
+    Contribution Margin               $300,000 - $220,000 =               $200,000 - $140,000 =
+                                      $80,000 per year                    $60,000 per year
+    Breakeven                         $200,000 / $80,000 =                $300,000 / $60,000 =
+                                      2.5 years                           3.33 years
+
+•   If candidate attempts to calculate the breakeven for the entire fleet, let them, but if they are
+    struggling guide them to the per plane calculation
+
+
+
+
+                                                                                                         138
+Tuck Air II | Part 4
+
+Risks
+• What risks should Tuck Air be aware of when installing an in-flight Wi-Fi service?
+
+
+  Product                           Security                          Implementation
+  • Upgrade risk: next big          • Client: hackers may take        • Payments in-air required,
+    upgrade or product may be         control of the network            posing development risk
+    just around the corner.         • Customer: client data           • Assumptions may be
+    Mobile Data in the air?           security, particularly for        flawed, need sensitivity
+  • Speed: network may be             business customers                analysis
+    congested if too many                                             • Roll out delays keeping
+    customers join, or if their                                         planes in hangars.
+    activity is too data-intense
+  • Reliability: in-flight outage
+    may cause customer
+    dissatisfaction
+
+
+
+
+                                                                                                    139
+Tuck Air II | Part 5
+
+Recommendation
+• You are heading into a progress meeting with the client, and they would like to hear your
+  recommendation.
+
+
+Illustrative example:
+
+• Recommendation: Tuck Air should install Ku-Band Wi-Fi receivers in its fleet of aircraft and charge a
+  $10 flat fee to access the network.
+
+• Reason: Ku-Band has the capacity to support the requirements of business customer segment (which
+  has higher willingness-to-pay) while breaking even in 2.5 years
+
+• Risk: the roll-out process may not be smooth or may take longer than expected, which could reduce
+  fleet utilization
+
+• Next steps: work with Tuck Air to define an implementation plan to mitigate roll-out risk
+
+
+
+
+                                                                                                     140
+Tuck Air II | Exhibit A
+
+    Passenger                                                      Likely to             Passenger
+                        Mostly travel        Proportion of                                                    Willingness
+       Survey                                                      connect to            data usage
+                        for…                 passengers                                                       to pay
+      Results                                                      Wi-Fi                 estimates
+                        Business             33%                   90%                   200 MB/hour          $10/flight
+
+                        Leisure              67%                   30%                   800 MB/hour           $4/flight
+
+
+
+Wi-Fi Receiver          Ku-Band                                                 Ka-Band
+Specifications
+                        Shared data                                             Shared data
+                                                  14 GB/hour                                              32 GB/hour
+                        capacity                                                capacity
+                        Installation cost         $200,000/aircraft             Installation cost         $300,000/aircraft
+                        Annual costs                                            Annual costs
+                        (service fee,             $220,000/aircraft             (service fee,             $140,000/aircraft
+                        maintenance, etc)                                       maintenance, etc)
+
+
+ Note: A Tuck Air Boeing 737-500 has a capacity of 125 passengers with an average load factor (utilization) of 80%, making on
+ average 1000 flights per year
+
+
+                                                                                                                                141
+This book is intended for internal use by members of the Tuck Consulting Club (TCC). Distribution to individuals outside
+of the TCC is forbidden without the expressed written consent of the TCC.
+© 2024 Tuck Consulting Club. All rights reserved.
+
