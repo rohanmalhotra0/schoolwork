@@ -42,7 +42,7 @@
 <section class="sheet sheet--active" id="cards">
   <div class="sheet-margin">
     <h2 class="pencil">Flashcards</h2>
-    <p class="kicker">Space = flip · [K] = got it (retires card) · [D] = missed (requeues) · [H] = reveal hint · [U] = undo. Each filter is a finite session — you're done when every card is mastered.</p>
+    <p class="kicker">Pick a filter. Click the card or press Space to flip. ←/→ arrow keys cycle through the deck.</p>
     <div class="deck-bar">
       <label class="deck-chip"><input type="radio" name="deck" value="all" checked>All</label>
       <label class="deck-chip"><input type="radio" name="deck" value="K5">K5 · prepositions</label>
@@ -74,8 +74,6 @@
       <button class="mini-btn" id="flip-card">flip</button>
       <button class="mini-btn" id="next-card">next &rarr;</button>
       <span class="counter" id="card-counter">0 / 0</span>
-      <button class="mini-btn mini-btn--ok" id="knew">K — got it</button>
-      <button class="mini-btn mini-btn--bad" id="missed">D — missed</button>
     </div>
   </div>
 </section>
@@ -267,8 +265,7 @@
 </footer>
 
 <script src="content.js?v=5"></script>
-<script src="/assets/flashcards.js?v=2"></script>
-<script src="app.js?v=5"></script>
+<script src="app.js?v=6"></script>
 <script src="/assets/quiz.js?v=1" defer></script>
 <script src="/assets/voice.js?v=1" defer></script>
 <script src="/assets/mock.js?v=1" defer></script>

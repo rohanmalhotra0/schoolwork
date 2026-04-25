@@ -38,9 +38,7 @@ function isCardsActive(){ return document.getElementById('cards').classList.cont
    instead of term/def/hint/cat, so we pass field mappings.
 */
 // Shared filter helper: chapter chips (K5-K8) + GR/VO type filters.
-// Reused by the flashcards module (via filterToPool) AND by the Learn
-// tab below — Learn previously called an undefined `filterPool` and
-// silently ReferenceError'd, freezing the start button.
+// Used by flashcards (below) AND by the Learn tab.
 function filterPool(filter, cards){
   const src = cards || CARDS;
   if (filter === 'all') return src.slice();
@@ -48,15 +46,86 @@ function filterPool(filter, cards){
   return src.filter(c => c.ch === filter);
 }
 
-window.StudyLab?.flashcards?.init({
-  cards:       CARDS,
-  fields:      { term: 'front', def: 'back', hint: 'note', cat: 'ch' },
-  weightKey:   'deutsch.card.weights',
-  masteredKey: 'deutsch.card.mastered',
-  weightKeyFor: c => c.ch + ':' + c.front,
-  catLabel:     c => c.ch + ' · ' + (c.type === 'GR' ? 'grammar' : 'vocab'),
-  filterToPool: (filter, cards) => filterPool(filter, cards),
+/* ========================= FLASHCARDS (linear) =========================
+   Plain prev/flip/next deck — no mastery, no requeue, no undo. The
+   shared StudyLab.flashcards module added a K/D/U flow that read as
+   confusing here, so this tab uses its own minimal loop. */
+const fcEls = {
+  card:    document.getElementById('flashcard'),
+  front:   document.getElementById('card-front'),
+  back:    document.getElementById('card-back'),
+  tag:     document.getElementById('card-tag'),
+  note:    document.getElementById('card-note'),
+  prev:    document.getElementById('prev-card'),
+  flip:    document.getElementById('flip-card'),
+  next:    document.getElementById('next-card'),
+  counter: document.getElementById('card-counter'),
+  shuffle: document.getElementById('shuffle'),
+};
+let fcDeck = [];
+let fcIdx = 0;
+
+function fcCurrentFilter(){
+  const r = document.querySelector('input[name="deck"]:checked');
+  return r ? r.value : 'all';
+}
+function fcShuffle(arr){
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function fcRebuild(){
+  fcDeck = fcShuffle(filterPool(fcCurrentFilter()));
+  fcIdx = 0;
+  fcRender();
+}
+function fcRender(){
+  if (fcEls.card) fcEls.card.classList.remove('flipped');
+  if (!fcDeck.length) {
+    if (fcEls.front)   fcEls.front.textContent = 'no cards in this filter';
+    if (fcEls.back)    fcEls.back.textContent  = '';
+    if (fcEls.note)    fcEls.note.textContent  = '';
+    if (fcEls.tag)     fcEls.tag.style.display = 'none';
+    if (fcEls.counter) fcEls.counter.textContent = '0 / 0';
+    return;
+  }
+  const c = fcDeck[fcIdx];
+  if (fcEls.front) fcEls.front.textContent = c.front || '';
+  if (fcEls.back)  fcEls.back.textContent  = c.back  || '';
+  if (fcEls.note)  fcEls.note.textContent  = c.note  || '';
+  if (fcEls.tag) {
+    const label = c.ch + ' · ' + (c.type === 'GR' ? 'grammar' : 'vocab');
+    fcEls.tag.textContent = label;
+    fcEls.tag.style.display = 'inline-block';
+  }
+  if (fcEls.counter) fcEls.counter.textContent = (fcIdx + 1) + ' / ' + fcDeck.length;
+}
+function fcAdvance(step){
+  if (!fcDeck.length) return;
+  fcIdx = (fcIdx + step + fcDeck.length) % fcDeck.length;
+  fcRender();
+}
+function fcFlip(){ if (fcEls.card) fcEls.card.classList.toggle('flipped'); }
+
+if (fcEls.card)    fcEls.card.addEventListener('click', fcFlip);
+if (fcEls.flip)    fcEls.flip.addEventListener('click',    e => { e.stopPropagation(); fcFlip(); });
+if (fcEls.prev)    fcEls.prev.addEventListener('click',    e => { e.stopPropagation(); fcAdvance(-1); });
+if (fcEls.next)    fcEls.next.addEventListener('click',    e => { e.stopPropagation(); fcAdvance(1); });
+if (fcEls.shuffle) fcEls.shuffle.addEventListener('click', fcRebuild);
+document.querySelectorAll('input[name="deck"]').forEach(r => {
+  r.addEventListener('change', fcRebuild);
 });
+document.addEventListener('keydown', e => {
+  if (document.querySelector('.sheet--active')?.id !== 'cards') return;
+  if (e.target.matches('input, textarea')) return;
+  if (e.code === 'Space')      { e.preventDefault(); fcFlip(); }
+  else if (e.key === 'ArrowLeft')  fcAdvance(-1);
+  else if (e.key === 'ArrowRight') fcAdvance(1);
+});
+fcRebuild();
 
 /* ============================= LEARN ============================= */
 let learnFilter = 'all';
