@@ -37,6 +37,17 @@ function isCardsActive(){ return document.getElementById('cards').classList.cont
    (chapters K5-K8 plus GR/VO categories) and uses front/back/note/ch
    instead of term/def/hint/cat, so we pass field mappings.
 */
+// Shared filter helper: chapter chips (K5-K8) + GR/VO type filters.
+// Reused by the flashcards module (via filterToPool) AND by the Learn
+// tab below — Learn previously called an undefined `filterPool` and
+// silently ReferenceError'd, freezing the start button.
+function filterPool(filter, cards){
+  const src = cards || CARDS;
+  if (filter === 'all') return src.slice();
+  if (filter === 'GR' || filter === 'VO') return src.filter(c => c.type === filter);
+  return src.filter(c => c.ch === filter);
+}
+
 window.StudyLab?.flashcards?.init({
   cards:       CARDS,
   fields:      { term: 'front', def: 'back', hint: 'note', cat: 'ch' },
@@ -44,12 +55,7 @@ window.StudyLab?.flashcards?.init({
   masteredKey: 'deutsch.card.mastered',
   weightKeyFor: c => c.ch + ':' + c.front,
   catLabel:     c => c.ch + ' · ' + (c.type === 'GR' ? 'grammar' : 'vocab'),
-  // Custom filter: chapter chips + GR/VO type filters
-  filterToPool: (filter, cards) => {
-    if (filter === 'all') return cards.slice();
-    if (filter === 'GR' || filter === 'VO') return cards.filter(c => c.type === filter);
-    return cards.filter(c => c.ch === filter);
-  },
+  filterToPool: (filter, cards) => filterPool(filter, cards),
 });
 
 /* ============================= LEARN ============================= */
