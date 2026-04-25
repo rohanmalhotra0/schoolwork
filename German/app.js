@@ -314,6 +314,70 @@ document.querySelectorAll('.quiz-picker .tabline').forEach(b => {
 document.querySelector('.quiz-picker .tabline[data-qset="all"]').classList.add('active');
 renderQuiz('all');
 
+/* ========================= ACTIVE RECALL =========================
+   Open-ended prompts grouped by topic — accordion w/ revealable hint.
+   Mirrors the Politics "Essays" tab pattern. */
+const recallList = document.getElementById('recall-list');
+const recallFilters = document.getElementById('recall-filters');
+let recallFilter = 'all';
+
+function recallTopic(cat){
+  // Group by leading "K8 · …" / "Verben · …" / "Schreiben · …" etc.
+  return (cat.split('·')[0] || cat).trim();
+}
+
+function renderRecall(){
+  const items = (recallFilter === 'all')
+    ? ACTIVE_RECALL
+    : ACTIVE_RECALL.filter(r => recallTopic(r.cat) === recallFilter);
+  recallList.innerHTML = '';
+  items.forEach((e, i) => {
+    const item = document.createElement('div');
+    item.className = 'essay-item';
+    const head = document.createElement('button');
+    head.className = 'essay-head';
+    head.innerHTML = `
+      <span class="essay-num">${String(i + 1).padStart(2, '0')}</span>
+      <span class="essay-q">
+        <span class="essay-cat">${escapeHtml(e.cat)}</span>
+        ${escapeHtml(e.q)}
+      </span>
+      <span class="essay-toggle">show hint ▾</span>
+    `;
+    const body = document.createElement('div');
+    body.className = 'essay-body';
+    const hint = document.createElement('div');
+    hint.className = 'essay-hint';
+    hint.textContent = e.hint;
+    body.appendChild(hint);
+    head.addEventListener('click', () => {
+      const open = body.classList.toggle('open');
+      head.querySelector('.essay-toggle').textContent = open ? 'hide hint ▴' : 'show hint ▾';
+    });
+    item.appendChild(head);
+    item.appendChild(body);
+    recallList.appendChild(item);
+  });
+}
+
+function renderRecallFilters(){
+  const topics = ['all', ...new Set(ACTIVE_RECALL.map(r => recallTopic(r.cat)))];
+  recallFilters.innerHTML = '';
+  topics.forEach(t => {
+    const id = 'rf-' + t.replace(/\s+/g, '-').toLowerCase();
+    const wrap = document.createElement('label');
+    wrap.className = 'deck-chip';
+    wrap.innerHTML = `<input type="radio" name="rfilter" id="${id}" value="${escapeHtml(t)}"${t === 'all' ? ' checked' : ''}>${t === 'all' ? 'All' : escapeHtml(t)}`;
+    wrap.querySelector('input').addEventListener('change', () => {
+      recallFilter = t;
+      renderRecall();
+    });
+    recallFilters.appendChild(wrap);
+  });
+}
+renderRecallFilters();
+renderRecall();
+
 /* ============================= GRAMMAR ============================= */
 const grammarList = document.getElementById('grammar-list');
 grammarList.innerHTML = GRAMMAR.map(g => {

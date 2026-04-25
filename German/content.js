@@ -22,6 +22,9 @@ const CARDS = [
   { ch:'K5', type:'GR', front:'sie / ihr (feminine)', back:'her (Akk) / her (Dat)', note:'Ich sehe sie. | Ich helfe ihr.' },
   { ch:'K5', type:'GR', front:'uns / euch / ihnen', back:'us / you-all / them (Akk = Dat except ihnen)', note:'Dat: uns, euch, ihnen.' },
   { ch:'K5', type:'GR', front:'Two-way prep: wo? vs wohin?', back:'wo? → Dativ (location) · wohin? → Akkusativ (motion into)', note:'in/auf/unter/über/neben/zwischen/hinter/an/vor.' },
+  { ch:'K5', type:'GR', front:'Akkusativ-Präpositionen (dogfud)', back:'durch · ohne · gegen · für · um', note:'Always Akkusativ. Mnemonic: d-o-g-f-u-d.' },
+  { ch:'K5', type:'GR', front:'8 Dativ-only Präpositionen', back:'aus · außer · bei · mit · nach · seit · von · zu', note:'Always Dativ. (zu+dem=zum · von+dem=vom · bei+dem=beim)' },
+  { ch:'K5', type:'GR', front:'9 Wechselpräpositionen', back:'in · auf · unter · über · neben · zwischen · hinter · an · vor', note:'Wo? Dativ (liegen/stehen/hängen) · Wohin? Akkusativ (legen/stellen/hängen).' },
 
   // K5 · Vocab
   { ch:'K5', type:'VO', front:'der Bahnhof', back:'train station' },
@@ -85,12 +88,16 @@ const CARDS = [
   { ch:'K7', type:'VO', front:'die Speisekarte', back:'menu' },
   { ch:'K7', type:'VO', front:'die Vorspeise / das Hauptgericht / die Nachspeise', back:'starter / main course / dessert' },
 
-  // K8 · Grammar (Konjunktiv II, Passiv, Infinitivkonstruktionen)
+  // K8 · Grammar (Konjunktiv II, Partizip I, Futur, Passiv, Infinitivkonstruktionen)
   { ch:'K8', type:'GR', front:'Konjunktiv II: würde + Infinitiv', back:'would + verb (hypothetical / polite)', note:'Ich würde gern reisen. Was würdest du machen?' },
   { ch:'K8', type:'GR', front:'Konjunktiv II: wäre', back:'would be (from sein)', note:'Ich wäre glücklich. Wenn ich reich wäre…' },
   { ch:'K8', type:'GR', front:'Konjunktiv II: hätte', back:'would have (from haben)', note:'Ich hätte gern einen Kaffee.' },
-  { ch:'K8', type:'GR', front:'Konjunktiv II: könnte / müsste / sollte', back:'could / would have to / should', note:'Könntest du mir helfen? Ich müsste mehr lernen.' },
-  { ch:'K8', type:'GR', front:'Konjunktiv II: wenn-Satz', back:'Wenn + Konj II …, dann würde/wäre/hätte …', note:'Wenn ich Zeit hätte, würde ich mehr lesen.' },
+  { ch:'K8', type:'GR', front:'Konjunktiv II der Modalverben', back:'könnte, müsste, dürfte, wollte, sollte (+ Infinitiv)', note:'Umlaut für können/müssen/dürfen — NOT for wollen/sollen.' },
+  { ch:'K8', type:'GR', front:'Konjunktiv II: wenn-Satz ("Kicker")', back:'Wenn + … + Konj II am Ende, würde/wäre/hätte …', note:'wenn = Kicker → konjugiertes Verb ans Ende. Wenn ich Zeit hätte, würde ich mehr lesen.' },
+  { ch:'K8', type:'GR', front:'Partizip I (Form)', back:'Infinitiv + d (+ Adjektivendung): lesen → lesend', note:'Used like an adjective: ein schnell fahrendes Auto.' },
+  { ch:'K8', type:'GR', front:'Partizip I = Relativsatz mit "der/die/das …"', back:'ein protestierender Student = ein Student, der protestiert', note:'Weinende Kinder = Kinder, die weinen.' },
+  { ch:'K8', type:'GR', front:'Futur: werden + Infinitiv (am Ende)', back:'will + verb (future)', note:'Wir werden heute in die Neue Galerie gehen.' },
+  { ch:'K8', type:'GR', front:'werden — Präsens konjugieren', back:'ich werde · du wirst · er wird · wir werden · ihr werdet · sie werden', note:'Stem change in du/er. Used for Futur AND Passiv.' },
   { ch:'K8', type:'GR', front:'Passiv Präsens', back:'wird + Partizip II', note:'Das Auto wird repariert.' },
   { ch:'K8', type:'GR', front:'Passiv Präteritum', back:'wurde + Partizip II', note:'Das Auto wurde repariert.' },
   { ch:'K8', type:'GR', front:'Passiv Perfekt', back:'ist + Partizip II + worden', note:'Das Auto ist repariert worden.' },
@@ -349,6 +356,38 @@ const QUIZ = [
     q:'Sie versucht, die Tür ___.',
     opts:['aufmachen zu','zu aufmachen','aufzumachen','aufmachenzu'], a:2,
     explain:'Separable verb + zu: zu goes BETWEEN prefix and stem → aufzumachen.' },
+  { set:'K8', tag:'K8 · Konj II Modalverben', type:'single',
+    q:'___ du mir helfen, bitte? (Konj II of können — polite)',
+    opts:['Kannst','Konntest','Könntest','Kannst-du'], a:2,
+    explain:'Konjunktiv II der Modalverben: können → könnte (Umlaut). Polite request.' },
+  { set:'K8', tag:'K8 · Konj II Modalverben', type:'single',
+    q:'Konjunktiv II of "müssen" für ich/er ist…',
+    opts:['musste','müsste','muss','müssen'], a:1,
+    explain:'müssen → müsste (mit Umlaut). Vergleiche Präteritum musste (ohne Umlaut).' },
+  { set:'K8', tag:'K8 · Partizip I', type:'single',
+    q:'Partizip I von "lesen" (vor einem Substantiv, Nom. n.) ist…',
+    opts:['gelesend','lesend','lesendes','lesendem'], a:2,
+    explain:'Partizip I = Infinitiv + d (+ Adjektivendung). "ein lesendes Kind" — adj. ending nach ein- Nom. n. = -es.' },
+  { set:'K8', tag:'K8 · Partizip I', type:'single',
+    q:'"Ein schnell ___ Auto" = ein Auto, das schnell fährt.',
+    opts:['fahrend','fahrendes','fahrenden','fahrender'], a:1,
+    explain:'fahren → fahrend → mit Adjektivendung: nach "ein" Nom. n. = -es → fahrendes.' },
+  { set:'K8', tag:'K8 · Partizip I', type:'single',
+    q:'Welcher Satz ist äquivalent zu "Weinende Kinder sind hier"?',
+    opts:['Kinder, die weinen, sind hier.','Kinder, die geweint haben, sind hier.','Kinder, die weinen werden, sind hier.','Kinder, die zu weinen, sind hier.'], a:0,
+    explain:'Partizip I = aktive, gleichzeitige Handlung → Relativsatz mit Präsens.' },
+  { set:'K8', tag:'K8 · Futur', type:'single',
+    q:'Wir ___ morgen ins Museum gehen. (Futur)',
+    opts:['werden','wurden','würden','sind'], a:0,
+    explain:'Futur = werden (Präsens) + Infinitiv am Ende. wir werden … gehen.' },
+  { set:'K8', tag:'K8 · Futur', type:'single',
+    q:'"Du ___ das verstehen." (Futur, 2. Sg.)',
+    opts:['werde','wirst','wird','werdet'], a:1,
+    explain:'werden Präsens: ich werde · DU WIRST · er wird · wir werden · ihr werdet · sie werden.' },
+  { set:'K8', tag:'K8 · Futur', type:'single',
+    q:'Wo steht der Infinitiv im Futur-Satz?',
+    opts:['nach werden','vor werden','am Ende des Satzes','immer in der Mitte'], a:2,
+    explain:'Futur: werden in V2-Position, Infinitiv am Satzende.' },
 
   // --- Mixed final prep ---
   { set:'mixed', tag:'mixed', type:'single',
@@ -376,6 +415,47 @@ const QUIZ = [
     q:'Present tense active → present passive: "Der Lehrer liest das Buch."',
     opts:['Das Buch wird gelesen.','Das Buch ist gelesen.','Das Buch wird lesen.','Das Buch war gelesen.'], a:0,
     explain:'Passiv Präsens: wird + Partizip II.' },
+  { set:'mixed', tag:'mixed · Akk. Präp.', type:'multi',
+    q:'Welche Präpositionen sind IMMER Akkusativ? (dogfud — alle wählen)',
+    opts:['durch','mit','ohne','gegen','seit','für','um','aus'],
+    a:[0,2,3,5,6],
+    explain:'Akkusativ-only: durch · ohne · gegen · für · um (Mnemonic: dogfud).' },
+  { set:'mixed', tag:'mixed · V2-Regel', type:'single',
+    q:'"Heute Abend ___ wir ins Kino." Welches Verb steht in zweiter Position?',
+    opts:['gehen','geht','wir gehen','ist'], a:0,
+    explain:'V2-Regel: konjugiertes Verb bleibt in 2. Position, auch wenn der Satz nicht mit dem Subjekt beginnt.' },
+  { set:'mixed', tag:'mixed · V2-Regel', type:'single',
+    q:'Welcher Satz ist eine AUSNAHME zur V2-Regel (Verb zuerst)?',
+    opts:['Heute gehen wir ins Kino.','Wohnst du in New York?','Meine Freundin und ich gehen.','Warum gehen wir?'], a:1,
+    explain:'Ja/Nein-Fragen UND Imperative haben das konjugierte Verb in Position 1.' },
+  { set:'mixed', tag:'mixed · Adjektiv', type:'single',
+    q:'"Der Glühwein ___ heiß." Welche Adjektivendung?',
+    opts:['heiß (keine Endung)','heißer','heißen','heißes'], a:0,
+    explain:'Nach "sein" (Prädikatsadjektiv) → KEINE Endung. Nur attributive Adjektive (vor dem Substantiv) bekommen Endungen.' },
+  { set:'mixed', tag:'mixed · Adjektiv', type:'single',
+    q:'"Wir haben ___ Glühwein getrunken." (heiß, keine Artikel, Akk. m.)',
+    opts:['heiß','heißen','heißer','heißes'], a:1,
+    explain:'Ohne Artikel (starke Deklination) Akkusativ maskulin → -en. Beispiel: heißen Glühwein.' },
+  { set:'mixed', tag:'mixed · Konjunktion', type:'single',
+    q:'Welche ist eine KOORDINIERENDE Konjunktion (Verb bleibt in V2)?',
+    opts:['weil','dass','denn','wenn'], a:2,
+    explain:'Koordinierende: und, oder, denn, aber, sondern (0-Position, Verb bleibt V2). Subordinierende sind Kicker → Verb ans Ende.' },
+  { set:'mixed', tag:'mixed · Konjunktion', type:'single',
+    q:'"Schultze fährt nach Amerika, ___ er Cajun Musik liebt." (Verb am Ende!)',
+    opts:['denn','und','aber','weil'], a:3,
+    explain:'weil ist subordinierend (Kicker) → liebt am Ende. denn würde V2-Wortstellung erfordern.' },
+  { set:'mixed', tag:'mixed · Imperativ', type:'single',
+    q:'Imperativ (du-Form) von "trinken": "___ mehr Milch!"',
+    opts:['Trinkst','Trink','Trinke du','Du trinkst'], a:1,
+    explain:'Imperativ du-Form: Verbstamm ohne -st (Trink!). Verb in Position 1 — Subjekt fällt weg.' },
+  { set:'mixed', tag:'mixed · Relativsatz', type:'single',
+    q:'"Das ist meine Freundin, ___ ich Yoga mache." (mit + Relativpronomen, fem.)',
+    opts:['die','der','mit der','mit die'], a:2,
+    explain:'mit ist Dativ-Präposition → "mit der" (fem. Dativ). Präpositionen MIT Relativpronomen.' },
+  { set:'mixed', tag:'mixed · Reflexiv', type:'single',
+    q:'"Ich ___ jeden Morgen." (sich duschen — reflexiv)',
+    opts:['dusche mich','duscht mich','duschen mich','mich dusche'], a:0,
+    explain:'Reflexives Verb: sich duschen → ich dusche mich (Akk-Reflexivpronomen).' },
 ];
 
 /* ===================== GRAMMAR tables ===================== */
@@ -572,6 +652,68 @@ const GRAMMAR = [
     ]
   },
   {
+    title: 'Konjunktiv II der Modalverben',
+    sub: 'Umlaut für können / müssen / dürfen — KEIN Umlaut für wollen / sollen.',
+    rows: [
+      ['Modal','Konj II','Beispiel'],
+      ['können','könnte','Könntest du mir helfen?'],
+      ['müssen','müsste','Ich müsste mehr lernen.'],
+      ['dürfen','dürfte','Dürfte ich fragen?'],
+      ['wollen','wollte','Ich wollte gehen.'],
+      ['sollen','sollte','Du solltest schlafen.'],
+    ]
+  },
+  {
+    title: 'Partizip I — als Adjektiv',
+    sub: 'Form: Infinitiv + d (+ Adjektivendung) · = Relativsatz mit "der/die/das …"',
+    rows: [
+      ['Verb','Partizip I','Beispiel = Relativsatz'],
+      ['fahren','fahrend','ein schnell fahrendes Auto = ein Auto, das schnell fährt'],
+      ['sprechen','sprechend','eine laut sprechende Professorin = eine Professorin, die laut spricht'],
+      ['protestieren','protestierend','ein protestierender Student = ein Student, der protestiert'],
+      ['weinen','weinend','weinende Kinder = Kinder, die weinen'],
+      ['lesen','lesend','ein lesendes Kind = ein Kind, das liest'],
+    ]
+  },
+  {
+    title: 'Futur — werden + Infinitiv',
+    sub: 'werden in V2-Position, Infinitiv am Satzende. Achtung: werden auch für Passiv!',
+    rows: [
+      ['Person','werden (Präsens)','Beispiel'],
+      ['ich','werde','Ich werde Deutsch lernen.'],
+      ['du','wirst','Du wirst das verstehen.'],
+      ['er/sie/es','wird','Sie wird in Wien wohnen.'],
+      ['wir','werden','Wir werden heute in die Galerie gehen.'],
+      ['ihr','werdet','Ihr werdet müde sein.'],
+      ['sie / Sie','werden','Sie werden bald kommen.'],
+    ]
+  },
+  {
+    title: 'Wortstellung — V2-Regel & Ausnahmen',
+    sub: 'Konjugiertes Verb in 2. Position — Subjekt + Verb sind unzertrennlich, auch wenn ein anderes Element vorne steht.',
+    rows: [
+      ['Satztyp','Verb-Position','Beispiel'],
+      ['Aussagesatz (Subjekt vorne)','V2','Meine Freundin und ich gehen heute Abend ins Kino.'],
+      ['Aussagesatz (Element vorne)','V2 (Verb VOR Subjekt)','Heute Abend gehen meine Freundin und ich ins Kino.'],
+      ['W-Frage','V2','Warum gehen wir heute Abend ins Kino?'],
+      ['Ja/Nein-Frage (Ausnahme)','V1','Wohnst du in New York?'],
+      ['Imperativ (Ausnahme)','V1, kein Subjekt','Trink mehr Milch! / Kommen Sie nach New York!'],
+      ['Subord. Konj. (Kicker)','konj. Verb am Ende','Ich esse, weil ich Hunger habe.'],
+    ]
+  },
+  {
+    title: 'Akkusativ-Präpositionen — "dogfud"',
+    sub: 'durch · ohne · gegen · für · um — IMMER Akkusativ.',
+    rows: [
+      ['Prep.','Bedeutung','Beispiel'],
+      ['durch','through','durch den Park'],
+      ['ohne','without','ohne meinen Computer'],
+      ['gegen','against','gegen die Wand'],
+      ['für','for','für meinen Freund'],
+      ['um','around / at (time)','um die Ecke / um 10 Uhr'],
+    ]
+  },
+  {
     title: 'Passiv',
     sub: 'werden + Partizip II · Agent: von + Dativ',
     rows: [
@@ -656,116 +798,114 @@ const K8_SECTIONS = [
   },
 ];
 
-/* ===================== VERBS (for Conjugate drill) =====================
-   For each verb: infinitive, English gloss, Präteritum (3rd sg.),
-   Partizip II, auxiliary (haben/sein), chapter tag.
-   ====================================================================== */
-const VERBS = [
-  // core irregulars
-  { inf:'sein',       en:'to be',            pret:'war',        part:'gewesen',     aux:'sein',  ch:'K6' },
-  { inf:'haben',      en:'to have',          pret:'hatte',      part:'gehabt',      aux:'haben', ch:'K6' },
-  { inf:'werden',     en:'to become',        pret:'wurde',      part:'geworden',    aux:'sein',  ch:'K8' },
-  // motion / sein
-  { inf:'gehen',      en:'to go',            pret:'ging',       part:'gegangen',    aux:'sein',  ch:'K6' },
-  { inf:'kommen',     en:'to come',          pret:'kam',        part:'gekommen',    aux:'sein',  ch:'K6' },
-  { inf:'fahren',     en:'to drive/travel',  pret:'fuhr',       part:'gefahren',    aux:'sein',  ch:'K6' },
-  { inf:'fliegen',    en:'to fly',           pret:'flog',       part:'geflogen',    aux:'sein',  ch:'K6' },
-  { inf:'laufen',     en:'to run',           pret:'lief',       part:'gelaufen',    aux:'sein',  ch:'K6' },
-  { inf:'bleiben',    en:'to stay',          pret:'blieb',      part:'geblieben',   aux:'sein',  ch:'K6' },
-  { inf:'passieren',  en:'to happen',        pret:'passierte',  part:'passiert',    aux:'sein',  ch:'K6' },
-  { inf:'aufwachsen', en:'to grow up',       pret:'wuchs auf',  part:'aufgewachsen',aux:'sein',  ch:'K6' },
-  { inf:'umziehen',   en:'to move (house)',  pret:'zog um',     part:'umgezogen',   aux:'sein',  ch:'K8' },
-  // strong, haben
-  { inf:'essen',      en:'to eat',           pret:'aß',         part:'gegessen',    aux:'haben', ch:'K6' },
-  { inf:'trinken',    en:'to drink',         pret:'trank',      part:'getrunken',   aux:'haben', ch:'K6' },
-  { inf:'sehen',      en:'to see',           pret:'sah',        part:'gesehen',     aux:'haben', ch:'K6' },
-  { inf:'sprechen',   en:'to speak',         pret:'sprach',     part:'gesprochen',  aux:'haben', ch:'K6' },
-  { inf:'schreiben',  en:'to write',         pret:'schrieb',    part:'geschrieben', aux:'haben', ch:'K6' },
-  { inf:'lesen',      en:'to read',          pret:'las',        part:'gelesen',     aux:'haben', ch:'K6' },
-  { inf:'nehmen',     en:'to take',          pret:'nahm',       part:'genommen',    aux:'haben', ch:'K6' },
-  { inf:'geben',      en:'to give',          pret:'gab',        part:'gegeben',     aux:'haben', ch:'K6' },
-  { inf:'finden',     en:'to find',          pret:'fand',       part:'gefunden',    aux:'haben', ch:'K6' },
-  { inf:'schlafen',   en:'to sleep',         pret:'schlief',    part:'geschlafen',  aux:'haben', ch:'K6' },
-  { inf:'treffen',    en:'to meet',          pret:'traf',       part:'getroffen',   aux:'haben', ch:'K6' },
-  { inf:'helfen',     en:'to help',          pret:'half',       part:'geholfen',    aux:'haben', ch:'K5' },
-  { inf:'empfehlen',  en:'to recommend',     pret:'empfahl',    part:'empfohlen',   aux:'haben', ch:'K7' },
-  // mixed ("haben" forms like "bringen")
-  { inf:'bringen',    en:'to bring',         pret:'brachte',    part:'gebracht',    aux:'haben', ch:'K6' },
-  { inf:'denken',     en:'to think',         pret:'dachte',     part:'gedacht',     aux:'haben', ch:'K6' },
-  { inf:'wissen',     en:'to know (fact)',   pret:'wusste',     part:'gewusst',     aux:'haben', ch:'K6' },
-  { inf:'kennen',     en:'to know (person)', pret:'kannte',     part:'gekannt',     aux:'haben', ch:'K6' },
-  { inf:'verbringen', en:'to spend (time)',  pret:'verbrachte', part:'verbracht',   aux:'haben', ch:'K6' },
-  // regular weak
-  { inf:'kaufen',     en:'to buy',           pret:'kaufte',     part:'gekauft',     aux:'haben', ch:'K6' },
-  { inf:'spielen',    en:'to play',          pret:'spielte',    part:'gespielt',    aux:'haben', ch:'K6' },
-  { inf:'lernen',     en:'to learn / study', pret:'lernte',     part:'gelernt',     aux:'haben', ch:'K6' },
-  { inf:'arbeiten',   en:'to work',          pret:'arbeitete',  part:'gearbeitet',  aux:'haben', ch:'K6' },
-  { inf:'machen',     en:'to do / make',     pret:'machte',     part:'gemacht',     aux:'haben', ch:'K6' },
-  // separable / inseparable
-  { inf:'einkaufen',  en:'to shop',          pret:'kaufte ein', part:'eingekauft',  aux:'haben', ch:'K6' },
-  { inf:'aufmachen',  en:'to open',          pret:'machte auf', part:'aufgemacht',  aux:'haben', ch:'K6' },
-  { inf:'besuchen',   en:'to visit',         pret:'besuchte',   part:'besucht',     aux:'haben', ch:'K6' },
-  { inf:'verstehen',  en:'to understand',    pret:'verstand',   part:'verstanden',  aux:'haben', ch:'K6' },
-  { inf:'vergessen',  en:'to forget',        pret:'vergaß',     part:'vergessen',   aux:'haben', ch:'K6' },
-  { inf:'bestellen',  en:'to order',         pret:'bestellte',  part:'bestellt',    aux:'haben', ch:'K7' },
-  { inf:'telefonieren',en:'to phone',        pret:'telefonierte',part:'telefoniert',aux:'haben', ch:'K6' },
-  { inf:'studieren',  en:'to study',         pret:'studierte',  part:'studiert',    aux:'haben', ch:'K6' },
-  { inf:'schützen',   en:'to protect',       pret:'schützte',   part:'geschützt',   aux:'haben', ch:'K8' },
-  { inf:'sparen',     en:'to save',          pret:'sparte',     part:'gespart',     aux:'haben', ch:'K8' },
-  { inf:'wählen',     en:'to vote / choose', pret:'wählte',     part:'gewählt',     aux:'haben', ch:'K8' },
-  { inf:'einstellen', en:'to hire',          pret:'stellte ein',part:'eingestellt', aux:'haben', ch:'K8' },
-  { inf:'kündigen',   en:'to quit / fire',   pret:'kündigte',   part:'gekündigt',   aux:'haben', ch:'K8' },
-];
+/* ===================== ACTIVE RECALL ====================
+   Open-ended prompts grouped by Final-Vorbereitung topic.
+   Try to answer aus dem Kopf BEFORE revealing the hint.
+   ====================================================== */
+const ACTIVE_RECALL = [
+  // ----- I. Grammatik aus Kapitel 8 -----
+  { cat:'K8 · Konjunktiv II',
+    q:'Translate aus dem Kopf: "If I were the King of England, I would drink tea every day."',
+    hint:'Wenn ich der König von England wäre, würde ich jeden Tag Tee trinken.\n\n· wenn = Kicker → wäre am Ende des Wenn-Satzes\n· Hauptsatz: würde + Infinitiv (trinken) am Ende' },
+  { cat:'K8 · Konjunktiv II',
+    q:'Konjugiere wäre und hätte (alle 6 Personen) — diese sind UNREGELMÄSSIG.',
+    hint:'wäre: ich wäre · du wärst · er wäre · wir wären · ihr wärt · sie wären\nhätte: ich hätte · du hättest · er hätte · wir hätten · ihr hättet · sie hätten' },
+  { cat:'K8 · Konjunktiv II',
+    q:'Konj II der 5 Modalverben — und welche 3 bekommen einen Umlaut?',
+    hint:'könnte · müsste · dürfte (Umlaut!) · wollte · sollte (KEIN Umlaut)\nFormel: + Infinitiv am Ende. "Du solltest mehr schlafen."' },
+  { cat:'K8 · Konjunktiv II',
+    q:'Translate: "I would be permitted to wear a hat every day if I were the Queen of Sweden."',
+    hint:'Ich dürfte jeden Tag einen Hut tragen, wenn ich die Königin von Schweden wäre.\n\n· dürfte (Konj II von dürfen) + tragen (Inf am Ende)\n· wenn-Satz mit wäre am Ende' },
+  { cat:'K8 · Partizip I',
+    q:'Wie bildet man Partizip I? Gib die Formel und 2 Beispiele.',
+    hint:'Formel: Infinitiv + d (+ Adjektivendung)\n• fahren → fahrend → ein schnell fahrendes Auto\n• weinen → weinend → weinende Kinder\n\nFunktion: wie ein Adjektiv vor einem Substantiv.' },
+  { cat:'K8 · Partizip I',
+    q:'Schreib "ein protestierender Student" als RELATIVSATZ.',
+    hint:'ein Student, der protestiert.\n\n(Partizip I = aktive, gleichzeitige Handlung → "der/die/das + Verb im Präsens")' },
+  { cat:'K8 · Partizip I',
+    q:'Form mit Partizip I: "a loudly speaking professor" (eine Professorin, die laut spricht).',
+    hint:'eine laut sprechende Professorin\n\n· sprechen → sprechend\n· nach "eine" Nom. fem. → -e ending → sprechende' },
+  { cat:'K8 · Futur',
+    q:'Wie bildet man das Futur? Wo steht der Infinitiv?',
+    hint:'werden (Präsens, V2) + Infinitiv AM ENDE.\nBsp.: Wir werden heute in die Neue Galerie gehen.' },
+  { cat:'K8 · Futur',
+    q:'Konjugiere "werden" im Präsens (alle 6 Personen).',
+    hint:'ich werde · du wirst · er/sie/es wird · wir werden · ihr werdet · sie/Sie werden\n\n(Achtung: Stammwechsel du wirst / er wird. werden ist auch das Hilfsverb für Passiv!)' },
 
-/* ===================== LUCKEN (fill-in-the-blank drill) =====================
-   Each item has:
-     sentence  — shown with ___ where the blank goes
-     answer    — accepted answer (case-insensitive; umlauts normalized)
-     alts      — optional array of other acceptable strings
-     hint      — 1-line teacher hint (shown on request)
-     explain   — 1-line explanation shown after the answer
-     tag       — short label for the badge
-     ch        — chapter
-   ========================================================================= */
-const LUCKEN = [
-  // K5 · Prepositions + cases
-  { ch:'K5', tag:'prep · Dativ',       sentence:'Ich fahre mit ___ Bus zur Arbeit.',            answer:'dem',       hint:'mit + Dativ; der Bus',                explain:'mit is always Dativ; masc. dat. = dem.' },
-  { ch:'K5', tag:'prep · contraction', sentence:'Wir gehen zu ___ Bahnhof.',                     answer:'zum',       alts:['zu dem'], hint:'zu + dem contracts', explain:'zu + dem → zum.' },
-  { ch:'K5', tag:'prep · contraction', sentence:'Ich komme gerade von ___ Arzt.',                answer:'vom',       alts:['von dem'], hint:'von + dem contracts',explain:'von + dem → vom.' },
-  { ch:'K5', tag:'prep · seit + Dat',  sentence:'Ich lerne Deutsch seit ___ Jahr. (one, neut.)', answer:'einem',     hint:'seit + Dativ; neut. dat. = einem',    explain:'seit is always Dativ; ein (neut. dat.) → einem.' },
-  { ch:'K5', tag:'two-way · wo?',      sentence:'Das Buch liegt auf ___ Tisch. (wo?)',           answer:'dem',       hint:'location → Dativ',                    explain:'wo? → Dativ; der Tisch (dat.) → dem.' },
-  { ch:'K5', tag:'two-way · wohin?',   sentence:'Ich lege das Buch auf ___ Tisch. (wohin?)',     answer:'den',       hint:'motion → Akkusativ',                  explain:'wohin? → Akk.; der Tisch (acc.) → den.' },
-  { ch:'K5', tag:'pronoun · Dativ',    sentence:'Kannst du ___ helfen? (to me)',                 answer:'mir',       hint:'helfen + Dativ',                      explain:'helfen takes Dativ; "to me" = mir.' },
+  // ----- II. Wiederholtes: Verben & Zeiten -----
+  { cat:'Verben · Tenses',
+    q:'Bilde Perfekt: gehen, essen, telefonieren, besuchen, aufmachen.',
+    hint:'• gehen → ich BIN gegangen (sein, Bewegung)\n• essen → ich HABE gegessen\n• telefonieren → ich habe telefoniert (KEIN ge-)\n• besuchen → ich habe besucht (untrennbar be- → KEIN ge-)\n• aufmachen → ich habe aufgemacht (trennbar: prefix + ge + stem)' },
+  { cat:'Verben · Tenses',
+    q:'Wann benutzt man Präteritum statt Perfekt im gesprochenen Deutsch?',
+    hint:'Auch in der Konversation: sein (war), haben (hatte) und Modalverben (konnte, sollte, musste, wollte, durfte) — KEIN Umlaut im Präteritum!\nIn schriftlichen Erzählungen: alle Verben im Präteritum.' },
+  { cat:'Verben · Tenses',
+    q:'Trennbares Verb "ankommen" im Präsens-Satz: "I arrive in Berlin at 10."',
+    hint:'Ich komme um 10 Uhr in Berlin AN.\n\n(Präfix "an" wandert ans Satzende.)' },
+  { cat:'Verben · Reflexiv',
+    q:'Konjugiere "sich anziehen" im Präsens (ich/du/er/wir).',
+    hint:'ich ziehe MICH an · du ziehst DICH an · er zieht SICH an · wir ziehen UNS an\n\n(Reflexivpronomen + trennbares Verb!)' },
 
-  // K6 · Perfekt auxiliary + conjunctions
-  { ch:'K6', tag:'Perfekt · aux',      sentence:'Ich ___ nach Berlin gefahren.',                 answer:'bin',       hint:'motion → sein',                       explain:'fahren = motion → Perfekt with sein; 1.Sg. = bin.' },
-  { ch:'K6', tag:'Perfekt · aux',      sentence:'Wir ___ einen Kuchen gegessen.',                answer:'haben',     hint:'no motion → haben',                   explain:'essen → Perfekt with haben; 1.Pl. = haben.' },
-  { ch:'K6', tag:'als / wenn / wann',  sentence:'___ ich jung war, lebte ich in München.',       answer:'Als',       alts:['als'], hint:'single past event',      explain:'Als = single completed past event.' },
-  { ch:'K6', tag:'als / wenn / wann',  sentence:'Immer ___ es regnet, bleibe ich zu Hause.',     answer:'wenn',      hint:'recurring / if',                      explain:'wenn = recurring (or "if") in present/future.' },
-  { ch:'K6', tag:'weil (verb to end)', sentence:'Ich esse, weil ich Hunger ___.',                answer:'habe',      hint:'weil sends verb to end',              explain:'weil is subordinating → conjugated verb goes last.' },
-  { ch:'K6', tag:'dass',               sentence:'Ich finde, dass Deutsch schön ___.',            answer:'ist',       hint:'dass → verb to end',                  explain:'dass is subordinating → conjugated verb last.' },
+  // ----- II. Nomen & Fälle -----
+  { cat:'Fälle · Artikel',
+    q:'Bestimmte Artikel in allen 3 Fällen × 4 Genera (12 Formen).',
+    hint:'Nom: der · die · das · die\nAkk: den · die · das · die\nDat: dem · der · dem · den (+ -n am Substantiv im Plural!)' },
+  { cat:'Fälle · Artikel',
+    q:'Unbestimmte Artikel (ein-) in allen 3 Fällen × 4 Genera.',
+    hint:'Nom: ein · eine · ein · keine\nAkk: einen · eine · ein · keine\nDat: einem · einer · einem · keinen' },
+  { cat:'Fälle · Pronomen',
+    q:'Personalpronomen Akk und Dat — alle 8 Personen.',
+    hint:'Akk: mich · dich · ihn · sie · es · uns · euch · sie/Sie\nDat: mir · dir · ihm · ihr · ihm · uns · euch · ihnen/Ihnen' },
 
-  // K7 · Adjective endings + relative pronouns
-  { ch:'K7', tag:'adj · weak · Nom',   sentence:'Der alt___ Mann liest die Zeitung.',            answer:'e',         hint:'after der (masc. nom.): -e',          explain:'Weak ending after der (masc. nom.) = -e.' },
-  { ch:'K7', tag:'adj · mixed · Nom',  sentence:'Ein schnell___ Auto steht vor dem Haus.',       answer:'es',        hint:'after ein (neut. nom.): -es',         explain:'Mixed ending after ein (neut. nom.) = -es.' },
-  { ch:'K7', tag:'adj · weak · Akk',   sentence:'Ich kenne den klug___ Professor.',              answer:'en',        hint:'after den (masc. acc.): -en',         explain:'Weak ending after den (masc. acc.) = -en.' },
-  { ch:'K7', tag:'adj · Dativ',        sentence:'Er hilft der alt___ Frau.',                     answer:'en',        hint:'Dativ = always -en',                  explain:'Every adjective in the dative takes -en.' },
-  { ch:'K7', tag:'adj · plural',       sentence:'Die alt___ Leute sitzen im Café.',              answer:'en',        hint:'plural with def. article → -en',      explain:'die + plural → -en.' },
-  { ch:'K7', tag:'relpron · masc acc', sentence:'Der Mann, ___ ich gestern gesehen habe, ist mein Lehrer.', answer:'den', hint:'masc., accusative', explain:'Masc. Akk. relative pronoun = den.' },
-  { ch:'K7', tag:'relpron · fem dat',  sentence:'Die Frau, ___ ich geholfen habe, ist meine Tante.',       answer:'der', hint:'fem., dative',      explain:'Fem. Dat. relative pronoun = der.' },
-  { ch:'K7', tag:'relpron · pl dat',   sentence:'Die Leute, ___ ich vertraue, sind meine Freunde.',        answer:'denen', hint:'plural, dative',  explain:'Plural Dat. relative pronoun = denen (irregular).' },
-  { ch:'K7', tag:'Komparativ',         sentence:'Mein Bruder ist ___ als ich. (older)',          answer:'älter',     alts:['aelter'], hint:'comparative of alt — adds umlaut', explain:'alt → älter (umlaut added).' },
-  { ch:'K7', tag:'Superlativ',         sentence:'Der ICE ist am ___. (fast)',                    answer:'schnellsten',hint:'am + adj + -sten',                   explain:'Predicate superlative: am schnellsten.' },
+  // ----- II. Adjektive -----
+  { cat:'Adjektive',
+    q:'Wann brauchen Adjektive KEINE Endung?',
+    hint:'Nach dem Verb "sein" (Prädikatsadjektiv):\n"Der Glühwein WAR heiß." (keine Endung)\n\nVor einem Substantiv (attributiv) brauchen sie IMMER eine Endung.' },
+  { cat:'Adjektive',
+    q:'Setz die Endungen: "Wir haben heiß__ Glühwein, lecker__ Eis und gut__ Gespräche gehabt." (kein Artikel)',
+    hint:'heißEN Glühwein (Akk. m., starke Dekl. → -en)\nleckerES Eis (Akk. n., starke Dekl. → -es)\ngutE Gespräche (Akk. pl., starke Dekl. → -e)' },
+  { cat:'Adjektive · Komparativ',
+    q:'Komparativ + Superlativ von: groß, alt, gut, viel, gern.',
+    hint:'groß → größer → am größten\nalt → älter → am ältesten\ngut → besser → am besten (irregulär!)\nviel → mehr → am meisten (irregulär!)\ngern → lieber → am liebsten (irregulär!)' },
 
-  // K8 · Konjunktiv II + Passiv + Infinitivkonstruktionen
-  { ch:'K8', tag:'Konj II · würde',    sentence:'Wenn ich Zeit hätte, ___ ich mehr reisen.',     answer:'würde',     alts:['wuerde'], hint:'würde + Infinitiv',  explain:'Main clause in a Konj-II conditional takes würde + infinitive.' },
-  { ch:'K8', tag:'Konj II · wäre',    sentence:'Ich ___ glücklich, wenn du kommen würdest.',    answer:'wäre',      alts:['waere'], hint:'sein → wäre',         explain:'Konjunktiv II of sein = wäre.' },
-  { ch:'K8', tag:'Konj II · hätte',   sentence:'Sie ___ gern mehr Urlaub.',                      answer:'hätte',     alts:['haette'], hint:'haben → hätte',      explain:'Konjunktiv II of haben = hätte.' },
-  { ch:'K8', tag:'Konj II · könnte',  sentence:'___ du mir bitte helfen? (polite)',             answer:'Könntest',  alts:['könntest','koenntest','Koenntest'], hint:'können → könnte; 2.Sg. = könntest', explain:'können → könnte; du-form = könntest (capital at sentence start).' },
-  { ch:'K8', tag:'Passiv · Präsens',   sentence:'Das Auto ___ gerade repariert.',                answer:'wird',      hint:'werden + Partizip II',                explain:'Passiv Präsens 3.Sg. = wird.' },
-  { ch:'K8', tag:'Passiv · Prät.',     sentence:'Das Buch ___ letzte Woche gelesen.',            answer:'wurde',     hint:'werden (Präteritum) + Partizip II',   explain:'Passiv Präteritum 3.Sg. = wurde.' },
-  { ch:'K8', tag:'Passiv · Agent',     sentence:'Der Brief wurde ___ meinem Vater geschrieben.', answer:'von',       hint:'by whom? → von + Dat',                explain:'Passiv agent is expressed with von + Dativ.' },
-  { ch:'K8', tag:'um … zu',            sentence:'Ich lerne Deutsch, ___ in Wien zu leben.',      answer:'um',        hint:'um … zu = in order to',               explain:'um + (…) + zu + Infinitiv = in order to.' },
-  { ch:'K8', tag:'ohne … zu',          sentence:'Er ging, ___ Tschüss zu sagen.',                 answer:'ohne',      hint:'ohne … zu = without doing',           explain:'ohne + (…) + zu + Infinitiv = without doing.' },
-  { ch:'K8', tag:'statt … zu',         sentence:'___ zu lernen, schläft er. (instead of)',       answer:'Statt',     alts:['statt'], hint:'statt … zu = instead of', explain:'statt + (…) + zu + Infinitiv = instead of.' },
+  // ----- II. Konjunktionen -----
+  { cat:'Konjunktionen',
+    q:'5 koordinierende Konjunktionen — und was passiert mit dem Verb?',
+    hint:'und · oder · denn · aber · sondern (nach Negation)\n→ 0-Position: das konjugierte Verb bleibt in zweiter Position.\n"Schultze fährt nach Amerika, denn er LIEBT Cajun Musik."' },
+  { cat:'Konjunktionen',
+    q:'Subordinierende Konjunktionen ("Kicker"): nenne 3 + Effekt aufs Verb.',
+    hint:'dass · weil · wenn (auch: als, ob, obwohl, damit, …)\n→ "kicken" das konjugierte Verb ans Ende des Nebensatzes.\n"Schultze fährt nach Amerika, weil er Cajun Musik LIEBT."' },
+  { cat:'Konjunktionen · Relativsatz',
+    q:'Relativpronomen mit Präposition: "Das ist meine Freundin, ___ ich Yoga mache." (mit + fem.)',
+    hint:'mit der ich Yoga mache.\n\n(mit = Dativ-Präp. → fem. Dativ Relativpronomen "der". Im Relativsatz: Verb am Ende.)' },
+  { cat:'Konjunktionen · Relativsatz',
+    q:'Komplettiere: "Im Kurs ist ein Student, ___ ich schon lange kenne und ___ mein Freund ist."',
+    hint:'…, DEN ich schon lange kenne (Akk. m. — Objekt von "kenne"), und DER mein Freund ist (Nom. m. — Subjekt).' },
+
+  // ----- II. Präpositionen -----
+  { cat:'Präpositionen',
+    q:'Akkusativ-Präpositionen — die 5 (Mnemonic dogfud)?',
+    hint:'durch · ohne · gegen · für · um (d-o-g-f-u-d)\nBsp.: "Ich kann nicht ohne meinen Computer leben."' },
+  { cat:'Präpositionen',
+    q:'Dativ-Präpositionen — alle 8.',
+    hint:'aus · außer · bei · mit · nach · seit · von · zu\nBsp.: "Ich komme MIT meinem Freund AUS der Bibliothek und wir gehen ZUM Kino."\nKontraktionen: zum (zu+dem), zur (zu+der), vom (von+dem), beim (bei+dem).' },
+  { cat:'Präpositionen',
+    q:'Die 9 Wechselpräpositionen — und welcher Fall wann?',
+    hint:'in · auf · unter · über · neben · zwischen · hinter · an · vor\n\nWo? → Dativ (liegen/stehen/hängen): "Das Buch liegt auf DEM Tisch."\nWohin? → Akkusativ (legen/stellen/hängen): "Ich lege das Buch auf DEN Tisch."' },
+
+  // ----- III. Schreiben -----
+  { cat:'Schreiben · V2',
+    q:'V2-Regel: 3 Beispielsätze (Subjekt vorne / Element vorne / Perfekt).',
+    hint:'1. "Meine Freundin und ich GEHEN heute Abend ins Kino."\n2. "Heute Abend GEHEN meine Freundin und ich ins Kino." (Verb VOR Subjekt!)\n3. "Heute Abend SIND meine Freundin und ich ins Kino GEGANGEN." (Hilfsverb V2, Partizip am Ende)' },
+  { cat:'Schreiben · V2',
+    q:'Welche 2 Satztypen sind AUSNAHMEN zur V2-Regel?',
+    hint:'1. Ja/Nein-Fragen → Verb in V1: "Wohnst du in New York?" / "Lesen Sie gerne Shakespeare?"\n2. Imperative → Verb in V1: "Trink mehr Milch!" / "Kommen Sie nach New York!"' },
+  { cat:'Schreiben · Stil',
+    q:'Tipp aus der Vorbereitung: Wie kann man die Syntax variieren?',
+    hint:'Nicht immer mit dem Subjekt anfangen! Konjunktionen benutzen, um Gedanken zu verbinden. Strukturen aus dem Semester verwenden (Konj II, Passiv, Relativsätze, Partizip I, Futur).' },
+
+  // ----- IV. Lesen -----
+  { cat:'Lesen · Strategie',
+    q:'Welche Strategie für Lesetexte mit Fragen oder richtig/falsch?',
+    hint:'1. Titel + visuelle Hinweise → Genre erkennen\n2. Fragen / r-f-Statements ZUERST lesen — so weißt du, worauf du achtest\n3. Text überfliegen (skim) — Hauptthema?\n4. Dann genauer lesen und beantworten' },
 ];
