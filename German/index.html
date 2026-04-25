@@ -81,8 +81,8 @@
 <!-- ================= LEARN ================= -->
 <section class="sheet" id="learn">
   <div class="sheet-margin">
-    <h2 class="pencil">Learn — MC first, then type it</h2>
-    <p class="kicker">Pick a filter. Multiple-choice first — get it right and it upgrades to type-in. Miss it and the card comes back. Done when every card is mastered.</p>
+    <h2 class="pencil">Learn — multiple choice</h2>
+    <p class="kicker">Pick a filter. One click to answer — get it right and the card retires, miss it and it comes back. Distractors are pulled from the same chapter so wrong options stay topical. Done when every card is mastered.</p>
 
     <div id="learn-start">
       <div class="deck-bar">
@@ -103,7 +103,7 @@
         <span class="learn-prog-txt" id="learn-prog-txt">0 / 0 mastered</span>
       </div>
 
-      <div id="learn-mc" style="display:none">
+      <div id="learn-mc">
         <div class="check-box">
           <h4>multiple choice</h4>
           <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="learn-mc-ch"></p>
@@ -111,21 +111,6 @@
           <div class="learn-mc-opts" id="learn-mc-opts"></div>
           <div class="check-feedback" id="learn-mc-fb"></div>
           <button class="mini-btn" id="learn-mc-next" style="display:none;margin-top:10px">continue &rarr;</button>
-        </div>
-      </div>
-
-      <div id="learn-write" style="display:none">
-        <div class="check-box" style="background:var(--tab-2)">
-          <h4 style="color:var(--teal)">type it out</h4>
-          <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="learn-wr-ch"></p>
-          <p style="font-family:'Spectral',serif;font-size:17px;margin:0 0 10px" id="learn-wr-q"></p>
-          <input class="learn-input" id="learn-wr-input" type="text" placeholder="type the answer…">
-          <div style="display:flex;gap:8px;margin-top:10px">
-            <button class="mini-btn mini-btn--ok" id="learn-wr-check">check</button>
-            <button class="mini-btn" id="learn-wr-skip">skip</button>
-          </div>
-          <div class="check-feedback" id="learn-wr-fb"></div>
-          <button class="mini-btn" id="learn-wr-next" style="display:none;margin-top:10px">continue &rarr;</button>
         </div>
       </div>
     </div>
@@ -265,7 +250,7 @@
 </footer>
 
 <script src="content.js?v=5"></script>
-<script src="app.js?v=6"></script>
+<script src="app.js?v=7"></script>
 <script src="/assets/quiz.js?v=1" defer></script>
 <script src="/assets/voice.js?v=1" defer></script>
 <script src="/assets/mock.js?v=1" defer></script>

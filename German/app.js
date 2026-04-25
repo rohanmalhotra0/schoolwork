@@ -148,7 +148,7 @@ document.getElementById('learn-restart').addEventListener('click', () => {
 function startLearn(){
   const src = filterPool(learnFilter);
   if (!src.length) return;
-  learnItems = src.map(c => ({ card:c, stage:0, mastered:false }));
+  learnItems = src.map(c => ({ card:c, mastered:false }));
   for (let i = learnItems.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [learnItems[i], learnItems[j]] = [learnItems[j], learnItems[i]];
@@ -180,12 +180,11 @@ function serveLearn(){
   }
   learnCurrent = learnQueue.shift();
   learnAnswered = false;
-  if (learnCurrent.stage === 0) showLearnMC(); else showLearnWrite();
+  showLearnMC();
 }
 
 function showLearnMC(){
   document.getElementById('learn-mc').style.display = 'block';
-  document.getElementById('learn-write').style.display = 'none';
   const c = learnCurrent.card;
   document.getElementById('learn-mc-ch').textContent = c.ch + ' · ' + (c.type === 'GR' ? 'grammar' : 'vocab');
   document.getElementById('learn-mc-q').textContent = c.front;
@@ -219,80 +218,28 @@ function checkMC(btn, correct, right){
   learnAnswered = true;
   document.querySelectorAll('#learn-mc-opts .learn-opt').forEach(b => {
     if (b.textContent === right) b.classList.add(correct ? 'correct' : 'reveal');
+    b.disabled = true;
   });
   const fb = document.getElementById('learn-mc-fb');
   if (correct) {
     btn.classList.add('correct');
-    learnCurrent.stage = 1;
+    if (!learnCurrent.mastered) {
+      learnCurrent.mastered = true;
+      learnMastered++;
+      updateLearnProg();
+    }
     fb.className = 'check-feedback ok';
-    fb.textContent = '✓ richtig. Jetzt bitte eintippen.';
+    fb.textContent = '✓ richtig — gemeistert.';
   } else {
     btn.classList.add('wrong');
     learnQueue.push(learnCurrent);
     fb.className = 'check-feedback bad';
-    fb.textContent = '✗ falsch — richtig: ' + right + '. Card kommt zurück.';
+    fb.textContent = '✗ falsch — richtig: ' + right + '. Karte kommt zurück.';
   }
   document.getElementById('learn-mc-next').style.display = 'inline-block';
 }
 
 document.getElementById('learn-mc-next').addEventListener('click', serveLearn);
-
-function showLearnWrite(){
-  document.getElementById('learn-mc').style.display = 'none';
-  document.getElementById('learn-write').style.display = 'block';
-  const c = learnCurrent.card;
-  document.getElementById('learn-wr-ch').textContent = c.ch + ' · ' + (c.type === 'GR' ? 'grammar' : 'vocab');
-  document.getElementById('learn-wr-q').textContent = c.front;
-  const inp = document.getElementById('learn-wr-input');
-  inp.value = '';
-  inp.style.borderColor = '';
-  const fb = document.getElementById('learn-wr-fb');
-  fb.className = 'check-feedback';
-  fb.textContent = '';
-  document.getElementById('learn-wr-next').style.display = 'none';
-  setTimeout(() => inp.focus(), 50);
-}
-
-document.getElementById('learn-wr-input').addEventListener('keydown', e => {
-  if (e.key === 'Enter') checkWrite();
-});
-document.getElementById('learn-wr-check').addEventListener('click', checkWrite);
-document.getElementById('learn-wr-skip').addEventListener('click', () => {
-  learnQueue.push(learnCurrent);
-  serveLearn();
-});
-document.getElementById('learn-wr-next').addEventListener('click', serveLearn);
-
-function checkWrite(){
-  if (learnAnswered) return;
-  const inp = document.getElementById('learn-wr-input');
-  const typed = inp.value.trim().toLowerCase();
-  const right = learnCurrent.card.back.toLowerCase();
-  const core = right.replace(/\(.*?\)/g, '').trim();
-  const ok = !!typed && (
-    typed === right ||
-    typed === core ||
-    (core.includes(typed) && typed.length > 3) ||
-    (typed.length >= 4 && core.split(/[ ,/]+/).some(w => w && typed.includes(w) && w.length > 3))
-  );
-  learnAnswered = true;
-  const fb = document.getElementById('learn-wr-fb');
-  if (ok) {
-    learnCurrent.mastered = true;
-    learnMastered++;
-    inp.style.borderColor = 'var(--olive)';
-    fb.className = 'check-feedback ok';
-    fb.textContent = '✓ richtig. Karte gemeistert.';
-    updateLearnProg();
-  } else {
-    learnCurrent.stage = 0;
-    learnQueue.push(learnCurrent);
-    inp.style.borderColor = 'var(--red)';
-    fb.className = 'check-feedback bad';
-    fb.textContent = '✗ Antwort: ' + learnCurrent.card.back + '. Card kommt zurück.';
-  }
-  document.getElementById('learn-wr-next').style.display = 'inline-block';
-}
 
 function endLearn(){
   document.getElementById('learn-session').style.display = 'none';
