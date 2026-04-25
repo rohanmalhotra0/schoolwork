@@ -1220,6 +1220,9 @@ h2.pencil::after{
 .guide-row--bl .guide-body{ font-weight: 500; }
 .guide-row--trap .guide-label{ color: var(--red); }
 .guide-row--trap .guide-body{ font-style: italic; color: var(--ink-soft); }
+.guide-card .hl,
+.guide-card-q .hl{ color: var(--red); font-weight: 600; }
+.guide-row--trap .guide-body .hl{ font-style: normal; color: var(--red); }
 .guide-outline{
   margin: 0;
   padding-left: 22px;

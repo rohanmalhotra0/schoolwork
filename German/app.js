@@ -530,12 +530,12 @@ k8.innerHTML = K8_SECTIONS.map(s => `
     <article class="guide-card" id="guide-q-${q.n}">
       <header class="guide-card-h">
         <span class="guide-card-n">Q${q.n}</span>
-        <p class="guide-card-q">${escapeHtml(q.q)}</p>
+        <p class="guide-card-q">${fmtHl(q.q)}</p>
         ${q.ch ? `<span class="guide-card-ch gr-ch gr-ch--${q.ch.toLowerCase()}">${escapeHtml(q.ch)}</span>` : ''}
       </header>
       <div class="guide-row guide-row--bl">
         <span class="guide-label">bottom line</span>
-        <span class="guide-body">${escapeHtml(q.bottomLine)}</span>
+        <span class="guide-body">${fmtHl(q.bottomLine)}</span>
       </div>
       <div class="guide-row guide-row--terms">
         <span class="guide-label">forms</span>
@@ -546,12 +546,12 @@ k8.innerHTML = K8_SECTIONS.map(s => `
       <div class="guide-row guide-row--outline">
         <span class="guide-label">outline</span>
         <ol class="guide-body guide-outline">
-          ${q.outline.map(b => `<li>${escapeHtml(b)}</li>`).join('')}
+          ${q.outline.map(b => `<li>${fmtHl(b)}</li>`).join('')}
         </ol>
       </div>
       <div class="guide-row guide-row--trap">
         <span class="guide-label">trap</span>
-        <span class="guide-body">${escapeHtml(q.trap)}</span>
+        <span class="guide-body">${fmtHl(q.trap)}</span>
       </div>
     </article>
   `).join('');
@@ -565,4 +565,7 @@ function escapeHtml(s){
     .replaceAll('>','&gt;')
     .replaceAll('"','&quot;')
     .replaceAll("'",'&#39;');
+}
+function fmtHl(s){
+  return escapeHtml(s).replace(/\*\*([^*]+)\*\*/g,'<span class="hl">$1</span>');
 }
