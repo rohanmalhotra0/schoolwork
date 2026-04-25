@@ -697,7 +697,31 @@ h2.pencil::after{
   font-size: 22px;
   color: var(--teal);
   margin: 0 0 2px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
+.gr-ch{
+  display: inline-block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border: 1.2px solid var(--ink);
+  background: var(--paper-dark);
+  color: var(--ink);
+  border-radius: 2px;
+  transform: rotate(-1deg);
+  box-shadow: 1.5px 1.5px 0 var(--ink);
+}
+.gr-ch--k5{ background:#f0e7d8; color:#7a4d11; }
+.gr-ch--k6{ background:#e0ecd8; color:#3d6b1f; }
+.gr-ch--k7{ background:#dde7f0; color:#1f4a7a; }
+.gr-ch--k8{ background:#f3dde0; color:#a01f33; }
+.gr-ch--core{ background:#ece0f0; color:#5a2c7a; }
 .gr-sub{
   font-family:'IBM Plex Mono', monospace;
   font-size: 11.5px;

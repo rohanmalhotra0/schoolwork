@@ -412,26 +412,45 @@ renderRecall();
 
 /* ============================= GRAMMAR ============================= */
 const grammarList = document.getElementById('grammar-list');
-grammarList.innerHTML = GRAMMAR.map(g => {
-  const header = g.rows[0];
-  const body = g.rows.slice(1);
-  return `
-    <div class="gr-block">
-      <div class="gr-title">${escapeHtml(g.title)}</div>
-      ${g.sub ? `<div class="gr-sub">${escapeHtml(g.sub)}</div>` : ''}
-      <table>
-        <tr>${header.map(h => `<th>${escapeHtml(h)}</th>`).join('')}</tr>
-        ${body.map(row => `<tr>${row.map((cell, i) => {
-          // highlight first column of header-like tables, and middle columns that look like forms
-          const isHl = i > 0 && cell && /^[-a-zäöüßA-ZÄÖÜ]{1,20}$/.test(cell) && !/ /.test(cell);
-          const isEx = cell && / /.test(cell) && /[.!?]/.test(cell);
-          const cls = isEx ? 'ex' : (isHl && i === 1 ? 'hl' : '');
-          return `<td${cls ? ` class="${cls}"` : ''}>${escapeHtml(cell)}</td>`;
-        }).join('')}</tr>`).join('')}
-      </table>
-    </div>
-  `;
-}).join('');
+let grammarFilter = 'all';
+
+function renderGrammar(){
+  const items = grammarFilter === 'all'
+    ? GRAMMAR
+    : GRAMMAR.filter(g => g.ch === grammarFilter);
+
+  if (!items.length){
+    grammarList.innerHTML = `<p style="font-family:'Spectral',serif;color:var(--pencil);font-style:italic;margin-top:14px">No tables for this filter.</p>`;
+    return;
+  }
+
+  grammarList.innerHTML = items.map(g => {
+    const header = g.rows[0];
+    const body = g.rows.slice(1);
+    return `
+      <div class="gr-block">
+        <div class="gr-title">
+          ${g.ch ? `<span class="gr-ch gr-ch--${g.ch.toLowerCase()}">${escapeHtml(g.ch)}</span>` : ''}
+          ${escapeHtml(g.title)}
+        </div>
+        ${g.sub ? `<div class="gr-sub">${escapeHtml(g.sub)}</div>` : ''}
+        <table>
+          <tr>${header.map(h => `<th>${escapeHtml(h)}</th>`).join('')}</tr>
+          ${body.map(row => `<tr>${row.map((cell, i) => {
+            const isHl = i > 0 && cell && /^[-a-zäöüßA-ZÄÖÜ]{1,20}$/.test(cell) && !/ /.test(cell);
+            const isEx = cell && / /.test(cell) && /[.!?]/.test(cell);
+            const cls = isEx ? 'ex' : (isHl && i === 1 ? 'hl' : '');
+            return `<td${cls ? ` class="${cls}"` : ''}>${escapeHtml(cell)}</td>`;
+          }).join('')}</tr>`).join('')}
+        </table>
+      </div>
+    `;
+  }).join('');
+}
+document.querySelectorAll('input[name="gfilter"]').forEach(r => {
+  r.addEventListener('change', () => { grammarFilter = r.value; renderGrammar(); });
+});
+renderGrammar();
 
 /* ============================= VOCAB ============================= */
 const vocabGrid = document.getElementById('vocab-grid');
