@@ -210,7 +210,7 @@
 <section class="sheet" id="konjugation">
   <div class="sheet-margin">
     <h2 class="pencil">Konjugation — Verbformen drillen</h2>
-    <p class="kicker">Pick a mode. Type the verb form for the prompt — Enter to check, [S] to skip, [R] to reveal. Match is forgiving (capitalization + leading subject pronoun optional). Done when every form is mastered.</p>
+    <p class="kicker">Pick a mode, then click the correct conjugated form. Distractors are pulled from the same mode so every miss teaches a real contrast. Done when every form is mastered.</p>
 
     <div id="kj-start">
       <div class="deck-bar">
@@ -233,11 +233,9 @@
         <h4 style="color:var(--mustard)">conjugate</h4>
         <p class="kj-mode" id="kj-mode"></p>
         <p class="kj-prompt" id="kj-prompt"></p>
-        <input class="learn-input" id="kj-input" type="text" placeholder="type the form…" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <div class="learn-mc-opts" id="kj-opts"></div>
         <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-          <button class="mini-btn mini-btn--ok" id="kj-check">check</button>
           <button class="mini-btn" id="kj-skip">skip</button>
-          <button class="mini-btn" id="kj-reveal">reveal</button>
         </div>
         <div class="check-feedback" id="kj-fb"></div>
         <div class="kj-note" id="kj-note"></div>
@@ -268,9 +266,9 @@
   </div>
 </footer>
 
-<script src="content.js?v=4"></script>
+<script src="content.js?v=5"></script>
 <script src="/assets/flashcards.js?v=2"></script>
-<script src="app.js?v=4"></script>
+<script src="app.js?v=5"></script>
 <script src="/assets/quiz.js?v=1" defer></script>
 <script src="/assets/voice.js?v=1" defer></script>
 <script src="/assets/mock.js?v=1" defer></script>

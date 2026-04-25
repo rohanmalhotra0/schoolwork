@@ -1001,7 +1001,7 @@ const KONJUGATION = [
   { mode:'Konj II', q:'gehen · ich',                   a:'würde gehen',       alt:['ich würde gehen'], note:'Standardform: würde + Infinitiv.' },
   { mode:'Konj II', q:'lernen · wir',                  a:'würden lernen',     alt:['wir würden lernen'] },
   { mode:'Konj II', q:'reisen · ich (gern)',           a:'würde gern reisen', alt:['ich würde gern reisen'], note:'"gern" zwischen würde und Infinitiv.' },
-  { mode:'Konj II', q:'einen Kaffee · ich (polite)',   a:'hätte gern einen kaffee', alt:['ich hätte gern einen kaffee'], note:'„Ich hätte gern…" = höflicher Wunsch.' },
+  { mode:'Konj II', q:'„Ich __ gern einen Kaffee." (polite)', a:'hätte', note:'„Ich hätte gern…" = höflicher Wunsch.' },
 
   // ---- Modal Konj II (5 Modalverben) ----
   { mode:'Modal Konj II', q:'können · ich',  a:'könnte',  note:'Umlaut!' },
@@ -1023,11 +1023,11 @@ const KONJUGATION = [
   { mode:'Partizip I', q:'arbeiten — vor "Mann" (m. Nom., nach "ein")',        a:'arbeitender' },
 
   // ---- Futur (werden + Inf am Ende) ----
-  { mode:'Futur', q:'gehen · wir (ins Museum)',     a:'wir werden ins museum gehen',     alt:['werden ins museum gehen'],    note:'werden V2, Infinitiv am Ende.' },
-  { mode:'Futur', q:'lernen · ich (Deutsch)',       a:'ich werde deutsch lernen',        alt:['werde deutsch lernen'] },
-  { mode:'Futur', q:'verstehen · du (das)',         a:'du wirst das verstehen',          alt:['wirst das verstehen'],         note:'2.Sg.: du wirst (Stammwechsel).' },
-  { mode:'Futur', q:'kommen · sie (3.Pl, bald)',    a:'sie werden bald kommen',          alt:['werden bald kommen'] },
-  { mode:'Futur', q:'sein · ihr (müde)',            a:'ihr werdet müde sein',            alt:['werdet müde sein'],            note:'2.Pl.: ihr werdet.' },
+  { mode:'Futur', q:'gehen · wir (ins Museum)',     a:'wir werden ins Museum gehen',     note:'werden V2, Infinitiv am Ende.' },
+  { mode:'Futur', q:'lernen · ich (Deutsch)',       a:'ich werde Deutsch lernen' },
+  { mode:'Futur', q:'verstehen · du (das)',         a:'du wirst das verstehen',          note:'2.Sg.: du wirst (Stammwechsel).' },
+  { mode:'Futur', q:'kommen · sie (3.Pl, bald)',    a:'sie werden bald kommen' },
+  { mode:'Futur', q:'sein · ihr (müde)',            a:'ihr werdet müde sein',            note:'2.Pl.: ihr werdet.' },
 
   // ---- Konj II — extras: Wenn-Sätze (real/irreal aus K8.7) ----
   { mode:'Konj II', q:'müde · ich → IRREAL: Wenn ich müde …, … ich schlafen.', a:'wäre, würde', alt:['wäre würde','wäre, würde'], note:'Wenn ich müde wäre, würde ich schlafen. (Konj II beider Verben.)' },

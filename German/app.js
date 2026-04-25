@@ -388,11 +388,11 @@ renderRecallFilters();
 renderRecall();
 
 /* ========================= KONJUGATION DRILL =========================
-   One-prompt-at-a-time typed-answer drill, queue-based.
+   One-prompt-at-a-time multiple-choice drill, queue-based.
    Filter by mode (Perfekt / Konj II / Modal Konj II / Partizip I / Futur).
-   Match is forgiving: case-insensitive, ignores leading subject pronoun
-   (ich/du/er/sie/es/wir/ihr/Sie), trims trailing punctuation, accepts
-   the gold answer or any of the `alt` variants. */
+   Distractors are pulled from items in the same mode so every wrong
+   option is itself a real conjugated form — the contrast is what teaches.
+   Card is mastered after one correct click; misses requeue. */
 const kjEls = {
   start:    document.getElementById('kj-start'),
   startBtn: document.getElementById('kj-start-btn'),
@@ -404,10 +404,8 @@ const kjEls = {
   progTxt:  document.getElementById('kj-prog-txt'),
   mode:     document.getElementById('kj-mode'),
   prompt:   document.getElementById('kj-prompt'),
-  input:    document.getElementById('kj-input'),
-  check:    document.getElementById('kj-check'),
+  opts:     document.getElementById('kj-opts'),
   skip:     document.getElementById('kj-skip'),
-  reveal:   document.getElementById('kj-reveal'),
   fb:       document.getElementById('kj-fb'),
   note:     document.getElementById('kj-note'),
   next:     document.getElementById('kj-next'),
@@ -427,29 +425,12 @@ kjEls.restart.addEventListener('click', () => {
   kjEls.done.style.display = 'none';
   kjEls.start.style.display = 'block';
 });
-kjEls.check.addEventListener('click', checkKj);
 kjEls.skip.addEventListener('click', () => {
   if (!kjCurrent) return;
   kjQueue.push(kjCurrent);
   serveKj();
 });
-kjEls.reveal.addEventListener('click', () => {
-  if (!kjCurrent || kjAnswered) return;
-  kjAnswered = true;
-  kjEls.input.value = kjCurrent.item.a;
-  kjEls.input.style.borderColor = 'var(--mustard)';
-  kjEls.fb.className = 'check-feedback bad';
-  kjEls.fb.textContent = '↳ shown — count requeued.';
-  if (kjCurrent.item.note) kjEls.note.textContent = kjCurrent.item.note;
-  kjQueue.push(kjCurrent);
-  kjEls.next.style.display = 'inline-block';
-});
 kjEls.next.addEventListener('click', serveKj);
-kjEls.input.addEventListener('keydown', e => {
-  if (e.key === 'Enter') {
-    if (kjAnswered) serveKj(); else checkKj();
-  }
-});
 
 function startKj(){
   const src = (kjMode === 'all')
@@ -491,45 +472,58 @@ function serveKj(){
   const it = kjCurrent.item;
   kjEls.mode.textContent = it.mode;
   kjEls.prompt.textContent = it.q;
-  kjEls.input.value = '';
-  kjEls.input.style.borderColor = '';
   kjEls.fb.className = 'check-feedback';
   kjEls.fb.textContent = '';
   kjEls.note.textContent = '';
   kjEls.next.style.display = 'none';
-  setTimeout(() => kjEls.input.focus(), 50);
+  renderKjOpts(it);
 }
 
-function normalizeKj(s){
-  return (s || '')
-    .toLowerCase()
-    .trim()
-    .replace(/[.,!?;]+$/, '')
-    .replace(/^(ich|du|er|sie|es|wir|ihr|sie)\s+/, '')
-    .replace(/\s+/g, ' ');
+function renderKjOpts(it){
+  // Same-mode distractors first; fall back to any other item if the mode is small.
+  const sameMode = KONJUGATION.filter(x => x.mode === it.mode && x.a !== it.a);
+  const fallback = KONJUGATION.filter(x => x.a !== it.a);
+  const pool = sameMode.length >= 3 ? sameMode : fallback;
+  const wrongs = [];
+  const guard = new Set([it.a]);
+  while (wrongs.length < 3 && pool.length) {
+    const r = pool[Math.floor(Math.random() * pool.length)];
+    if (!guard.has(r.a)) { wrongs.push(r.a); guard.add(r.a); }
+    if (guard.size > pool.length + 1) break;
+  }
+  const opts = [it.a, ...wrongs].sort(() => Math.random() - 0.5);
+  kjEls.opts.innerHTML = '';
+  opts.forEach(text => {
+    const b = document.createElement('button');
+    b.className = 'learn-opt';
+    b.textContent = text;
+    b.addEventListener('click', () => checkKjMC(b, text === it.a, it.a));
+    kjEls.opts.appendChild(b);
+  });
 }
 
-function checkKj(){
+function checkKjMC(btn, correct, right){
   if (kjAnswered || !kjCurrent) return;
-  const it = kjCurrent.item;
-  const typed = normalizeKj(kjEls.input.value);
-  const candidates = [it.a, ...(it.alt || [])].map(normalizeKj);
-  const ok = !!typed && candidates.includes(typed);
   kjAnswered = true;
-  if (ok) {
+  const it = kjCurrent.item;
+  kjEls.opts.querySelectorAll('.learn-opt').forEach(b => {
+    if (b.textContent === right) b.classList.add(correct ? 'correct' : 'reveal');
+    b.disabled = true;
+  });
+  if (correct) {
+    btn.classList.add('correct');
     if (!kjCurrent.mastered) {
       kjCurrent.mastered = true;
       kjMastered++;
       updateKjProg();
     }
-    kjEls.input.style.borderColor = 'var(--olive)';
     kjEls.fb.className = 'check-feedback ok';
     kjEls.fb.textContent = '✓ richtig — gemeistert.';
   } else {
+    btn.classList.add('wrong');
     kjQueue.push(kjCurrent);
-    kjEls.input.style.borderColor = 'var(--red)';
     kjEls.fb.className = 'check-feedback bad';
-    kjEls.fb.textContent = '✗ falsch — Antwort: ' + it.a + '. Karte kommt zurück.';
+    kjEls.fb.textContent = '✗ falsch — richtig: ' + right + '. Karte kommt zurück.';
   }
   if (it.note) kjEls.note.textContent = it.note;
   kjEls.next.style.display = 'inline-block';
