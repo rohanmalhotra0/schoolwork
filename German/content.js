@@ -61,6 +61,10 @@ const CARDS = [
   { ch:'K6', type:'VO', front:'zuerst / dann / danach / schließlich', back:'first / then / afterwards / finally' },
   { ch:'K6', type:'VO', front:'verbringen', back:'to spend (time)', note:'hat verbracht.' },
   { ch:'K6', type:'VO', front:'passieren', back:'to happen', note:'ist passiert — sein! Was ist passiert?' },
+  { ch:'K6', type:'VO', front:'erzählen', back:'to tell (a story)', note:'hat erzählt.' },
+  { ch:'K6', type:'VO', front:'einladen', back:'to invite', note:'lädt ein → hat eingeladen (separable, stem-change).' },
+  { ch:'K6', type:'VO', front:'vergessen', back:'to forget', note:'vergisst → hat vergessen (insep. ver- → KEIN ge-).' },
+  { ch:'K6', type:'VO', front:'besuchen', back:'to visit', note:'hat besucht (insep. be- → KEIN ge-).' },
 
   // K7 · Grammar (Relativ + Adjektive + Komparativ)
   { ch:'K7', type:'GR', front:'Relativpronomen: masculine', back:'Nom der · Akk den · Dat dem', note:'Der Mann, den ich kenne, …' },
@@ -131,8 +135,9 @@ const CARDS = [
   { ch:'K8', type:'VO', front:'kündigen', back:'to quit / to fire' },
   { ch:'K8', type:'VO', front:'die Ausbildung', back:'vocational training' },
   { ch:'K8', type:'VO', front:'umziehen', back:'to move (to a new home)', note:'ist umgezogen (separable, sein!).' },
-  { ch:'K8', type:'VO', front:'an deiner Stelle würde ich…', back:'if I were in your place, I would…', note:'Key Konjunktiv II phrase.' },
-  { ch:'K8', type:'VO', front:'Es wäre schön, wenn…', back:'it would be nice if…', note:'Followed by Konjunktiv II verb at end.' },
+  { ch:'K8', type:'VO', front:'der Bewerber / die Bewerberin', back:'applicant', note:'sich um eine Stelle bewerben.' },
+  { ch:'K8', type:'VO', front:'das Praktikum', back:'internship', note:'pl: die Praktika.' },
+  { ch:'K8', type:'VO', front:'die Erfahrung', back:'experience' },
 ];
 
 /* ===================== VOCAB (for vocab page) ===================== */
@@ -284,6 +289,26 @@ const QUIZ = [
     q:'Ich esse, ___ ich Hunger habe. (verb goes to end!)',
     opts:['denn','weil','aber','und'], a:1,
     explain:'weil = subordinating conjunction → verb to end. denn keeps main-clause order.' },
+  { set:'K6', tag:'K6 · Modal Präteritum', type:'single',
+    q:'Als ich klein war, ___ ich nicht alleine bleiben.',
+    opts:['kann','konnte','könnte','gekonnt'], a:1,
+    explain:'Präteritum von Modalverben (immer ohne Umlaut): konnte. In Erzählungen wird Präteritum benutzt, sogar gesprochen.' },
+  { set:'K6', tag:'K6 · Partizip II', type:'single',
+    q:'Ich habe meinen Freund ___ . (einladen)',
+    opts:['eingeladen','geeinladen','eingeladet','einladet'], a:0,
+    explain:'einladen ist trennbar UND stark: prefix + ge + neuer Stamm + -en → eingeladen.' },
+  { set:'K6', tag:'K6 · Partizip II', type:'single',
+    q:'Sie hat ihre Schlüssel ___ . (vergessen)',
+    opts:['gevergessen','vergessen','vergesst','vergisst'], a:1,
+    explain:'Inseparable prefix ver- → KEIN ge-. Stark: vergessen → vergessen (kein zusätzliches Affix).' },
+  { set:'K6', tag:'K6 · sein vs haben', type:'single',
+    q:'Was ist gestern ___? — Mein Hund ist krank geworden.',
+    opts:['gepassiert','passiert','ist passiert','war passiert'], a:1,
+    explain:'passieren = Zustandswechsel → sein (ist passiert). Partizip ohne ge- (-ieren).' },
+  { set:'K6', tag:'K6 · als/wenn', type:'single',
+    q:'___ ich gestern nach Hause kam, war niemand da. (einmaliges Ereignis)',
+    opts:['Wenn','Als','Wann','Ob'], a:1,
+    explain:'als = einmaliges Ereignis in der Vergangenheit. wenn = wiederholt oder Bedingung.' },
 
   // --- K7 ---
   { set:'K7', tag:'K7 · Relativpronomen', type:'single',
@@ -798,6 +823,71 @@ const K8_SECTIONS = [
   },
 ];
 
+/* ===================== KONJUGATION DRILL =====================
+   Type the verb form for a given prompt. Modes:
+   Perfekt, Konj II, Modal Konj II, Partizip I, Futur.
+   Answer matching is forgiving (case + leading subject pronoun
+   optional + accepted variants).
+   ============================================================ */
+const KONJUGATION = [
+  // ---- Perfekt (Partizip II + correct aux) ----
+  { mode:'Perfekt', q:'gehen · ich',         a:'bin gegangen',     alt:['ich bin gegangen'],     note:'Bewegung → sein. Stark: gehen → gegangen.' },
+  { mode:'Perfekt', q:'essen · ich',         a:'habe gegessen',    alt:['ich habe gegessen'],    note:'haben (kein Zustandswechsel). Stark.' },
+  { mode:'Perfekt', q:'fahren · er',         a:'ist gefahren',     alt:['er ist gefahren'],      note:'Bewegung → sein. Stark.' },
+  { mode:'Perfekt', q:'bleiben · ich',       a:'bin geblieben',    alt:['ich bin geblieben'],    note:'Zustandsänderung → sein. Stark.' },
+  { mode:'Perfekt', q:'werden · sie (3.Sg)', a:'ist geworden',     alt:['sie ist geworden'],     note:'Zustandsänderung → sein. Stark.' },
+  { mode:'Perfekt', q:'lesen · ich',         a:'habe gelesen',     alt:['ich habe gelesen'],     note:'Stark: lesen → gelesen.' },
+  { mode:'Perfekt', q:'sehen · wir',         a:'haben gesehen',    alt:['wir haben gesehen'],    note:'Stark: sehen → gesehen.' },
+  { mode:'Perfekt', q:'sprechen · du',       a:'hast gesprochen',  alt:['du hast gesprochen'],   note:'Stark: sprechen → gesprochen.' },
+  { mode:'Perfekt', q:'schreiben · ich',     a:'habe geschrieben', alt:['ich habe geschrieben'], note:'Stark: schreiben → geschrieben.' },
+  { mode:'Perfekt', q:'denken · ich',        a:'habe gedacht',     alt:['ich habe gedacht'],     note:'Mischverb: denken → gedacht.' },
+  { mode:'Perfekt', q:'telefonieren · sie',  a:'hat telefoniert',  alt:['sie hat telefoniert'],  note:'-ieren-Verben: KEIN ge-.' },
+  { mode:'Perfekt', q:'studieren · wir',     a:'haben studiert',   alt:['wir haben studiert'],   note:'-ieren-Verben: KEIN ge-.' },
+  { mode:'Perfekt', q:'besuchen · ich',      a:'habe besucht',     alt:['ich habe besucht'],     note:'Insep. be- → KEIN ge-.' },
+  { mode:'Perfekt', q:'vergessen · sie',     a:'hat vergessen',    alt:['sie hat vergessen'],    note:'Insep. ver- → KEIN ge-.' },
+  { mode:'Perfekt', q:'aufstehen · ich',     a:'bin aufgestanden', alt:['ich bin aufgestanden'], note:'Trennbar + Bewegung: prefix + ge + Stamm + sein.' },
+  { mode:'Perfekt', q:'einladen · ich',      a:'habe eingeladen',  alt:['ich habe eingeladen'],  note:'Trennbar + stark.' },
+  { mode:'Perfekt', q:'aufmachen · er',      a:'hat aufgemacht',   alt:['er hat aufgemacht'],    note:'Trennbar + schwach: prefix + ge + Stamm + -t.' },
+
+  // ---- Konj II (sein, haben, würde + Inf) ----
+  { mode:'Konj II', q:'sein · ich',                    a:'wäre',              note:'Unregelmäßig.' },
+  { mode:'Konj II', q:'sein · wir',                    a:'wären' },
+  { mode:'Konj II', q:'sein · du',                     a:'wärst',             alt:['wärest'] },
+  { mode:'Konj II', q:'haben · ich',                   a:'hätte' },
+  { mode:'Konj II', q:'haben · du',                    a:'hättest' },
+  { mode:'Konj II', q:'haben · sie (3.Pl)',            a:'hätten' },
+  { mode:'Konj II', q:'gehen · ich',                   a:'würde gehen',       alt:['ich würde gehen'], note:'Standardform: würde + Infinitiv.' },
+  { mode:'Konj II', q:'lernen · wir',                  a:'würden lernen',     alt:['wir würden lernen'] },
+  { mode:'Konj II', q:'reisen · ich (gern)',           a:'würde gern reisen', alt:['ich würde gern reisen'], note:'"gern" zwischen würde und Infinitiv.' },
+  { mode:'Konj II', q:'einen Kaffee · ich (polite)',   a:'hätte gern einen kaffee', alt:['ich hätte gern einen kaffee'], note:'„Ich hätte gern…" = höflicher Wunsch.' },
+
+  // ---- Modal Konj II (5 Modalverben) ----
+  { mode:'Modal Konj II', q:'können · ich',  a:'könnte',  note:'Umlaut!' },
+  { mode:'Modal Konj II', q:'können · du',   a:'könntest' },
+  { mode:'Modal Konj II', q:'können · wir',  a:'könnten' },
+  { mode:'Modal Konj II', q:'müssen · ich',  a:'müsste',  note:'Umlaut. Vergleiche Präteritum musste (ohne Umlaut).' },
+  { mode:'Modal Konj II', q:'müssen · du',   a:'müsstest' },
+  { mode:'Modal Konj II', q:'dürfen · ich',  a:'dürfte',  note:'Umlaut. Höflich.' },
+  { mode:'Modal Konj II', q:'dürfen · ihr',  a:'dürftet' },
+  { mode:'Modal Konj II', q:'wollen · ich',  a:'wollte',  note:'KEIN Umlaut. Identisch mit Präteritum.' },
+  { mode:'Modal Konj II', q:'sollen · du',   a:'solltest', note:'KEIN Umlaut. „Du solltest mehr schlafen."' },
+
+  // ---- Partizip I als Adjektiv (mit Endung) ----
+  { mode:'Partizip I', q:'fahren — vor "Auto" (n. Nom., nach "ein")',         a:'fahrendes',       note:'fahren → fahrend → -es (n. Nom. mixed).' },
+  { mode:'Partizip I', q:'sprechen — vor "Professorin" (f. Nom., nach "eine")', a:'sprechende',    note:'-e nach "eine" (f. Nom.).' },
+  { mode:'Partizip I', q:'lesen — vor "Kind" (n. Nom., nach "ein")',           a:'lesendes' },
+  { mode:'Partizip I', q:'protestieren — vor "Student" (m. Nom., nach "ein")', a:'protestierender', note:'-er nach "ein" (m. Nom. mixed).' },
+  { mode:'Partizip I', q:'weinen — vor "Kinder" (Pl. Nom., kein Artikel)',     a:'weinende',        note:'-e starke Pl. Nom.' },
+  { mode:'Partizip I', q:'arbeiten — vor "Mann" (m. Nom., nach "ein")',        a:'arbeitender' },
+
+  // ---- Futur (werden + Inf am Ende) ----
+  { mode:'Futur', q:'gehen · wir (ins Museum)',     a:'wir werden ins museum gehen',     alt:['werden ins museum gehen'],    note:'werden V2, Infinitiv am Ende.' },
+  { mode:'Futur', q:'lernen · ich (Deutsch)',       a:'ich werde deutsch lernen',        alt:['werde deutsch lernen'] },
+  { mode:'Futur', q:'verstehen · du (das)',         a:'du wirst das verstehen',          alt:['wirst das verstehen'],         note:'2.Sg.: du wirst (Stammwechsel).' },
+  { mode:'Futur', q:'kommen · sie (3.Pl, bald)',    a:'sie werden bald kommen',          alt:['werden bald kommen'] },
+  { mode:'Futur', q:'sein · ihr (müde)',            a:'ihr werdet müde sein',            alt:['werdet müde sein'],            note:'2.Pl.: ihr werdet.' },
+];
+
 /* ===================== ACTIVE RECALL ====================
    Open-ended prompts grouped by Final-Vorbereitung topic.
    Try to answer aus dem Kopf BEFORE revealing the hint.
@@ -908,4 +998,15 @@ const ACTIVE_RECALL = [
   { cat:'Lesen · Strategie',
     q:'Welche Strategie für Lesetexte mit Fragen oder richtig/falsch?',
     hint:'1. Titel + visuelle Hinweise → Genre erkennen\n2. Fragen / r-f-Statements ZUERST lesen — so weißt du, worauf du achtest\n3. Text überfliegen (skim) — Hauptthema?\n4. Dann genauer lesen und beantworten' },
+
+  // ----- Extras (Lücken) -----
+  { cat:'K8 · Partizip I',
+    q:'Schreib drei Partizip-I-Phrasen um in Relativsätze: "ein lachendes Kind", "die schlafende Katze", "ein arbeitender Mann".',
+    hint:'• ein lachendes Kind → ein Kind, das lacht\n• die schlafende Katze → die Katze, die schläft\n• ein arbeitender Mann → ein Mann, der arbeitet\n\nFormel: Adjektivendung wird zum Pronomen (Genus + Kasus), Verb im Präsens am Ende.' },
+  { cat:'Verben · Trennbar',
+    q:'Trennbares Verb in 3 Tempora: aufstehen (ich, jeden Tag / gestern / morgen).',
+    hint:'• Präsens: Ich STEHE jeden Tag um 7 Uhr AUF.\n• Perfekt: Ich BIN gestern um 7 Uhr AUFGESTANDEN. (sein!)\n• Futur: Ich WERDE morgen um 7 Uhr AUFSTEHEN. (Infinitiv ans Ende, zusammen!)' },
+  { cat:'Schreiben · Negation',
+    q:'kein vs. nicht — wann benutzt man was?',
+    hint:'kein = negiert Substantive mit ein/kein Artikel: "Ich habe KEIN Geld." / "Sie hat keine Zeit."\nnicht = negiert alles andere (Verben, definite Substantive, Adjektive, ganze Sätze): "Ich gehe NICHT." / "Das ist NICHT mein Auto."' },
 ];

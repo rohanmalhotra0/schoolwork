@@ -958,6 +958,30 @@ h2.pencil::after{
   border-left: 3px solid var(--red);
 }
 
+/* ============== konjugation drill ============== */
+.kj-mode{
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mustard);
+  margin: 0 0 6px;
+}
+.kj-prompt{
+  font-family:'Architects Daughter', cursive;
+  font-size: 26px;
+  color: var(--ink);
+  margin: 0 0 12px;
+  letter-spacing: 0.5px;
+}
+.kj-note{
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  color: var(--pencil);
+  margin-top: 8px;
+  font-style: italic;
+}
+
 /* fc badge (chapter tag on flashcard front) */
 .fc-badge{
   display: inline-block;

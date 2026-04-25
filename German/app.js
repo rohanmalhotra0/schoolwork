@@ -114,10 +114,13 @@ function showLearnMC(){
   const c = learnCurrent.card;
   document.getElementById('learn-mc-ch').textContent = c.ch + ' · ' + (c.type === 'GR' ? 'grammar' : 'vocab');
   document.getElementById('learn-mc-q').textContent = c.front;
-  const others = CARDS.filter(x => x.back !== c.back);
+  // Prefer distractors from same chapter+type so options stay topical.
+  const sameBucket = CARDS.filter(x => x.back !== c.back && x.ch === c.ch && x.type === c.type);
+  const fallback   = CARDS.filter(x => x.back !== c.back);
+  const pool = sameBucket.length >= 3 ? sameBucket : fallback;
   const wrongs = [];
-  while (wrongs.length < 3 && others.length > wrongs.length) {
-    const r = others[Math.floor(Math.random() * others.length)];
+  while (wrongs.length < 3 && pool.length > wrongs.length) {
+    const r = pool[Math.floor(Math.random() * pool.length)];
     if (!wrongs.find(w => w.back === r.back)) wrongs.push(r);
   }
   const opts = [c, ...wrongs].sort(() => Math.random() - 0.5);
@@ -377,6 +380,161 @@ function renderRecallFilters(){
 }
 renderRecallFilters();
 renderRecall();
+
+/* ========================= KONJUGATION DRILL =========================
+   One-prompt-at-a-time typed-answer drill, queue-based.
+   Filter by mode (Perfekt / Konj II / Modal Konj II / Partizip I / Futur).
+   Match is forgiving: case-insensitive, ignores leading subject pronoun
+   (ich/du/er/sie/es/wir/ihr/Sie), trims trailing punctuation, accepts
+   the gold answer or any of the `alt` variants. */
+const kjEls = {
+  start:    document.getElementById('kj-start'),
+  startBtn: document.getElementById('kj-start-btn'),
+  session:  document.getElementById('kj-session'),
+  done:     document.getElementById('kj-done'),
+  doneTxt:  document.getElementById('kj-done-txt'),
+  restart:  document.getElementById('kj-restart'),
+  progFill: document.getElementById('kj-prog-fill'),
+  progTxt:  document.getElementById('kj-prog-txt'),
+  mode:     document.getElementById('kj-mode'),
+  prompt:   document.getElementById('kj-prompt'),
+  input:    document.getElementById('kj-input'),
+  check:    document.getElementById('kj-check'),
+  skip:     document.getElementById('kj-skip'),
+  reveal:   document.getElementById('kj-reveal'),
+  fb:       document.getElementById('kj-fb'),
+  note:     document.getElementById('kj-note'),
+  next:     document.getElementById('kj-next'),
+};
+let kjMode = 'all';
+let kjItems = [];
+let kjQueue = [];
+let kjCurrent = null;
+let kjAnswered = false;
+let kjMastered = 0;
+
+document.querySelectorAll('input[name="kjmode"]').forEach(r => {
+  r.addEventListener('change', () => { kjMode = r.value; });
+});
+kjEls.startBtn.addEventListener('click', startKj);
+kjEls.restart.addEventListener('click', () => {
+  kjEls.done.style.display = 'none';
+  kjEls.start.style.display = 'block';
+});
+kjEls.check.addEventListener('click', checkKj);
+kjEls.skip.addEventListener('click', () => {
+  if (!kjCurrent) return;
+  kjQueue.push(kjCurrent);
+  serveKj();
+});
+kjEls.reveal.addEventListener('click', () => {
+  if (!kjCurrent || kjAnswered) return;
+  kjAnswered = true;
+  kjEls.input.value = kjCurrent.item.a;
+  kjEls.input.style.borderColor = 'var(--mustard)';
+  kjEls.fb.className = 'check-feedback bad';
+  kjEls.fb.textContent = '↳ shown — count requeued.';
+  if (kjCurrent.item.note) kjEls.note.textContent = kjCurrent.item.note;
+  kjQueue.push(kjCurrent);
+  kjEls.next.style.display = 'inline-block';
+});
+kjEls.next.addEventListener('click', serveKj);
+kjEls.input.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    if (kjAnswered) serveKj(); else checkKj();
+  }
+});
+
+function startKj(){
+  const src = (kjMode === 'all')
+    ? KONJUGATION.slice()
+    : KONJUGATION.filter(x => x.mode === kjMode);
+  if (!src.length) return;
+  kjItems = src.map(it => ({ item: it, mastered: false }));
+  for (let i = kjItems.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [kjItems[i], kjItems[j]] = [kjItems[j], kjItems[i]];
+  }
+  kjQueue = [...kjItems];
+  kjMastered = 0;
+  kjEls.start.style.display = 'none';
+  kjEls.done.style.display = 'none';
+  kjEls.session.style.display = 'block';
+  updateKjProg();
+  serveKj();
+}
+
+function updateKjProg(){
+  const t = kjItems.length;
+  const pct = t ? Math.round(kjMastered / t * 100) : 0;
+  kjEls.progFill.style.width = pct + '%';
+  kjEls.progTxt.textContent = kjMastered + ' / ' + t + ' mastered';
+}
+
+function serveKj(){
+  if (!kjQueue.length) {
+    if (kjItems.every(x => x.mastered)) { endKj(); return; }
+    kjQueue = kjItems.filter(x => !x.mastered);
+    for (let i = kjQueue.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [kjQueue[i], kjQueue[j]] = [kjQueue[j], kjQueue[i]];
+    }
+  }
+  kjCurrent = kjQueue.shift();
+  kjAnswered = false;
+  const it = kjCurrent.item;
+  kjEls.mode.textContent = it.mode;
+  kjEls.prompt.textContent = it.q;
+  kjEls.input.value = '';
+  kjEls.input.style.borderColor = '';
+  kjEls.fb.className = 'check-feedback';
+  kjEls.fb.textContent = '';
+  kjEls.note.textContent = '';
+  kjEls.next.style.display = 'none';
+  setTimeout(() => kjEls.input.focus(), 50);
+}
+
+function normalizeKj(s){
+  return (s || '')
+    .toLowerCase()
+    .trim()
+    .replace(/[.,!?;]+$/, '')
+    .replace(/^(ich|du|er|sie|es|wir|ihr|sie)\s+/, '')
+    .replace(/\s+/g, ' ');
+}
+
+function checkKj(){
+  if (kjAnswered || !kjCurrent) return;
+  const it = kjCurrent.item;
+  const typed = normalizeKj(kjEls.input.value);
+  const candidates = [it.a, ...(it.alt || [])].map(normalizeKj);
+  const ok = !!typed && candidates.includes(typed);
+  kjAnswered = true;
+  if (ok) {
+    if (!kjCurrent.mastered) {
+      kjCurrent.mastered = true;
+      kjMastered++;
+      updateKjProg();
+    }
+    kjEls.input.style.borderColor = 'var(--olive)';
+    kjEls.fb.className = 'check-feedback ok';
+    kjEls.fb.textContent = '✓ richtig — gemeistert.';
+  } else {
+    kjQueue.push(kjCurrent);
+    kjEls.input.style.borderColor = 'var(--red)';
+    kjEls.fb.className = 'check-feedback bad';
+    kjEls.fb.textContent = '✗ falsch — Antwort: ' + it.a + '. Karte kommt zurück.';
+  }
+  if (it.note) kjEls.note.textContent = it.note;
+  kjEls.next.style.display = 'inline-block';
+}
+
+function endKj(){
+  kjEls.session.style.display = 'none';
+  kjEls.done.style.display = 'block';
+  kjEls.doneTxt.textContent =
+    'Du hast alle ' + kjItems.length + ' Formen gemeistert. Gut gemacht!';
+}
 
 /* ============================= GRAMMAR ============================= */
 const grammarList = document.getElementById('grammar-list');
