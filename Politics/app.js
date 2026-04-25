@@ -420,6 +420,71 @@ function endEssayQuiz(){
     `${eqMastered.size} / ${eqTotal} essay topics recalled cleanly.`;
 }
 
+/* =========================================================
+   CHEATSHEET — render the structured walk-through.
+   Each "section" entry produces a header + intro and starts a
+   new TOC anchor; each "term" entry is a card with definition,
+   underlying mechanism, application rule, and trap-to-watch.
+   ========================================================= */
+(function renderCheatsheet(){
+  const list = document.getElementById("cheat-list");
+  const toc  = document.getElementById("cheat-toc");
+  if (!list || typeof CHEATSHEET === "undefined") return;
+
+  const sectionAnchors = [];
+  let buf = "";
+  let inSection = false;
+  CHEATSHEET.forEach((entry, i) => {
+    if (entry.kind === "section"){
+      if (inSection) buf += `</div>`;
+      const id = "cheat-sec-" + i;
+      sectionAnchors.push({ id, title: entry.title });
+      buf += `
+        <section class="cheat-section" id="${id}">
+          <h3 class="cheat-h">${escapeHtml(entry.title)}</h3>
+          ${entry.intro ? `<p class="cheat-intro">${escapeHtml(entry.intro)}</p>` : ""}
+          <div class="cheat-cards">`;
+      inSection = true;
+      return;
+    }
+    if (entry.kind === "term"){
+      buf += `
+        <article class="cheat-card">
+          <h4 class="cheat-term">${escapeHtml(entry.term)}</h4>
+          <div class="cheat-row"><span class="cheat-label">def</span><span class="cheat-body">${escapeHtml(entry.def)}</span></div>
+          ${entry.means ? `<div class="cheat-row"><span class="cheat-label">means</span><span class="cheat-body">${escapeHtml(entry.means)}</span></div>` : ""}
+          ${entry.apply ? `<div class="cheat-row"><span class="cheat-label">apply</span><span class="cheat-body">${escapeHtml(entry.apply)}</span></div>` : ""}
+          ${entry.watch ? `<div class="cheat-row cheat-row--watch"><span class="cheat-label">watch</span><span class="cheat-body">${escapeHtml(entry.watch)}</span></div>` : ""}
+        </article>`;
+    }
+  });
+  if (inSection) buf += `</div></section>`;
+  list.innerHTML = buf;
+
+  toc.innerHTML = sectionAnchors.map(s =>
+    `<a class="cheat-toc-link" href="#${s.id}">${escapeHtml(s.title)}</a>`
+  ).join("");
+  // intercept TOC clicks so they scroll inside the sheet without
+  // confusing the tab system (we're already on the cheat tab).
+  toc.querySelectorAll(".cheat-toc-link").forEach(a => {
+    a.addEventListener("click", ev => {
+      ev.preventDefault();
+      const id = a.getAttribute("href").slice(1);
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+})();
+
+function escapeHtml(s){
+  return (s ?? "").toString()
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#39;");
+}
+
 // Wire essay-quiz event listeners defensively so a missing element (stale
 // cached HTML, etc.) can never halt execution of earlier init code.
 const eqOn = (id, handler) => {

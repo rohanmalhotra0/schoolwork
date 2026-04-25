@@ -51,6 +51,252 @@ const ESSAYS = [
 ];
 
 /* ---------------------------------------------------------
+   CHEATSHEET — structured walk-through of every concept on the
+   study guide. Each entry has a definition, the *underlying
+   mechanism* (what it means / why it matters), how to apply it
+   on the exam, and (where useful) the common trap to watch.
+   The shape mirrors how the study guide groups material so a
+   reader can scan top-to-bottom and have answers ready for the
+   "Questions to grapple with" section.
+   --------------------------------------------------------- */
+const CHEATSHEET = [
+
+  /* ============= 1. EXIT / VOICE / LOYALTY ============= */
+  { kind:"section", title:"1 · Exit, Voice & Loyalty (Hirschman)",
+    intro:"Hirschman's framework for what a citizen does when she's unhappy with the state. The whole framework hinges on which channel is cheapest and most credible." },
+
+  { kind:"term", term:"Credible Exit Option",
+    def:"The genuine, low-cost ability to leave a political relationship — by emigrating, switching jurisdictions, or moving capital abroad.",
+    means:"Exit is leverage. The state has to listen to you only as much as it fears losing you. If you can't actually leave, the state can ignore your complaints.",
+    apply:"On any 'will the citizen exit / voice / stay loyal' question, FIRST ask: is exit credible? If borders are closed, assets are frozen, or there's no alternative jurisdiction, exit is OFF the table and voice or loyalty is the answer.",
+    watch:"Credible ≠ legal. North Koreans can technically flee but at huge personal cost — exit is not credible. Wealthy elites with offshore accounts have very credible exit even where exit is officially banned." },
+
+  { kind:"term", term:"Voice",
+    def:"Trying to change a state from within — voting, protesting, signing petitions, calling representatives, donating, attending council meetings, boycotts, demonstrations.",
+    means:"Voice is the costly-but-collective channel. It only works when enough people exercise it AND the regime is responsive enough to listen.",
+    apply:"Voice is the predicted response when (a) exit is blocked or expensive AND (b) loyalty is moderate-to-high so the citizen still wants the state to improve. Most observed political participation is a form of voice.",
+    watch:"Don't confuse voice with loyalty. Voice = active complaint. Loyalty = silent attachment despite dissatisfaction." },
+
+  { kind:"term", term:"Loyalty",
+    def:"Continued attachment to a state or organization despite dissatisfaction — usually from emotional ties, identity, or hope that things will improve.",
+    means:"Loyalty suppresses BOTH exit and voice. It is the 'quiet acceptance' option.",
+    apply:"Predicted when attachment is very high, exit is impossible, and voice feels futile. A loyal citizen disengages politically — silence, not protest, is the signature.",
+    watch:"Loyalty can co-exist with voice (loyal opposition) but at high enough loyalty it dampens action altogether." },
+
+  /* ============= 2. VOTING CALCULUS ============= */
+  { kind:"section", title:"2 · How citizens vote (and why platforms converge)",
+    intro:"These four concepts explain who votes for whom and why party platforms often look indistinguishable in two-party systems." },
+
+  { kind:"term", term:"Spatial / Sincere Voting",
+    def:"Casting a ballot for your true first-choice candidate without considering who is likely to win.",
+    means:"It's the baseline — what voters do when there's no strategic pressure. PR systems with low thresholds approximate sincere voting.",
+    apply:"If asked which voting type dominates under PR with proportional seat allocation: sincere. Under FPTP with one seat per district: usually NOT sincere — see strategic voting.",
+    watch:"'Spatial' refers to the ideological-distance model: voters pick the candidate closest to them on a left-right line. 'Sincere' is the action that follows from it absent strategy." },
+
+  { kind:"term", term:"Median Voter Theorem",
+    def:"In a two-candidate, majority-rule election where voters lie on a single policy dimension, both candidates have an incentive to position themselves at the preferences of the median voter.",
+    means:"Whoever owns the median wins. Movement away from the median loses you more votes than it gains.",
+    apply:"Use this to explain why two-party platforms converge to the center. Required assumptions: single-dimension issue space, two candidates, majority rule, full voter turnout, no abstention, single-peaked preferences.",
+    watch:"Breaks down when (a) more than two candidates, (b) multidimensional issues, (c) low turnout that lets ideologues dominate primaries, (d) voter abstention from extreme platforms." },
+
+  { kind:"term", term:"Strategic Voting",
+    def:"Switching from your sincere first choice to a candidate with a realistic shot at winning, to avoid 'wasting' your vote.",
+    means:"Mechanism behind Duverger's Law: when the system rewards only the top finisher (district magnitude = 1, FPTP), voters abandon hopeless third parties → support concentrates around top two.",
+    apply:"Strongest under FPTP / majoritarian rules. Weak under PR. Cite this when explaining why FPTP systems trend toward two parties.",
+    watch:"Strategic voting can ALSO mean voting for a moderate party to balance an extreme one — the unifying definition is 'voting against your sincere preference for an instrumental reason.'" },
+
+  { kind:"term", term:"Vote Buying",
+    def:"Exchanging cash, goods, jobs, or favors for a vote (or for turnout itself). A form of electoral clientelism.",
+    means:"Direct violation of electoral integrity — turns the vote from a public good (selecting representation) into a private transaction.",
+    apply:"On 'why might SES NOT predict participation?' questions, vote-buying is a key answer: clientelist machines mobilize POOR voters preferentially because their vote is cheaper to buy.",
+    watch:"Hard to detect directly. Researchers infer it from turnout anomalies, expert surveys, or precinct-level outliers (rich precincts and poor precincts behaving very differently)." },
+
+  /* ============= 3. COLLECTIVE ACTION ============= */
+  { kind:"section", title:"3 · Collective action — the paradox of voting",
+    intro:"The single most-tested cluster on Exam 2. The paradox: rational individuals shouldn't bother participating, but billions do. The resolution explains everything from why people protest to why interest groups form." },
+
+  { kind:"term", term:"Public Good",
+    def:"A benefit that is both non-excludable (you can't keep non-contributors from enjoying it) and non-rival (one person's enjoyment doesn't reduce another's). Examples: clean air, national defense, the policy outputs of an elected government.",
+    means:"Non-excludability creates the free-rider incentive: why pay if you'll get the benefit anyway?",
+    apply:"Define this BEFORE the collective action problem on any essay — public goods are the precondition that makes collective action a dilemma.",
+    watch:"Most political outcomes are public goods (a winning candidate's policies apply to everyone in the jurisdiction), which is why participation is rational only with extra incentives." },
+
+  { kind:"term", term:"Collective Action Problem",
+    def:"Individually rational behavior — free-riding — produces a collectively suboptimal outcome. Each person's contribution is small enough that not contributing is locally rational, but if everyone reasons that way, the public good is undersupplied.",
+    means:"Olson's logic: in a large group, your individual probability of being decisive ≈ 0. Cost of acting > expected benefit. Rational actors abstain. Public good fails.",
+    apply:"Use it to explain why predicted voter turnout under purely rational-choice assumptions is near zero. Then layer in the four resolutions (selective incentives, civic duty, social pressure, identity) to explain observed turnout.",
+    watch:"The problem is NOT that people don't WANT the good; everyone wants it. The problem is structural: the incentive to free-ride is built into the public-good payoff." },
+
+  { kind:"term", term:"Selective Incentives",
+    def:"Private rewards or punishments given ONLY to those who participate — paid staff jobs in a campaign, member-only newsletters, social shaming for non-voters, union benefits restricted to dues-payers.",
+    means:"Olson's solution to the collective action problem: convert a public-good payoff into a partial private-good payoff. Now contributing has a non-zero individual return.",
+    apply:"On 'why do people vote anyway?' essay: selective incentives is one of the four standard answers (alongside civic duty, social pressure, partisan identity). Cite specific examples — get-out-the-vote drives, candidate yard signs, social media badges.",
+    watch:"Selective incentives need not be material. Social belonging, esteem, and 'I voted' stickers are all selective incentives — anything restricted to participants." },
+
+  /* ============= 4. SES & PARTICIPATION ============= */
+  { kind:"section", title:"4 · Why SES correlates with participation (and when it doesn't)",
+    intro:"Not its own term but a recurring exam question. Build the answer from resources, mobilization, and clientelism." },
+
+  { kind:"term", term:"SES → Participation (positive direction)",
+    def:"Higher socioeconomic status is empirically associated with higher rates of voting, protesting, donating, contacting officials.",
+    means:"Three drivers: (1) RESOURCES — time, money, civic skills; (2) INFORMATION — the educated have lower information costs; (3) MOBILIZATION — parties target high-propensity voters, who tend to be high-SES, creating a feedback loop.",
+    apply:"This is the textbook answer for the Verba/Schlozman/Brady framework. Always name all three drivers, not just 'rich people have more time.'",
+    watch:"Don't overstate it. The correlation is robust in consolidated democracies; it weakens or reverses elsewhere — see next entry." },
+
+  { kind:"term", term:"When SES → Participation breaks down",
+    def:"Conditions that flatten or invert the SES-participation relationship.",
+    means:"Three classic conditions: (a) CLIENTELISM — vote-buying machines mobilize the poor first; (b) ETHNIC/COMMUNAL MOBILIZATION — identity overrides class so poor co-ethnics turn out at high rates; (c) EXTREME GRIEVANCE — high-intensity protest movements draw from the deprived.",
+    apply:"This is a classic 'under what conditions' question. Pick ONE of the three mechanisms and elaborate with a real-world example (Mexico's PRI = clientelism; Indian state politics = ethnic mobilization; Arab Spring = grievance).",
+    watch:"Don't say 'poor people don't vote in poor countries.' That's empirically wrong — many poor countries see HIGHER turnout among the poor due to clientelism." },
+
+  /* ============= 5. ETHNICITY & IDENTITY ============= */
+  { kind:"section", title:"5 · Ethnicity, identity & cleavage structure",
+    intro:"Three competing theoretical lenses (primordialism / instrumentalism / constructivism) plus the empirical measure (fractionalization) and the connection to party systems (cleavages)." },
+
+  { kind:"term", term:"Ethnicity (Chandra 2006)",
+    def:"\"A subset of social identity categories for which eligibility is associated with (or believed to be associated with) descent.\" Examples: language, tribe, race, region, religion (in many contexts). Excludes identities like gender or sexuality that siblings would not be expected to share.",
+    means:"Chandra's definition is operational. The descent test (would a person's siblings be in the same category by default?) lets you decide IF a given identity counts as ethnic in a particular case.",
+    apply:"Cite Chandra by name. The key phrase is descent-based — even when the descent claim is socially constructed rather than biologically true.",
+    watch:"Religion is sometimes ethnic (Northern Ireland) and sometimes not (the United States, where conversion is common). Apply the descent test case by case." },
+
+  { kind:"term", term:"Ethnic Fractionalization",
+    def:"The probability that two randomly chosen members of a population belong to different ethnic groups. Score 0 = perfectly homogeneous, score → 1 = many small groups.",
+    means:"A single-number summary of ethnic diversity. Higher = more groups and/or more equal sizes.",
+    apply:"Use it to QUANTIFY diversity, but never as a stand-alone predictor of political instability. Diversity matters only when paired with reinforcing cleavages and elite politicization.",
+    watch:"Fractionalization does NOT equal polarization. A society of two equal-sized rival groups (low fractionalization, high polarization) is more conflict-prone than a society of twenty small groups (high fractionalization, low polarization)." },
+
+  { kind:"term", term:"Primordialism",
+    def:"The view that ethnic identities are ancient, fixed, biologically or culturally inherited, and emotionally deep-rooted.",
+    means:"Identities-as-essence. Predicts ethnic conflict whenever groups are present.",
+    apply:"Mention as the OLDEST of the three theoretical lenses, then critique it: it can't explain when identities shift, fuse, or are invented (Hutu/Tutsi reclassifications, the construction of 'Hindu' as a political identity).",
+    watch:"Few serious scholars are pure primordialists today, but the framing still appears in journalism — recognize it and critique it." },
+
+  { kind:"term", term:"Instrumentalism",
+    def:"The view that ethnic identities are tools — elites manipulate or activate them strategically to mobilize support and gain power.",
+    means:"Identity-as-strategy. Predicts ethnic salience rises when elites benefit from it (e.g., before elections).",
+    apply:"Strong fit when explaining sudden activation of identities in electoral campaigns, riots timed to election cycles, or cleavages that go dormant outside politics.",
+    watch:"Pure instrumentalism understates how durable identities feel from the inside — that's where constructivism fills the gap." },
+
+  { kind:"term", term:"Constructivism",
+    def:"The view that ethnic identities are socially constructed and historically contingent — real and consequential, but malleable, layered, and shaped by institutions, colonial history, and political action.",
+    means:"Identity-as-built. Acknowledges instrumentalist dynamics but adds that once constructed, identities take on their own emotional weight and are not infinitely flexible.",
+    apply:"Constructivism is the dominant modern view. On any 'which lens best explains X?' question, default to constructivism unless the prompt forces a contrast.",
+    watch:"Don't read constructivism as 'ethnicity is fake.' Constructed ≠ unreal. Constructed identities can be just as politically lethal as primordial ones." },
+
+  { kind:"term", term:"Reinforcing Cleavages",
+    def:"Multiple social divisions (class, religion, region, ethnicity) line up on the same axis — the same people are on the same side of every important issue.",
+    means:"Compounds polarization. There's no incentive to compromise because every issue maps onto the same in-group/out-group split.",
+    apply:"On 'when does ethnic diversity threaten democracy?' questions, REINFORCING cleavages plus elite politicization is the danger zone.",
+    watch:"Reinforcing ≠ polarized in the affective sense. Reinforcing is structural (cleavages overlap); polarization is the resulting emotional intensity." },
+
+  { kind:"term", term:"Cross-Cutting Cleavages",
+    def:"Social divisions cut across each other — a single person may be working-class AND religiously conservative AND an ethnic minority, with no two of those traits coinciding cleanly with party lines.",
+    means:"Generates cross-pressures. People hold mixed loyalties, which moderates conflict and pushes parties toward broader coalitions.",
+    apply:"Use as the stabilizing counterpart to reinforcing cleavages. A diverse society with cross-cutting cleavages is much less prone to ethnic conflict than one with reinforcing cleavages.",
+    watch:"Cross-cutting cleavages can produce LOWER turnout among cross-pressured voters who don't know which side to back." },
+
+  /* ============= 6. PARTISANSHIP ============= */
+  { kind:"section", title:"6 · Partisanship — running tally vs. social identity",
+    intro:"The central disagreement in the partisanship literature: is party ID a rational accounting summary, or a team membership?" },
+
+  { kind:"term", term:"Party Identification (Partisanship)",
+    def:"A voter's subjective alignment with a particular party. Measured on surveys: 'Generally speaking, do you think of yourself as a Republican, a Democrat, an Independent, or what?' plus follow-ups on strength.",
+    means:"It is a SUBJECTIVE attachment, NOT a record of who you voted for last time. The two diverge often.",
+    apply:"In any partisanship question, distinguish the IDENTITY (long-run attachment) from the VOTE (one-shot decision). Identity predicts vote, but the two aren't identical.",
+    watch:"Don't confuse partisanship with ideology. Partisans of the same party can disagree on policy; ideologues of the same persuasion can vote different parties." },
+
+  { kind:"term", term:"Running Tally Perspective (Fiorina)",
+    def:"Party ID is an updated retrospective summary of how each party has performed across past elections. Voters revise it based on outcomes.",
+    means:"Partisanship is RATIONAL — voters reward and punish parties for performance. It's a Bayesian-ish update, not a fixed loyalty.",
+    apply:"This is the framework that PREDICTS partisanship will swing with policy shifts and economic outcomes. Cite Fiorina by name.",
+    watch:"The running tally model has trouble explaining the stickiness of partisanship across major party realignments — that's the opening for the social-identity view." },
+
+  { kind:"term", term:"Social Identity Perspective (Green, Palmquist & Schickler)",
+    def:"Partisanship is a group identity — like religion or sports team membership — adopted early in life and resistant to short-run information.",
+    means:"Partisanship is EXPRESSIVE, not instrumental. It gives belonging and meaning. Updates only slowly, even when the party changes positions.",
+    apply:"This explains: stable partisanship across major policy shifts, partisan-motivated reasoning, affective polarization, partisan sorting in marriage and friendship, and partisan stability after dramatic candidate failures.",
+    watch:"On 'what evidence shows partisanship is identity?' essays, point to STABILITY DESPITE PARTY CHANGE — that's the diagnostic Fiorina's model can't explain." },
+
+  /* ============= 7. PARTY SYSTEMS ============= */
+  { kind:"section", title:"7 · Party systems — counting and classifying",
+    intro:"The vocabulary for describing how many parties matter in a country and why." },
+
+  { kind:"term", term:"Political Party",
+    def:"An organization that contests elections with the goal of placing its candidates in government office.",
+    means:"What distinguishes a party from an interest group is candidate-running. NRA = interest group; Republicans = party. A think tank that lobbies but doesn't field candidates is NOT a party.",
+    apply:"Use this minimal definition before classifying party systems.",
+    watch:"Some 'parties' in authoritarian regimes don't truly contest — they're regime fronts. Apply the definition strictly." },
+
+  { kind:"term", term:"One-Party System",
+    def:"A regime in which only one party is legally permitted to hold power. Opposition parties are banned outright.",
+    means:"Electoral competition is suppressed by law. Examples: PRC (CCP), DPRK, USSR pre-1990.",
+    apply:"Distinguish from single-party DOMINANT — the legal monopoly is what defines a one-party system.",
+    watch:"One-party states often hold elections (with one party on the ballot) and may have multiple internal factions, but legally there's only one party." },
+
+  { kind:"term", term:"Single-Party Dominant System",
+    def:"A regime in which multiple parties may legally compete, but only one party realistically holds power across electoral cycles.",
+    means:"Competition is legal but uncompetitive — the dominant party wins repeatedly through mass appeal, incumbency advantages, electoral rules, or some mix.",
+    apply:"Examples: Japan (LDP from 1955), Mexico (PRI 1929-2000), South Africa (ANC), Sweden (Social Democrats for most of the 20th c.).",
+    watch:"Single-party dominant ≠ one-party. The opposition exists and can win in principle — Mexico's PRI lost in 2000, Japan's LDP lost in 2009. The system is dominant, not closed." },
+
+  { kind:"term", term:"Two-Party System",
+    def:"Only two parties have a realistic chance of winning national power.",
+    means:"Usually a product of FPTP electoral rules + Duverger's Law — strategic voting and entry costs concentrate competition on two parties.",
+    apply:"Canonical example: USA. Distinguish from single-party dominant (one party always wins) — in a two-party system, both parties periodically govern.",
+    watch:"Third parties may exist and even win local seats; the system is two-party at the level of national power competition." },
+
+  { kind:"term", term:"Multi-Party System",
+    def:"More than two parties have a realistic chance of holding power, usually through coalition government.",
+    means:"Common under proportional representation, where small parties can win seats with modest vote shares and bring them into coalitions.",
+    apply:"Examples: Germany, Netherlands, Israel, most of continental Europe. Coalition formation and dissolution is a normal feature, not a sign of instability.",
+    watch:"More parties does NOT mean less stable. Mature multi-party PR systems can be very stable; instability comes from low institutionalization, not from party count." },
+
+  { kind:"term", term:"Effective Number of Parties (ENP)",
+    def:"A weighted count of parties that captures both NUMBER and SIZE. Formula: 1 ÷ Σ(vote share²) — sum the squared vote shares of all parties, take the reciprocal.",
+    means:"Penalizes tiny parties, rewards parties with substantial support. Two equally-sized parties → ENP = 2; one party with 80%, one with 20% → ENP ≈ 1.47.",
+    apply:"You don't need to memorize the formula but you DO need to know it weights by size, not just counts. Higher ENP = more competition.",
+    watch:"You can have 10 registered parties on the ballot but ENP barely above 2 if most are tiny. Don't equate registered count with ENP." },
+
+  { kind:"term", term:"Duverger's Law",
+    def:"FPTP / single-member-district systems tend to produce two-party systems; proportional representation tends to produce multi-party systems.",
+    means:"Two mechanisms: (1) MECHANICAL — winner-take-all districts waste votes for third parties; (2) PSYCHOLOGICAL — voters anticipate this and switch to viable parties (strategic voting); parties also avoid hopeless entries.",
+    apply:"On 'why do some countries have more parties?' essays: lead with Duverger, name BOTH mechanisms, then add cleavage structure and historical path dependence as further factors.",
+    watch:"It's a tendency, not a deterministic law. Counterexamples exist (UK has FPTP but a robust third party historically; Canada has FPTP and effectively 4 parties). Use 'tends to' language." },
+
+  /* ============= 8. INSTITUTIONALIZATION & STABILITY ============= */
+  { kind:"section", title:"8 · Party system institutionalization",
+    intro:"Mainwaring & Scully's framework for asking whether a country's party system is 'real' or just a rotating cast of personal vehicles." },
+
+  { kind:"term", term:"Party System Institutionalization",
+    def:"The degree to which a party system is stable, rooted in society, viewed as legitimate, and built on parties with strong organizations independent of any individual leader.",
+    means:"Mainwaring & Scully's four dimensions: (1) LOW VOLATILITY — vote shares don't whipsaw; (2) SOCIETAL ROOTS — voters identify with parties; (3) LEGITIMACY — parties are seen as the proper actors in democratic competition; (4) STRONG ORGANIZATION — parties outlive their founders.",
+    apply:"On 'how would you assess institutionalization?' essays, name ALL FOUR dimensions and map a country to each. The US scores high on all four; many newer democracies score low on volatility and organization.",
+    watch:"Institutionalization is independent of democracy QUALITY. A highly institutionalized system can be authoritarian; a fragile democracy can have a low-IQ party system." },
+
+  { kind:"term", term:"Electoral Volatility",
+    def:"The aggregate shift in vote shares between parties from one election to the next.",
+    means:"Operationalized via the Pedersen Index: sum of absolute vote-share changes across all parties, divided by 2. Higher = more flip-flopping.",
+    apply:"This is the FIRST dimension of party system institutionalization. Cite the Pedersen Index by name when asked how it's measured.",
+    watch:"Volatility can come from genuine voter shift or from new parties replacing old ones. Pedersen captures both — not just opinion change." },
+
+  /* ============= 9. ELECTORAL INTEGRITY ============= */
+  { kind:"section", title:"9 · Electoral integrity & measuring fraud",
+    intro:"The capstone topic: how do we know elections are clean, and what tools do social scientists use when they aren't?" },
+
+  { kind:"term", term:"Electoral Integrity",
+    def:"The extent to which elections meet international standards: free, fair, transparent, competitive, free from intimidation/fraud, and administered by impartial bodies.",
+    means:"It's a continuum, not a binary. Even consolidated democracies have integrity problems (gerrymandering, voter ID, registration purges); even autocracies sometimes hold partially clean elections.",
+    apply:"Use Pippa Norris's Perceptions of Electoral Integrity (PEI) index as the canonical expert-survey measure. Mention multi-method triangulation when asked how to assess.",
+    watch:"Electoral integrity is broader than 'no fraud.' It includes campaign financing, media access, voter registration, district drawing, and dispute resolution." },
+
+  { kind:"term", term:"Why electoral fraud is hard to measure",
+    def:"Fraud is, by definition, hidden. There is no clean ledger of fraudulent votes — researchers must triangulate.",
+    means:"Five common methods: (1) EXPERT SURVEYS (PEI, V-Dem); (2) FORENSIC STATISTICS (Benford's-Law digit analysis, last-digit tests); (3) TURNOUT ANOMALIES (impossibly round numbers, near-100% turnout); (4) PRECINCT-LEVEL OUTLIERS (one precinct's results that defy regional patterns); (5) OBSERVER REPORTS / SATELLITE IMAGERY.",
+    apply:"On 'how do we measure fraud?' essays, list at LEAST three methods and note the trade-offs: surveys are subjective, forensic stats produce false positives, observers can be excluded.",
+    watch:"None of the methods are bulletproof on their own. Triangulation across methods is the standard." },
+];
+
+/* ---------------------------------------------------------
    ESSAY_MC — one multiple-choice question per essay prompt.
    Each tests the key argument of that essay. Use for Learn
    "essay concepts" mode and for Hard quiz difficulty.
