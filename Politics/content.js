@@ -297,6 +297,242 @@ const CHEATSHEET = [
 ];
 
 /* ---------------------------------------------------------
+   STUDY_GUIDE — full walk-through of every section of the
+   official "Terms and concepts" handout. The terms list mirrors
+   the cheatsheet (cross-linked) and each "Question to grapple
+   with" gets a structured model answer: bottom line, the key
+   terms to cite, a 4–6 bullet outline you could write straight
+   onto an exam, and the trap to avoid.
+   --------------------------------------------------------- */
+const STUDY_GUIDE_TERMS = [
+  // Order matches the official handout exactly.
+  "Spatial / sincere voting",
+  "Median Voter Theorem",
+  "Strategic voting",
+  "Vote buying",
+  "Credible exit option",
+  "Voice",
+  "Loyalty",
+  "The collective action problem",
+  "Selective incentives",
+  "Public good",
+  "Ethnicity (Chandra's definition)",
+  "Ethnic fractionalization*",
+  "Primordialism",
+  "Instrumentalism",
+  "Constructivism",
+  "Party identification / partisanship",
+  "Running tally perspective on partisanship",
+  "Social identity perspective on partisanship",
+  "Political party",
+  "One-party system",
+  "Single-party dominant system",
+  "Two-party system",
+  "Multi-party system",
+  "Effective number of parties*",
+  "Reinforcing cleavages",
+  "Cross-cutting cleavages",
+  "Duverger's law",
+  "Party system institutionalization",
+  "Electoral volatility*",
+  "Electoral integrity",
+];
+
+const STUDY_GUIDE_QUESTIONS = [
+  {
+    n: 1,
+    q: "Under what conditions might we expect a citizen to exert \"voice\" against a state that has in the past instituted some policy against her interests? Under what conditions might we expect the citizen to exit? To remain loyal to the state? Why?",
+    bottomLine: "Hirschman's three options are governed by the credibility of the exit option, the responsiveness of the regime, and the depth of loyalty. Whichever is cheapest and most effective wins.",
+    keyTerms: ["Voice", "Exit", "Loyalty", "Credible exit option"],
+    outline: [
+      "Define the three responses upfront: Voice = costly within-system pressure (protest, vote, petition); Exit = leave the relationship (emigrate, switch jurisdictions, move capital); Loyalty = continued attachment despite dissatisfaction.",
+      "Voice predicted when (a) exit is blocked or expensive, (b) the regime is responsive enough that voice can plausibly succeed, and (c) loyalty is high enough that the citizen still wants the state to improve rather than abandon it.",
+      "Exit predicted when a credible exit option exists AND voice feels futile — closed regimes with porous borders, or wealthy citizens with offshore options.",
+      "Loyalty predicted when emotional/identity attachment is so high it suppresses both exit and voice — the citizen tolerates the policy and stays quiet.",
+      "Concrete example: 1980s East Germany — closed border made exit non-credible, so voice + loyalty competed; once the Wall fell, exit became credible and the regime collapsed within months.",
+    ],
+    trap: "Don't reduce this to 'rich exit, poor voice.' Hirschman's framework is about the credibility of exit, not income directly. The three options are also not exclusive — voice and loyalty often coexist (loyal opposition).",
+  },
+  {
+    n: 2,
+    q: "What is the collective action dilemma? What does it say about the likely calculation of an individual citizen about whether to participate in voting, protest, donating to a political cause, etc?",
+    bottomLine: "Individually rational free-riding produces a collectively irrational result: the public good (clean elections, policy change) is undersupplied because no one's contribution is decisive.",
+    keyTerms: ["Collective action problem", "Public good", "Selective incentives"],
+    outline: [
+      "Define a public good: non-excludable AND non-rival. Most political outputs (policy, regime change, electoral integrity) qualify.",
+      "Olson's logic: each citizen's probability of being decisive is ≈ 0, so the expected benefit of participating is tiny while the cost (time, risk) is real and immediate. Rational actors abstain.",
+      "Result: predicted turnout / protest / donation under purely rational assumptions is near zero. The dilemma is that everyone wants the good, but no individual has the incentive to provide it.",
+      "Resolutions: selective incentives (private rewards/punishments restricted to participants), civic duty / expressive benefits, social pressure, partisan identity that makes participation feel intrinsic, low-cost participation channels.",
+      "On the exam: state the paradox FIRST, then layer in the four resolutions to explain observed (non-zero) participation.",
+    ],
+    trap: "Don't say people 'don't want' the public good. The logic isn't preference, it's structural — the free-rider incentive is built into the payoff structure of any public good.",
+  },
+  {
+    n: 3,
+    q: "Why do people bother to turn out to vote? What kinds of factors might lead people to vote, and generally to participate in politics?",
+    bottomLine: "Once you accept Olson's paradox, observed turnout has to come from non-instrumental motives: duty, identity, mobilization, and selective incentives.",
+    keyTerms: ["Collective action problem", "Selective incentives", "Party identification", "Public good"],
+    outline: [
+      "Restate the puzzle: rational-choice logic predicts ≈ 0 turnout because no one vote decides the election.",
+      "Resolution 1 — civic duty / expressive voting: voters get utility from the act itself (Riker & Ordeshook's 'D' term).",
+      "Resolution 2 — social pressure and norms: visible turnout (yard signs, 'I voted' stickers, social-media posts) attaches social rewards to participating.",
+      "Resolution 3 — selective incentives from parties: GOTV operations target known partisans with rides, reminders, social belonging — a private benefit for showing up.",
+      "Resolution 4 — partisan identity: when party = social identity, voting is an expression of who you are, not an instrumental calculation.",
+      "Add structural factors: low cost (registration ease, mail-in ballots), close elections (perceived stakes), competitive districts, age and habit formation.",
+    ],
+    trap: "Don't list factors atomistically. The structure of the answer should be: paradox → why rational-choice predicts zero → the four mechanisms that explain why the prediction is wrong.",
+  },
+  {
+    n: 4,
+    q: "Why might socio-economic status often be positively correlated with political participation?",
+    bottomLine: "Higher SES brings more resources, more information, and more contact from parties — three independent reinforcing channels (Verba/Schlozman/Brady).",
+    keyTerms: ["Selective incentives", "Public good", "Collective action problem"],
+    outline: [
+      "Three drivers, name all three explicitly.",
+      "RESOURCES: time off work to vote, money to donate, civic skills (writing letters, organizing) acquired through education and white-collar work.",
+      "INFORMATION: lower information costs — the educated read political news more, follow campaigns, know how to register.",
+      "MOBILIZATION: parties strategically target high-propensity voters, who tend to be high-SES, creating a positive feedback loop where the well-off get more voter contact.",
+      "Empirical: this correlation is robust across consolidated democracies (the U.S., Western Europe).",
+    ],
+    trap: "Don't stop at 'rich people have more time.' The Verba model has THREE drivers — leaving out skills/information or mobilization is the easiest way to lose points.",
+  },
+  {
+    n: 5,
+    q: "Are there conditions under which socio-economic status might not be correlated with political participation, or might even be negatively correlated with political participation? Why under those conditions?",
+    bottomLine: "Three classic conditions break the SES → participation link: clientelism, ethnic/communal mobilization, and high-grievance protest movements.",
+    keyTerms: ["Vote buying", "Ethnicity (Chandra)", "Reinforcing cleavages", "Selective incentives"],
+    outline: [
+      "Lead with the empirical fact: the SES → participation correlation is contingent on context, not universal.",
+      "CONDITION 1 — Clientelism / vote buying: machine politics targets the poor first because their votes are cheaper to secure and their dependence is greater. Mexico under PRI, parts of Brazil and the Philippines.",
+      "CONDITION 2 — Ethnic/communal mobilization: when party competition runs on ethnic lines, identity overrides class. Poor co-ethnics turn out at high rates because the stakes are felt as group survival, not policy preference. Indian state politics, parts of sub-Saharan Africa.",
+      "CONDITION 3 — High-grievance movements: deprivation itself fuels participation when grievances become acute (Arab Spring, civil-rights era). Low-SES groups can outpace the wealthy.",
+      "Mechanism summary: each condition substitutes a different mobilizing logic (private payoff, identity, grievance) for the standard resource model.",
+    ],
+    trap: "Don't say 'poor people don't vote in poor countries.' Empirically WRONG — many poor democracies see HIGHER turnout among the poor due to clientelism. Get the direction right.",
+  },
+  {
+    n: 6,
+    q: "In the films, An African Election and The People's Choice, what did you observe about the reasons people were making different choices about whom to vote for and whether to vote?",
+    bottomLine: "Voter choice in the films was driven by overlapping considerations of ethnic identity, partisan loyalty built over generations, performance evaluations, and clientelist mobilization — exactly the mix predicted by the theoretical literature.",
+    keyTerms: ["Ethnicity", "Reinforcing cleavages", "Party identification", "Vote buying", "Running tally perspective"],
+    outline: [
+      "Frame the answer with the three lenses: identity (ethnic / partisan), instrumental performance evaluation (running tally), and clientelist exchange.",
+      "ETHNIC / REGIONAL IDENTITY: voters in An African Election visibly aligned along NPP/NDC lines that overlapped with regional and ethnic cleavages — a textbook reinforcing-cleavage pattern.",
+      "PARTISANSHIP AS IDENTITY: long-time party loyalists treated voting as an expression of who they were, not a calculation about platforms — Green/Palmquist/Schickler social-identity model.",
+      "RUNNING TALLY / PERFORMANCE: some voters explicitly evaluated incumbent performance (corruption, jobs, services) and updated their support — Fiorina's retrospective model.",
+      "CLIENTELISM: scenes of food, money, and small-favor distribution captured vote-buying as part of how mobilization happened.",
+      "TURNOUT MOTIVATION: voters spoke about civic duty and a felt obligation to participate — duty + selective incentives in action.",
+    ],
+    trap: "If you only describe what you saw, you miss the points for connecting it to theory. Always tag each observation with the concept it illustrates.",
+  },
+  {
+    n: 7,
+    q: "Do you expect ethnic diversity to have consequences for democratic politics? Under what conditions? What kinds of consequences?",
+    bottomLine: "Diversity per se is not the problem — the danger is reinforcing cleavages plus elite politicization. Cross-cutting cleavages and constructivist fluidity neutralize most of the risk.",
+    keyTerms: ["Ethnic fractionalization", "Reinforcing cleavages", "Cross-cutting cleavages", "Constructivism", "Instrumentalism"],
+    outline: [
+      "Resist the simple 'diversity = conflict' story. The data on fractionalization alone don't predict democratic breakdown.",
+      "WHEN diversity threatens democracy: (a) cleavages REINFORCE each other (ethnicity, class, religion, region all line up on the same axis); (b) elites POLITICIZE identity for electoral gain (instrumentalism); (c) institutions are weak so there are no incentives to compromise.",
+      "WHEN diversity is benign: cross-cutting cleavages create cross-pressures and moderate group conflict; institutionalized parties absorb identity claims; constructivist fluidity allows identities to recombine.",
+      "Possible consequences when conditions are bad: ethnic-party systems, exclusion of minorities, electoral violence, eventually civil conflict.",
+      "Theoretical lens: constructivism is the dominant modern view — identities are real and can be politically lethal, but they are constructed and shapeable rather than fixed.",
+    ],
+    trap: "Don't cite ethnic fractionalization as a stand-alone predictor. Quoting a fractionalization score without discussing cleavage structure or politicization misses the actual mechanism.",
+  },
+  {
+    n: 8,
+    q: "What kinds of evidence might suggest that partisanship is operating as a social identity in a particular country/time period?",
+    bottomLine: "Diagnostic: stability of partisanship across major party policy shifts, plus affective polarization that exceeds policy disagreement.",
+    keyTerms: ["Social identity perspective", "Running tally perspective", "Party identification"],
+    outline: [
+      "Frame the question as a contest between Fiorina's running-tally model and Green/Palmquist/Schickler's social-identity model.",
+      "EVIDENCE 1 — STABILITY DESPITE PARTY CHANGE: voters keep their party ID even after the party shifts position dramatically. The running-tally model predicts updating; the identity model predicts stickiness.",
+      "EVIDENCE 2 — AFFECTIVE POLARIZATION: voters dislike the OUT-party more than they like their own — emotional, not policy-driven. Thermometer scores diverge sharply.",
+      "EVIDENCE 3 — PARTISAN-MOTIVATED REASONING: factual beliefs (about the economy, scandal accusations) track partisan identity rather than evidence.",
+      "EVIDENCE 4 — SOCIAL SORTING: marriage, friendship, neighborhood selection by party. People treat party like an in-group rather than a policy bundle.",
+      "EVIDENCE 5 — STABILITY ACROSS GENERATIONS: party ID transmitted from parents to children, like religion or ethnicity.",
+    ],
+    trap: "Stability ALONE doesn't prove identity — Fiorina would say a stable record of good performance produces stable updating. The diagnostic is stability DESPITE change in party performance/positions.",
+  },
+  {
+    n: 9,
+    q: "Why do some countries exhibit a greater number of political parties than others do?",
+    bottomLine: "Lead with Duverger: electoral rules drive party-system size, but cleavage structure and historical path-dependence do real work too.",
+    keyTerms: ["Duverger's law", "Strategic voting", "Effective number of parties", "Reinforcing / cross-cutting cleavages", "Multi-party system"],
+    outline: [
+      "ELECTORAL SYSTEM (Duverger's Law): FPTP / single-member districts → 2 parties via mechanical (winner-take-all wastes votes) and psychological (strategic voting) effects. PR with low thresholds → multi-party, because small parties can win seats.",
+      "DISTRICT MAGNITUDE / THRESHOLDS: the higher the magnitude and the lower the legal threshold, the more parties survive.",
+      "SOCIAL CLEAVAGES: more distinct salient cleavages produce more parties IF the electoral system permits them — Lipset & Rokkan's frozen cleavages.",
+      "FEDERALISM / DECENTRALIZATION: regional parties become viable when there are sub-national legislatures to compete for (Canada, Spain, Belgium).",
+      "HISTORICAL / PATH DEPENDENCE: founding moments shape the party system — once two parties capture the funding, talent, and brand recognition, entry costs climb.",
+      "On the exam: name the rule (Duverger) FIRST, both mechanisms (mechanical + psychological), then add cleavages and history as secondary explanations.",
+    ],
+    trap: "Don't treat Duverger as deterministic. UK historically has FPTP + a strong third party; Canada has FPTP and effectively 4 parties. Use 'tends to' language and acknowledge counterexamples.",
+  },
+  {
+    n: 10,
+    q: "How would you assess whether a country has high levels of party system institutionalization or not?",
+    bottomLine: "Use Mainwaring & Scully's four dimensions. A country must score high on ALL FOUR to count as institutionalized.",
+    keyTerms: ["Party system institutionalization", "Electoral volatility", "Political party"],
+    outline: [
+      "Define institutionalization upfront: parties are stable, rooted in society, viewed as legitimate, and built on organizations that outlive any one leader.",
+      "DIMENSION 1 — LOW ELECTORAL VOLATILITY: vote shares between elections are stable. Operationalize via the Pedersen Index (sum of absolute vote-share changes / 2). Low Pedersen = high institutionalization.",
+      "DIMENSION 2 — SOCIETAL ROOTS: voters identify with parties and parties have stable bases — surveys measuring party ID, membership, generational transmission.",
+      "DIMENSION 3 — LEGITIMACY: parties are viewed as the proper actors in democratic competition, not as vehicles to be circumvented. Survey confidence-in-parties items.",
+      "DIMENSION 4 — STRONG ORGANIZATION: parties have permanent staff, internal procedures, candidate selection rules — they outlive their founders rather than collapsing when the leader dies or retires.",
+      "Apply: U.S. and UK score high on all four; many newer democracies score low on volatility and organization despite holding regular elections.",
+    ],
+    trap: "Institutionalization is independent of democracy QUALITY. A regime can have an institutionalized authoritarian party (PRI for decades) and a low-quality democracy can have a fragile party system. Don't conflate.",
+  },
+  {
+    n: 11,
+    q: "Why might some countries have a higher level of party system institutionalization than others?",
+    bottomLine: "Time, electoral stability, and structural conditions that reward party-building over personalist politics drive institutionalization.",
+    keyTerms: ["Party system institutionalization", "Electoral volatility", "Cross-cutting cleavages", "Single-party dominant system"],
+    outline: [
+      "TIME / SEQUENCE: institutions take generations to root. Older democracies have had more elections, more transmission of party ID, more chances for organizations to outlive founders.",
+      "STABLE CLEAVAGE STRUCTURE: when underlying social cleavages are stable, parties have stable constituencies. Volatility falls naturally.",
+      "ELECTORAL RULES: PR with moderate thresholds rewards stable mid-sized parties; pure majoritarian + weak parties produce personalist vehicles.",
+      "ABSENCE OF MAJOR REGIME SHOCKS: democracies that haven't been interrupted by coups, civil wars, or ruptured transitions accumulate institutional capital.",
+      "STATE CAPACITY: when the state delivers basic services, parties can run on policy rather than patronage, which favors organization-building.",
+      "FOUNDING CONDITIONS: countries whose democracy was built around pre-existing mass parties (Western Europe) start from a higher base than those whose parties were assembled around individual leaders post-transition.",
+    ],
+    trap: "It's NOT just 'old democracies institutionalize.' Plenty of newer democracies have institutionalized fast (Chile post-1990) and old ones have de-institutionalized (Italy in the 1990s). Time is a factor, not a guarantee.",
+  },
+  {
+    n: 12,
+    q: "Why is electoral fraud difficult to measure? What are some of the ways social scientists have tried to measure it?",
+    bottomLine: "Fraud is hidden by definition, so researchers triangulate across imperfect indirect methods. No single tool is conclusive.",
+    keyTerms: ["Electoral integrity", "Electoral volatility"],
+    outline: [
+      "PROBLEM: there is no clean ledger of fraudulent votes. Perpetrators have every incentive to conceal. Direct measurement is impossible, so all methods are inferential.",
+      "METHOD 1 — EXPERT SURVEYS: Pippa Norris's Perceptions of Electoral Integrity (PEI) index aggregates expert ratings across multiple election dimensions. Pros: comparable across countries. Cons: subjective, depends on which experts you ask.",
+      "METHOD 2 — FORENSIC STATISTICS: Benford's-Law digit analysis, last-digit tests, looking for anomalous digit distributions in reported counts. Pros: cheap, can be run after the fact. Cons: produces false positives in messy real-world data.",
+      "METHOD 3 — TURNOUT ANOMALIES: impossibly round numbers (95%, 99% turnout), turnout patterns that defy demographic expectations, identical results across very different precincts.",
+      "METHOD 4 — PRECINCT-LEVEL OUTLIERS: precincts whose results diverge dramatically from regional patterns suggest manipulation.",
+      "METHOD 5 — OBSERVER REPORTS / SATELLITE IMAGERY: international monitors (OSCE, Carter Center) and satellite imagery of polling-place activity. Pros: direct. Cons: observers can be excluded, monitor only sampled stations.",
+      "Standard practice: triangulate across at least three methods. No single tool is bulletproof.",
+    ],
+    trap: "Don't list one method. The question explicitly asks for 'ways' (plural) and the trade-off discussion. Citing PEI without naming Norris and listing weaknesses is a half-answer.",
+  },
+  {
+    n: 13,
+    q: "In the films, An African Election and The People's Choice, what did you observe about how elections were administered? How did political actors try to prevent electoral malfeasance and ensure electoral integrity (or conversely, to engage in it)? What were some of the challenges to administering elections that the films raised?",
+    bottomLine: "The films illustrate that electoral integrity is the OUTPUT of an active institutional system: independent commissions, observers, transparent counting, plus visible attempts at manipulation that those institutions had to detect and counter.",
+    keyTerms: ["Electoral integrity", "Vote buying", "Political party", "Voice"],
+    outline: [
+      "Tag observations to theory rather than just describing.",
+      "INTEGRITY-PROTECTING INSTITUTIONS: independent electoral commission, party agents at polling stations, observer missions, public counts at the precinct, secured ballot boxes, biometric registration.",
+      "INTEGRITY-THREATENING ACTIONS: vote buying, voter intimidation, premature 'announcement' of results before counts are complete, chaos around vote-counting centers, party-aligned media spreading disinformation.",
+      "THE PERIPHERAL CHALLENGES: logistics — getting ballots to remote areas, training poll workers, handling power outages during counts, managing the queue at polling stations under heat and stress.",
+      "STAKEHOLDER PRESSURE: party leaders, civil society groups, and ordinary voters all played enforcement roles — calling out fraud, demanding recounts, refusing to leave count rooms. This is electoral integrity as a CONTESTED practice, not a passive property.",
+      "THEORY LINK: cite the PEI framework — integrity is multi-dimensional (registration, campaign finance, vote count, dispute resolution), and the films show actors fighting on each dimension.",
+    ],
+    trap: "Don't describe scenes generically. The point is to NAME the dimension of integrity each scene illustrates and connect it to the academic concept.",
+  },
+];
+
+/* ---------------------------------------------------------
    ESSAY_MC — one multiple-choice question per essay prompt.
    Each tests the key argument of that essay. Use for Learn
    "essay concepts" mode and for Hard quiz difficulty.

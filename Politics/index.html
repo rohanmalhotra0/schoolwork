@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Architects+Daughter&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 <link rel="stylesheet" href="/assets/flashcards.css?v=2">
 <link rel="stylesheet" href="/assets/chat-widget.css?v=1">
 </head>
@@ -31,6 +31,7 @@
   <button class="tab" data-target="essays">04 · Essays</button>
   <button class="tab" data-target="essay-quiz">05 · Essay Quiz</button>
   <button class="tab" data-target="cheat">06 · Cheatsheet</button>
+  <button class="tab" data-target="guide">07 · Study Guide</button>
   <button class="tab" data-target="home" onclick="location.href='../index.html';return false">↩ home</button>
 </nav>
 
@@ -203,6 +204,35 @@
   </div>
 </section>
 
+<!-- ================= STUDY GUIDE ================= -->
+<section class="sheet" id="guide">
+  <div class="sheet-margin">
+    <h2 class="pencil">Study Guide — full walkthrough</h2>
+    <p class="kicker">Every section of the official handout, solved. The terms list mirrors the Cheatsheet (click any term to jump). Each "question to grapple with" gets a structured model answer: bottom line, terms to cite, an outline you could put on the page, and the trap to avoid.</p>
+
+    <div class="guide-meta">
+      <a class="guide-dl" href="study-guide.docx" download>↓ download .docx</a>
+      <a class="guide-dl guide-dl--alt" href="study-guide.html" target="_blank" rel="noopener">↗ open original (text)</a>
+      <span class="guide-meta-note">POL-UA 500 · Spring 2026 · Exam #2 · 30 terms · 13 questions</span>
+    </div>
+
+    <details class="guide-orig" open>
+      <summary>Original handout (verbatim)</summary>
+      <div class="guide-orig-body">
+        <h4 class="guide-orig-h">Terms and concepts for the POL-UA 500 Spring 2026 Exam #2</h4>
+        <p class="guide-orig-sub">(Substantive focus on second half of the course)</p>
+        <ol class="guide-orig-terms" id="guide-orig-terms"></ol>
+        <p class="guide-orig-note">* You don't need to memorize exact formulas but you should be able to define and discuss these concepts and say what the measures are intended to capture. (Bonus questions may ask for calculations but you will not need a calculator for them.)</p>
+        <h4 class="guide-orig-h">Questions to grapple with in preparing for Exam 2</h4>
+        <ol class="guide-orig-qs" id="guide-orig-qs"></ol>
+      </div>
+    </details>
+
+    <h3 class="guide-h">Walkthrough — questions to grapple with</h3>
+    <div class="guide-list" id="guide-list"></div>
+  </div>
+</section>
+
 <!-- ================= CHEATSHEET ================= -->
 <section class="sheet" id="cheat">
   <div class="sheet-margin">
@@ -225,9 +255,9 @@
   </div>
 </footer>
 
-<script src="content.js?v=3"></script>
+<script src="content.js?v=4"></script>
 <script src="/assets/flashcards.js?v=2"></script>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 <script src="/assets/quiz.js?v=1" defer></script>
 <script src="/assets/voice.js?v=1" defer></script>
 <script src="/assets/mock.js?v=1" defer></script>

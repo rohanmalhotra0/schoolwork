@@ -485,6 +485,61 @@ function escapeHtml(s){
     .replaceAll("'","&#39;");
 }
 
+/* =========================================================
+   STUDY GUIDE — verbatim handout + structured walkthrough.
+   Each "question to grapple with" gets a card with:
+     · bottom line     — the headline answer
+     · terms           — concepts to cite explicitly
+     · outline         — 4–6 bullets you could write on the exam
+     · trap            — most common mistake on this question
+   ========================================================= */
+(function renderStudyGuide(){
+  const list  = document.getElementById("guide-list");
+  const oTerms = document.getElementById("guide-orig-terms");
+  const oQs    = document.getElementById("guide-orig-qs");
+  if (!list || typeof STUDY_GUIDE_QUESTIONS === "undefined") return;
+
+  if (oTerms && Array.isArray(STUDY_GUIDE_TERMS)){
+    oTerms.innerHTML = STUDY_GUIDE_TERMS.map(t =>
+      `<li>${escapeHtml(t)}</li>`
+    ).join("");
+  }
+  if (oQs){
+    oQs.innerHTML = STUDY_GUIDE_QUESTIONS.map(q =>
+      `<li>${escapeHtml(q.q)}</li>`
+    ).join("");
+  }
+
+  list.innerHTML = STUDY_GUIDE_QUESTIONS.map(q => `
+    <article class="guide-card" id="guide-q-${q.n}">
+      <header class="guide-card-h">
+        <span class="guide-card-n">Q${q.n}</span>
+        <p class="guide-card-q">${escapeHtml(q.q)}</p>
+      </header>
+      <div class="guide-row guide-row--bl">
+        <span class="guide-label">bottom line</span>
+        <span class="guide-body">${escapeHtml(q.bottomLine)}</span>
+      </div>
+      <div class="guide-row guide-row--terms">
+        <span class="guide-label">cite</span>
+        <span class="guide-body">
+          ${q.keyTerms.map(t => `<span class="guide-term-pill">${escapeHtml(t)}</span>`).join("")}
+        </span>
+      </div>
+      <div class="guide-row guide-row--outline">
+        <span class="guide-label">outline</span>
+        <ol class="guide-body guide-outline">
+          ${q.outline.map(b => `<li>${escapeHtml(b)}</li>`).join("")}
+        </ol>
+      </div>
+      <div class="guide-row guide-row--trap">
+        <span class="guide-label">trap</span>
+        <span class="guide-body">${escapeHtml(q.trap)}</span>
+      </div>
+    </article>
+  `).join("");
+})();
+
 // Wire essay-quiz event listeners defensively so a missing element (stale
 // cached HTML, etc.) can never halt execution of earlier init code.
 const eqOn = (id, handler) => {
