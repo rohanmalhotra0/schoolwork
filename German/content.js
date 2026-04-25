@@ -740,6 +740,14 @@ const GRAMMAR = [
       ['wir','sind','waren','wären','haben','hatten','hätten'],
       ['ihr','seid','wart','wärt','habt','hattet','hättet'],
       ['sie / Sie','sind','waren','wären','haben','hatten','hätten'],
+    ],
+    gloss: [
+      ['bin / bist / ist', 'am / are / is'],
+      ['war / waren', 'was / were'],
+      ['wäre / wären', 'would be'],
+      ['habe / hat', 'have / has'],
+      ['hatte / hatten', 'had'],
+      ['hätte / hätten', 'would have'],
     ]
   },
   {
@@ -754,6 +762,13 @@ const GRAMMAR = [
       ['wir','werden','wurden','würden','—'],
       ['ihr','werdet','wurdet','würdet','—'],
       ['sie / Sie','werden','wurden','würden','—'],
+    ],
+    gloss: [
+      ['werde / wirst / wird', 'will / become(s) — Futur or "to become"'],
+      ['wurde / wurden', 'became / was -ed (Präteritum + Passiv past)'],
+      ['würde / würden', 'would'],
+      ['ist geworden', 'has become (Perfekt of "werden")'],
+      ['ist … worden', '-ed (Perfekt Passiv ending)'],
     ]
   },
   {
@@ -803,6 +818,33 @@ const GRAMMAR = [
       ['wissen','wusste','gewusst','haben'],
       ['kennen','kannte','gekannt','haben'],
       ['nennen','nannte','genannt','haben'],
+    ],
+    gloss: [
+      ['gehen / ging / gegangen', 'to go / went / gone'],
+      ['fahren / fuhr / gefahren', 'to drive / drove / driven'],
+      ['kommen / kam / gekommen', 'to come / came / come'],
+      ['fliegen / flog / geflogen', 'to fly / flew / flown'],
+      ['laufen / lief / gelaufen', 'to run / ran / run'],
+      ['bleiben / blieb / geblieben', 'to stay / stayed / stayed'],
+      ['werden / wurde / geworden', 'to become / became / become'],
+      ['sein / war / gewesen', 'to be / was / been'],
+      ['essen / aß / gegessen', 'to eat / ate / eaten'],
+      ['trinken / trank / getrunken', 'to drink / drank / drunk'],
+      ['schreiben / schrieb / geschrieben', 'to write / wrote / written'],
+      ['sprechen / sprach / gesprochen', 'to speak / spoke / spoken'],
+      ['lesen / las / gelesen', 'to read / read / read'],
+      ['sehen / sah / gesehen', 'to see / saw / seen'],
+      ['nehmen / nahm / genommen', 'to take / took / taken'],
+      ['geben / gab / gegeben', 'to give / gave / given'],
+      ['finden / fand / gefunden', 'to find / found / found'],
+      ['helfen / half / geholfen', 'to help / helped / helped'],
+      ['tragen / trug / getragen', 'to carry, wear / carried / carried'],
+      ['waschen / wusch / gewaschen', 'to wash / washed / washed'],
+      ['denken / dachte / gedacht', 'to think / thought / thought'],
+      ['bringen / brachte / gebracht', 'to bring / brought / brought'],
+      ['wissen / wusste / gewusst', 'to know (a fact) / knew / known'],
+      ['kennen / kannte / gekannt', 'to know (a person) / knew / known'],
+      ['nennen / nannte / genannt', 'to name, call / named / named'],
     ]
   },
   {
@@ -817,6 +859,11 @@ const GRAMMAR = [
       ['wir','machten','konnten','gingen'],
       ['ihr','machtet','konntet','gingt'],
       ['sie / Sie','machten','konnten','gingen'],
+    ],
+    gloss: [
+      ['machte / machten', 'made / did (Präteritum of machen)'],
+      ['konnte / konnten', 'could / was able to (Präteritum of können)'],
+      ['ging / gingen', 'went (Präteritum of gehen)'],
     ]
   },
   {
@@ -860,6 +907,12 @@ const GRAMMAR = [
       ['nehmen','Nimm!','Nehmt!','Nehmen Sie!'],
       ['sein','Sei!','Seid!','Seien Sie!'],
       ['haben','Hab!','Habt!','Haben Sie!'],
+    ],
+    gloss: [
+      ['Komm! / Kommt! / Kommen Sie!', 'Come! (you-sg / you-pl / formal)'],
+      ['Sprich!', 'Speak! (du-form, with i-shift)'],
+      ['Lies! / Nimm!', 'Read! / Take! (du-form, with vowel shift)'],
+      ['Sei! / Seid!', 'Be! (irregular du / ihr)'],
     ]
   },
   {
@@ -980,6 +1033,11 @@ const GRAMMAR = [
       ['wir','würden','Wir würden das Buch lesen.'],
       ['ihr','würdet','Würdet ihr kommen?'],
       ['sie / Sie','würden','Sie würden mehr lernen.'],
+    ],
+    gloss: [
+      ['würde / würden', 'would'],
+      ['Ich würde reisen.', 'I would travel.'],
+      ['Würdest du …?', 'Would you …?'],
     ]
   },
   {
@@ -994,6 +1052,14 @@ const GRAMMAR = [
       ['wir','wären','hätten','könnten','müssten','dürften','sollten'],
       ['ihr','wärt','hättet','könntet','müsstet','dürftet','solltet'],
       ['sie / Sie','wären','hätten','könnten','müssten','dürften','sollten'],
+    ],
+    gloss: [
+      ['wäre', 'would be'],
+      ['hätte', 'would have'],
+      ['könnte', 'could / would be able to'],
+      ['müsste', 'would have to / ought to'],
+      ['dürfte', 'would be allowed to / might'],
+      ['sollte', 'should / ought to'],
     ]
   },
   {
@@ -1008,6 +1074,14 @@ const GRAMMAR = [
       ['mögen','möchte','+ Umlaut','Ich möchte einen Kaffee.'],
       ['wollen','wollte','KEIN Umlaut','Ich wollte gehen.'],
       ['sollen','sollte','KEIN Umlaut','Du solltest schlafen.'],
+    ],
+    gloss: [
+      ['könnte', 'could'],
+      ['müsste', 'would have to'],
+      ['dürfte', 'would be allowed to'],
+      ['möchte', 'would like'],
+      ['wollte', 'wanted to / would want to'],
+      ['sollte', 'should'],
     ]
   },
   {
@@ -1019,6 +1093,12 @@ const GRAMMAR = [
       ['REAL','Präsens','Präsens / Futur','Wenn ich Zeit habe, lese ich. (likely)'],
       ['IRREAL Gegenwart','Konj II','Konj II oder würde-Form','Wenn ich Zeit hätte, würde ich mehr lesen.'],
       ['IRREAL Vergangenheit','wäre/hätte + Partizip II','wäre/hätte + Partizip II','Wenn ich Zeit gehabt hätte, hätte ich gelesen.'],
+    ],
+    gloss: [
+      ['Wenn ich Zeit habe …', 'If / when I have time … (real)'],
+      ['Wenn ich Zeit hätte …', 'If I had time … (irreal, Gegenwart)'],
+      ['Wenn ich Zeit gehabt hätte …', 'If I had had time … (irreal, Vergangenheit)'],
+      ['würde + Inf. / hätte + PP', 'would + verb / would have + verb'],
     ]
   },
   {
@@ -1033,6 +1113,10 @@ const GRAMMAR = [
       ['wir','werden','Wir werden in die Galerie gehen.'],
       ['ihr','werdet','Ihr werdet bald müde sein.'],
       ['sie / Sie','werden','Sie werden bald kommen.'],
+    ],
+    gloss: [
+      ['werde / wirst / wird', 'will (Futur, "going to")'],
+      ['Ich werde lernen.', 'I will / am going to learn.'],
     ]
   },
   {
@@ -1049,6 +1133,16 @@ const GRAMMAR = [
       ['Modal + Passiv','modal + PP + werden','Das Buch muss gelesen werden.'],
       ['Konj II Passiv','würde + PP + werden','Das Buch würde gelesen werden.'],
       ['Agent','von + Dativ','Das Buch wird vom Lehrer gelesen.'],
+    ],
+    gloss: [
+      ['wird gelesen', 'is being read'],
+      ['wurde gelesen', 'was being read / was read'],
+      ['ist gelesen worden', 'has been read'],
+      ['war gelesen worden', 'had been read'],
+      ['wird gelesen werden', 'will be read'],
+      ['muss gelesen werden', 'must be read'],
+      ['würde gelesen werden', 'would be read'],
+      ['von + Dativ', 'by … (agent of the action)'],
     ]
   },
   {
@@ -1063,6 +1157,11 @@ const GRAMMAR = [
       ['wir','werden','wurden','würden'],
       ['ihr','werdet','wurdet','würdet'],
       ['sie / Sie','werden','wurden','würden'],
+    ],
+    gloss: [
+      ['Präsens (wird)', 'is being …-ed'],
+      ['Präteritum (wurde)', 'was being …-ed / was …-ed'],
+      ['Konj II (würde)', 'would be …-ed'],
     ]
   },
   {

@@ -427,6 +427,19 @@ function renderGrammar(){
   grammarList.innerHTML = items.map(g => {
     const header = g.rows[0];
     const body = g.rows.slice(1);
+    const gloss = Array.isArray(g.gloss) && g.gloss.length ? `
+      <div class="gr-gloss">
+        <div class="gr-gloss-h">English crib · what these forms mean</div>
+        <dl class="gr-gloss-list">
+          ${g.gloss.map(([de, en]) => `
+            <div class="gr-gloss-row">
+              <dt>${escapeHtml(de)}</dt>
+              <dd>${escapeHtml(en)}</dd>
+            </div>
+          `).join('')}
+        </dl>
+      </div>
+    ` : '';
     return `
       <div class="gr-block">
         <div class="gr-title">
@@ -443,6 +456,7 @@ function renderGrammar(){
             return `<td${cls ? ` class="${cls}"` : ''}>${escapeHtml(cell)}</td>`;
           }).join('')}</tr>`).join('')}
         </table>
+        ${gloss}
       </div>
     `;
   }).join('');

@@ -722,6 +722,54 @@ h2.pencil::after{
 .gr-ch--k7{ background:#dde7f0; color:#1f4a7a; }
 .gr-ch--k8{ background:#f3dde0; color:#a01f33; }
 .gr-ch--core{ background:#ece0f0; color:#5a2c7a; }
+
+.gr-gloss{
+  margin: 14px -8px 0;
+  padding: 10px 14px 10px;
+  border-top: 1.5px dashed var(--ink);
+  background: var(--paper-soft, #f3ecd8);
+}
+.gr-gloss-h{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--pencil);
+  margin-bottom: 8px;
+}
+.gr-gloss-list{
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px 14px;
+}
+@media (min-width: 600px){
+  .gr-gloss-list{ grid-template-columns: 1fr 1fr; }
+}
+.gr-gloss-row{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+  padding: 2px 0;
+  border-bottom: 1px dotted var(--paper-dark);
+}
+.gr-gloss-row:last-child{ border-bottom: none; }
+.gr-gloss-row dt{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  color: var(--red);
+  font-weight: 500;
+  margin: 0;
+}
+.gr-gloss-row dd{
+  font-family: 'Spectral', serif;
+  font-size: 13.5px;
+  color: var(--ink);
+  margin: 0;
+  font-style: italic;
+}
 .gr-sub{
   font-family:'IBM Plex Mono', monospace;
   font-size: 11.5px;
