@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Architects+Daughter&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 <link rel="stylesheet" href="/assets/flashcards.css?v=1">
 <link rel="stylesheet" href="/assets/chat-widget.css?v=1">
 </head>
@@ -31,6 +31,7 @@
   <button class="tab" data-target="grammar">04 · Grammar</button>
   <button class="tab" data-target="vocab">05 · Vokabeln</button>
   <button class="tab" data-target="k8">06 · Kapitel 8</button>
+  <button class="tab" data-target="guide">07 · Study Guide</button>
   <button class="tab" data-target="home" onclick="location.href='../index.html';return false">↩ home</button>
 </nav>
 
@@ -200,6 +201,28 @@
   </div>
 </section>
 
+<!-- ================= STUDY GUIDE ================= -->
+<section class="sheet" id="guide">
+  <div class="sheet-margin">
+    <h2 class="pencil">Study Guide — Final Vorbereitung, solved</h2>
+    <p class="kicker">Every section of the official "Elementary II Final Vorbereitung" handout, walked through. Each "question to grapple with" gets a structured model answer: bottom line, forms to memorize, an outline you could put on the page, and the trap to avoid.</p>
+
+    <div class="guide-meta">
+      <a class="guide-dl" href="final-vorbereitung.pdf" download>↓ download .pdf</a>
+      <a class="guide-dl guide-dl--alt" href="final-vorbereitung.pdf" target="_blank" rel="noopener">↗ open original</a>
+      <span class="guide-meta-note">Elementary II · Final · K8 + cumulative review · 14 walkthrough cards</span>
+    </div>
+
+    <details class="guide-orig" open>
+      <summary>Original handout (verbatim)</summary>
+      <div class="guide-orig-body" id="guide-orig-body"></div>
+    </details>
+
+    <h3 class="guide-h">Walkthrough — every topic, solved</h3>
+    <div class="guide-list" id="guide-list"></div>
+  </div>
+</section>
+
 </main>
 
 <footer class="footer">
@@ -212,8 +235,8 @@
   </div>
 </footer>
 
-<script src="content.js?v=9"></script>
-<script src="app.js?v=10"></script>
+<script src="content.js?v=10"></script>
+<script src="app.js?v=11"></script>
 <script src="/assets/quiz.js?v=1" defer></script>
 <script src="/assets/voice.js?v=1" defer></script>
 <script src="/assets/mock.js?v=1" defer></script>

@@ -1,6 +1,6 @@
 /* =====================================================================
    deutsch.lab — content for German II (K5–K8)
-   CARDS, VOCAB, QUIZ, GRAMMAR, K8_SECTIONS
+   CARDS, VOCAB, QUIZ, GRAMMAR, K8_SECTIONS, GERMAN_STUDY_GUIDE
    ===================================================================== */
 
 const CARDS = [
@@ -601,7 +601,7 @@ const GRAMMAR = [
   /* =================== K5 — cases & prepositions =================== */
   {
     ch: 'K5',
-    title: 'Personal pronouns — Nominativ / Akkusativ / Dativ',
+    title: 'Personal pronouns · Nom / Akk / Dat',
     sub: 'Memorize all three columns side-by-side. The Dativ column is the one most students drop on the exam.',
     rows: [
       ['Person','Nom (subject)','Akk (direct obj.)','Dat (indirect obj.)'],
@@ -613,11 +613,20 @@ const GRAMMAR = [
       ['wir','wir','uns','uns'],
       ['ihr','ihr','euch','euch'],
       ['sie / Sie','sie / Sie','sie / Sie','ihnen / Ihnen'],
+    ],
+    gloss: [
+      ['ich / mich / mir', 'I / me (direct) / me (indirect)'],
+      ['du / dich / dir', 'you-sg / you / you'],
+      ['er / ihn / ihm', 'he / him / him'],
+      ['sie / sie / ihr', 'she / her / her'],
+      ['wir / uns', 'we / us (Akk = Dat)'],
+      ['ihr / euch', 'you-pl / you-all'],
+      ['sie / Sie / ihnen / Ihnen', 'they/you-formal · them/you (Dat)'],
     ]
   },
   {
     ch: 'K5',
-    title: 'Definite & indefinite articles — alle vier Kasus',
+    title: 'Articles · all four cases',
     sub: 'Same endings repeat across der-words and ein-words. Master this once and adjective endings click.',
     rows: [
       ['Case','Mask.','Fem.','Neut.','Pl.'],
@@ -625,12 +634,19 @@ const GRAMMAR = [
       ['Akk','den / einen','die / eine','das / ein','die / —'],
       ['Dat','dem / einem','der / einer','dem / einem','den + N-en / —'],
       ['Gen','des + N-(e)s','der / einer','des + N-(e)s','der / —'],
+    ],
+    gloss: [
+      ['der / die / das', 'the (masc / fem / neut)'],
+      ['ein / eine / ein', 'a/an (masc / fem / neut)'],
+      ['den / die / das', 'the (Akk: m / f / n)'],
+      ['dem / der / dem', 'to the (Dat: m / f / n)'],
+      ['des / der / des', 'of the (Gen: m / f / n)'],
     ]
   },
   {
     ch: 'K5',
-    title: 'Akkusativ-Präpositionen — "DOGFU(M)"',
-    sub: 'durch · ohne · gegen · für · um (· bis · entlang) — IMMER Akkusativ. No exceptions, no two-way behaviour.',
+    title: 'Akk prepositions · DOGFU(D)',
+    sub: 'durch · ohne · gegen · für · um (· bis · entlang) — always Accusative. No exceptions, no two-way behaviour.',
     rows: [
       ['Prep.','Meaning','Beispiel'],
       ['durch','through','Wir gehen durch den Park.'],
@@ -640,12 +656,17 @@ const GRAMMAR = [
       ['um','around / at (time)','um die Ecke / um 10 Uhr'],
       ['bis','until / by','bis nächsten Montag'],
       ['entlang','along (postposition!)','den Fluss entlang'],
+    ],
+    gloss: [
+      ['durch / ohne / gegen / für / um', 'through / without / against / for / around'],
+      ['bis / entlang', 'until / along (postposition — comes after)'],
+      ['Akkusativ', 'Accusative — direct object case'],
     ]
   },
   {
     ch: 'K5',
-    title: 'Dativ-Präpositionen — "aus·außer·bei·mit·nach·seit·von·zu"',
-    sub: 'Always Dativ. Common contractions: bei dem → beim · von dem → vom · zu dem → zum · zu der → zur.',
+    title: 'Dativ prepositions · the 8',
+    sub: 'aus · außer · bei · mit · nach · seit · von · zu — always Dative. Common contractions: beim · vom · zum · zur.',
     rows: [
       ['Prep.','Meaning','Beispiel'],
       ['aus','from (origin) / made of','Ich komme aus der Schweiz.'],
@@ -656,35 +677,56 @@ const GRAMMAR = [
       ['seit','since / for (an ongoing duration)','Seit einem Jahr lebe ich hier.'],
       ['von','from (person/source) / of','Das Buch ist vom Lehrer.'],
       ['zu','to (a person, an institution)','Wir fahren zum Bahnhof.'],
+    ],
+    gloss: [
+      ['aus / außer / bei', 'from / except for / at-near'],
+      ['mit / nach / seit', 'with / after-to / since-for'],
+      ['von / zu', 'from-of / to'],
+      ['beim · vom · zum · zur', 'bei dem · von dem · zu dem · zu der'],
     ]
   },
   {
     ch: 'K5',
-    title: 'Wechselpräpositionen — two-way prepositions',
-    sub: 'an · auf · hinter · in · neben · über · unter · vor · zwischen — Wo? → Dativ (location). Wohin? → Akkusativ (direction).',
+    title: 'Two-way prepositions · the 9',
+    sub: 'an · auf · hinter · in · neben · über · unter · vor · zwischen — Wo? → Dat (location). Wohin? → Akk (direction).',
     rows: [
       ['Test question','Case','Verb pair','Example'],
       ['Wo? (location, no movement)','Dativ','liegen · stehen · sitzen · hängen','Das Buch liegt auf dem Tisch.'],
       ['Wohin? (direction, change of place)','Akkusativ','legen · stellen · setzen · hängen','Ich lege das Buch auf den Tisch.'],
       ['Contractions','—','—','an dem → am · in dem → im · in das → ins · an das → ans'],
+    ],
+    gloss: [
+      ['Wo?', 'Where? (location → Dat)'],
+      ['Wohin?', 'Where to? (direction → Akk)'],
+      ['liegen / stehen / sitzen', 'to lie / stand / sit (state — Dat)'],
+      ['legen / stellen / setzen', 'to lay / put-upright / set down (motion — Akk)'],
+      ['am · im · ins · ans', 'at the · in the · into the · onto the'],
     ]
   },
   {
     ch: 'K5',
-    title: 'State vs. motion verb pairs (the "lay/lie" trap)',
-    sub: 'German uses different verbs for "to be lying" vs. "to lay (something down)". The state verbs take Dativ, the motion verbs take Akkusativ.',
+    title: 'State vs. motion verbs · the lay/lie trap',
+    sub: 'Different verbs for "to be lying" vs. "to lay (something down)". State verbs take Dativ, motion verbs take Akkusativ.',
     rows: [
       ['State (where?) — Dativ','Motion (where to?) — Akkusativ','Bedeutung'],
       ['liegen — lag — gelegen','legen — legte — gelegt','to lie / to lay'],
       ['stehen — stand — gestanden','stellen — stellte — gestellt','to stand / to put upright'],
       ['sitzen — saß — gesessen','setzen — setzte — gesetzt','to sit / to set down'],
       ['hängen — hing — gehangen','hängen — hängte — gehängt','to hang (state) / to hang up'],
+    ],
+    gloss: [
+      ['liegen / lag / gelegen', 'to lie (state, strong)'],
+      ['legen / legte / gelegt', 'to lay something down (motion, weak)'],
+      ['stehen / stand / gestanden', 'to stand (state)'],
+      ['stellen / stellte / gestellt', 'to put upright (motion)'],
+      ['sitzen / saß / gesessen', 'to sit (state)'],
+      ['setzen / setzte / gesetzt', 'to set down / seat (motion)'],
     ]
   },
   {
     ch: 'K5',
-    title: 'Da- and Wo-compounds (Pronominaladverbien)',
-    sub: 'Used for THINGS, never for people. Insert -r- if the prep starts with a vowel: da+auf → darauf, wo+an → woran.',
+    title: 'Da- and Wo-compounds',
+    sub: 'For THINGS, never people. Insert -r- if the prep starts with a vowel: da+auf → darauf, wo+an → woran.',
     rows: [
       ['Prep.','da-form (= "with it")','wo-form (= "with what?")'],
       ['mit','damit','womit'],
@@ -695,12 +737,19 @@ const GRAMMAR = [
       ['an','daran','woran'],
       ['von','davon','wovon'],
       ['in','darin','worin'],
+    ],
+    gloss: [
+      ['damit / womit', 'with it / with what?'],
+      ['dafür / wofür', 'for it / for what?'],
+      ['darauf / worauf', 'on it / on what?'],
+      ['darüber / worüber', 'about it / about what?'],
+      ['davon / wovon', 'from it · about it / from what?'],
     ]
   },
   {
     ch: 'K5',
-    title: 'Reflexivpronomen — Akkusativ vs. Dativ',
-    sub: 'Identical to personal pronouns EXCEPT er/sie/es/Sie/sie-pl all become "sich" — that\'s the only thing to memorize.',
+    title: 'Reflexive pronouns · Akk vs. Dat',
+    sub: 'Identical to personal pronouns EXCEPT er/sie/es/Sie/sie-pl all become "sich". That\'s the only thing to memorize.',
     rows: [
       ['Person','Akk reflexive','Dat reflexive','Beispiel'],
       ['ich','mich','mir','Ich freue mich. / Ich kaufe mir ein Buch.'],
@@ -709,12 +758,19 @@ const GRAMMAR = [
       ['wir','uns','uns','Wir treffen uns.'],
       ['ihr','euch','euch','Ihr setzt euch.'],
       ['sie / Sie','sich','sich','Sie freuen sich.'],
+    ],
+    gloss: [
+      ['mich / mir', 'myself (direct / indirect)'],
+      ['dich / dir', 'yourself (sg)'],
+      ['sich', 'himself / herself / itself / themselves / yourself-formal'],
+      ['uns', 'ourselves'],
+      ['euch', 'yourselves (pl)'],
     ]
   },
   {
     ch: 'K5',
-    title: 'Modalverben im Präsens — voller Konjugationstabelle',
-    sub: 'Note the singular vowel change for können/müssen/dürfen/wollen/sollen. Modal in V2, Infinitiv ans Satzende.',
+    title: 'Modal verbs · present tense (full conj.)',
+    sub: 'Singular vowel change for können / müssen / dürfen / wollen / sollen. Modal in V2, Infinitive at clause end.',
     rows: [
       ['Verb','Meaning','ich','du','er/sie/es','wir','ihr','sie/Sie'],
       ['können','can / be able to','kann','kannst','kann','können','könnt','können'],
@@ -724,13 +780,22 @@ const GRAMMAR = [
       ['sollen','should / supposed to','soll','sollst','soll','sollen','sollt','sollen'],
       ['mögen','to like','mag','magst','mag','mögen','mögt','mögen'],
       ['möchten','would like (Konj II)','möchte','möchtest','möchte','möchten','möchtet','möchten'],
+    ],
+    gloss: [
+      ['kann / kannst / kann', 'can / be able to'],
+      ['muss / musst / muss', 'must / have to'],
+      ['darf / darfst / darf', 'may / be allowed to'],
+      ['will / willst / will', 'want to (NOT "will" in English!)'],
+      ['soll / sollst / soll', 'should / be supposed to'],
+      ['mag / magst / mag', 'like'],
+      ['möchte / möchtest', 'would like'],
     ]
   },
 
   /* =================== K6 — past tenses & narration =================== */
   {
     ch: 'K6',
-    title: 'sein & haben — Präsens, Präteritum, Konjunktiv II',
+    title: 'sein & haben · pres / past / Konj II',
     sub: 'These two carry the entire Perfekt + Plusquamperfekt + Konj II vergangen. Drill all three columns until automatic.',
     rows: [
       ['Person','sein (Präs)','sein (Prät)','sein (Konj II)','haben (Präs)','haben (Prät)','haben (Konj II)'],
@@ -752,7 +817,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K6',
-    title: 'werden — Präsens, Präteritum, Konjunktiv II',
+    title: 'werden · pres / past / Konj II (3-in-1)',
     sub: 'werden does triple duty: (1) Futur, (2) Passiv, (3) Konj II würde-Form. Knowing all three columns is non-negotiable for K6 + K8.',
     rows: [
       ['Person','werden (Präs)','werden (Prät)','werden (Konj II)','Use'],
@@ -773,7 +838,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K6',
-    title: 'Perfekt — Partizip-II Bildung (alle Muster)',
+    title: 'Perfekt · how to form Partizip II',
     sub: 'haben for most. sein for motion (gehen, fahren, kommen) AND change-of-state (werden, sterben, einschlafen) AND bleiben/sein.',
     rows: [
       ['Type','Pattern','Example','Aux'],
@@ -785,11 +850,20 @@ const GRAMMAR = [
       ['Separable prefix','prefix + ge + stem','aufmachen → aufgemacht','haben'],
       ['Motion / change-of-state','same as strong/weak','gehen → gegangen','SEIN'],
       ['bleiben / sein','—','geblieben / gewesen','SEIN'],
+    ],
+    gloss: [
+      ['gekauft / gespielt', 'bought / played (regular -t)'],
+      ['geschrieben / gesprochen', 'written / spoken (strong -en)'],
+      ['gedacht / gebracht', 'thought / brought (mixed)'],
+      ['telefoniert / studiert', 'telephoned / studied (no ge-)'],
+      ['besucht / verstanden', 'visited / understood (no ge-)'],
+      ['aufgemacht / eingekauft', 'opened / shopped (ge- splits prefix)'],
+      ['ist gegangen / ist geworden', 'has gone / has become (sein-aux)'],
     ]
   },
   {
     ch: 'K6',
-    title: 'Strong-verb cheat sheet — Partizip II + Hilfsverb',
+    title: 'Strong-verb cheat sheet · 25 most-tested',
     sub: 'The 25 most-tested strong + mixed verbs for Exam 2. Watch the vowel change pattern.',
     rows: [
       ['Infinitiv','Präteritum','Partizip II','Aux'],
@@ -849,7 +923,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K6',
-    title: 'Präteritum endings (regular & modals)',
+    title: 'Präteritum endings · regular vs. modal',
     sub: 'Spoken German: only sein / haben / modals show up in Präteritum. Written / news / fairy-tales use it for everything.',
     rows: [
       ['Person','Regular (-te)','Modal (no umlaut)','Strong (no ending in 1./3.Sg)'],
@@ -868,7 +942,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K6',
-    title: 'Subordinating conjunctions — Verbendstellung',
+    title: 'Subordinating conjunctions · verb to the end',
     sub: 'After these, the conjugated verb goes to the END of the clause. Most-tested: dass · weil · wenn · als · obwohl · damit.',
     rows: [
       ['Word','Meaning','Verb position','Beispiel'],
@@ -880,11 +954,21 @@ const GRAMMAR = [
       ['damit','so that','END','Ich lerne, damit ich bestehe.'],
       ['ob','whether','END','Ich weiß nicht, ob er kommt.'],
       ['denn','because (coordinator!)','MAIN-clause order','Ich esse, denn ich habe Hunger.'],
+    ],
+    gloss: [
+      ['dass', 'that (links a thought)'],
+      ['weil', 'because (verb to end)'],
+      ['wenn', 'when (recurring) / if'],
+      ['als', 'when (one-time past)'],
+      ['obwohl', 'although / even though'],
+      ['damit', 'so that (purpose)'],
+      ['ob', 'whether / if (yes-no question embedded)'],
+      ['denn', 'because (coordinator — keeps normal word order)'],
     ]
   },
   {
     ch: 'K6',
-    title: 'als / wenn / wann — when to use which',
+    title: 'als / wenn / wann · which one?',
     sub: 'The single most-tested K6 trap. Translation alone won\'t save you — you need the function.',
     rows: [
       ['Word','Use','Tense','Beispiel'],
@@ -892,11 +976,17 @@ const GRAMMAR = [
       ['wenn','recurring or future / "if"','any','Wenn ich müde bin, schlafe ich früh.'],
       ['wenn','recurring past ("whenever")','past','Immer wenn ich nach Hause kam, war Kaffee bereit.'],
       ['wann','question word — "when?"','any','Wann kommst du? / Ich weiß nicht, wann er kommt.'],
+    ],
+    gloss: [
+      ['als', 'when (one-time past, narrative)'],
+      ['wenn', 'when (recurring) / if (conditional)'],
+      ['immer wenn', 'whenever (past or present recurring)'],
+      ['wann', 'when? (the question word, only)'],
     ]
   },
   {
     ch: 'K6',
-    title: 'Imperativ — alle drei Formen',
+    title: 'Imperativ · all three forms',
     sub: 'du-form: stem (no ending, no pronoun). ihr-form: ihr-form minus pronoun. Sie-form: KEEPS Sie + verb-first.',
     rows: [
       ['Verb','du-form','ihr-form','Sie-form'],
@@ -917,7 +1007,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K6',
-    title: 'Negation — nicht vs. kein',
+    title: 'Negation · nicht vs. kein',
     sub: 'kein for nouns with indefinite/no article. nicht for verbs, definite-article nouns, adjectives, adverbs.',
     rows: [
       ['Use','Word','Beispiel'],
@@ -926,13 +1016,20 @@ const GRAMMAR = [
       ['Verb','nicht (am Satzende)','Ich gehe nicht.'],
       ['Adjective / adverb','nicht (vor dem Wort)','Das ist nicht teuer.'],
       ['Time expression','nicht (vor der Zeit)','Ich komme nicht heute.'],
+    ],
+    gloss: [
+      ['kein / keine / keinen', 'no / not a (Akk: m → keinen, f → keine)'],
+      ['nicht', 'not (general)'],
+      ['nicht (am Satzende)', 'not (negates the whole verb idea)'],
+      ['Ich habe keinen Hund.', 'I do not have a dog. (no article noun → kein)'],
+      ['Ich kenne ihn nicht.', "I don't know him. (definite/pronoun → nicht)"],
     ]
   },
 
   /* =================== K7 — adjectives, relative clauses =================== */
   {
     ch: 'K7',
-    title: 'Adjektivendungen — schwach (nach der/die/das, dieser, jeder)',
+    title: 'Adj. endings · weak (after der-words)',
     sub: 'Only TWO endings: -e (5 cells) and -en (everywhere else). Memorize the 5 -e cells, default the rest to -en.',
     rows: [
       ['Case','Mask.','Fem.','Neut.','Pl.'],
@@ -940,23 +1037,37 @@ const GRAMMAR = [
       ['Akk','-en','-e','-e','-en'],
       ['Dat','-en','-en','-en','-en'],
       ['Gen','-en','-en','-en','-en'],
+    ],
+    gloss: [
+      ['der alte Mann', 'the old man (Nom-mask -e)'],
+      ['die alte Frau', 'the old woman (Nom-fem -e)'],
+      ['das alte Kind', 'the old child (Nom-neut -e)'],
+      ['den alten Mann', 'the old man (Akk-mask -en)'],
+      ['die alten Leute', 'the old people (plural -en)'],
     ]
   },
   {
     ch: 'K7',
-    title: 'Adjektivendungen — gemischt (nach ein/kein/mein/dein…)',
-    sub: 'Same as schwach EXCEPT three cells: Nom-Mask -er, Nom-Neut -es, Akk-Neut -es (because ein has no ending in those cells, the adjective takes over).',
+    title: 'Adj. endings · mixed (after ein-words)',
+    sub: 'Same as weak EXCEPT three cells: Nom-mask -er, Nom-neut -es, Akk-neut -es (because ein has no ending in those cells, the adjective takes over).',
     rows: [
       ['Case','Mask.','Fem.','Neut.','Pl.'],
       ['Nom','-er','-e','-es','-en'],
       ['Akk','-en','-e','-es','-en'],
       ['Dat','-en','-en','-en','-en'],
       ['Gen','-en','-en','-en','-en'],
+    ],
+    gloss: [
+      ['ein alter Mann', 'an old man (-er, ein has no ending)'],
+      ['eine alte Frau', 'an old woman (-e)'],
+      ['ein altes Kind', 'an old child (-es, ein has no ending)'],
+      ['einen alten Mann', 'an old man (Akk -en)'],
+      ['meine alten Bücher', 'my old books (plural -en)'],
     ]
   },
   {
     ch: 'K7',
-    title: 'Adjektivendungen — stark (kein Artikel)',
+    title: 'Adj. endings · strong (no article)',
     sub: 'No article = the adjective itself shows the case. Endings ≈ definite-article endings (der/dem/des).',
     rows: [
       ['Case','Mask.','Fem.','Neut.','Pl.'],
@@ -964,11 +1075,18 @@ const GRAMMAR = [
       ['Akk','-en','-e','-es','-e'],
       ['Dat','-em','-er','-em','-en'],
       ['Gen','-en','-er','-en','-er'],
+    ],
+    gloss: [
+      ['guter Wein', 'good wine (Nom-mask, no article → -er)'],
+      ['kalte Milch', 'cold milk (Nom-fem → -e)'],
+      ['schönes Wetter', 'nice weather (Nom-neut → -es)'],
+      ['mit gutem Wein', 'with good wine (Dat-mask → -em)'],
+      ['kalte Tage', 'cold days (Nom/Akk-pl → -e)'],
     ]
   },
   {
     ch: 'K7',
-    title: 'Relativpronomen — Genus folgt dem Bezugswort, Kasus folgt der Funktion',
+    title: 'Relative pronouns · gender + case table',
     sub: 'STEP 1: gender from the antecedent. STEP 2: case from the role inside the relative clause. STEP 3: verb to the END.',
     rows: [
       ['Case','Mask.','Fem.','Neut.','Pl.'],
@@ -976,11 +1094,18 @@ const GRAMMAR = [
       ['Akk','den','die','das','die'],
       ['Dat','dem','der','dem','denen'],
       ['Gen','dessen','deren','dessen','deren'],
+    ],
+    gloss: [
+      ['der / die / das', 'who / which / that (Nom)'],
+      ['den / die / das', 'whom / which (Akk)'],
+      ['dem / der / dem', 'to whom / to which (Dat: m / f / n)'],
+      ['denen', 'to whom (Dat-plural)'],
+      ['dessen / deren', 'whose (m·n / f·pl — Genitive)'],
     ]
   },
   {
     ch: 'K7',
-    title: 'Relativsatz — examples by case',
+    title: 'Relative clause · examples by case',
     sub: 'Decide gender of antecedent, then case from the verb/preposition INSIDE the relative clause.',
     rows: [
       ['Antecedent','Case in clause','Beispiel'],
@@ -989,11 +1114,18 @@ const GRAMMAR = [
       ['das Kind (n)','Dat','Das Kind, dem ich helfe, ist krank.'],
       ['die Bücher (pl)','Dat','Die Bücher, mit denen ich lerne, sind teuer.'],
       ['der Mann (m)','Gen','Der Mann, dessen Auto kaputt ist, läuft.'],
+    ],
+    gloss: [
+      ['Der Mann, der …', 'The man who … (subject of relative clause)'],
+      ['Die Frau, die ich kenne', 'The woman whom I know (Akk in clause)'],
+      ['Das Kind, dem ich helfe', 'The child whom I help (Dat — helfen + Dat)'],
+      ['mit denen', 'with whom / with which (prep + Dat-pl)'],
+      ['dessen Auto', "whose car (Gen-mask 'dessen')"],
     ]
   },
   {
     ch: 'K7',
-    title: 'Komparativ & Superlativ — adjectives',
+    title: 'Comparative & superlative · adjectives',
     sub: 'Komparativ: + -er. Superlativ predicative: am ___-sten. Superlativ attributiv: der/die/das ___-ste (with adj endings).',
     rows: [
       ['Base','Komparativ','Superlativ predicative','Superlativ attributive'],
@@ -1006,24 +1138,38 @@ const GRAMMAR = [
       ['gern','lieber','am liebsten','—'],
       ['hoch','höher','am höchsten','der höchste'],
       ['nah','näher','am nächsten','der nächste'],
+    ],
+    gloss: [
+      ['schneller / am schnellsten', 'faster / fastest'],
+      ['größer / älter / jünger', 'bigger / older / younger (with Umlaut!)'],
+      ['besser / am besten', 'better / best (gut → suppletive)'],
+      ['mehr / am meisten', 'more / most (viel → suppletive)'],
+      ['lieber / am liebsten', 'rather / most preferably (gern → suppletive)'],
+      ['näher / am nächsten', 'closer / closest'],
     ]
   },
   {
     ch: 'K7',
-    title: 'als vs. wie im Vergleich',
-    sub: 'als = unequal comparison ("than"). wie = equal comparison ("as ... as"). Tested directly on the Exam.',
+    title: 'als vs. wie · in comparisons',
+    sub: 'als = unequal ("than"). wie = equal ("as … as"). Tested directly on the Exam.',
     rows: [
       ['Pattern','Form','Beispiel'],
       ['Komparativ als','adj-er + als','Sie ist größer als ich.'],
       ['Gleichheit (so … wie)','so + adj + wie','Er ist so alt wie ich.'],
       ['Negation (nicht so … wie)','nicht so + adj + wie','Es ist nicht so kalt wie gestern.'],
+    ],
+    gloss: [
+      ['als', 'than (after a comparative — größer als)'],
+      ['so … wie', 'as … as (equal comparison)'],
+      ['nicht so … wie', 'not as … as'],
+      ['größer als ich', 'bigger than I (NOT "größer wie ich" — common spoken error)'],
     ]
   },
 
   /* =================== K8 — Konjunktiv II, Passiv, Futur =================== */
   {
     ch: 'K8',
-    title: 'Konjunktiv II — würde-Form (für die meisten Verben)',
+    title: 'Konj II · würde-form (most verbs)',
     sub: 'Default for any non-irregular verb. Form: würde + Infinitiv at clause end. Used for hypotheticals, polite requests, advice.',
     rows: [
       ['Person','würde','Beispiel'],
@@ -1042,7 +1188,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K8',
-    title: 'Konjunktiv II — wäre / hätte / könnte (echte Formen)',
+    title: 'Konj II · wäre / hätte / könnte (real forms)',
     sub: 'These six verbs use their own Konj-II form, NOT würde. Memorize them — they replace würde for sein/haben/modals.',
     rows: [
       ['Person','wäre','hätte','könnte','müsste','dürfte','sollte'],
@@ -1064,7 +1210,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K8',
-    title: 'Konjunktiv II der Modalverben — alle sechs',
+    title: 'Konj II of modals · all six',
     sub: 'können / müssen / dürfen → take Umlaut. wollen / sollen → KEIN Umlaut (look just like the Präteritum).',
     rows: [
       ['Modal','Konj II ich-Form','Pattern','Beispiel'],
@@ -1086,7 +1232,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K8',
-    title: 'Wenn-Sätze — real (Indikativ) vs. irreal (Konjunktiv II)',
+    title: 'Wenn-clauses · real vs. unreal',
     sub: 'REAL = a likely or possible condition (Indikativ). IRREAL = hypothetical or impossible (Konj II in BOTH halves).',
     rows: [
       ['Type','Wenn-clause','Main clause','Beispiel'],
@@ -1103,7 +1249,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K8',
-    title: 'Futur — werden + Infinitiv',
+    title: 'Futur · werden + Infinitive',
     sub: 'werden in V2-Position, Infinitiv at the end of the clause. Same werden also marks Passiv — context tells them apart.',
     rows: [
       ['Person','werden (Präsens)','Beispiel — Futur'],
@@ -1121,7 +1267,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K8',
-    title: 'Passiv — alle Tempora',
+    title: 'Passive · all tenses',
     sub: 'werden + Partizip II is the core. Agent (optional): von + Dativ. Note that Perfekt Passiv ends in "worden" (NOT "geworden").',
     rows: [
       ['Tense','Form','Beispiel'],
@@ -1147,7 +1293,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K8',
-    title: 'Passiv — werden in jeder Form, side-by-side',
+    title: 'Passive · werden side-by-side',
     sub: 'Same six persons, three forms of werden. The form of werden tells you the tense of the entire Passiv.',
     rows: [
       ['Person','Präsens (wird)','Präteritum (wurde)','Konj II (würde)'],
@@ -1166,7 +1312,7 @@ const GRAMMAR = [
   },
   {
     ch: 'K8',
-    title: 'Partizip I — als Adjektiv',
+    title: 'Partizip I · as adjective (active, ongoing)',
     sub: 'Form: Infinitiv + d (+ Adjektivendung). Means an active, ongoing action. Equivalent to a relative clause "der/die/das …".',
     rows: [
       ['Verb','Partizip I','Beispiel = Relativsatz'],
@@ -1176,11 +1322,17 @@ const GRAMMAR = [
       ['weinen','weinend','weinende Kinder = Kinder, die weinen'],
       ['lesen','lesend','ein lesendes Kind = ein Kind, das liest'],
       ['singen','singend','die singende Katze = die Katze, die singt'],
+    ],
+    gloss: [
+      ['fahrend / sprechend', 'driving / speaking (active, ongoing)'],
+      ['ein lesendes Kind', 'a reading child = a child that is reading'],
+      ['weinende Kinder', 'crying children'],
+      ['Inf + d + Endung', 'Infinitive + d + adjective ending'],
     ]
   },
   {
     ch: 'K8',
-    title: 'Partizip II — als Adjektiv (passive / completed)',
+    title: 'Partizip II · as adjective (passive, done)',
     sub: 'Same Partizip II from Perfekt, but used attributively. Means a passive, completed action.',
     rows: [
       ['Verb','Partizip II','Beispiel = Relativsatz'],
@@ -1188,11 +1340,17 @@ const GRAMMAR = [
       ['schreiben','geschrieben','der geschriebene Brief = der Brief, der geschrieben wurde'],
       ['kochen','gekocht','das gekochte Essen = das Essen, das gekocht wurde'],
       ['öffnen','geöffnet','die geöffnete Tür = die Tür, die geöffnet wurde'],
+    ],
+    gloss: [
+      ['das gelesene Buch', 'the book that has been read (passive, done)'],
+      ['der geschriebene Brief', 'the (already) written letter'],
+      ['das gekochte Essen', 'the cooked meal'],
+      ['die geöffnete Tür', 'the (now) opened door'],
     ]
   },
   {
     ch: 'K8',
-    title: 'Infinitivkonstruktionen — um/ohne/(an)statt … zu',
+    title: 'Infinitive constructions · um / ohne / statt … zu',
     sub: 'zu + Infinitiv at clause end. Separable verbs split: aufmachen → aufzumachen.',
     rows: [
       ['Konstruktion','Bedeutung','Beispiel'],
@@ -1200,11 +1358,18 @@ const GRAMMAR = [
       ['ohne … zu','without doing','Er ging, ohne etwas zu sagen.'],
       ['(an)statt … zu','instead of doing','Statt zu lernen, schlief er.'],
       ['Separables Verb','prefix + zu + Stamm','aufmachen → aufzumachen — Es ist Zeit, das Buch aufzumachen.'],
+    ],
+    gloss: [
+      ['um … zu + Inf.', 'in order to + verb (purpose)'],
+      ['ohne … zu + Inf.', 'without (doing) + verb'],
+      ['(an)statt … zu + Inf.', 'instead of (doing) + verb'],
+      ['aufzumachen / einzukaufen', 'to open up / to go shopping (separable: zu in middle)'],
+      ['Es ist Zeit, … zu …', 'It is time to …'],
     ]
   },
   {
     ch: 'K8',
-    title: 'Adjektive auf -los · Komposita · Lehnwörter',
+    title: 'Word-formation · -los, compounds, loanwords',
     sub: 'Three K8 word-formation patterns that show up on every Final.',
     rows: [
       ['Pattern','Bedeutung','Beispiel'],
@@ -1212,14 +1377,22 @@ const GRAMMAR = [
       ['Komposita (compound)','last word = head','Sonnenuntergang = Sonne + Untergang (m).'],
       ['Komposita-Definition','use a relative clause','Sonnenuntergang = die Tageszeit, zu der die Sonne (jeden Abend) untergeht.'],
       ['Lehnwörter / Anglizismen','Engl. + -en','googeln, leaken, updaten, chillen, posten'],
+    ],
+    gloss: [
+      ['chancenlos', 'chance-less / without a chance'],
+      ['arbeitslos', 'unemployed / out of work'],
+      ['obdachlos', 'homeless'],
+      ['der Sonnenuntergang', 'the sunset (Sonne "sun" + Untergang "going-down")'],
+      ['googeln / posten / chillen', 'to google / to post / to chill (English roots, German -en)'],
+      ['Komposita-Genus', 'gender = gender of the LAST word (Untergang = m → der Sonnenuntergang)'],
     ]
   },
 
   /* =================== Core / cross-chapter =================== */
   {
     ch: 'core',
-    title: 'Wortstellung — V2-Regel & Ausnahmen',
-    sub: 'Konjugiertes Verb in 2. Position. The "second slot" can hold ONE element (subject, time, place, object…) — once filled, the verb must come.',
+    title: 'Word order · V2 rule & exceptions',
+    sub: 'Conjugated verb in position 2. The "second slot" holds ONE element (subject, time, place, object…) — once filled, the verb must come.',
     rows: [
       ['Satztyp','Verb-Position','Beispiel'],
       ['Aussagesatz (Subjekt vorne)','V2','Meine Freundin und ich gehen heute Abend ins Kino.'],
@@ -1229,11 +1402,19 @@ const GRAMMAR = [
       ['Imperativ','V1, kein Subjekt','Trink mehr Milch! / Kommen Sie nach New York!'],
       ['Subord. Konj. (dass, weil, wenn…)','konj. Verb am Ende','Ich esse, weil ich Hunger habe.'],
       ['Two-verb sentence','konj. Verb V2, Inf./PP am Ende','Ich werde Deutsch lernen. / Ich habe gelernt.'],
+    ],
+    gloss: [
+      ['V1', 'Verb in position 1 (Ja/Nein-Fragen, Imperativ)'],
+      ['V2', 'Verb in position 2 (statements, W-questions)'],
+      ['Verb-Endstellung', 'Verb at the end (subordinate clauses)'],
+      ['Inversion', "Subject-verb flip when something else is in front (Heute GEHE ich …)"],
+      ['Aussagesatz', 'declarative sentence / statement'],
+      ['Klammer (Satzklammer)', 'sentence bracket — conjugated verb V2, infinitive/PP at the end'],
     ]
   },
   {
     ch: 'core',
-    title: 'TeKaMoLo — Reihenfolge der Adverbien',
+    title: 'TeKaMoLo · adverb order in the middle',
     sub: 'When multiple adverbial phrases appear in the middle field, the order is Time → Cause → Manner → Place.',
     rows: [
       ['Position','Was','Beispiel-Element'],
@@ -1242,6 +1423,13 @@ const GRAMMAR = [
       ['Mo (modal)','wie?','mit dem Bus'],
       ['Lo (lokal)','wo / wohin?','in die Stadt'],
       ['Voller Satz','—','Ich fahre heute Abend wegen des Wetters mit dem Bus in die Stadt.'],
+    ],
+    gloss: [
+      ['Te', 'Time — wann? (when?)'],
+      ['Ka', 'Cause — warum? (why?)'],
+      ['Mo', 'Manner — wie? (how?)'],
+      ['Lo', 'Location — wo / wohin? (where / where to?)'],
+      ['Mittelfeld', 'middle field — between V2 and the clause-final infinitive/PP'],
     ]
   },
 ];
@@ -1571,4 +1759,245 @@ const ACTIVE_RECALL = [
   { cat:'K8 · Auto/Mobilität',
     q:'Beschreib dein Traumauto (Konjunktiv II). Gib 3 Sätze: was es WÄRE, was es HÄTTE, was es MACHEN WÜRDE.',
     hint:'• „Mein Traumauto WÄRE ein selbstfahrendes Elektroauto."\n• „Es HÄTTE Solarzellen auf dem Dach."\n• „Es WÜRDE mich automatisch zur Uni FAHREN."\n\nKonj II + Inf am Ende. Aus K8.6.' },
+];
+
+/* ---------------------------------------------------------
+   GERMAN_STUDY_GUIDE — official "Final Vorbereitung" handout,
+   solved & explained. Mirrors the Politics study guide:
+     · GERMAN_STUDY_GUIDE_SECTIONS  — verbatim handout in 4 parts
+     · GERMAN_STUDY_GUIDE_QUESTIONS — walkthrough cards
+   --------------------------------------------------------- */
+const GERMAN_STUDY_GUIDE_SECTIONS = [
+  {
+    roman: 'I',
+    title: 'Grammatik aus Kapitel 8',
+    items: [
+      'Konjunktiv II — würde + Infinitiv (am Ende). Beispiel: Ich würde nach Wien fahren.',
+      'sein → wäre · haben → hätte. Beispiel: Wenn ich reich wäre, hätte ich ein Schloss.',
+      'Modalverben Konjunktiv II — könnte / müsste / dürfte / wollte / sollte. Umlaut für können / müssen / dürfen — KEIN Umlaut für wollen / sollen.',
+      'Wenn-Satz (irreal). Beispiel: Wenn ich der König von England wäre, würde ich jeden Tag Tee trinken.',
+      'Partizip I — Infinitiv + d (+ Adjektivendung). Beispiel: ein lachendes Kind = ein Kind, das lacht.',
+      'Futur — werden + Infinitiv (am Ende). Beispiel: Ich werde Deutsch lernen.',
+    ],
+  },
+  {
+    roman: 'II',
+    title: 'Allgemeines und Wiederholtes',
+    items: [
+      'Verben & Zeitformen — Präsens (inkl. Modalverben, Reflexivverben, trennbare Verben), Perfekt mit haben/sein, Präteritum von sein, haben und Modalverben (kein Umlaut!).',
+      'Nomen & Fälle — Nominativ / Akkusativ / Dativ. Artikel & Pronomen lernen!',
+      'Adjektive — attributive Endungen (Buch-Tabelle erlaubt, falls mitgebracht), Komparativ und Superlativ.',
+      'Konjunktionen — koordinierende (Position 0): und · oder · denn · aber · sondern. Subordinierende (Verb am Ende): dass · weil · wenn. Relativsätze (z.B. „mit der …").',
+      'Präpositionen — DOGFUD (Akk), 8 Dativ-Präpositionen, 9 Wechselpräpositionen (Wo? → Dat / Wohin? → Akk).',
+    ],
+  },
+  {
+    roman: 'III',
+    title: 'Schreiben',
+    items: [
+      'V2-Regel — das konjugierte Verb steht IMMER an Position 2.',
+      'Inversion — wenn ein anderes Element vorne steht (Heute, Morgen, In Wien …), kommt das Verb VOR dem Subjekt.',
+      'Ja/Nein-Fragen — Verb an Position 1 (Wohnst du in NY?).',
+      'Imperativ — Verb an Position 1, kein Subjekt (Komm! · Kommt! · Kommen Sie!).',
+      'Adjektivendungen — IMMER, wenn ein Adjektiv vor einem Nomen steht. KEINE Endung nach „sein" (Das Auto ist rot.).',
+    ],
+  },
+  {
+    roman: 'IV',
+    title: 'Lesen',
+    items: [
+      'Lesestrategie: 1) Titel überfliegen. 2) Fragen ZUERST lesen. 3) Den allgemeinen Sinn (Gist) erfassen. 4) Dann gezielt den Text lesen für Details.',
+    ],
+  },
+];
+
+const GERMAN_STUDY_GUIDE_QUESTIONS = [
+  {
+    n: 1, ch: 'K8',
+    q: 'Konjunktiv II — wann benutzt man würde + Infinitiv und wann die echte Form (wäre/hätte/könnte)?',
+    bottomLine: 'Standard für Verben = würde + Inf. Für sein, haben und Modalverben benutzt man die echte Konj-II-Form.',
+    keyTerms: ['würde + Inf.','wäre','hätte','könnte / müsste / dürfte','wollte / sollte','Inf. ans Ende'],
+    outline: [
+      'Bilde mit allen anderen Verben → würde + Infinitiv am Satzende. „Ich würde gern nach Wien fahren."',
+      'Für sein → wäre / wärst / wäre / wären. „Wenn ich reich wäre …"',
+      'Für haben → hätte / hättest / hätte / hätten. „Ich hätte gern einen Kaffee."',
+      'Modalverben → könnte / müsste / dürfte (Umlaut) und wollte / sollte (KEIN Umlaut).',
+      'Höfliche Bitte → Könnten Sie mir helfen? · Hätten Sie Zeit? · Würden Sie das wiederholen?',
+    ],
+    trap: '„Ich würde sein" oder „ich würde haben" sind FALSCH — benutze IMMER wäre / hätte. Auch: wollte hat KEINEN Umlaut (sieht aus wie Präteritum, ist aber Konj II).',
+  },
+  {
+    n: 2, ch: 'K8',
+    q: 'Wie bildet man einen irrealen Wenn-Satz? Gib das Beispiel aus dem Lehrbuch.',
+    bottomLine: 'Beide Hälften im Konjunktiv II. Wenn-Teil = Konj II der echten Form, Hauptsatz = würde + Inf. (oder echte Konj-II-Form).',
+    keyTerms: ['Wenn-Satz','irreal','Konj II Gegenwart','Konj II Vergangenheit','würde + Inf.','wäre/hätte + Partizip II'],
+    outline: [
+      'Gegenwart-irreal: „Wenn ich der König von England wäre, würde ich jeden Tag Tee trinken." — wäre im Wenn-Teil, würde + Inf. im Hauptsatz.',
+      'Vergangenheit-irreal: „Wenn ich Zeit gehabt hätte, hätte ich gelesen." — wäre/hätte + Partizip II in BEIDEN Hälften.',
+      'Wenn-Verb am Ende, Komma, dann Hauptsatz mit konj. Verb in Position 1 (weil das Wenn-Glied = Position 1).',
+      'Real (likely) bleibt Indikativ: „Wenn ich Zeit habe, lese ich." Nur irreale Wünsche/Hypothesen → Konj II.',
+    ],
+    trap: 'Vergessen, das Verb im Hauptsatz nach vorne zu ziehen. Nach „Wenn …, …" muss es heißen „Wenn ich Zeit hätte, WÜRDE ich lesen." (Verb-Subjekt-Inversion).',
+  },
+  {
+    n: 3, ch: 'K8',
+    q: 'Wie bildet man Partizip I? Welche Bedeutung hat es im Vergleich zu einem Relativsatz?',
+    bottomLine: 'Infinitiv + d (+ Adjektivendung). Bedeutet aktiv & andauernd — entspricht einem Relativsatz mit „der/die/das …".',
+    keyTerms: ['Partizip I','Inf + d','Adjektivendung','aktiver Sinn','Relativsatz-Äquivalent'],
+    outline: [
+      'Form: lachen → lachend → das lachende Kind. fahren → fahrend → ein schnell fahrendes Auto.',
+      'Bedeutung = aktiv, gleichzeitig zur Haupthandlung. „lachendes Kind" = Kind, das (gerade) lacht.',
+      'Adjektivendungen NICHT vergessen: das lachende (n, schwach), ein lachendes (n, gemischt), lachende Kinder (pl).',
+      'Vergleich Partizip II = passiv & abgeschlossen: „das gelesene Buch" = das Buch, das gelesen WURDE.',
+    ],
+    trap: 'Endung vergessen. „Ein lachend Kind" ist FALSCH — es muss „ein lachendes Kind" heißen. Wenn du es als Adjektiv benutzt, gelten die normalen Adj.-Endungen.',
+  },
+  {
+    n: 4, ch: 'K8',
+    q: 'Wie bildet man Futur und wo stehen werden und der Infinitiv?',
+    bottomLine: 'werden in V2-Position (konjugiert), Infinitiv am Ende. Werden konjugiert wie ein normales Verb: werde / wirst / wird / werden.',
+    keyTerms: ['Futur','werden + Inf.','V2','Inf. am Ende','wird','werden ≠ Passiv-werden'],
+    outline: [
+      '„Ich werde Deutsch lernen." — werde V2, lernen am Ende.',
+      'Konjugation: ich werde · du wirst · er/sie/es wird · wir/sie werden · ihr werdet.',
+      'Kontext entscheidet: werden + Inf. = Futur. werden + Partizip II = Passiv.',
+      'In Wenn-Sätzen mit Futur: „Wenn ich Zeit habe, werde ich kommen." — wenn-Verb am Ende, dann Komma, dann werde + ich + Inf.',
+    ],
+    trap: 'Wirst statt wirdest. Du-Form = wirst (kein -est!). Auch: Infinitiv NICHT konjugieren am Ende — er bleibt im Infinitiv.',
+  },
+  {
+    n: 5, ch: 'K6',
+    q: 'Welche Verben bilden Perfekt mit sein und welche mit haben?',
+    bottomLine: 'sein für Bewegung (gehen, fahren, kommen) UND Zustandswechsel (werden, sterben, einschlafen) UND bleiben/sein selbst. Alle anderen → haben.',
+    keyTerms: ['Perfekt','Hilfsverb','sein-Verben','haben-Verben','Bewegung','Zustandswechsel','bleiben/sein'],
+    outline: [
+      'sein-Verben: gehen, fahren, kommen, fliegen, laufen, reisen, fallen, sterben, werden, aufwachen, einschlafen, bleiben, sein, passieren.',
+      'Alle anderen Verben (lesen, essen, trinken, machen, kaufen, sehen …) → haben.',
+      'Reflexive Verben → IMMER haben. „Ich habe mich gewaschen."',
+      'Modalverben im Perfekt → IMMER haben. „Ich habe gehen müssen / gemusst."',
+    ],
+    trap: 'Vergessen, dass „werden" und „sein" selbst sein-Verben sind: „Ich BIN müde geworden." · „Ich BIN in Berlin gewesen." Auch: „passieren" → „Was IST passiert?" (nicht „hat").',
+  },
+  {
+    n: 6, ch: 'K6',
+    q: 'Welche Form hat Partizip II für die verschiedenen Verbtypen?',
+    bottomLine: 'Schwach: ge- + Stamm + -t. Stark: ge- + (neuer) Stamm + -en. -ieren-Verben: KEIN ge-, nur -t. Inseparable Präfixe (be-/er-/ver-/ent-/emp-/zer-/ge-/miss-): KEIN ge-. Trennbar: ge- in der Mitte.',
+    keyTerms: ['ge- + Stamm + -t','ge- + Stamm + -en','-ieren → kein ge-','inseparable Präfixe','separable Präfixe','Stammvokalwechsel'],
+    outline: [
+      'Schwach (regular): kaufen → gekauft, machen → gemacht, spielen → gespielt.',
+      'Stark: schreiben → geschrieben, gehen → gegangen, sprechen → gesprochen.',
+      'Mixed: denken → gedacht, bringen → gebracht, wissen → gewusst.',
+      '-ieren: telefonieren → telefoniert, studieren → studiert, organisieren → organisiert.',
+      'Inseparable: besuchen → besucht, verstehen → verstanden, vergessen → vergessen.',
+      'Separable: aufmachen → aufgemacht, einkaufen → eingekauft, anrufen → angerufen.',
+    ],
+    trap: 'ge- bei -ieren oder bei inseparable Präfixen einbauen. „getelefoniert" oder „gevergessen" sind FALSCH. Auch: bei separable Verben kommt das ge- ZWISCHEN Präfix und Stamm.',
+  },
+  {
+    n: 7, ch: 'K6',
+    q: 'Wann benutzt man Präteritum statt Perfekt im Deutschen?',
+    bottomLine: 'Mündlich: nur sein, haben, Modalverben + werden. Schriftlich (Nachrichten, Märchen, Romane, Berichte): ALLES.',
+    keyTerms: ['Präteritum','sein → war','haben → hatte','Modalverben (kein Umlaut)','schriftlich vs. mündlich'],
+    outline: [
+      'Mündlich: „Ich war müde, ich hatte keine Zeit, ich konnte nicht kommen." — sein/haben/Modal nur als Präteritum.',
+      'Andere Verben mündlich → Perfekt: „Ich habe gegessen", nicht „Ich aß".',
+      'Modalverben Präteritum: konnte, musste, durfte, wollte, sollte, mochte. KEIN Umlaut!',
+      'Schriftlich (Erzählung, Nachrichten): alle Verben dürfen im Präteritum stehen — „Sie ging in den Park, las ein Buch und trank Kaffee."',
+    ],
+    trap: 'Umlaut bei Modal-Präteritum benutzen. Präteritum von können/müssen/dürfen ist konnte/musste/durfte (KEIN Umlaut). Der Umlaut ist erst im Konjunktiv II (könnte/müsste/dürfte).',
+  },
+  {
+    n: 8, ch: 'K5',
+    q: 'Wie funktionieren die drei deutschen Fälle und welche Pronomen / Artikel gehören dazu?',
+    bottomLine: 'Nominativ = Subjekt (wer?), Akkusativ = direktes Objekt (wen?), Dativ = indirektes Objekt (wem?). Artikel und Pronomen ändern sich pro Kasus.',
+    keyTerms: ['Nominativ','Akkusativ','Dativ','der/den/dem','die/die/der','das/das/dem','ich/mich/mir','er/ihn/ihm','sie/sie/ihr','wir/uns/uns'],
+    outline: [
+      'Pronomen: ich → mich → mir · du → dich → dir · er → ihn → ihm · sie (f) → sie → ihr · es → es → ihm · wir → uns → uns · ihr → euch → euch · sie/Sie → sie → ihnen.',
+      'Artikel mask: der / den / dem · fem: die / die / der · neut: das / das / dem · pl: die / die / den (+ -n).',
+      'Frage-Test: wer/was = Nom · wen/was = Akk · wem = Dat.',
+      'Beispiel: „Der Mann (Nom) gibt der Frau (Dat) das Buch (Akk)."',
+    ],
+    trap: 'Dativ vergessen. „Ich helfe dich" ist FALSCH — helfen + Dativ → „Ich helfe dir". Andere Dativ-Verben: gehören, gefallen, schmecken, danken, antworten.',
+  },
+  {
+    n: 9, ch: 'K7',
+    q: 'Wie wählt man die richtige Adjektivendung?',
+    bottomLine: 'Drei Tabellen: schwach (nach der/die/das, dieser …), gemischt (nach ein/kein/mein …), stark (kein Artikel). Die Endung hängt von Genus + Kasus + Determinator ab.',
+    keyTerms: ['schwach','gemischt','stark','Adj.-Tabelle','-e','-en','-er / -es'],
+    outline: [
+      'Schwach: nur -e (5 Zellen Nom + Akk-fem/neut) oder -en (alles andere). „der alte Mann, die alten Bücher".',
+      'Gemischt: identisch zu schwach EXCEPT 3 Zellen — Nom-mask -er, Nom-neut -es, Akk-neut -es. „ein alter Mann, ein altes Kind".',
+      'Stark (kein Artikel): Endungen ≈ definite-article Endungen. „guter Wein (m), kalte Milch (f), schönes Wetter (n)".',
+      'Buch-Tabelle ist im Final ERLAUBT, falls mitgebracht.',
+    ],
+    trap: 'KEINE Endung nach „sein/werden/bleiben". „Das Auto ist ROT." (kein -es!). Endung gibt es NUR, wenn das Adjektiv VOR dem Nomen steht.',
+  },
+  {
+    n: 10, ch: 'K6',
+    q: 'Was ist der Unterschied zwischen koordinierenden und subordinierenden Konjunktionen für die Verb-Position?',
+    bottomLine: 'Koordinierende (Position 0) ändern die Verb-Position NICHT. Subordinierende (Verb am Ende) schicken das konjugierte Verb ans Satzende.',
+    keyTerms: ['koord. Konj.','und/oder/denn/aber/sondern','Position 0','sub. Konj.','dass/weil/wenn','Verb am Ende'],
+    outline: [
+      'Koordinierende (Pos. 0): und, oder, denn, aber, sondern. „Ich esse, denn ich habe Hunger." (denn = Pos 0, normale Wortstellung).',
+      'Subordinierende (Kicker): dass, weil, wenn, als, obwohl, damit, ob, bevor, nachdem. „Ich esse, weil ich Hunger habe." (Verb HABE am Ende).',
+      'Faustregel: weil ↔ denn haben dieselbe Bedeutung, aber unterschiedliche Wortstellung. Kennt man eines, weiß man das andere.',
+      'Relativsätze (der/die/das, dem, denen …) zählen auch als subordinierend → Verb am Ende.',
+    ],
+    trap: 'denn vs. weil verwechseln. Nach „denn" bleibt die normale Wortstellung. Nach „weil" muss das Verb ans Ende.',
+  },
+  {
+    n: 11, ch: 'K5',
+    q: 'Welche Präpositionen gehen mit Akkusativ, welche mit Dativ, und wie funktionieren die Wechselpräpositionen?',
+    bottomLine: 'Akk: DOGFU(D) — durch / ohne / gegen / für / um (· bis · entlang). Dativ: 8 = aus außer bei mit nach seit von zu. Wechsel: 9 = an auf hinter in neben über unter vor zwischen — Wo? → Dat, Wohin? → Akk.',
+    keyTerms: ['DOGFUD (Akk)','Dat-8','Wechselpräpositionen','Wo? → Dat','Wohin? → Akk','liegen vs. legen'],
+    outline: [
+      'Akk-Präpositionen: durch, ohne, gegen, für, um (immer Akk).',
+      'Dat-8: aus, außer, bei, mit, nach, seit, von, zu (immer Dat). Kontraktionen: zum, zur, vom, beim.',
+      'Wechselpräpositionen: an, auf, hinter, in, neben, über, unter, vor, zwischen.',
+      'Wo? (Lage, kein Wechsel) → Dat + liegen/stehen/sitzen/hängen. „Das Buch liegt auf DEM Tisch."',
+      'Wohin? (Bewegung, Ortswechsel) → Akk + legen/stellen/setzen/hängen. „Ich lege das Buch auf DEN Tisch."',
+    ],
+    trap: 'Bewegungsverb mit Lage-Kasus benutzen oder umgekehrt. Auch: „in" + Akk = ins (in das), „in" + Dat = im (in dem) — Kontraktionen lernen.',
+  },
+  {
+    n: 12, ch: 'core',
+    q: 'Was sagt die V2-Regel und wie funktioniert die Inversion?',
+    bottomLine: 'Konjugiertes Verb steht IMMER an Position 2 im Aussagesatz. Wenn ein anderes Element vorne steht (nicht das Subjekt), kommt das Verb vor das Subjekt — „Inversion".',
+    keyTerms: ['V2-Regel','Position 2','Inversion','Subjekt-Verb-Tausch','TeKaMoLo'],
+    outline: [
+      'Subjekt vorne: „Ich gehe heute ins Kino." → Subjekt (Pos 1) + Verb (Pos 2) + Rest.',
+      'Anderes Element vorne: „Heute gehe ich ins Kino." → Adverb (Pos 1) + Verb (Pos 2) + Subjekt (Pos 3).',
+      'W-Frage: „Warum gehst du ins Kino?" — W-Wort (Pos 1) + Verb (Pos 2).',
+      'Ja/Nein-Frage: V1 — „Gehst du ins Kino?" (Verb an Pos 1, Subjekt an Pos 2).',
+      'Imperativ: V1, kein Subjekt — „Komm! Geh nach Hause!"',
+    ],
+    trap: 'Nach Adverb oder Zeitausdruck am Anfang das Subjekt nicht zurückzustellen. „Heute ich gehe …" ist FALSCH — es muss „Heute gehe ich …" heißen.',
+  },
+  {
+    n: 13, ch: 'core',
+    q: 'Wann braucht man Adjektivendungen und wann nicht?',
+    bottomLine: 'JA: vor einem Nomen → Endung nötig (schwach / gemischt / stark). NEIN: nach „sein", „werden", „bleiben" (prädikativ) → KEINE Endung.',
+    keyTerms: ['attributiv = Endung','prädikativ = keine Endung','nach sein/werden/bleiben','vor dem Nomen'],
+    outline: [
+      'Attributiv (vor Nomen): „der rote Apfel · ein rotes Kleid · gute Bücher" — Endung nötig.',
+      'Prädikativ (nach Kopulaverb): „Der Apfel ist rot. · Das Kleid wird teuer. · Sie bleibt müde." — KEINE Endung.',
+      'Adverbial (vor Verb): „Sie singt schön." — KEINE Endung.',
+      'Komparativ und Superlativ folgen denselben Regeln: „der schnellERE Zug" (attr.) vs. „Er ist schneller." (präd.).',
+    ],
+    trap: '-e oder -es nach „sein" anhängen. „Das Auto ist rotes" ist FALSCH — es heißt „Das Auto ist rot."',
+  },
+  {
+    n: 14, ch: 'core',
+    q: 'Welche Lesestrategie empfiehlt die Final Vorbereitung?',
+    bottomLine: 'Nicht von Anfang bis Ende lesen! 1) Titel scannen, 2) Fragen ZUERST lesen, 3) Gist erfassen, 4) erst dann gezielt nach Details suchen.',
+    keyTerms: ['skim','Fragen zuerst','Gist','gezieltes Lesen','Schlüsselwörter'],
+    outline: [
+      'Schritt 1: Titel und Untertitel überfliegen — was ist das Thema?',
+      'Schritt 2: Die Verständnisfragen ZUERST lesen — du weißt jetzt, wonach du suchen musst.',
+      'Schritt 3: Den Text einmal schnell durchlesen für den allgemeinen Sinn (Gist), nicht jedes Wort verstehen.',
+      'Schritt 4: Gezielt zurück, finde die Antwort auf jede Frage — Schlüsselwörter aus der Frage sind Anker im Text.',
+      'Bei unbekannten Wörtern: weiterlesen, Kontext nutzen — selten muss jedes Wort übersetzt werden.',
+    ],
+    trap: 'Zeit verschwenden, indem du jedes Wort verstehen willst. Auf einer Klausur ist Zeit knapp — Strategie schlägt Vokabeln.',
+  },
 ];

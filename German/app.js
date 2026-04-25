@@ -511,6 +511,52 @@ k8.innerHTML = K8_SECTIONS.map(s => `
   </div>
 `).join('');
 
+/* ============================= STUDY GUIDE ============================= */
+(function renderGermanStudyGuide(){
+  const list = document.getElementById('guide-list');
+  const origBody = document.getElementById('guide-orig-body');
+  if (!list || typeof GERMAN_STUDY_GUIDE_QUESTIONS === 'undefined') return;
+
+  if (origBody && Array.isArray(GERMAN_STUDY_GUIDE_SECTIONS)){
+    origBody.innerHTML = GERMAN_STUDY_GUIDE_SECTIONS.map(sec => `
+      <h4 class="guide-orig-h">${escapeHtml(sec.roman)}. ${escapeHtml(sec.title)}</h4>
+      <ol class="guide-orig-qs">
+        ${sec.items.map(it => `<li>${escapeHtml(it)}</li>`).join('')}
+      </ol>
+    `).join('');
+  }
+
+  list.innerHTML = GERMAN_STUDY_GUIDE_QUESTIONS.map(q => `
+    <article class="guide-card" id="guide-q-${q.n}">
+      <header class="guide-card-h">
+        <span class="guide-card-n">Q${q.n}</span>
+        <p class="guide-card-q">${escapeHtml(q.q)}</p>
+        ${q.ch ? `<span class="guide-card-ch gr-ch gr-ch--${q.ch.toLowerCase()}">${escapeHtml(q.ch)}</span>` : ''}
+      </header>
+      <div class="guide-row guide-row--bl">
+        <span class="guide-label">bottom line</span>
+        <span class="guide-body">${escapeHtml(q.bottomLine)}</span>
+      </div>
+      <div class="guide-row guide-row--terms">
+        <span class="guide-label">forms</span>
+        <span class="guide-body">
+          ${q.keyTerms.map(t => `<span class="guide-term-pill">${escapeHtml(t)}</span>`).join('')}
+        </span>
+      </div>
+      <div class="guide-row guide-row--outline">
+        <span class="guide-label">outline</span>
+        <ol class="guide-body guide-outline">
+          ${q.outline.map(b => `<li>${escapeHtml(b)}</li>`).join('')}
+        </ol>
+      </div>
+      <div class="guide-row guide-row--trap">
+        <span class="guide-label">trap</span>
+        <span class="guide-body">${escapeHtml(q.trap)}</span>
+      </div>
+    </article>
+  `).join('');
+})();
+
 /* ============================= util ============================= */
 function escapeHtml(s){
   return (s ?? '').toString()
