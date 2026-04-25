@@ -27,12 +27,10 @@
 <nav class="file-tabs" role="tablist">
   <button class="tab tab--active" data-target="cards">01 · Flashcards</button>
   <button class="tab" data-target="learn">02 · Learn</button>
-  <button class="tab" data-target="quiz">03 · Quiz</button>
-  <button class="tab" data-target="recall">04 · Active Recall</button>
-  <button class="tab" data-target="grammar">05 · Grammar</button>
-  <button class="tab" data-target="vocab">06 · Vokabeln</button>
-  <button class="tab" data-target="k8">07 · Kapitel 8</button>
-  <button class="tab" data-target="konjugation">08 · Konjugation</button>
+  <button class="tab" data-target="recall">03 · Active Recall</button>
+  <button class="tab" data-target="grammar">04 · Grammar</button>
+  <button class="tab" data-target="vocab">05 · Vokabeln</button>
+  <button class="tab" data-target="k8">06 · Kapitel 8</button>
   <button class="tab" data-target="home" onclick="location.href='../index.html';return false">↩ home</button>
 </nav>
 
@@ -78,21 +76,43 @@
   </div>
 </section>
 
-<!-- ================= LEARN ================= -->
+<!-- ================= LEARN (unified practice) ================= -->
 <section class="sheet" id="learn">
   <div class="sheet-margin">
-    <h2 class="pencil">Learn — multiple choice</h2>
-    <p class="kicker">Pick a filter. One click to answer — get it right and the card retires, miss it and it comes back. Distractors are pulled from the same chapter so wrong options stay topical. Done when every card is mastered.</p>
+    <h2 class="pencil">Learn — practice everything in one place</h2>
+    <p class="kicker">Pick a study mode, then a filter. Multiple choice; one click answers. Right → mastered. Wrong → card requeues with an explanation. Done when every item is mastered.</p>
 
     <div id="learn-start">
-      <div class="deck-bar">
-        <label class="deck-chip"><input type="radio" name="lfilter" value="all" checked>All</label>
-        <label class="deck-chip"><input type="radio" name="lfilter" value="K5">K5</label>
-        <label class="deck-chip"><input type="radio" name="lfilter" value="K6">K6</label>
-        <label class="deck-chip"><input type="radio" name="lfilter" value="K7">K7</label>
-        <label class="deck-chip"><input type="radio" name="lfilter" value="K8">K8</label>
-        <label class="deck-chip"><input type="radio" name="lfilter" value="GR">grammar</label>
-        <label class="deck-chip"><input type="radio" name="lfilter" value="VO">vocab</label>
+      <div class="deck-bar" style="margin-bottom:8px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin-right:6px">study mode:</span>
+        <label class="deck-chip"><input type="radio" name="lmode" value="cards" checked>Vocab &amp; grammar</label>
+        <label class="deck-chip"><input type="radio" name="lmode" value="kj">Verb forms</label>
+        <label class="deck-chip"><input type="radio" name="lmode" value="quiz">Quiz items</label>
+      </div>
+      <div class="deck-bar" id="lf-cards">
+        <label class="deck-chip"><input type="radio" name="lf-cards-r" value="all" checked>All</label>
+        <label class="deck-chip"><input type="radio" name="lf-cards-r" value="K5">K5</label>
+        <label class="deck-chip"><input type="radio" name="lf-cards-r" value="K6">K6</label>
+        <label class="deck-chip"><input type="radio" name="lf-cards-r" value="K7">K7</label>
+        <label class="deck-chip"><input type="radio" name="lf-cards-r" value="K8">K8</label>
+        <label class="deck-chip"><input type="radio" name="lf-cards-r" value="GR">grammar</label>
+        <label class="deck-chip"><input type="radio" name="lf-cards-r" value="VO">vocab</label>
+      </div>
+      <div class="deck-bar" id="lf-kj" style="display:none">
+        <label class="deck-chip"><input type="radio" name="lf-kj-r" value="all" checked>All</label>
+        <label class="deck-chip"><input type="radio" name="lf-kj-r" value="Perfekt">Perfekt</label>
+        <label class="deck-chip"><input type="radio" name="lf-kj-r" value="Konj II">Konj II</label>
+        <label class="deck-chip"><input type="radio" name="lf-kj-r" value="Modal Konj II">Modal Konj II</label>
+        <label class="deck-chip"><input type="radio" name="lf-kj-r" value="Partizip I">Partizip I</label>
+        <label class="deck-chip"><input type="radio" name="lf-kj-r" value="Futur">Futur</label>
+      </div>
+      <div class="deck-bar" id="lf-quiz" style="display:none">
+        <label class="deck-chip"><input type="radio" name="lf-quiz-r" value="all" checked>All</label>
+        <label class="deck-chip"><input type="radio" name="lf-quiz-r" value="K5">K5</label>
+        <label class="deck-chip"><input type="radio" name="lf-quiz-r" value="K6">K6</label>
+        <label class="deck-chip"><input type="radio" name="lf-quiz-r" value="K7">K7</label>
+        <label class="deck-chip"><input type="radio" name="lf-quiz-r" value="K8">K8</label>
+        <label class="deck-chip"><input type="radio" name="lf-quiz-r" value="mixed">mixed</label>
       </div>
       <button class="mini-btn" id="learn-start-btn" style="margin-top:6px">start session &rarr;</button>
     </div>
@@ -105,11 +125,12 @@
 
       <div id="learn-mc">
         <div class="check-box">
-          <h4>multiple choice</h4>
+          <h4 id="learn-mode-label">multiple choice</h4>
           <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pencil);margin:0 0 4px" id="learn-mc-ch"></p>
           <p style="font-family:'Spectral',serif;font-size:17px;margin:0 0 10px" id="learn-mc-q"></p>
           <div class="learn-mc-opts" id="learn-mc-opts"></div>
           <div class="check-feedback" id="learn-mc-fb"></div>
+          <p id="learn-mc-note" style="font-family:'Spectral',serif;font-size:14px;color:var(--ink);margin:8px 0 0;line-height:1.5"></p>
           <button class="mini-btn" id="learn-mc-next" style="display:none;margin-top:10px">continue &rarr;</button>
         </div>
       </div>
@@ -123,24 +144,6 @@
         <button class="mini-btn" id="learn-restart">study again &rarr;</button>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ================= QUIZ ================= -->
-<section class="sheet" id="quiz">
-  <div class="sheet-margin">
-    <h2 class="pencil">Quizzes</h2>
-    <p class="kicker">Pick a set. Answer with the radio buttons. Grade-all gives you the percent in red ink at the end.</p>
-    <div class="quiz-picker">
-      <button class="tabline" data-qset="all">all items</button>
-      <button class="tabline" data-qset="K5">K5 · prepositions</button>
-      <button class="tabline" data-qset="K6">K6 · past tense</button>
-      <button class="tabline" data-qset="K7">K7 · relative + adj</button>
-      <button class="tabline" data-qset="K8">K8 · Konj II + Passiv</button>
-      <button class="tabline" data-qset="mixed">mixed final prep</button>
-    </div>
-    <div id="quiz-area"></div>
-    <div id="quiz-score" class="score-slip hidden"></div>
   </div>
 </section>
 
@@ -189,54 +192,6 @@
   </div>
 </section>
 
-<!-- ================= KONJUGATION ================= -->
-<section class="sheet" id="konjugation">
-  <div class="sheet-margin">
-    <h2 class="pencil">Konjugation — Verbformen drillen</h2>
-    <p class="kicker">Pick a mode, then click the correct conjugated form. Distractors are pulled from the same mode so every miss teaches a real contrast. Done when every form is mastered.</p>
-
-    <div id="kj-start">
-      <div class="deck-bar">
-        <label class="deck-chip"><input type="radio" name="kjmode" value="all" checked>All</label>
-        <label class="deck-chip"><input type="radio" name="kjmode" value="Perfekt">Perfekt</label>
-        <label class="deck-chip"><input type="radio" name="kjmode" value="Konj II">Konj II</label>
-        <label class="deck-chip"><input type="radio" name="kjmode" value="Modal Konj II">Modal Konj II</label>
-        <label class="deck-chip"><input type="radio" name="kjmode" value="Partizip I">Partizip I</label>
-        <label class="deck-chip"><input type="radio" name="kjmode" value="Futur">Futur</label>
-      </div>
-      <button class="mini-btn" id="kj-start-btn" style="margin-top:6px">start drill &rarr;</button>
-    </div>
-
-    <div id="kj-session" style="display:none">
-      <div class="learn-prog">
-        <div class="learn-prog-bar"><div class="learn-prog-fill" id="kj-prog-fill" style="width:0%"></div></div>
-        <span class="learn-prog-txt" id="kj-prog-txt">0 / 0 mastered</span>
-      </div>
-      <div class="check-box" style="background:var(--tab-3)">
-        <h4 style="color:var(--mustard)">conjugate</h4>
-        <p class="kj-mode" id="kj-mode"></p>
-        <p class="kj-prompt" id="kj-prompt"></p>
-        <div class="learn-mc-opts" id="kj-opts"></div>
-        <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-          <button class="mini-btn" id="kj-skip">skip</button>
-        </div>
-        <div class="check-feedback" id="kj-fb"></div>
-        <div class="kj-note" id="kj-note"></div>
-        <button class="mini-btn" id="kj-next" style="display:none;margin-top:10px">continue &rarr;</button>
-      </div>
-    </div>
-
-    <div id="kj-done" style="display:none">
-      <div class="done-screen">
-        <div class="done-icon">✓</div>
-        <div class="done-title">Drill abgeschlossen!</div>
-        <div class="done-sub" id="kj-done-txt"></div>
-        <button class="mini-btn" id="kj-restart">drill again &rarr;</button>
-      </div>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="footer">
@@ -249,8 +204,8 @@
   </div>
 </footer>
 
-<script src="content.js?v=6"></script>
-<script src="app.js?v=7"></script>
+<script src="content.js?v=7"></script>
+<script src="app.js?v=8"></script>
 <script src="/assets/quiz.js?v=1" defer></script>
 <script src="/assets/voice.js?v=1" defer></script>
 <script src="/assets/mock.js?v=1" defer></script>

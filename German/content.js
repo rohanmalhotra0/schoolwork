@@ -1029,10 +1029,10 @@ const KONJUGATION = [
   { mode:'Futur', q:'kommen · sie (3.Pl, bald)',    a:'sie werden bald kommen',          note:'3rd person plural: sie werden. Adverb „bald" (soon) sits before the infinitive.' },
   { mode:'Futur', q:'sein · ihr (müde)',            a:'ihr werdet müde sein',            note:'2nd person plural: ihr werdet. Adjective „müde" (tired) is part of the predicate; sein goes at the very end.' },
 
-  // ---- Konj II — Wenn-Sätze (irreal "if"-clauses from K8.7) ----
-  { mode:'Konj II', q:'müde · ich → IRREAL: Wenn ich müde …, … ich schlafen.', a:'wäre, würde', note:'Full sentence: „Wenn ich müde wäre, würde ich schlafen" = "If I were tired, I would sleep". Both halves use Konj II — wäre in the wenn-clause, würde + Inf in the main clause.' },
-  { mode:'Konj II', q:'Zeit · ich → IRREAL: Wenn ich Zeit …, … ich mehr lesen.', a:'hätte, würde', note:'„Wenn ich Zeit hätte, würde ich mehr lesen" = "If I had time, I would read more". Use hätte (not wäre) because it is about HAVING time.' },
-  { mode:'Konj II', q:'reich · ich → IRREAL: Wenn ich reich …, … ich um die Welt reisen.', a:'wäre, würde', note:'„Wenn ich reich wäre, würde ich um die Welt reisen" = "If I were rich, I would travel around the world". Adjective predicate → wäre.' },
+  // ---- Konj II — Wenn-Sätze (hypothetical "if"-clauses from K8.7) ----
+  { mode:'Konj II', q:'Pick the verb pair for: "If I WERE tired, I WOULD sleep." → Wenn ich müde ___, ___ ich schlafen.', a:'wäre, würde', note:'Full sentence: „Wenn ich müde wäre, würde ich schlafen". Both halves use Konj II — wäre in the wenn-clause (am tired = state, so wäre), würde + Inf in the main clause.' },
+  { mode:'Konj II', q:'Pick the verb pair for: "If I HAD time, I WOULD read more." → Wenn ich Zeit ___, ___ ich mehr lesen.', a:'hätte, würde', note:'„Wenn ich Zeit hätte, würde ich mehr lesen". Use hätte (not wäre) because it is about HAVING time. Main clause stays würde + Infinitiv.' },
+  { mode:'Konj II', q:'Pick the verb pair for: "If I WERE rich, I WOULD travel the world." → Wenn ich reich ___, ___ ich um die Welt reisen.', a:'wäre, würde', note:'„Wenn ich reich wäre, würde ich um die Welt reisen". Adjective predicate (being rich = state) → wäre. würde + reisen in the main clause.' },
 
   // ---- Partizip I — more gender/article patterns (K8.9) ----
   { mode:'Partizip I', q:'schlafen — vor "Hund" (m. Nom., nach "der")',     a:'schlafende',  note:'After definite article „der" → weak declension → -e ending. „Der schlafende Hund" = "The sleeping dog".' },

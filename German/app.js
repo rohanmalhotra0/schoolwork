@@ -127,28 +127,134 @@ document.addEventListener('keydown', e => {
 });
 fcRebuild();
 
-/* ============================= LEARN ============================= */
-let learnFilter = 'all';
+/* ============================= LEARN (unified) =============================
+   One MC engine that drills three sources — flashcards, verb conjugations,
+   and quiz items — and normalizes each into {prompt, label, answer,
+   distractors, note}. Pick a mode, pick a filter, click through. Right →
+   mastered. Wrong → requeue + show explanation.
+*/
+const LEARN_MODE_LABEL = {
+  cards: 'pick the meaning',
+  kj:    'pick the form',
+  quiz:  'pick the answer',
+};
+let learnMode = 'cards';
+const learnFilters = { cards:'all', kj:'all', quiz:'all' };
 let learnItems = [];
 let learnQueue = [];
 let learnCurrent = null;
 let learnAnswered = false;
 let learnMastered = 0;
 
-document.querySelectorAll('input[name="lfilter"]').forEach(r => {
-  r.addEventListener('change', () => { learnFilter = r.value; });
+const learnStartBtn = document.getElementById('learn-start-btn');
+const learnRestart  = document.getElementById('learn-restart');
+const learnNext     = document.getElementById('learn-mc-next');
+const lfRows = {
+  cards: document.getElementById('lf-cards'),
+  kj:    document.getElementById('lf-kj'),
+  quiz:  document.getElementById('lf-quiz'),
+};
+
+document.querySelectorAll('input[name="lmode"]').forEach(r => {
+  r.addEventListener('change', () => {
+    learnMode = r.value;
+    Object.entries(lfRows).forEach(([k, el]) => {
+      if (el) el.style.display = (k === learnMode) ? 'flex' : 'none';
+    });
+  });
+});
+document.querySelectorAll('input[name="lf-cards-r"]').forEach(r => {
+  r.addEventListener('change', () => { learnFilters.cards = r.value; });
+});
+document.querySelectorAll('input[name="lf-kj-r"]').forEach(r => {
+  r.addEventListener('change', () => { learnFilters.kj = r.value; });
+});
+document.querySelectorAll('input[name="lf-quiz-r"]').forEach(r => {
+  r.addEventListener('change', () => { learnFilters.quiz = r.value; });
 });
 
-document.getElementById('learn-start-btn').addEventListener('click', startLearn);
-document.getElementById('learn-restart').addEventListener('click', () => {
+learnStartBtn.addEventListener('click', startLearn);
+learnRestart.addEventListener('click', () => {
   document.getElementById('learn-done').style.display = 'none';
   document.getElementById('learn-start').style.display = 'block';
 });
+learnNext.addEventListener('click', serveLearn);
+
+function buildLearnItems(){
+  const filter = learnFilters[learnMode];
+  if (learnMode === 'cards') {
+    return filterPool(filter).map(c => normalizeCard(c));
+  }
+  if (learnMode === 'kj') {
+    const src = (filter === 'all') ? KONJUGATION : KONJUGATION.filter(x => x.mode === filter);
+    return src.map(it => normalizeKj(it));
+  }
+  // quiz
+  const src = (filter === 'all') ? QUIZ : QUIZ.filter(q => q.set === filter);
+  return src.map(q => normalizeQuiz(q));
+}
+
+function normalizeCard(c){
+  const sameBucket = CARDS.filter(x => x.back !== c.back && x.ch === c.ch && x.type === c.type);
+  const fallback   = CARDS.filter(x => x.back !== c.back);
+  const pool = sameBucket.length >= 3 ? sameBucket : fallback;
+  const distractors = pickDistinct(pool.map(x => x.back), 3, [c.back]);
+  return {
+    prompt:      c.front,
+    label:       c.ch + ' · ' + (c.type === 'GR' ? 'grammar' : 'vocab'),
+    answer:      c.back,
+    distractors,
+    note:        c.note || '',
+  };
+}
+
+function normalizeKj(it){
+  const sameMode = KONJUGATION.filter(x => x.mode === it.mode && x.a !== it.a);
+  const fallback = KONJUGATION.filter(x => x.a !== it.a);
+  const pool = sameMode.length >= 3 ? sameMode : fallback;
+  const distractors = pickDistinct(pool.map(x => x.a), 3, [it.a]);
+  return {
+    prompt:      it.q,
+    label:       it.mode,
+    answer:      it.a,
+    distractors,
+    note:        it.note || '',
+  };
+}
+
+function normalizeQuiz(q){
+  // Multi-select questions get collapsed to "pick the most-correct option" —
+  // QUIZ stores the indices of every right answer in q.a; we use the first
+  // as the canonical correct answer and treat the rest as distractors that
+  // happen to also be defensible (the explanation tells the full story).
+  const correctIdx = (q.type === 'multi') ? q.a[0] : q.a;
+  const answer = q.opts[correctIdx];
+  const distractors = q.opts.filter((_, i) => i !== correctIdx);
+  return {
+    prompt:      q.q,
+    label:       q.tag,
+    answer,
+    distractors: distractors.slice(0, 3),
+    note:        q.explain || '',
+  };
+}
+
+function pickDistinct(pool, n, exclude){
+  const seen = new Set(exclude);
+  const out = [];
+  const src = pool.slice();
+  while (out.length < n && src.length) {
+    const i = Math.floor(Math.random() * src.length);
+    const v = src.splice(i, 1)[0];
+    if (!seen.has(v)) { out.push(v); seen.add(v); }
+  }
+  return out;
+}
 
 function startLearn(){
-  const src = filterPool(learnFilter);
-  if (!src.length) return;
-  learnItems = src.map(c => ({ card:c, mastered:false }));
+  const items = buildLearnItems();
+  if (!items.length) return;
+  learnItems = items.map(it => ({ data: it, mastered: false }));
   for (let i = learnItems.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [learnItems[i], learnItems[j]] = [learnItems[j], learnItems[i]];
@@ -158,6 +264,7 @@ function startLearn(){
   document.getElementById('learn-start').style.display = 'none';
   document.getElementById('learn-done').style.display = 'none';
   document.getElementById('learn-session').style.display = 'block';
+  document.getElementById('learn-mode-label').textContent = LEARN_MODE_LABEL[learnMode];
   updateLearnProg();
   serveLearn();
 }
@@ -184,36 +291,27 @@ function serveLearn(){
 }
 
 function showLearnMC(){
-  document.getElementById('learn-mc').style.display = 'block';
-  const c = learnCurrent.card;
-  document.getElementById('learn-mc-ch').textContent = c.ch + ' · ' + (c.type === 'GR' ? 'grammar' : 'vocab');
-  document.getElementById('learn-mc-q').textContent = c.front;
-  // Prefer distractors from same chapter+type so options stay topical.
-  const sameBucket = CARDS.filter(x => x.back !== c.back && x.ch === c.ch && x.type === c.type);
-  const fallback   = CARDS.filter(x => x.back !== c.back);
-  const pool = sameBucket.length >= 3 ? sameBucket : fallback;
-  const wrongs = [];
-  while (wrongs.length < 3 && pool.length > wrongs.length) {
-    const r = pool[Math.floor(Math.random() * pool.length)];
-    if (!wrongs.find(w => w.back === r.back)) wrongs.push(r);
-  }
-  const opts = [c, ...wrongs].sort(() => Math.random() - 0.5);
+  const it = learnCurrent.data;
+  document.getElementById('learn-mc-ch').textContent = it.label;
+  document.getElementById('learn-mc-q').textContent = it.prompt;
+  const opts = [it.answer, ...it.distractors].sort(() => Math.random() - 0.5);
   const div = document.getElementById('learn-mc-opts');
   div.innerHTML = '';
-  opts.forEach(o => {
+  opts.forEach(text => {
     const b = document.createElement('button');
     b.className = 'learn-opt';
-    b.textContent = o.back;
-    b.onclick = () => checkMC(b, o.back === c.back, c.back);
+    b.textContent = text;
+    b.onclick = () => checkLearnMC(b, text === it.answer, it.answer);
     div.appendChild(b);
   });
   const fb = document.getElementById('learn-mc-fb');
   fb.className = 'check-feedback';
   fb.textContent = '';
-  document.getElementById('learn-mc-next').style.display = 'none';
+  document.getElementById('learn-mc-note').textContent = '';
+  learnNext.style.display = 'none';
 }
 
-function checkMC(btn, correct, right){
+function checkLearnMC(btn, correct, right){
   if (learnAnswered) return;
   learnAnswered = true;
   document.querySelectorAll('#learn-mc-opts .learn-opt').forEach(b => {
@@ -236,10 +334,10 @@ function checkMC(btn, correct, right){
     fb.className = 'check-feedback bad';
     fb.textContent = '✗ falsch — richtig: ' + right + '. Karte kommt zurück.';
   }
-  document.getElementById('learn-mc-next').style.display = 'inline-block';
+  const noteEl = document.getElementById('learn-mc-note');
+  noteEl.textContent = learnCurrent.data.note || '';
+  learnNext.style.display = 'inline-block';
 }
-
-document.getElementById('learn-mc-next').addEventListener('click', serveLearn);
 
 function endLearn(){
   document.getElementById('learn-session').style.display = 'none';
@@ -247,97 +345,6 @@ function endLearn(){
   document.getElementById('learn-done-txt').textContent =
     'Du hast alle ' + learnItems.length + ' Karten gemeistert. Viel Erfolg auf der Prüfung!';
 }
-
-/* ============================= QUIZ ============================= */
-const quizArea = document.getElementById('quiz-area');
-const quizScore = document.getElementById('quiz-score');
-
-function renderQuiz(setKey){
-  const items = (setKey === 'all') ? QUIZ : QUIZ.filter(q => q.set === setKey);
-  quizArea.innerHTML = items.map((q, idx) => renderQuizItem(q, idx)).join('');
-  quizScore.classList.add('hidden');
-
-  quizArea.querySelectorAll('.q-submit').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = parseInt(btn.dataset.id, 10);
-      gradeOne(items[id], id);
-    });
-  });
-
-  const gradeAll = document.createElement('button');
-  gradeAll.className = 'mini-btn';
-  gradeAll.textContent = 'grade all';
-  gradeAll.style.marginBottom = '20px';
-  gradeAll.addEventListener('click', () => {
-    let correct = 0;
-    items.forEach((q, i) => { if (gradeOne(q, i)) correct++; });
-    quizScore.classList.remove('hidden');
-    const total = items.length;
-    quizScore.innerHTML = `grade: <b>${correct} / ${total}</b> · ${Math.round(100*correct/total)}%<br>
-      <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--pencil)">
-      red = missed — reread the explanations under each item.</span>`;
-    quizScore.scrollIntoView({ behavior: 'smooth' });
-  });
-  quizArea.prepend(gradeAll);
-}
-
-function renderQuizItem(q, id){
-  const name = `q-${id}`;
-  let opts;
-  if (q.type === 'multi') {
-    opts = q.opts.map((o,i) => `
-      <label><input type="checkbox" name="${name}" value="${i}"> ${escapeHtml(o)}</label>
-    `).join('');
-  } else {
-    opts = q.opts.map((o,i) => `
-      <label><input type="radio" name="${name}" value="${i}"> ${escapeHtml(o)}</label>
-    `).join('');
-  }
-  return `
-    <div class="q-item" id="q-item-${id}">
-      <div class="q-head">
-        <span class="q-tag">${escapeHtml(q.tag)}</span>
-        <span>Q${id + 1}</span>
-      </div>
-      <div class="q-prompt">${escapeHtml(q.q)}</div>
-      <div class="q-opts">${opts}</div>
-      <button class="mini-btn q-submit" data-id="${id}" style="margin-top:10px">submit</button>
-      <div class="q-feedback" id="q-fb-${id}"></div>
-      <div class="q-explain" id="q-ex-${id}" style="display:none">${escapeHtml(q.explain || '')}</div>
-    </div>
-  `;
-}
-
-function gradeOne(q, id){
-  const fb = document.getElementById('q-fb-' + id);
-  const ex = document.getElementById('q-ex-' + id);
-  let correct = false;
-
-  if (q.type === 'multi') {
-    const picked = [...document.querySelectorAll(`input[name="q-${id}"]:checked`)]
-      .map(x => parseInt(x.value, 10)).sort((a,b)=>a-b);
-    const want = [...q.a].sort((a,b)=>a-b);
-    correct = picked.length === want.length && picked.every((v,i) => v === want[i]);
-  } else {
-    const p = document.querySelector(`input[name="q-${id}"]:checked`);
-    if (p) correct = parseInt(p.value, 10) === q.a;
-  }
-
-  fb.className = 'q-feedback show ' + (correct ? 'ok' : 'bad');
-  fb.textContent = correct ? '✓ richtig' : '✗ falsch';
-  ex.style.display = 'block';
-  return correct;
-}
-
-document.querySelectorAll('.quiz-picker .tabline').forEach(b => {
-  b.addEventListener('click', () => {
-    document.querySelectorAll('.quiz-picker .tabline').forEach(x => x.classList.remove('active'));
-    b.classList.add('active');
-    renderQuiz(b.dataset.qset);
-  });
-});
-document.querySelector('.quiz-picker .tabline[data-qset="all"]').classList.add('active');
-renderQuiz('all');
 
 /* ========================= ACTIVE RECALL =========================
    Open-ended prompts grouped by topic — accordion w/ revealable hint.
@@ -402,155 +409,6 @@ function renderRecallFilters(){
 }
 renderRecallFilters();
 renderRecall();
-
-/* ========================= KONJUGATION DRILL =========================
-   One-prompt-at-a-time multiple-choice drill, queue-based.
-   Filter by mode (Perfekt / Konj II / Modal Konj II / Partizip I / Futur).
-   Distractors are pulled from items in the same mode so every wrong
-   option is itself a real conjugated form — the contrast is what teaches.
-   Card is mastered after one correct click; misses requeue. */
-const kjEls = {
-  start:    document.getElementById('kj-start'),
-  startBtn: document.getElementById('kj-start-btn'),
-  session:  document.getElementById('kj-session'),
-  done:     document.getElementById('kj-done'),
-  doneTxt:  document.getElementById('kj-done-txt'),
-  restart:  document.getElementById('kj-restart'),
-  progFill: document.getElementById('kj-prog-fill'),
-  progTxt:  document.getElementById('kj-prog-txt'),
-  mode:     document.getElementById('kj-mode'),
-  prompt:   document.getElementById('kj-prompt'),
-  opts:     document.getElementById('kj-opts'),
-  skip:     document.getElementById('kj-skip'),
-  fb:       document.getElementById('kj-fb'),
-  note:     document.getElementById('kj-note'),
-  next:     document.getElementById('kj-next'),
-};
-let kjMode = 'all';
-let kjItems = [];
-let kjQueue = [];
-let kjCurrent = null;
-let kjAnswered = false;
-let kjMastered = 0;
-
-document.querySelectorAll('input[name="kjmode"]').forEach(r => {
-  r.addEventListener('change', () => { kjMode = r.value; });
-});
-kjEls.startBtn.addEventListener('click', startKj);
-kjEls.restart.addEventListener('click', () => {
-  kjEls.done.style.display = 'none';
-  kjEls.start.style.display = 'block';
-});
-kjEls.skip.addEventListener('click', () => {
-  if (!kjCurrent) return;
-  kjQueue.push(kjCurrent);
-  serveKj();
-});
-kjEls.next.addEventListener('click', serveKj);
-
-function startKj(){
-  const src = (kjMode === 'all')
-    ? KONJUGATION.slice()
-    : KONJUGATION.filter(x => x.mode === kjMode);
-  if (!src.length) return;
-  kjItems = src.map(it => ({ item: it, mastered: false }));
-  for (let i = kjItems.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [kjItems[i], kjItems[j]] = [kjItems[j], kjItems[i]];
-  }
-  kjQueue = [...kjItems];
-  kjMastered = 0;
-  kjEls.start.style.display = 'none';
-  kjEls.done.style.display = 'none';
-  kjEls.session.style.display = 'block';
-  updateKjProg();
-  serveKj();
-}
-
-function updateKjProg(){
-  const t = kjItems.length;
-  const pct = t ? Math.round(kjMastered / t * 100) : 0;
-  kjEls.progFill.style.width = pct + '%';
-  kjEls.progTxt.textContent = kjMastered + ' / ' + t + ' mastered';
-}
-
-function serveKj(){
-  if (!kjQueue.length) {
-    if (kjItems.every(x => x.mastered)) { endKj(); return; }
-    kjQueue = kjItems.filter(x => !x.mastered);
-    for (let i = kjQueue.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [kjQueue[i], kjQueue[j]] = [kjQueue[j], kjQueue[i]];
-    }
-  }
-  kjCurrent = kjQueue.shift();
-  kjAnswered = false;
-  const it = kjCurrent.item;
-  kjEls.mode.textContent = it.mode;
-  kjEls.prompt.textContent = it.q;
-  kjEls.fb.className = 'check-feedback';
-  kjEls.fb.textContent = '';
-  kjEls.note.textContent = '';
-  kjEls.next.style.display = 'none';
-  renderKjOpts(it);
-}
-
-function renderKjOpts(it){
-  // Same-mode distractors first; fall back to any other item if the mode is small.
-  const sameMode = KONJUGATION.filter(x => x.mode === it.mode && x.a !== it.a);
-  const fallback = KONJUGATION.filter(x => x.a !== it.a);
-  const pool = sameMode.length >= 3 ? sameMode : fallback;
-  const wrongs = [];
-  const guard = new Set([it.a]);
-  while (wrongs.length < 3 && pool.length) {
-    const r = pool[Math.floor(Math.random() * pool.length)];
-    if (!guard.has(r.a)) { wrongs.push(r.a); guard.add(r.a); }
-    if (guard.size > pool.length + 1) break;
-  }
-  const opts = [it.a, ...wrongs].sort(() => Math.random() - 0.5);
-  kjEls.opts.innerHTML = '';
-  opts.forEach(text => {
-    const b = document.createElement('button');
-    b.className = 'learn-opt';
-    b.textContent = text;
-    b.addEventListener('click', () => checkKjMC(b, text === it.a, it.a));
-    kjEls.opts.appendChild(b);
-  });
-}
-
-function checkKjMC(btn, correct, right){
-  if (kjAnswered || !kjCurrent) return;
-  kjAnswered = true;
-  const it = kjCurrent.item;
-  kjEls.opts.querySelectorAll('.learn-opt').forEach(b => {
-    if (b.textContent === right) b.classList.add(correct ? 'correct' : 'reveal');
-    b.disabled = true;
-  });
-  if (correct) {
-    btn.classList.add('correct');
-    if (!kjCurrent.mastered) {
-      kjCurrent.mastered = true;
-      kjMastered++;
-      updateKjProg();
-    }
-    kjEls.fb.className = 'check-feedback ok';
-    kjEls.fb.textContent = '✓ richtig — gemeistert.';
-  } else {
-    btn.classList.add('wrong');
-    kjQueue.push(kjCurrent);
-    kjEls.fb.className = 'check-feedback bad';
-    kjEls.fb.textContent = '✗ falsch — richtig: ' + right + '. Karte kommt zurück.';
-  }
-  if (it.note) kjEls.note.textContent = it.note;
-  kjEls.next.style.display = 'inline-block';
-}
-
-function endKj(){
-  kjEls.session.style.display = 'none';
-  kjEls.done.style.display = 'block';
-  kjEls.doneTxt.textContent =
-    'Du hast alle ' + kjItems.length + ' Formen gemeistert. Gut gemacht!';
-}
 
 /* ============================= GRAMMAR ============================= */
 const grammarList = document.getElementById('grammar-list');
