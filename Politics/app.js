@@ -271,6 +271,7 @@ function renderEssays(){
   ESSAYS.forEach((e, i) => {
     const item = document.createElement("div");
     item.className = "essay-item";
+
     const head = document.createElement("button");
     head.className = "essay-head";
     head.innerHTML = `
@@ -288,8 +289,29 @@ function renderEssays(){
       const open = body.classList.toggle("open");
       head.querySelector(".essay-toggle").textContent = open ? "hide hint ▴" : "show hint ▾";
     });
+
+    const exHead = document.createElement("button");
+    exHead.className = "essay-head essay-head--example";
+    exHead.innerHTML = `
+      <span class="essay-num">→</span>
+      <span class="essay-q">in plain English (4-sentence example)</span>
+      <span class="essay-toggle">show example ▾</span>
+    `;
+    const exBody = document.createElement("div");
+    exBody.className = "essay-body essay-body--example";
+    const example = document.createElement("div");
+    example.className = "essay-example";
+    example.textContent = e.example || "";
+    exBody.appendChild(example);
+    exHead.addEventListener("click", () => {
+      const open = exBody.classList.toggle("open");
+      exHead.querySelector(".essay-toggle").textContent = open ? "hide example ▴" : "show example ▾";
+    });
+
     item.appendChild(head);
     item.appendChild(body);
+    item.appendChild(exHead);
+    item.appendChild(exBody);
     list.appendChild(item);
   });
 }

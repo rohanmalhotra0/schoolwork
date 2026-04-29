@@ -1175,6 +1175,24 @@ h2.pencil::after{
   background: var(--tab-3);
   border-left: 3px solid var(--red);
 }
+.essay-head--example{
+  border-top: 1px dashed var(--ink);
+}
+.essay-head--example .essay-num{ color: var(--ink-soft); }
+.essay-head--example .essay-q{
+  font-style: italic;
+  color: var(--pencil);
+}
+.essay-example{
+  font-family:'Spectral', serif;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  padding: 12px 14px;
+  margin-top: 12px;
+  background: var(--tab-2);
+  border-left: 3px solid var(--ink);
+}
 
 /* multi-select helpers */
 .deck-label{
